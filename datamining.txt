@@ -9,7 +9,7 @@ Clustering: k-Means
 Association Rule Learning: Apriori and FP-growth algorithm
 Dimensionality reduction: Principal Component Analysis (PCA) & Singular Value Decomposition(SVD)
 Hidden Markov Models
-Stochastic Gradient Descent
+Stochastic Gradient Descent, Simulated Annealing
 Bayes
 word2vec
 
