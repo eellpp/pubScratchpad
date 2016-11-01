@@ -1,0 +1,18 @@
+1. Try questions in linear algebra to poke understanding with more emphasis on geometric intutuion than methods to find the answers to solutions
+
+References
+- Practical Linear Algebra : Get the geometric intuitions around LA basic
+  concepts
+- Linear Algebra a modern introduction : LA with examples of applications
+- Coding the matrix : LA from computer science perspective
+
+Use LA references to study data mining book
+
+- Understanding complex datasets : With matrix decompositions
+- Matrix methods in data mining and pattern recognition
+
+Tools
+- openGL to visualize the LA tranformations wrt graphics
+
+ML
+- Machine learning a probabilistic perspective
