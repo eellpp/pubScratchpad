@@ -1,3 +1,27 @@
+
+Why nontrivial rotation matrices cannot have real eigenvectors ? 
+What is the intuition behind that?
+
+Understanding the rotation matrix
+http://scipp.ucsc.edu/~haber/ph216/rotation_12.pdf
+
+What is an intuitive explanation of the spectral theorem
+https://www.quora.com/What-is-an-intuitive-explanation-of-the-spectral-theorem
+
+The Intution Behind Real Symmetric Matrices and Their Real Eigenvectors
+http://math.stackexchange.com/questions/1413763/the-intution-behind-real-symmetric-matrices-and-their-real-eigenvectors
+
+Intuition of symmetric matrix
+
+Intuition behind transpose of matrix
+http://math.stackexchange.com/questions/37398/what-is-the-geometric-interpretation-of-the-transpose
+
+QR transformation intution
+http://www.cs.cornell.edu/courses/cs3220/2009sp/notes/qr.pdf
+
+qr orthogonalization intuition
+
+--------------------------------------------------------------------------------
 1. Try questions in linear algebra to poke understanding with more emphasis on geometric intutuion than methods to find the answers to solutions
 
 References
