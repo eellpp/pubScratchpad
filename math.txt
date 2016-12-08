@@ -21,6 +21,32 @@ http://www.cs.cornell.edu/courses/cs3220/2009sp/notes/qr.pdf
 
 qr orthogonalization intuition
 
+http://math.stackexchange.com/questions/598258/determinant-of-transpose/636198#636198
+
+Geometric Intuition for transpose
+http://math.stackexchange.com/questions/598258/determinant-of-transpose/636198#636198
+
+Mathematical Intuition
+https://sites.google.com/site/butwhymath/algebra/the-quadratic-formula
+
+Intuition of dual space:
+This post provides a great intuition of dual space
+http://math.stackexchange.com/questions/1502970/what-is-a-dual-space
+In the context of vector spaces, the dual space is a space of linear "measurements". When a dual vector ff acts on a vector vv, the scalar output f(v)f(v) provides information about vv; in particular, it gives you something about a coordinate of vv in some direction. A vector vv can be reconstructed from knowing all the values f(v)f(v) for ff in the dual space.
+As a rough example from engineering, consider vector space VV the space of continuous, periodic functions on [0,2π][0,2π]. Then there are certain dual vectors fkfk which returns how much of the function v(x)∈Vv(x)∈V contains a frequency kk. So if v(x)v(x) was a sound wave, then fk(v)fk(v) tells you whether the musical note of frequency kk is in the sound. Then the entire sound wave v(x)v(x) can be reconstructed from knowing fk(v)fk(v) for all kk, since that would tell you all the notes in the sound.
+And of course, fk(v)fk(v) is going to be the kkth Fourier coefficient of vv.
+
+Now try to relate that intuition to the concept present in this link
+http://math.stackexchange.com/questions/3749/why-do-we-care-about-dual-spaces?rq=1
+
+Intuition about Quotient Space
+V/U is all the space that are parallel to U. When U is squished to a point, V/U is the resultant
+Eg: Let V be R^3 and U be R^2
+Then V/U is the space of all lines that are parallel to U. But U is squished to zero in this space. 
+So all the lines that parallel to U are just points in V/U. 
+Dimension of V/U is 3 -2 = 1. These are just points.
+We can imagine these points (all the parrallel lines) to lie as points in a line in another two dimensional space
+
 --------------------------------------------------------------------------------
 1. Try questions in linear algebra to poke understanding with more emphasis on geometric intutuion than methods to find the answers to solutions
 
