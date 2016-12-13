@@ -47,6 +47,12 @@ So all the lines that parallel to U are just points in V/U.
 Dimension of V/U is 3 -2 = 1. These are just points.
 We can imagine these points (all the parrallel lines) to lie as points in a line in another two dimensional space
 
+Playlist on Vector Space. Saw the dual space explanation and looks easy to grasp on
+https://www.youtube.com/watch?v=KMlzcvmhaLA&list=PLAvgI3H-gclbucHp-i_p1OxzeFxadw8b3
+Dual vector spaces
+https://www.youtube.com/watch?v=SjCs_HyYtSo
+
+
 --------------------------------------------------------------------------------
 1. Try questions in linear algebra to poke understanding with more emphasis on geometric intutuion than methods to find the answers to solutions
 
