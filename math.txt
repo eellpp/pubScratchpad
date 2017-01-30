@@ -1,3 +1,7 @@
+[Book]Calculus In Context
+http://www.math.smith.edu/Local/cicintro/book.pdf
+http://www.math.smith.edu/Local/cicintro/
+
 MIT : 18.06 Linear Algebra archives
 http://web.mit.edu/18.06/www/
 
