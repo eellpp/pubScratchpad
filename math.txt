@@ -2,6 +2,13 @@
 http://www.math.smith.edu/Local/cicintro/book.pdf
 http://www.math.smith.edu/Local/cicintro/
 
+Convex Optimization
+http://stanford.edu/class/ee364a/videos/video01.html
+
+Introduction to linear dynamical systems
+https://www.youtube.com/playlist?list=PL06960BA52D0DB32B
+http://ee263.stanford.edu/lectures.html
+
 MIT : 18.06 Linear Algebra archives
 http://web.mit.edu/18.06/www/
 
