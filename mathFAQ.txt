@@ -1,0 +1,7 @@
+
+## Rabbit Holes
+
+1: Proof of the taylor series expansion of sinx
+
+2: Why any complex number can be written in terms on e
+
