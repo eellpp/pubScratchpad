@@ -5,3 +5,15 @@
 
 2: Why any complex number can be written in terms on e
 
+Favourite Eigen Value problems
+https://people.maths.ox.ac.uk/trefethen/dec11.pdf
+Any regular pattern you see in nature probably has something to do with an eigenvalue problem.
+- Where does it get those 16-meter tides you can read about in the Guinness Book of Records? Well, the turning of the earth against the moon provides a gravitational tap every 12 hours and 25 minutes, like pushing a child on a swing, and a natural mode of oscillation of the bay has a period of about 13 hours. So the giant tides come from resonance fed by pumping at a frequency near an eigenvalue. 
+- Musical instruments are built upon eigenvalues. The air in a flute vibrates according to the wave equation with atmospheric pressure at each end, so you get sine waves of pressure at approximately linearly spaced eigenfrequencies.
+- A childs swing is an eigen value problem. There is a natural place in oscillation where application of force will make the swing go higher.The place corresponds to the eigen value of the dynamical system. All dynamical systems have eigen values.
+- Radio tuning circuit to listen on a frequency is eigen value problem
+
+Eigen values have a role in Fibonacci series and markov process.
+
+
+Matlab eigshow demo
