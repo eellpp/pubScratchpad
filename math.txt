@@ -1,3 +1,24 @@
+[Book] Free book to introduction of svd, pca and others
+http://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/
+
+[Book] Introduction to probability
+https://www.amazon.com/Introduction-Probability-Chapman-Statistical-Science/dp/1466575573
+
+[Book] Introduction to probability with R
+https://www.amazon.com/Introduction-Probability-Chapman-Statistical-Science/dp/1420065211
+
+Lecture Notes on randomized linear algebra
+https://arxiv.org/abs/1608.04481v1
+
+[Book] Applied mathematics for database professional
+http://www.apress.com/us/book/9781590597453
+
+Stanford CS229 Machine learning class with material updated each year
+http://cs229.stanford.edu/
+- the pdf of lecture notes
+- review notes
+- project details for each year
+
 [Book]Calculus In Context
 http://www.math.smith.edu/Local/cicintro/book.pdf
 http://www.math.smith.edu/Local/cicintro/
