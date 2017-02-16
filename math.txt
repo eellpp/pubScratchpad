@@ -1,5 +1,11 @@
+Paper on netflix prize
+http://buzzard.ups.edu/courses/2014spring/420projects/math420-UPS-spring-2014-gower-netflix-SVD.pdf
+http://blog.echen.me/2011/10/24/winning-the-netflix-prize-a-summary/
+
+
 [Book] Free book to introduction of svd, pca and others
 http://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/
+http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf
 
 [Book] Introduction to probability
 https://www.amazon.com/Introduction-Probability-Chapman-Statistical-Science/dp/1466575573
@@ -32,6 +38,8 @@ http://ee263.stanford.edu/lectures.html
 
 MIT : 18.06 Linear Algebra archives
 http://web.mit.edu/18.06/www/
+solutions
+https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/assignments/
 
 Why nontrivial rotation matrices cannot have real eigenvectors ? 
 What is the intuition behind that?
