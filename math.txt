@@ -1,3 +1,18 @@
+
+[Course] stanford cs205
+http://graphics.stanford.edu/courses/cs205a-16-spring/index.html
+http://graphics.stanford.edu/courses/cs205a-16-spring/schedule.html
+[Book] Numerical Algorithms: Methods for Computer Vision, Machine Learning, and Graphics
+https://www.amazon.com/Numerical-Methods-Computer-Learning-Graphics/dp/1482251884
+
+
+Statistical Inference
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/video-lectures/lecture-23-classical-statistical-inference-i/
+http://isites.harvard.edu/icb/icb.do?keyword=k101665&pageid=icb.page656049
+
+statistical aspects of datamining
+https://www.youtube.com/watch?v=zRsMEl6PHhM
+
 Exercises from Gilbert Strang 4'th edition
 https://web.williams.edu/Mathematics/sjmiller/public_html/BrownClasses/54/HWStrang4thEd.pdf
 
