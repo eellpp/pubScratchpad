@@ -1,0 +1,11 @@
+
+## general prgramming problems
+https://adriann.github.io/programming_problems.html
+
+## practice problems in python
+http://www.w3resource.com/python-exercises/
+
+
+Q: Read a list of server names and config values from property file
+Q: Read and write json values
+
