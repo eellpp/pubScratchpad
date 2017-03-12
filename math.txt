@@ -1,3 +1,29 @@
+[Book]
+"Introduction to Information Retrieval", C. Manning, P. Raghavan, H. Schutze, Cambridge University Press.
+http://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf
+
+Data Mining Reference Books
+"Text Mining - Classification, Clustering, and Applications", A. Srivastava and M. Sahami, CRC Press.
+"Mining Text Data", C.C. Aggarwal and C.X. Zhai, Springer Science.
+"Introduction to Information Retrieval", C. Manning, P. Raghavan, H. Schutze, Cambridge University Press.
+"Machine Learning: A Probabilistic Perspective", K. Murphy, The MIT Press.
+"Pattern Recognition and Machine Learning", C.M. Bishop, Springer.
+1. "Probabilistic Topic Models", by Blei, Communications of the ACM, Vol. 55, No. 4, pp.77-84, 2012. 
+2. "Topic Models" by Blei and Lafferty, book chapter In Text Mining: Classification, Clustering, and Applications, Chapter 4, Srivastava and Sahami, CRC Press. 
+3. "Probabilistic Topic Models" by Steyvers and Griffiths, book chapter in Latent Semantic Analysis: A Road to Meaning, Landauer, McNamara, Dennis, and Kintsch, Laurence Erlbaum.
+
+Lecture Notes on text mining
+http://www1.se.cuhk.edu.hk/~seem5680/
+
+
+Abstract Algebra Resources
+[pinter: abstract algebra - self study friendly]
+http://www2.math.umd.edu/~jcohen/402/Pinter%20Algebra.pdf
+[Video of the lectures found under the link for schedule]
+https://www.math.upenn.edu/~ted/371F14/math371.html
+[Free book: Abstract algebra theory and patterns]
+http://abstract.ups.edu/download/aata-20160809-sage-7.3.pdf
+
 
 [Course] stanford cs205
 http://graphics.stanford.edu/courses/cs205a-16-spring/index.html
