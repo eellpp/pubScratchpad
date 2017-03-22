@@ -1,3 +1,6 @@
+Tom M
+http://www.cs.cmu.edu/~ninamf/courses/601sp15/index.html
+
 [Book]
 "Introduction to Information Retrieval", C. Manning, P. Raghavan, H. Schutze, Cambridge University Press.
 http://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf
