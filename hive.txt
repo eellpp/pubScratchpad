@@ -1,0 +1,30 @@
+
+## Internal and External Tables
+http://www.informit.com/articles/printerfriendly/2756471
+https://www.dezyre.com/hadoop-tutorial/apache-hive-tutorial-tables
+
+## Create Table
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-CreateTableCreate/Drop/TruncateTable
+Create Table As Select (CTAS)
+
+## Inserting data into tables
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DML#LanguageManualDML-InsertingvaluesintotablesfromSQL
+
+### Insert using Load Data
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DML#LanguageManualDML-Loadingfilesintotables
+
+## Dynamic and Static Partition
+https://cwiki.apache.org/confluence/display/Hive/DynamicPartitions
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-AddPartitions
+
+## Dynamic Partition Insert Rules
+https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-Dynamic-PartitionInsert
+
+## CSV data insert with spark
+https://github.com/databricks/spark-csv
+
+Others:
+
+https://community.hortonworks.com/questions/57191/how-to-createload-data-into-table-through-sparkql.html
+https://community.hortonworks.com/questions/34894/apache-zeppelin-with-hive.html
+https://zeppelin.apache.org/
