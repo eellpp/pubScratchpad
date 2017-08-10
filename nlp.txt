@@ -1,0 +1,16 @@
+
+[Dynamic programming]
+https://www.cs.cmu.edu/~avrim/451f09/lectures/lect1001.pdf
+
+[HMM chapter from Book]
+https://web.stanford.edu/~jurafsky/slp3/9.pdf
+
+[Casual video with derivation of Forward algorithm]
+https://www.youtube.com/watch?v=7glSTzgjwuU
+
+Models built using:
+HMM
+Decision Trees
+CRF
+SVM
+MaxEnt
