@@ -11,6 +11,10 @@ https://www.youtube.com/watch?v=7glSTzgjwuU
 [hmm parameter estimation with depmixS4 package - vignette]
 https://cran.opencpu.org/web/packages/depmixS4/vignettes/depmixS4.pdf
 
+[Book]
+Hidden Markov Models for Time Series: An Introduction Using R
+Walter Zucchini, Iain L. MacDonald
+
 Models built using:
 HMM
 Decision Trees
