@@ -15,6 +15,9 @@ https://cran.opencpu.org/web/packages/depmixS4/vignettes/depmixS4.pdf
 Hidden Markov Models for Time Series: An Introduction Using R
 Walter Zucchini, Iain L. MacDonald
 
+[R tutorial on market regime change model with R]
+http://yunus.hacettepe.edu.tr/~iozkan/eco742/hmm.html
+
 Models built using:
 HMM
 Decision Trees
