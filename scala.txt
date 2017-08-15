@@ -1,6 +1,27 @@
 
+Programming in Scala - 1'st Edition online reading
+http://www.artima.com/pins1ed/
+
+https://www.scala-exercises.org/
+http://allaboutscala.com/
+
 http://docs.scala-lang.org/cheatsheets/
 https://twitter.github.io/scala_school/index.html
+
+http://www.codecommit.com/blog/scala/scala-for-java-refugees-part-1
+Basic OOP
+http://www.codecommit.com/blog/scala/scala-for-java-refugees-part-2
+Methods and Statics
+http://www.codecommit.com/blog/scala/scala-for-java-refugees-part-3 
+Pattern Matching and Exceptions
+http://www.codecommit.com/blog/scala/scala-for-java-refugees-part-4
+Traits and Types
+http://www.codecommit.com/blog/scala/scala-for-java-refugees-part-5
+Getting Over Java
+http://www.codecommit.com/blog/scala/scala-for-java-refugees-part-6
+IBM: Java Develoer Guide to Scala
+https://www.ibm.com/developerworks/views/java/libraryview.jsp?search_by=scala+neward
+
 
 Instead of declaring something as int, in Scala it’s declared as Int.
 
