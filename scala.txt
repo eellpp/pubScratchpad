@@ -626,8 +626,82 @@ val date = """(\d\d\d\d)-(\d\d)-(\d\d)""".r
   case date(year, month, day) => s"$year was a good year for PLs."
 }
 
+-------------------------------
+Understanding pattern matching with Case
 
-				
+using the case class + traits we can achieve polymorphism as be using abstract class + derived classes 
+eg : Check the shape, circle, triangle example for polymorphism at microsoft website
+https://msdn.microsoft.com/en-us/library/ms173152.aspx
+
+This could be done in scala as : 
+trait  shape {
+  def draw() :String
+}
+
+case class circle(x :Int,y :Int) extends shape{
+  def draw(): String = {
+    "Drawing a circle"
+  }
+}
+case class Rectangle(x :Int,y :Int,height :Int,
+                       width :Int ) extends shape{
+  def draw(): String = {
+    "Drawing a Rectange"
+  }
+}
+
+
+var shapes = new circle(1,1) :: new Rectangle(1,1,2,2) ::Nil
+
+def getShapes(element :shape) : String = element match{
+  case i: circle => "Calling circle \n" + i.draw()
+  case i: Rectangle => "Calling rectangle \n" + i.draw()
+  case _ => "nothing"
+}
+
+var output = shapes.map(getShapes)
+println(output.mkString)
+
+The scala  code is more concise and readable.
+
+Understanding companion objects 
+Eg: 
+
+class gen (age :Int) {
+  var insideAge = age
+  def say() = println(age)
+}
+
+object gen {
+  var TESTVAL :Int = 10
+  def apply(age :Int, inc :Int) = new gen(age + inc)
+  def apply(age: Int) = new gen(age)
+}
+
+val g = new gen(34)
+g.say()
+g.insideAge				
+
+
+val go1 = gen(111)
+go1.say()
+go1.insideAge
+gen.TESTVAL = 111
+gen.TESTVAL
+
+val go = gen(22)
+go.say()
+go.insideAge
+go1.say()
+go1.insideAge
+gen.TESTVAL = 222
+gen.TESTVAL
+
+val goo = gen(12,23)
+goo.say()
+goo.insideAge
+
+
 			
 		
 
