@@ -849,6 +849,11 @@ This may well be the trickiest gotcha in Scala I have ever encountered.
 
 Scala gothchas and puzzlers
 
+JSON
+https://www.playframework.com/documentation/2.3.9/ScalaJson
+
+https://github.com/takezoe/solr-scala-client
+
 http://blog.scalac.io/2016/01/14/scala-gotchas.html
 http://scalapuzzlers.com/
 
