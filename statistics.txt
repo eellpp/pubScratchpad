@@ -1,0 +1,13 @@
+
+Statistics I at Elgin Community College, to coincide with the textbook Statistics:Informed Decisions Using Data, Fourth Edition, by Michael Sullivan, III.
+https://faculty.elgin.edu/dkernler/statistics/index.html
+
+ChiSq Stats
+https://onlinecourses.science.psu.edu/stat500/node/56
+http://www.stat.yale.edu/Courses/1997-98/101/chisq.htm
+http://math.hws.edu/javamath/ryan/ChiSquare.html
+http://stattrek.com/probability-distributions/chi-square.aspx?Tutorial=AP
+
+probability Cheatsheet
+https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf
+
