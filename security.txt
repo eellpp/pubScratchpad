@@ -1,0 +1,7 @@
+
+kerberos
+https://kb.iu.edu/d/acjj
+http://www.roguelynn.com/words/explain-like-im-5-kerberos/
+
+Keytab:
+https://kb.iu.edu/d/aumh
