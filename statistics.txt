@@ -1,6 +1,11 @@
 
+
+
 Statistics I at Elgin Community College, to coincide with the textbook Statistics:Informed Decisions Using Data, Fourth Edition, by Michael Sullivan, III.
 https://faculty.elgin.edu/dkernler/statistics/index.html
+
+## Introductory R info on various statistical tests
+http://www.r-tutor.com/elementary-statistics/inference-about-two-populations/population-mean-between-two-independent-samples
 
 ChiSq Stats
 https://onlinecourses.science.psu.edu/stat500/node/56
