@@ -1,5 +1,8 @@
 
 
+Learning statistics with R:A tutorial for psychology students and other beginners
+http://www.fon.hum.uva.nl/paul/lot2015/Navarro2014.pdf
+
 
 Statistics I at Elgin Community College, to coincide with the textbook Statistics:Informed Decisions Using Data, Fourth Edition, by Michael Sullivan, III.
 https://faculty.elgin.edu/dkernler/statistics/index.html
@@ -16,3 +19,5 @@ http://stattrek.com/probability-distributions/chi-square.aspx?Tutorial=AP
 probability Cheatsheet
 https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf
 
+R - handout - Pathway to Using R For Statistical Analysis
+http://people.vetmed.wsu.edu/jmgay/courses/documents/PathwaytoUsingRForStatisticalAnalysis.pdf
