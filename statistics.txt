@@ -1,5 +1,6 @@
 
 
+
 Learning statistics with R:A tutorial for psychology students and other beginners
 http://www.fon.hum.uva.nl/paul/lot2015/Navarro2014.pdf
 
@@ -9,6 +10,9 @@ https://faculty.elgin.edu/dkernler/statistics/index.html
 
 ## Introductory R info on various statistical tests
 http://www.r-tutor.com/elementary-statistics/inference-about-two-populations/population-mean-between-two-independent-samples
+
+Statistics cheat sheet
+http://web.mit.edu/~csvoss/Public/usabo/stats_handout.pdf
 
 ChiSq Stats
 https://onlinecourses.science.psu.edu/stat500/node/56
@@ -21,3 +25,6 @@ https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011
 
 R - handout - Pathway to Using R For Statistical Analysis
 http://people.vetmed.wsu.edu/jmgay/courses/documents/PathwaytoUsingRForStatisticalAnalysis.pdf
+
+
+http://www.statstutor.ac.uk/resources/uploaded/tutorsquickguidetostatistics.pdf
