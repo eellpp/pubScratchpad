@@ -22,3 +22,4 @@ Mining evidences for Named Entity Disambiguation
 https://www.cs.ucsb.edu/~xyan/papers/kdd13-name_wikification.pdf
 Given the named entity mentions in unstructured text data, the goal of NED is to map them to their corresponding real world entities in a knowledge base such as Wikipedia. Different from entity resolution (ER), whose goal is to cluster entity mentions into several disjoint groups with each group representing a unique entity, NED requires explicitly identifying which underlying entity a given named entity mention should refer to. The NED task is challenging due to the fact that many named entity mentions are ambiguous: the same mention can refer to various different real world entities when they appear in different contexts. For example, “Michael Jordan” can refer to the basketball star in NBA, the Machine Learning researcher in Berkeley or some other people. NED plays a critical role in high-quality information network construction. 
 
+data science
