@@ -1,0 +1,37 @@
+
+
+## documentation
+http://www.scala-sbt.org/1.x/docs/Getting-Started.html
+
+#tutorials
+https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md
+https://jazzy.id.au/2015/03/03/sbt-task-engine.html
+https://jazzy.id.au/2015/03/04/sbt-declarative-dsl.html
+
+## Adding properties file
+
+The philosophy of SBT is to work by convention (and not by configuration) as much as possible. So the most straightforward solution, in many cases, isn't to look for the correct setting to tell SBT where your files are... But rather to figure out where SBT already expects to find them. You can check this page of the "getting started with SBT" guide for the basics.
+For resource files that needs to be packaged together with compiled classes, the default directory is src/main/resources (a convention borrowed from Maven, like most of SBT's default directory structure). Similarly, files in src/test/resources are added to the classpath but only during tests.
+
+If, for some reason, you want to use non-standard directories, you will want to have a look at this page of the documentation. For resources, the key to modify is resourceDirectory:
+// resources in `resources` instead of `src/main/resources` :
+resourceDirectory in Compile := baseDirectory.value / "resources"
+// test resources in `test-resources` instead of `src/test/resources` :
+resourceDirectory in Test := baseDirectory.value / "test-resources"
+https://stackoverflow.com/questions/26912236/how-do-i-add-additional-file-to-class-path-which-is-not-java-or-scala-file-using
+
+sbt run                                      # Runs the main class for the project in the same virtual machine as sbt.
+sbt sbtVersion                               # displays sbt version
+sbt console                                  # Starts the Scala interpreter with a classpath including the compiled sources and all dependencies. To return to sbt, type :quit, Ctrl+D (Unix), or Ctrl+Z (Windows).
+sbt compile                                  # Compiles the main sources (in src/main/scala and src/main/java directories).
+sbt clean                                    # Deletes all generated files (in the target directory).
+sbt "test-only org.yourcompany.YourTestSpec" # runs a single test
+sbt test                                     # Compiles and runs all tests.
+sbt ";clean ;compile; run"                   # combines multiple commands in a single invocation
+sbt package                                  # Creates a jar file containing the files in src/main/resources and the classes compiled
+                 from src/main/scala and src/main/java.
+sbt reload                                   #Reloads the build definition (build.sbt, project/*.scala, project/*.sbt files).
+                 Needed if you change the build definition.
+                 
+     
+           
