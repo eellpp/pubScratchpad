@@ -1,5 +1,16 @@
 
+Learning Statistics Phases
+- Sampling/ Resampling methods and tests
+- Distributions and descriptive statistics
+- Inferential statististics
 
+pick up small practical daily life problems to poke your understanding of the concepts and to realize the limits of mathematical procedures involved. By pondering on the results, you will decipher the inherent assumptions in various techniques and whether they are relevant to problem in hand.
+
+https://elitedatascience.com/learn-statistics-for-data-science
+Free books
+- think stats
+- think bayes
+- ML
 
 Learning statistics with R:A tutorial for psychology students and other beginners
 http://www.fon.hum.uva.nl/paul/lot2015/Navarro2014.pdf
