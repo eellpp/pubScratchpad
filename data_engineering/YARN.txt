@@ -1,0 +1,5 @@
+
+Intorduction to YARN
+https://www.ibm.com/developerworks/library/bd-yarn-intro/
+
+https://www.oreilly.com/ideas/a-tale-of-two-clusters-mesos-and-yarn
