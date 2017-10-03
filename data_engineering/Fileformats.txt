@@ -1,0 +1,3 @@
+
+https://stackoverflow.com/questions/36822224/what-are-the-pros-and-cons-of-parquet-format-compared-to-other-formats
+https://conferences.oreilly.com/strata/strata-ny-2016/public/schedule/detail/51952
