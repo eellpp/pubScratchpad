@@ -63,6 +63,17 @@ or you can write to your own jks file
 ## keystore vs trustore in java
 Essentially, the keystore in `javax.net.ssl.keyStore` is meant to contain your private keys and certificates, whereas the `javax.net.ssl.trustStore` is meant to contain the CA certificates you're willing to trust when a remote party presents its certificate. In some cases, they can be one and the same store, although it's often better practice to use distinct stores (especially when they're file-based).
 
+- Trustore contains the CA certificates you are willing to trust. It also contains the clients public key
+- Keystore contains the clients public and private key pair and certificates
+
+To export the client's certificate (public key) to a file, so you can copy it to the server, use
+
+`keytool -export -alias MYKEY -file publicclientkey.cer -store keystore.jks`
+
+To import the client's public key into the server's truststore, use
+
+`keytool -import -file publicclientkey.cer -store trustore.jks`
+
 #### Key Manager and Trust Manager working
 The `javax.net.ssl.keyStore` and `javax.net.ssl.trustStore` parameters are the default parameters used to build KeyManagers and TrustManagers (respectively), then used to build an SSLContext which essentially contains the SSL/TLS settings to use when making an SSL/TLS connection via an SSLSocketFactory or an SSLEngine. These system properties are just where the default values come from, which is then used by `SSLContext.getDefault()`, itself used by `SSLSocketFactory.getDefault()` for example. (All of this can be customized via the API in a number of places, if you don't want to use the default values and that specific SSLContexts for a given purpose.)
 
@@ -70,6 +81,9 @@ The `javax.net.ssl.keyStore` and `javax.net.ssl.trustStore` parameters are the d
 `-Djavax.net.ssl.keyStore=keystore.jks -Djavax.net.ssl.keyStorePassword=x`
 
 `-Djavax.net.ssl.trustStore=keystore.jks -Djavax.net.ssl.trustStorePassword=x`
+
+
+
 
 ## jks file
 JKS stands for Java KeyStore. It is a repository of certificates (signed public keys) and (private) keys. You can export a certificate stored in a JKS file into a certificate file. You can use the "keytool" utility found in Java distributions to maintain your JKS trust and key repositories. 
