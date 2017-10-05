@@ -8,6 +8,42 @@ Here is a very simplified explanation:
 * The certificate contains the domain name and/or ip address of the web server. Your web browser confirms with the certificate authority that the address listed in the certificate is the one to which it has an open connection.
 * Your web browser generates a shared symmetric key which will be used to encrypt the HTTP traffic on this connection; this is much more efficient than using public/private key encryption for everything. Your browser encrypts the symmetric key with the public key of the web server then sends it back, thus ensuring that only the web server can decrypt it, since only the web server has its private key.
 
+
+
+#### Root and Intermediate CA
+There are two types of certificate authorities (CAs): root CAs and intermediate CAs. In order for an SSL certificate to be trusted, that certificate must have been issued by a CA that is included in the trusted store of the device that is connecting.
+
+Here’s a practical example. Let’s suppose that you purchase a certificate from the Awesome Authority for the domain example.awesome.
+
+- Awesome Authority is not a root certificate authority. In other words, its certificate is not directly embedded in your web browser and therefore it can’t be explicitly trusted.
+- Awesome Authority utilizes a certificate issued by Intermediate Awesome CA Alpha.
+- Intermediate Awesome CA Alpha utilizes a certificate issued by Intermediate Awesome CA Beta.
+- Intermediate Awesome CA Beta utilizes a certificate issued by Intermediate Awesome CA Gamma.
+- Intermediate Awesome CA Gamma utilizes a certificate issued by The King of Awesomeness.
+- The King of Awesomeness is a Root CA. Its certificate is directly embedded in your web browser, therefore it can be explicitly trusted.
+
+In our example, the SSL certificate chain is represented by 6 certificates:
+- End-user Certificate - Issued to: example.com; Issued By: Awesome Authority
+- Intermediate Certificate 1 - Issued to: Awesome Authority; Issued By: Intermediate Awesome CA Alpha
+- Intermediate Certificate 2 - Issued to: Intermediate Awesome CA Alpha; Issued By: Intermediate Awesome CA Beta
+- Intermediate Certificate 3 - Issued to: Intermediate Awesome CA Beta; Issued By: Intermediate Awesome CA Gamma
+- Intermediate Certificate 4 - Issued to: Intermediate Awesome CA Gamma; Issued By: The King of Awesomeness
+- Root certificate - Issued by and to: The King of Awesomeness
+
+Certificate 1 is your end-user certificate, the one you purchase from the CA. The certificates from 2 to 5 are called intermediate certificates. Certificate 6, the one at the top of the chain (or at the end, depending on how you read the chain), is called root certificate.
+
+When you install your end-user certificate for example.awesome, you must bundle all the intermediate certificates and install them along with your end-user certificate. If the SSL certificate chain is invalid or broken, your certificate will not be trusted by some devices.
+
+
+## Formats for certificate file
+Different formates for SSL certificates and their components:
+
+- PEM Governed by RFCs, it's used preferentially by open-source software. It can have a variety of extensions **(.pem, .key, .cer, .cert, more)**
+- PKCS7 An open standard used by Java and supported by Windows. Does not contain private key material.
+- PKCS12 A private standard that provides enhanced security versus the plain-text PEM format. This can contain private key material. It's used preferentially by Windows systems, and can be freely converted to PEM format through use of openssl.
+- DER The parent format of PEM. It's useful to think of it as a binary version of the base64-encoded PEM file. Not routinely used by much outside of Windows.
+
+
 ## Connecting to a server securely for Development
 First you need to obtain the public certificate from the server you're trying to connect to. That can be done in a variety of ways, such as 
 - contacting the server admin and asking for it, 
@@ -22,16 +58,6 @@ It will most likely ask you for a password. The default password as shipped with
 or you can write to your own jks file
 `keytool -import  -file bob.crt -alias bob -keystore keystore.jks`
 
-
-
-
-## Formats for certificate file
-Different formates for SSL certificates and their components:
-
-- PEM Governed by RFCs, it's used preferentially by open-source software. It can have a variety of extensions **(.pem, .key, .cer, .cert, more)**
-- PKCS7 An open standard used by Java and supported by Windows. Does not contain private key material.
-- PKCS12 A private standard that provides enhanced security versus the plain-text PEM format. This can contain private key material. It's used preferentially by Windows systems, and can be freely converted to PEM format through use of openssl.
-- DER The parent format of PEM. It's useful to think of it as a binary version of the base64-encoded PEM file. Not routinely used by much outside of Windows.
 
 
 ## keystore vs trustore in java
