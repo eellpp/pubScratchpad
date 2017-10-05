@@ -9,6 +9,11 @@ Now that you have the certificate saved in a file, you need to add it to your JV
 `keytool -import -file <the cert file> -alias <some meaningful name> -keystore <path to cacerts file>`
 It will most likely ask you for a password. The default password as shipped with java is changeit. 
 
+or you can write to your own jks file
+`keytool -import  -file bob.crt -alias bob -keystore keystore.jks`
+
+
+
 
 ## Formats for certificate file
 Different formates for SSL certificates and their components:
