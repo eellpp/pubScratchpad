@@ -1,4 +1,14 @@
-## Connecting to a server securely
+## SSL over browser - overview
+To operate correctly, SSL relies on a properly configured digital certificate, which the server passes to the browser when it tries to access a secure web page. Amongst other things, the certificate contains the “name” of the server for which the certificate has been issued, an encoded signature unique to the domain, the domain’s public key, and the validity period of the certificate itself. If the certificate has been digitally signed by a Certificate Authority (CA), it also contains the CA’s name and signature. In addition to establishing a relationship of trust, the certificate allows the server and browser to negotiate the encryption algorithm and encryption key used for the browsing session.
+
+Here is a very simplified explanation:
+
+* Your web browser downloads the web server's certificate, which contains the public key of the web server. This certificate is signed with the private key of a trusted certificate authority.
+* Your web browser comes installed with the public keys of all of the major certificate authorities. It uses this public key to verify that the web server's certificate was indeed signed by the trusted certificate authority.
+* The certificate contains the domain name and/or ip address of the web server. Your web browser confirms with the certificate authority that the address listed in the certificate is the one to which it has an open connection.
+* Your web browser generates a shared symmetric key which will be used to encrypt the HTTP traffic on this connection; this is much more efficient than using public/private key encryption for everything. Your browser encrypts the symmetric key with the public key of the web server then sends it back, thus ensuring that only the web server can decrypt it, since only the web server has its private key.
+
+## Connecting to a server securely for Development
 First you need to obtain the public certificate from the server you're trying to connect to. That can be done in a variety of ways, such as 
 - contacting the server admin and asking for it, 
 - using openssl to download it, or, 
@@ -51,7 +61,14 @@ keytool -genkey -keyalg RSA -alias selfsigned -keystore keystore.jks -storepass 
 #### create the cer file
 keytool -export -alias selfsigned -keystore keystore.jks -rfc -file my_certificate.cer
 
-#### provide info in properties file
+## Verifiying certificate and adding to keystore
+The certificate presented is verfied by public CA (certificate authorities). But you can manually verify and add it at server
+- from the browser get the cer file
+- print the cer fingerprints 
+`keytool -printcert -file Example.cer`
+- call up the person and ask to verify the fingerprints that you obtained from server
+
+## provide info in properties file
 
 // Now in the build.properties add the following lines,
 
