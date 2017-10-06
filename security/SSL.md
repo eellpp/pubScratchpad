@@ -48,15 +48,20 @@ Different formates for SSL certificates and their components:
 First you need to obtain the public certificate from the server you're trying to connect to. That can be done in a variety of ways, such as 
 - contacting the server admin and asking for it, 
 - using openssl to download it, or, 
+
+`echo -n | openssl s_client -connect HOST:PORTNUMBER \
+    | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/$SERVERNAME.cert`
+    
 - since this appears to be an HTTP server, connecting to it with any browser, viewing the page's security info, and saving a copy of the certificate. (Google should be able to tell you exactly what to do for your specific browser.)
+(In chrome click on the inspect and then find the security tab, from there follow instructions to download the certificate for the website)
 
 Now that you have the certificate saved in a file, you need to add it to your JVM's trust store. At $JAVA_HOME/jre/lib/security/ for JREs or $JAVA_HOME/lib/security for JDKs, there's a file named cacerts, which comes with Java and contains the public certificates of the well-known Certifying Authorities. To import the new cert, run keytool as a user who has permission to write to cacerts:
 
 `keytool -import -file <the cert file> -alias <some meaningful name> -keystore <path to cacerts file>`
 It will most likely ask you for a password. The default password as shipped with java is changeit. 
 
-or you can write to your own jks file
-`keytool -import  -file bob.crt -alias bob -keystore keystore.jks`
+or you can write to your own jks file ( if youare verifying the certificate yourslef, for eg while doing Java development)
+`keytool -import  -file maven-repo.crt -alias msven -keystore keystore.jks`
 
 
 
