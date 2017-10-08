@@ -1,6 +1,6 @@
 
 #### Torture of pigs in agrifarms
-The FBI’s Hunt for Two Missing Piglets Reveals the Federal Cover-Up of Barbaric Factory Farms [https://theintercept.com/2017/10/05/factory-farms-fbi-missing-piglets-animal-rights-glenn-greenwald/]
+[The FBI’s Hunt for Two Missing Piglets Reveals the Federal Cover-Up of Barbaric Factory Farms](https://theintercept.com/2017/10/05/factory-farms-fbi-missing-piglets-animal-rights-glenn-greenwald/)
 
 > “Torture a single chicken and you risk arrest. Abuse hundreds of thousands of chickens for their entire lives? That’s agribusiness.”
 
