@@ -55,3 +55,21 @@ These requirements are defined by Java Servlet API.
 Now that you've followed the requirements of the Servlet container(or application server) and the Java Servlet API requirements, you can organize the other parts of your webapp based upon what you need. 
 - You can put your resources (JSP files, plain text files, script files) in your application root directory. But then, people can access them directly from their browser, instead of their requests being processed by some logic provided by your application. So, to prevent your resources being directly accessed like that, you can put them in the WEB-INF directory, whose contents is only accessible by the server.
 
+The Servlet 2.4 specification says this about WEB-INF (page 70):
+
+> A special directory exists within the application hierarchy named  WEB-INF. This directory contains all things related to the application that aren’t in the document root of the application. The  WEB-INF node is not part of the public document tree of the application. No file contained in the WEB-INF directory may be served directly to a client by the container. However, the contents of the  WEB-INF directory are visible to servlet code using the getResource and getResourceAsStream method calls on the ServletContext, and may be exposed using the RequestDispatcher calls.
+
+This means that WEB-INF resources are accessible to the resource loader of your Web-Application and not directly visible for the public.
+
+This is why a lot of projects put their resources like JSP files, JARs/libraries and their own class files or property files or any other sensitive information in the WEB-INF folder. Otherwise they would be accessible by using a simple static URL (usefull to load CSS or Javascript for instance).
+
+It is important to make the difference between the structure of a project and the structure of the resulting WAR file.
+
+The structure of the project will in some cases partially reflect the structure of the WAR file (for static resources such as JSP files or HTML and JavaScript files, but this is not always the case.
+
+The transition from the project structure into the resulting WAR file is done by a build process.
+
+### war file
+A .war is a like  .jar, but it contains web application components and is laid out according to a specific structure. A .war is designed to be deployed to a web application server such as Tomcat or Jetty or a Java EE server such as JBoss or Glassfish.
+
+
