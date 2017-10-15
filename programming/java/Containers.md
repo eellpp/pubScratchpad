@@ -21,3 +21,37 @@ EJBs are designed to keep a business logic of your application. For example, sta
 Regarding the file type, EJB is packed into a .jar file, Web application into a .war file, and if you want to mix them in a single application, that would be the .ear file ("enterprise archive").
 
 Beside EJBs, "full" application server also takes care about transactions, security, JDBC resources.. I would highly recommend using it over a servlet container, but the benefits come with the complexity so you will have to spend a reasonable amount of time to learn how to deal with e.g. Websphere (Glassfish is much simpler, and it is my favourite). JBoss and Weblogic are also quite popular, and if you are familiar with Tomcat take a look at TomEE.
+
+## Tomcat Container
+It's both a web server (supports HTTP protocol) and a web container (supports JSP/Servlet API, also called "servlet container" at times). But it's not really meant to function as a high performance web server, nor does it include some features typical of a web server. Tomcat is meant to be used in conjunction with the Apache web server, where Apache manages static pages, caching, redirection, etc. and Tomcat handles the container (web application) functions.
+
+## Web-INF
+
+When you deploy a Java EE web application (using frameworks or not),its structure must follow some requirements/specifications. These specifications come from : 
+
+The servlet container (e.g Tomcat)
+- Java Servlet API
+- Your application domain
+- The Servlet container requirements
+
+If you use Apache Tomcat, the root directory of your application must be placed in the webapp folder. That may be different if you use another servlet container or application server.
+
+Java Servlet API requirements
+
+Java Servlet API states that your root application directory must have the following structure :
+``` java
+ApplicationName
+ |
+ |--META-INF
+ |--WEB-INF
+       |_web.xml       <-- Here is the configuration file of your web app(where you define servlets, filters, listeners...)
+      |_classes       <--Here goes all the classes of your webapp, following the package structure you defined. Only 
+      |_lib           <--Here goes all the libraries (jars) your application need
+```
+
+These requirements are defined by Java Servlet API.
+
+3. Your application domain
+Now that you've followed the requirements of the Servlet container(or application server) and the Java Servlet API requirements, you can organize the other parts of your webapp based upon what you need. 
+- You can put your resources (JSP files, plain text files, script files) in your application root directory. But then, people can access them directly from their browser, instead of their requests being processed by some logic provided by your application. So, to prevent your resources being directly accessed like that, you can put them in the WEB-INF directory, whose contents is only accessible by the server.
+
