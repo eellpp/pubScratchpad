@@ -59,14 +59,68 @@ Features:
 - Support for consumer groups--in cases of heavy loads, you need multiple instances of the same microservice. You can group all these microservice instances under a single consumer group so that the message is picked up only by one of the available instances.
 - Support for partitioning--there can be situations where you would want to ensure that a specific set of messages are addressed by the same instance. Partitioning allows you to configure the criteria to identify messages to be handled by the same partition instance.
  
+ ### Annotations
+ You can turn a Spring application into a Spring Cloud Stream application by applying the `@EnableBinding` annotation to one of the application’s configuration classes. 
  
+ `@payload`:
+ This annotation allows you to specify a SpEL expression indicating that a method parameter's value should be mapped from the payload of a Message.
+ Example: void foo(@Payload("city.name") String cityName) - will map the value of the 'name' property of the 'city' property of the payload object.
+
  
- @EnableBinding(Source.class): The EnableBinding annotation enables binding a class with the respective channel it needs--an input and/or an output. The source class is used to register a Cloud Stream with one output channel.
+ `@EnableBinding(Source.class)`: The EnableBinding annotation enables binding a class with the respective channel it needs--an input and/or an output. The source class is used to register a Cloud Stream with one output channel.
  
- @EnableBinding(Processor.class): The EnableBinding annotation enables binding a class with the respective channel it needs--an input and/or an output. The Processor class is used to register a Cloud Stream with one input channel and one output channel.
- 
- @EnableBinding(Sink.class): The EnableBinding annotation enables binding a class with the respective channel it needs--an input and/or an output. The Sink class is used to register a Cloud Stream with one input channel.
- 
+ `@EnableBinding(Processor.class)`: The EnableBinding annotation enables binding a class with the respective channel it needs--an input and/or an output. The Processor class is used to register a Cloud Stream with one input channel and one output channel.
+```java
+@EnableBinding(Processor.class)
+public class CelsiusConverterProcessorConfiguration {
+
+    @Transformer(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT)
+    public int convertToCelsius(String payload) {
+        int fahrenheitTemperature = Integer.parseInt(payload);
+        return (farenheitTemperature-30)/2;
+    }
+}
+```
+There are two important spring annotations that we introduced in the above code. First we annotated the class with @EnableBinding(Processor.class). Second we created a method and annotated it with @Transformer(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT). By adding these two annotations we are basically classifying this stream app as a Processor(as opposed to a source or a sink). This allows us to specify that the application is receiving input from upstream(Processor.input) and send the output data downstream(Processor.OUTPUT).
+
+
+
+ `@EnableBinding(Sink.class)`: The EnableBinding annotation enables binding a class with the respective channel it needs--an input and/or an output. The Sink class is used to register a Cloud Stream with one input channel.
+ ```java
+ @EnableBinding(Sink.class)
+public class VoteHandler {
+
+  @Autowired
+  VotingService votingService;
+
+  @StreamListener(Sink.INPUT)
+  public void handle(Vote vote) {
+    votingService.record(vote);
+  }
+}
+```
+*consider an inbound Message that has a String payload and a contentType header of application/json. In the case of @StreamListener, the MessageConverter mechanism will use the contentType header to parse the String payload into a Vote object.*
+
+#### Sink with condition
+
+```java
+@EnableBinding(Sink.class)
+@EnableAutoConfiguration
+public static class TestPojoWithAnnotatedArguments {
+
+    @StreamListener(target = Sink.INPUT, condition = "headers['type']=='foo'")
+    public void receiveFoo(@Payload FooPojo fooPojo) {
+       // handle the message
+    }
+
+    @StreamListener(target = Sink.INPUT, condition = "headers['type']=='bar'")
+    public void receiveBar(@Payload BarPojo barPojo) {
+       // handle the message
+    }
+}
+```
+All the messages bearing a header type with the value foo will be dispatched to the receiveFoo method, and all the messages bearing a header type with the value bar will be dispatched to the receiveBar method.
+
  - The Source interface defines an output channel
  - Processor class extends the Source and Sink classes. Hence, it defines both the output and input channels
  
