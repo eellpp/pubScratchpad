@@ -1,6 +1,7 @@
 
 https://github.com/PacktPublishing/Mastering-Spring-5.0/tree/master/Chapter10
-use Spring Initializr (https://start.spring.io) to set up the application. 
+
+- use Spring Initializr (https://start.spring.io) to set up the application. 
 
 
 Building on top of other Spring Projects, such as Spring Cloud Stream, Spring Integration, and Spring Boot, Spring Data Flow makes it easy to define and scale use cases involving data and event flows using message-based integration.
