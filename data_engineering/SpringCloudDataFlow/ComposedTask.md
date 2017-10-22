@@ -1,6 +1,13 @@
 https://spring.io/blog/2017/04/20/spring-cloud-data-flow-1-2-rc1-released
 
+### Video Tutorial
+https://www.youtube.com/watch?v=KT_4kVcyfRA
+
 ## Composed Task Runner
+
+https://docs.spring.io/spring-cloud-dataflow/docs/current/reference/html/spring-cloud-dataflow-composed-tasks.html
+
+https://docs.spring.io/spring-cloud-dataflow/docs/current/reference/html/_composed_tasks_dsl.html
 
 https://github.com/spring-cloud-task-app-starters/composed-task-runner/blob/master/spring-cloud-starter-task-composedtaskrunner/README.adoc
 
