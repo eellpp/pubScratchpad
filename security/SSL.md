@@ -1,4 +1,4 @@
-## Self certification brief
+### Self certification brief
 Scenario: You are on the server doing an maven updated and it throws up certification erros for maven repo url 
 
 In this case, the easiest way is to 
@@ -7,6 +7,8 @@ In this case, the easiest way is to
 `keytool -import  -file maven-repo.crt -alias msven -keystore keystore.jks`
 - Pass these as jvm options when doing the maven connection
 `-Djavax.net.ssl.trustStore=keystore.jks -Djavax.net.ssl.trustStorePassword=x`
+
+Detailed overview in following sections.
 
 
 ## SSL over browser - overview
