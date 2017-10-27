@@ -1,3 +1,14 @@
+## Self certification brief
+Scenario: You are on the server doing an maven updated and it throws up certification erros for maven repo url 
+
+In this case, the easiest way is to 
+- On your client desktop, use the chrome browser to download the maven repo security certificate. As of now it is within the security tab under inspect element
+- Copy this .cer file on the server and generate a .jks file. 
+`keytool -import  -file maven-repo.crt -alias msven -keystore keystore.jks`
+- Pass these as jvm options when doing the maven connection
+`-Djavax.net.ssl.trustStore=keystore.jks -Djavax.net.ssl.trustStorePassword=x`
+
+
 ## SSL over browser - overview
 To operate correctly, SSL relies on a properly configured digital certificate, which the server passes to the browser when it tries to access a secure web page. Amongst other things, the certificate contains the “name” of the server for which the certificate has been issued, an encoded signature unique to the domain, the domain’s public key, and the validity period of the certificate itself. If the certificate has been digitally signed by a Certificate Authority (CA), it also contains the CA’s name and signature. In addition to establishing a relationship of trust, the certificate allows the server and browser to negotiate the encryption algorithm and encryption key used for the browsing session.
 
