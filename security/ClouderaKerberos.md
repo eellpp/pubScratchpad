@@ -10,6 +10,9 @@
 ## cloudera Quick Start VM kerberos
 http://blog.cloudera.com/blog/2015/03/how-to-quickly-configure-kerberos-for-your-apache-hadoop-cluster/
 
+Accessing VM from host: 
+https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/
+
 ## Cloudera Manager Kerberos
 https://www.youtube.com/watch?v=4TwU0LwDJAg
 
