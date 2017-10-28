@@ -7,6 +7,9 @@
 - RJAVA hive connect with kerberos
 - Spark connection with kerberos
 
+## cloudera Quick Start VM kerberos
+http://blog.cloudera.com/blog/2015/03/how-to-quickly-configure-kerberos-for-your-apache-hadoop-cluster/
+
 ## Cloudera Manager Kerberos
 https://www.youtube.com/watch?v=4TwU0LwDJAg
 
