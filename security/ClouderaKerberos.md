@@ -9,6 +9,8 @@
 
 ### Access Keberized service from Java program
 To access Hive in a Java program, a Kerberos login is needed. For a keytab login, call the Hadoop UserGroupInformation API in your Java program. For kinit login, run kinit with the client principal before you run the Java program.
+
+#### With Keytab
 ```java
 import org.apache.hadoop.security.UserGroupInformation;
 org.apache.hadoop.conf.Configuration conf = new     
@@ -18,6 +20,23 @@ UserGroupInformation.setConfiguration(conf);
 UserGroupInformation.loginUserFromKeytab("example_user@DOMAIN", "/path/to/example_user.keytab");
 String url =  "jdbc:hive2://hive2_host:10000/default;principal=hive/hive2_host@YOUR-REALM.COM"
 Connection con = DriverManager.getConnection(url);
+```
+
+#### Without Keytab
+```java
+public class RecordController {
+  private static String driverName = "org.apache.hive.jdbc.HiveDriver";
+
+  public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
+    Class.forName(driverName);
+    System.setProperty("javax.security.auth.useSubjectCredsOnly","false");
+    System.setProperty("java.security.krb5.conf","krb5.conf");
+
+    Connection con = DriverManager
+                         .getConnection("jdbc:hive2://host:port/arstel;" +
+                                          "principal=hive/host@DOMAIN;" +
+                                          "auth=kerberos;" +
+                                          "kerberosAuthType=fromSubject");
 ```
 
 export HADOOP_OPTS="-Dsun.security.krb5.debug=true"
