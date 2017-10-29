@@ -11,7 +11,8 @@ https://www2.cisl.ucar.edu/resources/storage-and-file-systems/hpss/kerberos-basi
 
 A high livel overview of what happens when user wants to authenticate to service, he 
 - contacts the `KDC AUTHENTICATING SERVER` for a TGT ticket which can be used in future to authenticate against multiple `services`. TGT is the ticket granting ticket. During the process of getting a ticket, the user sends messages encrypted with his passwords. Since `KDC AUTHENTICATOR` knows users password, it authenticates the `user` for TGT
-example of TGT ticket
+
+Example of TGT ticket
 ```bash
 shell% klist
 Ticket cache: /tmp/krb5cc_ttypa
