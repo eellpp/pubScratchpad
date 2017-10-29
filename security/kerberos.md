@@ -2,13 +2,22 @@
 ### Kerberos basics
 https://www2.cisl.ucar.edu/resources/storage-and-file-systems/hpss/kerberos-basics
 
-`KDC` - Kerberos ticket controller. The one who stores all the username and passwords
+`KDC` - Kerberos ticket controller. The one who stores all the username and passwords. It has two parts
+- KDC Authenticating Server
+- KDC Ticket Granting Server
 `Service` - A service which `user` wants to access
 
 A high livel overview of what happens when user wants to authenticate to service, he 
-- contacts the `KDC` for ticket to use the `service`. During the process of getting a ticket, the user sends messages encrypted with his passwords. Since `KDC` knows users password, it authenticates the `user`
-- `KDC` sends a ticket for the `service`, which is encrypted with the `service` password. At this stage, the `KDC` has ensured that the `user` is who they they are and are eligible to use the service.
-- `User` can't decryt this ticket, (since it is encypted with the services key). It then sends to ticket to the `service`. The `service` can decrypt this and allows the `user`.
+- contacts the `KDC AUTHENTICATING SERVER` for a TGT ticket which can be used in future to authenticate against multiple `services`. TGT is the ticket granting ticket. During the process of getting a ticket, the user sends messages encrypted with his passwords. Since `KDC AUTHENTICATOR` knows users password, it authenticates the `user` for TGT
+- To authenticate with service, the 'user' sends this TGT ticket along with the service name to `KDC Ticket Granting Server`. `KDC` now checks whether the service exists etc and if all ok, sends a ticket for the `service`, which is encrypted with the `service` password. At this stage, the `KDC` has ensured that the `user` is who they they are and are eligible to use the service.
+- `User` can't decryt this ticket, (since it is encypted with the `service` password). It then sends to ticket to the `service`. The `service` can decrypt this and allows the `user`.
+
+Note:
+- The services never stored user passwords etc !
+- Nobody sends passwords (encrypted or otherwise) while communicating !
+- The service never contacts the KDC to verify user credentials !
+
+Really cool !
 
 #### Video reference
 https://www.youtube.com/watch?v=kp5d8Yv3-0c
