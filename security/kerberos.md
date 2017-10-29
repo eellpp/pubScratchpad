@@ -3,6 +3,8 @@
 http://www.roguelynn.com/words/explain-like-im-5-kerberos/
 https://kb.iu.edu/d/acjj
 https://www2.cisl.ucar.edu/resources/storage-and-file-systems/hpss/kerberos-basics
+https://web.mit.edu/kerberos/krb5-devel/doc/admin/install_kdc.html
+
 
 `KDC` - Kerberos ticket controller. The one who stores all the username and passwords. It has two parts
 - KDC Authenticating Server
