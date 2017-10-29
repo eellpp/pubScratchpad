@@ -45,6 +45,21 @@ The kerberos KDC does not store your password, but a secret key. When you kinit 
 
 If you know your secret key, you can unencrypt the blob and use that to access other services.
 
+#### Creating Keytab on Windows/Linux
+http://www.itadmintools.com/2011/07/creating-kerberos-keytab-files.html
+
+```bash
+## Windows
+ktpass ﻿/princ username@MYDOMAIN.COM /pass password /ptype KRB5_NT_PRINCIPAL /out username.keytab
+
+# Ubuntu
+ktutil
+addent -password -p username@MYDOMAIN.COM -k 1 -e RC4-HMAC
+- enter password for username -
+wkt username.keytab
+q
+```
+
 ### Configuring Windows
 http://doc.mapr.com/display/MapR/Configuring+Kerberos+Authentication+for+Windows
 
