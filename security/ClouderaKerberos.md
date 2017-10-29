@@ -23,6 +23,9 @@ Connection con = DriverManager.getConnection(url);
 ```
 
 #### Without Keytab
+
+Have to do kinit on the shell before launching the java app
+
 ```java
 public class RecordController {
   private static String driverName = "org.apache.hive.jdbc.HiveDriver";
