@@ -1,5 +1,7 @@
 
-### Kerberos basics
+### Kerberos 
+http://www.roguelynn.com/words/explain-like-im-5-kerberos/
+https://kb.iu.edu/d/acjj
 https://www2.cisl.ucar.edu/resources/storage-and-file-systems/hpss/kerberos-basics
 
 `KDC` - Kerberos ticket controller. The one who stores all the username and passwords. It has two parts
@@ -22,14 +24,8 @@ Really cool !
 #### Video reference
 https://www.youtube.com/watch?v=kp5d8Yv3-0c
 
-
-### kerberos
-https://kb.iu.edu/d/acjj
-http://www.roguelynn.com/words/explain-like-im-5-kerberos/
-
 ### Keytab:
 https://kb.iu.edu/d/aumh
-
 
 A keytab used with kinit can be thought of as storing a password in a file. So when you kinit using a keytab, it uses the key in the keytab to decrypt the blob you get from KDC.
 
