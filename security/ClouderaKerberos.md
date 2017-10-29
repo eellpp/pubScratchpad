@@ -21,6 +21,9 @@ Connection con = DriverManager.getConnection(url);
 ```
 
 export HADOOP_OPTS="-Dsun.security.krb5.debug=true"
+export HADOOP_CLIENT_OPTS="-Dsun.security.jgss.debug=true;javax.security.auth.useSubjectCredsOnly=false;java.security.krb5.conf=/etc/krb5.conf"
+
+Caused by: org.ietf.jgss.GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
 
 ## cloudera Quick Start VM kerberos
 http://blog.cloudera.com/blog/2015/03/how-to-quickly-configure-kerberos-for-your-apache-hadoop-cluster/
