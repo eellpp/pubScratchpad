@@ -7,6 +7,9 @@
 - RJAVA hive connect with kerberos
 - Spark connection with kerberos
 
+### Access Keberized service from Java program
+To access Hive in a Java program, a Kerberos login is needed. For a keytab login, call the Hadoop UserGroupInformation API in your Java program. For kinit login, run kinit with the client principal before you run the Java program.
+
 ## cloudera Quick Start VM kerberos
 http://blog.cloudera.com/blog/2015/03/how-to-quickly-configure-kerberos-for-your-apache-hadoop-cluster/
 
