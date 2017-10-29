@@ -38,9 +38,12 @@ public class RecordController {
                                           "auth=kerberos;" +
                                           "kerberosAuthType=fromSubject");
 ```
-
+#### ENV and JVM parameters
+```bash
 export HADOOP_OPTS="-Dsun.security.krb5.debug=true"
-export HADOOP_CLIENT_OPTS="-Dsun.security.jgss.debug=true;javax.security.auth.useSubjectCredsOnly=false;java.security.krb5.conf=/etc/krb5.conf"
+export HADOOP_CLIENT_OPTS="-Dsun.security.jgss.debug=true;-Djavax.security.auth.useSubjectCredsOnly=false;-Djava.security.krb5.conf=/etc/krb5.conf"
+
+```
 
 Caused by: org.ietf.jgss.GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
 
