@@ -48,6 +48,10 @@ export HADOOP_CLIENT_OPTS="-Dsun.security.jgss.debug=true;-Djavax.security.auth.
 
 ```
 
+### Removing the 128-bit key restriction in Java (default is 128)
+https://stackoverflow.com/questions/11538746/check-for-jce-unlimited-strength-jurisdiction-policy-files
+https://www.javamex.com/tutorials/cryptography/unrestricted_policy_files.shtml
+
 Caused by: org.ietf.jgss.GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)
 
 ## cloudera Quick Start VM kerberos
