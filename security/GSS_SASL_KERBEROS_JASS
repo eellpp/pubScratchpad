@@ -1,9 +1,12 @@
 ## SASL, SSL, KERBEROS and JAAS
+Frameworks/API:
  - `SASL` is a framework, which allows authentication with multiple protocols like GSSAPI, Kerberos, NTLM, et
- - `SSL/TLS` is a communication protocol
- - `Kerberos`, which is an authentication protocol 
  - `JAAS` (Java Authentication and Authorization Service ) is a pluggable authentication framework for java. Kerberos authentication can be done with JAAS
  - `GSSAPI` is a generic programming interface for doing authentication, encryption, etc regardless of what protocol is used underneath. Eg: Kerberos
+ 
+ Protocols:
+ - `SSL/TLS` is a communication protocol
+ - `Kerberos`, which is an authentication protocol 
  
 #### When to use Java GSS-API vs. JSSE
  https://docs.oracle.com/javase/7/docs/technotes/guides/security/jgss/tutorials/JGSSvsJSSE.html
