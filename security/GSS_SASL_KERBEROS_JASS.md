@@ -42,3 +42,8 @@ JAAS authentication is performed in a pluggable fashion. This permits Java appli
 JAAS is similar to GSSAPI. It provides a single programming interface regardless of what authentication method is using. While GSSAPI is focusing on authentication and secured message exchange, JAAS is focusing on authentication and authorization. 
 #### Kerberos with JAAS tutorial
 https://docs.oracle.com/javase/7/docs/technotes/guides/security/jgss/tutorials/AcnOnly.html
+
+
+### SPNEGO 
+SPNEGO is a standard specification defined in The Simple and Protected GSS-API Negotiation Mechanism (IETF RFC 2478).
+Kerberos is a network authentication protocol for client/server applications, and SPNEGO provides a mechanism for extending Kerberos to Web applications through the standard HTTP protocol
