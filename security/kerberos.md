@@ -5,6 +5,7 @@ https://kb.iu.edu/d/acjj
 https://www2.cisl.ucar.edu/resources/storage-and-file-systems/hpss/kerberos-basics
 https://web.mit.edu/kerberos/krb5-devel/doc/admin/install_kdc.html
 
+Kerberos is composed of three parts: a client, a server, and a trusted third party known as the Kerberos Key Distribution Center (KDC). The KDC provides authentication and ticket granting services.
 
 `KDC` - Kerberos ticket controller. The one who stores all the username and passwords. It has two parts
 - KDC Authenticating Server
