@@ -38,8 +38,9 @@ Single Sign-on Using Kerberos in Java
 https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/single-signon.html
 
 #### Video reference
-(Fundamentals of Kerberos ) https://www.youtube.com/watch?v=XLBAhz735mg&t=1698s
-https://www.youtube.com/watch?v=kp5d8Yv3-0c
+- (Fundamentals of Kerberos ) https://www.youtube.com/watch?v=XLBAhz735mg&t=1698s
+- https://www.youtube.com/watch?v=kp5d8Yv3-0c
+- https://www.youtube.com/watch?v=hG-PotkV-5U
 
 ### Keytab:
 https://kb.iu.edu/d/aumh
