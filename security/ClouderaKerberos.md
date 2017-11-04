@@ -57,6 +57,31 @@ Caused by: org.ietf.jgss.GSSException: No valid credentials provided (Mechanism 
 ## cloudera Quick Start VM kerberos
 http://blog.cloudera.com/blog/2015/03/how-to-quickly-configure-kerberos-for-your-apache-hadoop-cluster/
 
+Kerberos Admin ID : cloudera-scm/admin@CLOUDERA
+
+Cloudera Manager passes configuration and those keytabs through the agent at startup of the CDH processes configured to run on that cluster server. The keytabs are pushed from a database to a runtime location at startup of services.
+ The path to keytab is /var/run/cloudera-scm-agent/process/  but this is ephemeral, next restart will have another location. 
+
+
+./bin/beeline -u "jdbc:hive2://quickstart.cloudera:10000/default;principal=hive/_HOST@CLOUDERA;auth=kerberos"
+
+### Kerberos user principals
+Kerberos user principals have 2 parts. Eg: myuser@COMPANY.COM
+
+### Kerberos service principals
+
+`nfs/server.example.com@EXAMPLE.COM`
+
+Let's analyze this principal name. The first component represents the service being used, in this case 'nfs' is used to represent a NFS server. Other well know service types are 'HTTP', 'DNS', 'host', 'cifs', etc... The second component is a DNS name. This is the server's own name. The realm specifies that this service is bound to the EXAMPLE.COM realm.
+
+In the beeline connect string you should always use the hive service principal for the HiveServer2 instance to which you are connecting. Another option is to use _HOST instead of the specific hostname, which will be expanded to the correct host.
+
+For example:
+```bash
+kinit myuser@COMPANY.COM
+beeline> !connect jdbc:hive2://somehost.company.com:10000/default;principal=hive/_HOST@COMPANY.COM
+```bash
+
 Accessing VM from host: 
 https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/
 
