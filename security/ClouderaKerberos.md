@@ -58,6 +58,33 @@ Caused by: org.ietf.jgss.GSSException: No valid credentials provided (Mechanism 
 http://blog.cloudera.com/blog/2015/03/how-to-quickly-configure-kerberos-for-your-apache-hadoop-cluster/
 
 Kerberos Admin ID : cloudera-scm/admin@CLOUDERA
+```bash
+[cloudera@quickstart ~]$ kadmin -p cloudera-scm/admin@CLOUDERA
+Authenticating as principal cloudera-scm/admin@CLOUDERA with password.
+Password for cloudera-scm/admin@CLOUDERA: 
+kadmin:  list_principals
+HTTP/quickstart.cloudera@CLOUDERA
+K/M@CLOUDERA
+cloudera-scm/admin@CLOUDERA
+cloudera@CLOUDERA
+hbase/quickstart.cloudera@CLOUDERA
+hdfs/quickstart.cloudera@CLOUDERA
+hdfs@CLOUDERA
+hive/quickstart.cloudera@CLOUDERA
+hue/quickstart.cloudera@CLOUDERA
+impala/quickstart.cloudera@CLOUDERA
+kadmin/admin@CLOUDERA
+kadmin/changepw@CLOUDERA
+kadmin/quickstart.cloudera@CLOUDERA
+krbtgt/CLOUDERA@CLOUDERA
+mapred/quickstart.cloudera@CLOUDERA
+oozie/quickstart.cloudera@CLOUDERA
+solr/quickstart.cloudera@CLOUDERA
+spark/quickstart.cloudera@CLOUDERA
+sqoop2/quickstart.cloudera@CLOUDERA
+yarn/quickstart.cloudera@CLOUDERA
+zookeeper/quickstart.cloudera@CLOUDERA
+```
 
 Cloudera Manager passes configuration and those keytabs through the agent at startup of the CDH processes configured to run on that cluster server. The keytabs are pushed from a database to a runtime location at startup of services.
  The path to keytab is /var/run/cloudera-scm-agent/process/  but this is ephemeral, next restart will have another location. 
