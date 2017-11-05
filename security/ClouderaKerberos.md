@@ -48,6 +48,10 @@ export HADOOP_CLIENT_OPTS="-Dsun.security.jgss.debug=true;-Djavax.security.auth.
 
 ```
 
+
+### Server debug logs
+You will be able to locate the kerberos debug message from HiveServer2’s process directory on the server host, which is located under /var/run/cloudera-scm-agent/process/XXX-hive-HIVESERVER2/logs/stdout.log, where XXX is the largest number under the directory for HiveServer2
+
 ### Removing the 128-bit key restriction in Java (default is 128)
 https://stackoverflow.com/questions/11538746/check-for-jce-unlimited-strength-jurisdiction-policy-files
 https://www.javamex.com/tutorials/cryptography/unrestricted_policy_files.shtml
