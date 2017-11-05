@@ -107,7 +107,29 @@ For example:
 ```bash
 kinit myuser@COMPANY.COM
 beeline> !connect jdbc:hive2://somehost.company.com:10000/default;principal=hive/_HOST@COMPANY.COM
+```
+
+### Java Hive JDBC with Kerberos
+kinit cloudera@CLOUDERA
+
+gss-jaas.conf
 ```bash
+com.sun.security.jgss.initiate {
+     com.sun.security.auth.module.Krb5LoginModule required
+     useKeyTab=false
+     useTicketCache=true
+     principal="cloudera@CLOUDERA"
+     debug=true;
+  };
+```
+The connection url is jdbc:hive2://quickstart.cloudera:10000/default;principal=hive/quickstart.cloudera@CLOUDERA
+
+run the jar
+```bash
+java -cp $HADOOP_CLASSPATH:out/artifacts/hiveJDBCWithKerberos_jar/hiveJDBCWithKerberos.jar hiveTest.HiveJDBC
+```
+
+
 
 Accessing VM from host: 
 https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/
@@ -118,3 +140,4 @@ https://www.youtube.com/watch?v=4TwU0LwDJAg
 ## Commands
 Video: Kerberize hadoop and hive
 https://www.youtube.com/watch?v=xzcLiN-X4Q4
+
