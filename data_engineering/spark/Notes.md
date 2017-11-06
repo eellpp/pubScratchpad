@@ -59,6 +59,16 @@ select dept,avg(age) from data group by dept
 RDD API's provide even more lower level operations.
 SQL provides a structured view of the data while limiting the operations over it. This limited set of operations allows optimizations to be built into it. 
 
+### Best practices
+https://www.gitbook.com/book/umbertogriffo/apache-spark-best-practices-and-tuning
+
+### Spark DO and Don't
+http://www.puroguramingu.com/2016/02/26/spark-dos-donts.html
+
+## spark partitioning
+https://www.dezyre.com/article/how-data-partitioning-in-spark-helps-achieve-more-parallelism/297
+you can always increase the number of partitions with rdd.coalesce(numParts, true)
+
 ### Catalyst : Spark SQL Optimizer
 https://www.slideshare.net/databricks/a-deep-dive-into-spark-sqls-catalyst-optimizer-with-yin-huai
 
