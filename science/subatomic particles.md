@@ -20,6 +20,4 @@ If space was filled with water, the neutrinos will pass 100 light years of it wi
 
 Neutrinos are massless and so feel no gravity force. They are neutral in charge so don't interact in the electromagnetic force. 
 
-http://www.physics.usyd.edu.au/hienergy/index.php/Why_neutrinos_%22go_through_anything_and_everything%22
-
 
