@@ -2,6 +2,8 @@
 
 Why leaf is green. Why glass is transparent and mirror is reflective.
 
+Light is part of electromagnetic spectrum. Electromagnetic spectrum is the Electric and magnetic field fluctuation that transmit energy from one point to another. It can also be thought as travelling in fixed packets called photons (Wave Particle duality). Electro magnetic fluctuations are at different frequencies like radio waves/ microwaves and light etc. 
+
 ### Absorption
 Light have different frequencies of photon. Free electrons in atoms of elements have specific vibration frequency. When photon of the matching frequency strikes the atom, the electrons vibrate in higher amplitude due to resonance. This cause heat energy and this heat is absorbed into the material. This material is totally dark.  
 - A leaf aborbs blue and red spectrum of light and reflects back the green. 
