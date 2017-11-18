@@ -25,3 +25,11 @@ I know that's not a path that'll work for everyone. But it's one path that leads
 
 
 https://news.ycombinator.com/item?id=15723772
+
+
+
+## Experimenting something new is rewarding
+Once in a while you need to do something new, like a random mutation it will open up new way of thinking
+> Put another way: Getting better at the craft of programming allows you to write programs faster and better. Specializing in new domains allows you to do things you couldn't otherwise. This is the realization that made me decide to stop learning new programming languages, and instead spend my time learning new domains - I realized that learning Haskell, while incredibly fun and rewarding to my abilities as a programmer, will not let me make fundamentally different things than with Python. Learning e.g. Deep Learning, however, would.
+
+https://news.ycombinator.com/item?id=15726371
