@@ -13,8 +13,8 @@ Are you sure about that? I mean sure, if we're talking someone who wants a deep 
 But there are plenty of "simpler" problems that one can work on, and plenty of more engineering-oriented problems that one can work on. Lots of companies just need to apply semi-standard techniques to problems that are specific to their business, and nothing more complicated or research-y.
 https://news.ycombinator.com/item?id=15723772
 
-## Generalist marketing specialist use case to mass market
-Specialist generally are do deep into a specific area to market their solution to mass market. The generalist can bridge that gap
+## A Generalist venturing into specialization should be applied specialist
+Specialist generally are do deep into a specific area to market their solution to mass market. The generalist can bridge that gap in applying the specialist solution (which may not be anything breakthrough) to mass market.
 
 >In the specific case of CV, a programmer looking to move into that area is probably doing themselves a disservice if they just apply for jobs that are actually looking to hire computer vision specialists.
 There are so, so many businesses out there that could benefit from CV, but they don't realize it. Maybe they're spending a ton of money on off the shelf OCR software that isn't great for their needs. Maybe they're spending a few hundred thousand dollars a year manually organizing and classifying documents when they could automate it.
