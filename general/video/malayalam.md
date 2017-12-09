@@ -4,6 +4,9 @@
 ### Writing Alphabets in Malayalam (swaraksharam)
 https://www.youtube.com/watch?v=6-sI_eHUnfM
 
+### Writing Alphabets in Malayalam (vyanjana aksharangal)
+https://www.youtube.com/watch?v=1TGyHZAc-HY
+
 ### Learn Two Letter Words in Malayalam 
 https://www.youtube.com/watch?v=hXq67kdzK84
 
