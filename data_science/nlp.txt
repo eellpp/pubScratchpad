@@ -24,3 +24,14 @@ Decision Trees
 CRF
 SVM
 MaxEnt
+
+
+Text Books NLP:
+
+Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit
+Foundations of Statistical Natural Language Processing
+Neural Network Methods in Natural Language Processing 
+Statistical Machine Translation
+
+Text Mining:
+Fundamentals of Predictive Text mining
