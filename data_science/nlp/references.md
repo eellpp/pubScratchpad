@@ -16,6 +16,10 @@ Published around 2000, this covers the essential basics of NLP challenges and ap
 
 Gives a general overall perspective of this domain. It does not go into the specifics of each algorithms, or tools and frameworks. This could be the introductory overview of the domain from where the reader can jump into the specific use case which may involve deeper understanding of the probalistics and ml computations maths and frameworks around that.
 
+## Video
+Lecture Collection | Natural Language Processing with Deep Learning (Winter 2017)
+[https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6]
+
 ## Algo
 
 ### Dynamic programming
