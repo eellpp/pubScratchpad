@@ -3,6 +3,7 @@
 - Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit
 
 - Foundations of Statistical Natural Language Processing
+
 Published around 2000, this covers the essential basics of NLP challenges and approaches. This is like a textbook, which you would refer time and again. But the modern practitioner would need to look into other resources for modern approaches, tools and frameworks.
 
 - Neural Network Methods in Natural Language Processing 
@@ -12,6 +13,7 @@ Published around 2000, this covers the essential basics of NLP challenges and ap
 - Taming Text
 
 - Fundamentals of Predictive Text mining
+
 Gives a general overall perspective of this domain. It does not go into the specifics of each algorithms, or tools and frameworks. This could be the introductory overview of the domain from where the reader can jump into the specific use case which may involve deeper understanding of the probalistics and ml computations maths and frameworks around that.
 
 ## Algo
