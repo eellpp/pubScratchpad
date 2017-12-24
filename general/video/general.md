@@ -1,7 +1,9 @@
 
 ## NonDuality and the Nature of the Self
 https://www.youtube.com/watch?v=usu_cLGXLg4
+https://www.youtube.com/watch?v=RFr_dqhSbOQ
 
+## paper folding
 https://www.vanessagould.com/between-the-folds
 
 ## Planet Ocean
