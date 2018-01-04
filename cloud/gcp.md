@@ -7,6 +7,8 @@ gcloud compute instances create test-instance
 gcloud compute ssh test-instance --zone=us-central1-a
 gcloud compute instances restart test-instance
 
+http://holowczak.com/getting-started-with-hive-on-google-cloud-dataproc/5/
+
 ### GsUtils
 https://cloud.google.com/storage/docs/gsutil
 
