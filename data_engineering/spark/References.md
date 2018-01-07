@@ -1,3 +1,11 @@
+#### Understanding your Apache Spark Application Through Visualization
+https://databricks.com/blog/2015/06/22/understanding-your-spark-application-through-visualization.html
+#### Spark Visualization UI
+https://www.youtube.com/watch?v=VQOKk9jJGcw&index=5&list=PL-x35fyliRwif48cPXQ1nFM85_7e200Jp
+
+#### Spark Internals
+https://www.youtube.com/watch?v=dmL0N3qfSc8&t=1159s
+
 https://www.gitbook.com/book/jaceklaskowski/mastering-apache-spark/details
 
 #### sparkSummit channel
