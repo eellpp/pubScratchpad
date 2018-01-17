@@ -31,7 +31,7 @@ Q: How does coalesce works in spark?
 - coalesce avoids a full shuffle. If it's known that the number is decreasing then the executor can safely keep data on the minimum number of partitions, only moving the data off the extra nodes, onto the nodes that we kept.
 
 So, it would go something like this:
-
+```bash
 Node 1 = 1,2,3
 Node 2 = 4,5,6
 Node 3 = 7,8,9
@@ -40,6 +40,7 @@ Then coalesce down to 2 partitions:
 
 Node 1 = 1,2,3 + (10,11,12)
 Node 3 = 7,8,9 + (4,5,6)
+```
 Notice that Node 1 and Node 3 did not require its original data to move.
 
 Q: If i partition by column and the column contains only one type, then on repartition how many paritions will be created by default in spark ?
