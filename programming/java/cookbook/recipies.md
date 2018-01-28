@@ -1,6 +1,6 @@
 
 ### Java data structures
-arrays, list, maps
+arrays, list, maps,set,queue
 - initialization
 - various implementations
 
