@@ -35,6 +35,12 @@ http://www.thedevpiece.com/design-patterns-that-every-developer-should-know/
 ### Threading
 - parallel processing and concurrancy
 
+## IO
+
+- Buffered Reader/Writer
+- scanner
+- inputStreamReader
+
 ### Reading and writing files
 
 ### Reading aand writing json
