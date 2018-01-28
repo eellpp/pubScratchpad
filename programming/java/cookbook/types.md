@@ -62,3 +62,17 @@ Is this the best we can do? No! We have forgotten that all values are 20 charact
 
 http://java-performance.info/overview-of-memory-saving-techniques-java/
 
+### Arrays
+```java
+int[] arr = new int[10]
+int[] arr2 = {1,2,3}
+int[] arr3 = new int[]{1,2,3}
+```
+
+java.util.Arrays contains the useful method
+- asList
+ List<int> list = Arrays.asList(1, 2, 3);
+- sort
+- equals
+- binarySearch
+  
