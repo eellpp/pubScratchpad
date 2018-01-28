@@ -69,10 +69,27 @@ int[] arr2 = {1,2,3}
 int[] arr3 = new int[]{1,2,3}
 ```
 
-java.util.Arrays contains the useful method
+#### java.util.Arrays contains the useful method
 - asList
+
  List<int> list = Arrays.asList(1, 2, 3);
+
+ArrayList internally is an array of objects of type with ability to grow. 
+An ArrayList extends AbstractList and implements four interfaces viz. List<E>, RandomAccess, Cloneable, java.io.Serializable.
+And it stores elements in an Object[] array as: private transient Object[] elementData;
+If you say: ArrayList arr=new ArrayList(); then by default it creates an ArrayList of size 10.
+There is a method private void grow(int minCapacity) which resizes the ArrayList
+
 - sort
 - equals
 - binarySearch
   
+#### ArrayList vs LinkedList
+LinkedList<E> allows for constant-time insertions or removals using iterators, but only sequential access of elements. 
+
+ArrayList<E>, on the other hand, allow fast random read access, so you can grab any element in constant time. But adding or removing from anywhere but the end requires shifting all the latter elements over, either to make an opening or fill the gap. Also, if you add more elements than the capacity of the underlying array, a new array (1.5 times the size) is allocated, and the old array is copied to the new one, so adding to an ArrayList is O(n) in the worst case but constant on average.
+ 
+ - The main benefits of using a LinkedList arise when you re-use existing iterators to insert and remove elements. These operations
+ can then be done in O(1) by changing the list locally only. In an array list, the remainder of the array needs to be moved (i.e. copied). 
+
+- Another benefit of using a LinkedList arise when you add or remove from the head of the list, since those operations are O(1), while they are O(n) for ArrayList
