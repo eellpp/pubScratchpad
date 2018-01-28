@@ -52,3 +52,4 @@ http://www.thedevpiece.com/design-patterns-that-every-developer-should-know/
 ### Reading csv files
 csv files into into objects
 
+### text formats : utf conversion
