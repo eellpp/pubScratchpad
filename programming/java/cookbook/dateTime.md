@@ -22,6 +22,13 @@ LocalDateTime month10 =LocalDateTime.now().withMonth(10);
 int dayOfMonth=LocalDate.now().getDayOfMonth();
 ```
 
+Timestamp
+
+```java
+Instant instant = Instant.now();
+long timeStampSeconds = instant.getEpochSecond();
+```
+
 #### Conversion to TimeZone with java8
 
 ```java
