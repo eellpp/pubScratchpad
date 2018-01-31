@@ -56,3 +56,11 @@ ZonedDateTime utcDate = dateAndTimeInSydney.withZoneSameInstant(ZoneOffset.UTC);
 System.out.println("Current date and time in UTC : " + utcDate);
 ```
 
+#### Does timestamp change across timezone
+Do UNIX timestamps change in each timezone?
+For example, if I sent a request to another email the other side of the world saying, "Send out an email when the time is 1397484936", would the other server's timestamp be 12 hours behind my own?
+
+Unix timestamps do not change accross timezones, they are created for the purpose of having a standard time across globe.
+The definition of UNIX timestamp is timezone independent. The timestamp is the number of seconds (or milliseconds) elapsed since an absolute point in time, midnight of Jan 1 1970 in UTC time. (UTC is Greenwich Mean Time without Daylight Savings time adjustments.) Regardless of your timezone, a timestamp represents a moment that is the same everywhere. Of course you can convert back and forth to a local timezone representation (time 1397484936 is such-and-such local time in New York, or some other local time in Djakarta) if you want.
+
+
