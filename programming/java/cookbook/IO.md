@@ -5,8 +5,14 @@
 
 Three kind of stream
 1) Byte Stream
+- FileInputStream
+- FileOutputStream
 2) Character Stream
+- FileReader and FileWriter
+- InputStreamReader and OutputStreamWriter
 3) Buffered Stream
+- BufferedInputStream and BufferedOutputStream (Byte)
+- BufferedReader and BufferedWriter (Character)
 
  ### Byte Stream 
  byte streams to perform input and output of 8-bit bytes
