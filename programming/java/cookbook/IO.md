@@ -14,6 +14,7 @@ Three kind of stream
 - BufferedInputStream and BufferedOutputStream (Byte)
 - BufferedReader and BufferedWriter (Character)
 
+The ones ending in Reader/Writer are character Streams (w/o buffered). The ones ending in Stream are byte stream (w/o buffered)
  ### Byte Stream 
  byte streams to perform input and output of 8-bit bytes
 
