@@ -47,6 +47,7 @@ Character streams are often "wrappers" for byte streams. The character stream us
 #### InputStreamReader and OuputStreamWriter
 There are two general-purpose byte-to-character "bridge" streams: `InputStreamReader` and `OutputStreamWriter`. Use them to create character streams when there are no prepackaged character stream classes that meet your needs. 
 
+
 ### Buffered Stream
 Byte and Character stream are unbuffered IO.This means each read or write request is handled directly by the underlying OS. This can make a program much less efficient, since each such request often triggers disk access, network activity, or some other operation that is relatively expensive.
 
@@ -89,6 +90,16 @@ A Scanner breaks its input into tokens using a delimiter pattern, which by defau
 Scanner sc = new Scanner(file);
 Scanner sc = new Scanner(file).useDelimiter("\\s"); // to split text to words
 ```
+
+
+### FileWriter vs OutputStreamWriter
+
+```java
+Writer writer = new FileWriter("test.txt");
+Writer writer = new OutputStreamWriter(new FileOutputStream("test.txt"));
+```
+FileWriter is convinience. File writer writes in default characterset. The recommended way is to use the OutpuStreamWriter with proper character encoding.
+
 
 
 
