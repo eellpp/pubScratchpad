@@ -67,3 +67,28 @@ There are four buffered stream classes used to wrap unbuffered streams:
 
 
 ### Reading and Writing files
+- FileReader
+- BufferedReader
+- Scanner
+
+```java
+BufferedReader reader = Files.newBufferedReader(Paths.get("filepath"), Charset.forName("UTF-8")) // NIO api
+List contents = Files.readAllLines(Paths.get("filepath")); // NIO api
+Files.lines(Paths.get("filepath")).forEach(System.out::println);//print each line in java8 stream
+
+File file = new File("filename.txt");
+BufferedReader br = new BufferedReader(new FileReader(file)); // from char stream
+BufferedReader br = new BufferedReader(new InputStreamReader(file)); // from char Stream
+BufferedReader br = new BufferedReader(new FileInputStream(file)); // from byte stream 
+```
+
+ A simple text scanner which can parse primitive types and strings using regular expressions.
+A Scanner breaks its input into tokens using a delimiter pattern, which by default matches whitespace. The resulting tokens may then be converted into values of different types using the various next methods.
+
+```java
+Scanner sc = new Scanner(file);
+Scanner sc = new Scanner(file).useDelimiter("\\s"); // to split text to words
+```
+
+
+
