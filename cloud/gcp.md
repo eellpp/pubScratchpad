@@ -1,8 +1,31 @@
 
+### Cluster creation
+gcloud dataproc clusters create <CLUSTER_NAME> \
+    --num-masters 1 \
+    --zone us-central1-a \
+    --master-machine-type n1-standard-4 \
+    --master-boot-disk-size 50 \
+    --num-workers 3 \
+    --worker-machine-type n1-standard-4 \
+    --worker-boot-disk-size 50 \
+    --image-version preview \
+    --initialization-actions gs://dataproc-initialization-actions/kafka/kafka.sh
+
+- num-masters 3 is for HA mode . For standard mode we can use 1
+- default master/worker machine type n1-standard-4 , which is 4 core 15 GB memory (~ 0.19 per hour)
+
+
+### Access from local machine
+eg: cp file to bucket
+
+gsutil cp source gs://my_bucket
+
+
+
 gsutils ls <bucket path>
 gsutil ls gs://dataproc-initialization-actions
 
-## useful commands
+### useful commands
 
 ```bash
 get the <username>@<master name> by logging into the master node from the virtual instances table in clusters page 
