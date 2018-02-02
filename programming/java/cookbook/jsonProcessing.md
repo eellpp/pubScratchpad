@@ -28,4 +28,20 @@ mapper.writeValue(new File("c:\\file.json"), new Staff("john",22)); // to file
 ```
 
 ### GSON
+```java
+// json serde of object
+Gson gson = new Gson(); // Or use new GsonBuilder().create();
+ MyType target = new MyType();
+ String json = gson.toJson(target); // serializes target to Json
+ MyType target2 = gson.fromJson(json, MyType.class); // deserializes json into target2
+ 
+ // json serde of list of objects
+ Type listType = new TypeToken<List<String>>() {}.getType();
+ List<String> target = new LinkedList<String>();
+ target.add("blah");
 
+ Gson gson = new Gson();
+ String json = gson.toJson(target, listType);
+ List<String> target2 = gson.fromJson(json, listType);
+ ```
+ 
