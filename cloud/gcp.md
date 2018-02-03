@@ -14,6 +14,8 @@ gcloud dataproc clusters create <CLUSTER_NAME> \
 - num-masters 3 is for HA mode . For standard mode we can use 1
 - default master/worker machine type n1-standard-4 , which is 4 core 15 GB memory (~ 0.19 per hour)
 
+gcloud dataproc clusters delete NAME
+
 
 ### Access from local machine
 eg: cp file to bucket
