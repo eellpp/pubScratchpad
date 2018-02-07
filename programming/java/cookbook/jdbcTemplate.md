@@ -30,6 +30,26 @@ public T mapRow(ResultSet rs, int index) {
 }
 ```
 ### RowCallbackHandler vs RowMapper
+
+`RowCallbackHandler` 
+This is an interface with the method 
+```java
+void processRow(java.sql.ResultSet rs)throws java.sql.SQLException
+```
+Note that it returns void. It is left to the implementation to extract value out of row.
+
+> Implementations must implement this method to process each row of data in the ResultSet. This method should not call next() on the ResultSet; it is only supposed to extract values of the current row. Exactly what the implementation chooses to do is up to it: A trivial implementation might simply count rows, while another implementation might build an XML document.
+
+`RowMapper`
+This interface has the method
+
+```java
+T mapRow(java.sql.ResultSet rs, int rowNum) throws java.sql.SQLException
+```
+Note that it returns object of type T
+> Implementations must implement this method to map each row of data in the ResultSet. This method should not call next() on the ResultSet; it is only supposed to map values of the current row.
+
+### Fetching big data
 The Oracle JDBC driver has proper support for the setFetchSize() method on java.sql.Statement, which allows you to control how many rows the driver will fetch in one go.
 
 However, RowMapper as used by Spring works by reading each row into memory, getting the RowMapper to translate it into an object, and storing each row's object in one big list. If your result set is huge, then this list will get big, regardless of how JDBC fetches the row data.
