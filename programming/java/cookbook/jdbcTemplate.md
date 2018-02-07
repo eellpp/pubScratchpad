@@ -73,4 +73,28 @@ public void readMillionsOfRows() {
 }
 ```
 
+### Serializing and compressing objects in big hash map
+
+If you want to compress instances of MyObject you could have it implement Serializable and then stream the objects into a compressed byte array, like so:
+```java
+ByteArrayOutputStream baos = new ByteArrayOutputStream();
+GZIPOutputStream gzipOut = new GZIPOutputStream(baos);
+ObjectOutputStream objectOut = new ObjectOutputStream(gzipOut);
+objectOut.writeObject(myObj1);
+objectOut.writeObject(myObj2);
+objectOut.close();
+byte[] bytes = baos.toByteArray();
+Then to uncompress your byte[] back into the objects:
+
+ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
+GZIPInputStream gzipIn = new GZIPInputStream(bais);
+ObjectInputStream objectIn = new ObjectInputStream(gzipIn);
+MyObject myObj1 = (MyObject) objectIn.readObject();
+MyObject myObj2 = (MyObject) objectIn.readObject();
+objectIn.close();
+```
+
+### Using Trove for optimized hash map
+
+The Trove library has optimized HashMap and HashSet classes for primitives
  
