@@ -1,0 +1,31 @@
+
+### Using setFetchSize for fetching large number of rows
+
+Most of the JDBC drivers’ default fetch size is 10. In normal JDBC programming if you want to retrieve 1000 rows it requires 100 network round trips between your application and database server to transfer all data. Definitely this will impact your application response time. The reason is JDBC drivers are designed to fetch small number of rows from database to avoid any out of memory issues. For example if your query retrieves 1 million rows, the JVM heap memory may not be good enough to hold that large amount of data hence JDBC drivers are designed to retrieve small number (10 rows) of rows at a time that way it can support any number of rows as long as you have better design to handle large row set at your application coding. If you configure fetch size as 100, number of network trips to database will become 10. This will dramatically improve performance of your application.
+
+By default, when Oracle JDBC executes a query, it receives the result set 10 rows at a time from the database cursor. 
+
+Fetch size is also used in a result set. When the statement object executes a query, the fetch size of the statement object is passed to the result set object produced by the query. However, you can also set the fetch size in the result set object to override the statement fetch size that was passed to it. 
+
+### Dynamically changing the fetchsize inside the rowmapper
+```java
+public T mapRow(ResultSet rs, int index) {
+    T dto = null;
+
+    if (index == 0) {
+        setFetchSize(rs, 50);
+    } else if (index == 50) {
+        setFetchSize(rs, 500);
+    } else if (index == 1000) {
+        setFetchSize(rs, 1000);
+    }
+
+    try {
+        dto = mapRowToDto(rs, index);
+    } catch (SQLException e) {
+        throw new RuntimeException(e.getMessage(), e);
+    }
+
+    return dto;
+}
+```
