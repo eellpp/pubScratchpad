@@ -29,3 +29,28 @@ public T mapRow(ResultSet rs, int index) {
     return dto;
 }
 ```
+### RowCallbackHandler vs RowMapper
+The Oracle JDBC driver has proper support for the setFetchSize() method on java.sql.Statement, which allows you to control how many rows the driver will fetch in one go.
+
+However, RowMapper as used by Spring works by reading each row into memory, getting the RowMapper to translate it into an object, and storing each row's object in one big list. If your result set is huge, then this list will get big, regardless of how JDBC fetches the row data.
+
+If you need to handle large result sets, then RowMapper isn't scaleable. You might consider using RowCallbackHandler instead, along with the corresponding methods on JdbcTemplate. RowCallbackHandler doesn't dictate how the results are stored, leaving it up to you to store them.
+
+```java
+final int[] bigArray = new int[8];
+public void readMillionsOfRows() {
+    String sql= "SELECT col1,col2 from MY_BIG_TABLE";
+    jdbc().query(sql, new RowCallbackHandler(){
+        public void processRow(ResultSet rs) throws SQLException {
+            int index = rs.getInt("COL1");
+            int value = rs.getInt("COL2");
+          
+            bigArray[index] = value;
+            
+        }
+        
+    });
+}
+```
+
+ 
