@@ -1,4 +1,20 @@
 
+
+Create a demo project and public to github
+
+http://www.technicalkeeda.com/spring-tutorials/spring-4-jdbctemplate-annotation-example
+
+### Increasing the JVM Heap size
+The first option in handling large number of rows is to increase the JVM heap. 
+
+-Xmx
+
+Find out the default heap size
+- java -XX:+PrintFlagsFinal -version | grep HeapSize
+
+Often its default value is 1/4th of your physical memory or 1GB (whichever is smaller).
+
+
 ### Using setFetchSize for fetching large number of rows
 
 Most of the JDBC drivers’ default fetch size is 10. In normal JDBC programming if you want to retrieve 1000 rows it requires 100 network round trips between your application and database server to transfer all data. Definitely this will impact your application response time. The reason is JDBC drivers are designed to fetch small number of rows from database to avoid any out of memory issues. For example if your query retrieves 1 million rows, the JVM heap memory may not be good enough to hold that large amount of data hence JDBC drivers are designed to retrieve small number (10 rows) of rows at a time that way it can support any number of rows as long as you have better design to handle large row set at your application coding. If you configure fetch size as 100, number of network trips to database will become 10. This will dramatically improve performance of your application.
