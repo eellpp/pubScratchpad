@@ -8,6 +8,8 @@ export spring_profiles_active=dev
 
 We can also set the default profile when no other profile is set by setting `spring.profiles.default`
 
+On local machine these can be manually setup as above. In the production, it could be part of the OS environment variables or the startup script which decides the spring profile based on some variable like 'box_type' which can be PROD|UAT|DEV
+
 ### Profile specific properties file
  profile specific properties file should be named as `applications-{profile}.properties`.
  
