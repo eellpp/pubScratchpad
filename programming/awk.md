@@ -20,7 +20,14 @@ awk '$2 == "foo" print ' filename.txt
 ## when line number is 12
 awk 'NR==12 print' filename.txt
 
+# prints Hello Adam . the second command prints the entire line
+echo "Hello Tom" | awk '{$2="Adam"; print $0}'
+
+
 ```
+https://likegeeks.com/awk-command/
+
+https://www.shortcutfoo.com/app/dojos/awk/cheatsheet
 
 ## Basics I
 - $1 Reference first column
