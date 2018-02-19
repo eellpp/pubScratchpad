@@ -65,3 +65,15 @@ Apart from the fact that it is used to indicate that it's holding the business l
 What else?
 
 Similar to above, in future Spring may choose to add special functionalities for @Service, @Controller and @Repository based on their layering conventions. Hence its always a good idea to respect the convention and use them in line with layers.
+
+### @PostConstruct
+A method annotated by @PostConstruct is run just after all services initialized.
+
+```java
+ @PostConstruct
+  public void init(){
+     // init code goes here
+  }
+  ```
+  
+  
