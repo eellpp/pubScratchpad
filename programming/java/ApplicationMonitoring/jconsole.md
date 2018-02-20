@@ -28,3 +28,6 @@ Get overview about the system etc
 
 ### MBeans
 beans for monitoring via JMX
+
+
+Since Jconsole may itself consume resources, it is recommended to use jconsole remotely.
