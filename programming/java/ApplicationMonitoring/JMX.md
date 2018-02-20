@@ -27,3 +27,4 @@ https://github.com/jmxtrans/jmxtrans/wiki
 > The thought is that you use jmxtrans to continuously monitor services which expose statistics via jmx. You use jmxtrans to 'transform' data from jmx to whatever output format you want. Generally, devops people want to integrate their JVMs with some sort of monitoring solution like Graphite/Ganglia so I provided output writers for those tools.
 
 > jmxtrans is also very smart about how it does queries against jmx servers and there is a bit of optimization in there for that. There is also a lot of work to allow you to do things like parallelize requests to many servers to enable to you scale jmxtrans to continuously query hundreds of servers with a single jmxtrans instance.
+
