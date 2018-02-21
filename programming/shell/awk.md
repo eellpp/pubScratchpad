@@ -1,4 +1,7 @@
 
+https://www.gnu.org/software/gawk/manual/gawk.pdf
+
+
 ```bash
 # prints all the line
 awk '{ print }' filename.txt
