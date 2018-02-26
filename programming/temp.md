@@ -1,3 +1,5 @@
+
+```bash
 import urllib2
 from time import gmtime, strftime
 import time
@@ -13,3 +15,4 @@ def check():
 while(1):
         time.sleep(5)
         check()
+```
