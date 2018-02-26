@@ -1,3 +1,5 @@
+http://www.baeldung.com/java-hazelcast
+
 Hazelcast is an open source in-memory data grid based on Java.In a Hazelcast grid, data is evenly distributed among the nodes of a computer cluster, allowing for horizontal scaling of processing and available storage.
 
 https://hazelcast.org/mastering-hazelcast/#online-book-resources
