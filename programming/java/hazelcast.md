@@ -125,3 +125,33 @@ https://blog.hazelcast.com/in-memory-format/
 When using partition group, the partition backup is held at group level and not node level. So each group will have backup of partition.
 
 ### Split brain merge policy on network failure
+
+Different merge policies determine the merge when separate networks come back after disconnect.
+
+LatestUpdateMapMergePolicy is most useful as it merges based on which is most recently updated or created.
+
+```java
+<hazelcast>
+  <map name="default">
+    <merge-policy>
+      com.hazelcast.map.merge.LatestUpdateMapMergePolicy
+    </merge-policy>
+  </map>
+</hazelcast>
+```
+
+### Cluster Quorum
+This allows us to define a set of health rules around individual maps or the cluster as a whole, with Hazelcast preventing access to our data (either read, write, or both) should this health rule be violated. Eg we should atleast have tow nodes in cluster.
+
+```bash
+<hazelcast>
+  <quorum name="requireAtLeastTwoNodes" enabled="true">
+    <quorum-size>2</quorum-size>
+    <quorum-type>WRITE</quorum-type>
+  </quorum>
+
+  <map name="default">
+    <quorum-name>requireAtLeastTwoNodes</quorum-name>
+  </map>
+</hazelcast>
+```
