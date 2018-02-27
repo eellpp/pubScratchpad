@@ -47,5 +47,81 @@ https://blog.hazelcast.com/in-memory-format/
  3. CACHED: this is a combination BINARY and OBJECT: the value always is stored in serialized form, but when it is needed, it cached in object form, so it doesn’t need to be deserialized when the object form is needed again. 
  combines the advantages of the BINARY and OBJECT format, but it uses more memory since the value is potentially stored in 2 formats instead of 1.
  
+ ### Partition
+ 
+ `hazelcast.map.partition.count` configuration property is used to setup the count.
+ 
+ Data is broken down into partition for resilience. By default there are 271 partition within a cluster. It is partitioned by key.
+ 
+ Each partitioned is backed up by another node other than the owner. When a node goes down, the ownership of any of the partition owned by the defunct node will be migrated to one of the backups. Morever the data will be migrated to another backup node so as to have same resilience.
+ 
+ ```java
+ <hazelcast>
+
+  <map name="default">
+    <backup-count>1</backup-count>
+    <async-backup-count>1</async-backup-count>
+    <read-backup-data>false</read-backup-data>
+  </map>
+
+  <map name="capitals">
+    <backup-count>2</backup-count>
+    <async-backup-count>1</async-backup-count>
+    <read-backup-data>true</read-backup-data>
+  </map>
+
+  <map name="countries.*">
+    <backup-count>1</backup-count>
+    <async-backup-count>1</async-backup-count>
+    <read-backup-data>false</read-backup-data>
+  </map>
+
+</hazelcast>
+ ```
+ 
+ - backup-count  : This is the sync backup count
+ - async-backup-count : This is async which does not block on put, delete operation
+ 
+ total number of copies = 1 (owner) + backup-count + aysnc-backup-count
+ 
+ - read-backup-data : For using this, the async-backup should be 0 else we may be reading data from backup partition which may be still be modified
+ 
+ ### Fair share of load across nodes
+ A cluster of four nodes with 4 million object will have each node have 1 million owned object and 1 million backup
  
  
+ ### Partition grouping
+ Hazelcast considers each instance as a separate node. If there are 4 instances within a single machine they share the same risk of hadrware going down. 
+
+- The default group type is  `group-type="PER_MEMBER" ` 
+- HOST_AWARE : This group type makes the instances sharing the same IP address or interface be part of same group
+- CUSTOM : manual configuration
+
+```bash
+<hazelcast>
+  <partition-group enabled="true" group-type="HOST_AWARE" />
+</hazelcast>
+
+<hazelcast>
+  <partition-group enabled="true" group-type="CUSTOM">
+
+    <member-group>
+      <interface>10.0.1.*</interface>
+      <interface>10.0.2.1-127</interface>
+    </member-group>
+
+    <member-group>
+      <interface>10.0.2.128-254</interface>
+      <interface>10.0.3.*</interface>
+    </member-group>
+
+    <member-group>
+      <interface>10.0.4.*</interface>
+    </member-group>
+
+  </partition-group>
+</hazelcast>
+```
+When using partition group, the partition backup is held at group level and not node level. So each group will have backup of partition.
+
+### Split brain merge policy on network failure
