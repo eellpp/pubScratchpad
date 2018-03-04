@@ -95,6 +95,8 @@ https://blog.hazelcast.com/in-memory-format/
 
 - The default group type is  `group-type="PER_MEMBER" ` 
 - HOST_AWARE : This group type makes the instances sharing the same IP address or interface be part of same group
+-- http://docs.hazelcast.org/docs/3.9.3/manual/html-single/index.html#grouping-types
+ if there are multiple network interfaces or domain names per physical machine, that will make this assumption invalid.
 - CUSTOM : manual configuration
 
 ```bash
