@@ -23,3 +23,6 @@ If you’re on a tracking branch and type git pull, Git automatically knows whic
 
 ### Setting upstream
 
+### general
+- git branch featureA  ## will create featureA branch but still would be master. Future commits still on master
+- git checkout -b featureA ## will create featureA and would checkout the featureA. Future commits on this branch
