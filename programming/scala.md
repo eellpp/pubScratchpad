@@ -436,20 +436,22 @@ scala> t.get("k1").toString.length
 res7: Int = 8
 ```
 
-Convert scala list to java list
+#### Convert scala list to java list
 
 Scala list and java list are not compatible. When interfacing with java libarary you have to convert it from one form to another
+```java
 def toJavaList(scalaList: List[BasicNameValuePair]) = { 
 java.util.Arrays.asList(scalaList.toArray:_*)					
 } 
+```
 _* is required to get all all the values of the list
 
 Use require inside class to enforce 
 
 require(args.size >= 2, "at minimum you should specify action(post, get, delete, options) and url")
 
-Convert tuple to map key and value
-
+#### Convert tuple to map key and value
+```java
 scala> val t = (("k1","v1") , ("k2","v2"))
 t: ((String, String), (String, String)) = ((k1,v1),(k2,v2))
 
@@ -458,9 +460,10 @@ t: scala.collection.immutable.Map[String,String] = Map(k1 -> v1, k2 -> v2)
 
 scala> t("k1")
 res3: String = v1
+```
 ----
 
-Exists
+#### Exists
 // checks if string has upper case characters
 name.exists(_.isUpper)
 "asdf".contains("k")
@@ -469,10 +472,10 @@ name.exists(_.isUpper)
 
 ----
 
-Type of constructors
+#### Type of constructors
 
-primary constructor : the class body is primary constructor
-
+`primary constructor` : the class body is primary constructor
+```java
 class Greeter(var message: String) {
     println("A greeter is being instantiated")    
     message = "I was asked to say " + message
@@ -480,9 +483,10 @@ class Greeter(var message: String) {
 }
 val greeter = new Greeter("Hello world!")
 greeter.SayHi()
+```
+#### auxiliary constructor: 
 
-auxiliary constructor: 
-
+```java
 class Greeter(message: String, secondaryMessage: String) {
     def this(message: String) = this(message, "")    
     def SayHi() = println(message + secondaryMessage)
@@ -490,51 +494,57 @@ class Greeter(message: String, secondaryMessage: String) {
 
 val greeter = new Greeter("Hello world!")
 greeter.SayHi()
+```
 
 
-
-Slice
-
-Slice :use c slice(from, to)
+#### Slice
+```java
+//Slice :use c slice(from, to)
 scala> Vector("hello", "world", "this", "is", "was") slice(2,5)
 res38: scala.collection.immutable.Vector[String] = Vector(this, is, was)
+```
 
-
-Zip
+#### Zip
+```java
 List(1,2,3) zip List("one","two","three")
 res36: List[(Int, String)] = List((1,one), (2,two), (3,three))
+```
 
-
-dropWhile and takeWhile
+#### dropWhile and takeWhile
 Use dropWhile and takeWhile when you want to longest seqeunce from start when the predicate is true
+```java
 scala> Vector(1, 2, 3, 4, 5, 6) dropWhile { _ < 4}
 res31: scala.collection.immutable.Vector[Int] = Vector(4, 5, 6)
 
 scala> Vector(1, 2, 3, 4, 5, 6) takeWhile { _ < 4}
 res32: scala.collection.immutable.Vector[Int] = Vector(1, 2, 3)
+```
 
-collect
+#### collect
 collect is used with partial functions as
+```java
 List("hello","World",42) collect { case s:String => s}
 // A instance of Seq, Set or Map is actually a partial function. So,
 Seq(0,2,45) collect List("hello","World",42)
+```
 
-
-predicate
+### predicate
 A predicate is a anonymous function that takes one or more arguments and returns boolean
+```java
 filter(predicate)
 eg: List(1,2,3,4).filter(p => p % 2 == 0)
 or  List(1,2,3,4).filter(_ % 2 == 0)
+```
 
-
-Mutable Hashmap
+#### Mutable Hashmap
 For dictionary use the mutable HashMap
 collection.mutable.Map[String, String]
 
 
-flatMap
+#### flatMap
 flatMap, applies the map operation then the flattens the list of list
 eg: scala map treats the string as array of characters
+```java
 scala> "hello".map(x => "." + x)
 res90: scala.collection.immutable.IndexedSeq[String] = Vector(.h, .e, .l, .l, .o)
 
@@ -546,23 +556,28 @@ res100: String = .h.e.l.l.o
 
 scala> "hello".map(x => "." + x).toList.mkString
 res94: String = .h.e.l.l.o
+```
 ...
 
+### for and foreach
+```java
 for(x <- t if x != "a") yield x
 t.filter(x => x != "a").foreach(println)
+```
 
+#### Array To List
 
-Array To List
 a.toList
 
-Count (based on predicate)
+####  Count (based on predicate)
 Array(1,2,3,4,5,6).count(x =>  x > 3)
 
-Exists (based on predicate)
+#### Exists (based on predicate)
 Array(1,2,3,4,5,6).exists(x => x == 3)
 ...
 
-Scala Different way of defining an anonymous function
+#### Scala Different way of defining an anonymous function
+```java
 val t : Int => Boolean = (x :Int) => x > 5
 val t1 = (x :Int) => { x > 5} :Boolean
 
@@ -576,9 +591,11 @@ val t3 = new Function1[Int,Boolean] {
 val t4 = new {
   def apply(x :Int) : Boolean = x > 5
 }
+```
 ...
 
-Scala functions as arguments
+#### Scala functions as arguments
+```java
 val t : Int => Boolean = (x :Int) => x > 5
 def someFunc(predicate:Int => Boolean, x :List[Int]){
   x.filter(t => predicate(t)).foreach(println)
@@ -591,9 +608,10 @@ def someFunc2(predicate:(Int,Int) => Boolean, x :List[Tuple2[Int,Int]]){
   x.filter(t => predicate(t._1,t._2)).foreach(println)
 }
 someFunc2(t5,List((1,2),(5,4),(9,3)))
+```
 
-
-Functions vs Method
+#### Functions vs Method
+```java
 //method
 def m(i :Int) = i*i
 // function
@@ -605,15 +623,15 @@ p
 // res2: Int => Int = <function1>
 // method can be converted to function
 val t = m _
+```
 
-
-Scala curry functions
+#### Scala curry functions
 def curryFunc(a:Int)(b:Int) = a + b
 var t1 = curryFunc(5) _
 t1(2)
 
 
-Scala multiple parameters per list
+#### Scala multiple parameters per list
 
 def multipleParametersPerList(num : Int*) = num.sum
 multipleParametersPerList(1,2,3) // will give 6
@@ -631,7 +649,7 @@ val t = for(i <- List(1,3,5) if i < 5) yield i
 List(1,2,3).foreach(i => println(i*2))
 
 
-Function Literals
+#### Function Literals
 class person(name :String) {def introduce = println(s" my name is $name")}
 object person{def apply(name : String) = new person(name)}
 var t = List[person](person("john"),person("lee"),person("kim"))
