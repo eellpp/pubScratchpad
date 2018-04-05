@@ -1,3 +1,4 @@
+#### References
 
 Programming in Scala - 1'st Edition online reading
 http://www.artima.com/pins1ed/
@@ -22,8 +23,8 @@ http://www.codecommit.com/blog/scala/scala-for-java-refugees-part-6
 IBM: Java Develoer Guide to Scala
 https://www.ibm.com/developerworks/views/java/libraryview.jsp?search_by=scala+neward
 
-
-Instead of declaring something as int, in Scala it’s declared as Int.
+#### Types
+Instead of declaring as int, in Scala it’s declared as Int.
 
 > val decimal = 11235
 > val long = 11235L
@@ -36,47 +37,54 @@ scala> val multiLine = """This is a
 | multi line
 | string"""
 
-Val vs Var
+#### Val vs Var
 A val is a single assignment variable, some- times called value. Once initialized a val can’t be changed or reassigned to some other value (similar to final variables in Java). On the other hand, var is reassignable;
 
-Lazy evaluation of variables
+#### Lazy evaluation of variables
 scala> lazy val b = a + 1
 The lazy keyword is allowed only with val; you can’t declare lazy var variables in Scala.
 
 
-
-
-Scala uses = for type inference
+#### Scala uses = for type inference
+```java
 scala> def myFirstMethod() = { "exciting times ahead" }
 myFirstMethod: ()java.lang.String
 scala> myFirstMethod()
 res6: java.lang.String = exciting times ahead
+```
 The significance of = after the method signature isn’t only to separate the signature from the method body but also to tell the Scala compiler to infer the return type of your function. If you omit that, Scala won’t infer your return type:
+```java
 scala> def myFirstMethod(){ "exciting times ahead" }
 myFirstMethod: ()Unit
 scala> myFirstMethod()
+```
 In this case when you invoke the function using the function name and (), you’ll get no result. In the REPL output, notice that the return type of your function is no longer java.lang.String; it’s Unit. Unit in Scala is like void in Java, and it means that the method doesn’t return anything.
---
+
 Other valid ways of function calls :
+```java
 scala> def myFirstMethod = "exciting times ahead"
 scala> myFirstMethod
 scala> def max(a: Int, b: Int) = if(a > b) a else b
+```
 
---
-Generics Or Parameterized types
+#### Generics Or Parameterized types
 eg: create list of type
+```java
 scala> def toList[A](value:A) = List(value)
---
-Adding Numbers in a list
+```
 
+#### Adding Numbers in a list
+'''java
 val evenNumbers :List[Int] = List(2,4,6,7,8)
 val sum = evenNumbers.foldLeft(0) { (a :int, b :int) => a + b}
 scala> val sum = evenNumbers.foldLeft(0) { (a, b ) => a + b}
 scala> val sum = evenNumbers.foldLeft(0) { _ + _}
+'''
 In Scala you can use underscores in various places, and their meaning is determined solely by the context and where they’re used.
 . Function literals are a common idiom in Scala, and you’ll find occurrences of them in Scala libraries and codebases.
-
+'''java
 val hasUpperCase = name.exists(_.isUpper)
+'''
 In this case you’re invoking the given function literals for each character in the name string; when it finds an uppercase character, it will exit. 
 
 ---
@@ -84,8 +92,10 @@ Unit in scala is like Void
 
 --
 
-Passing function as an argument
+### Passing function as an argument
+'''java
 def breakable(op: => Unit) { ... }
+```
 The special right arrow (=>) lets Scala know that the breakable function expects a function as a parameter. The right side of the => defines the return type of the function—in this case it’s Unit (similar to Java void)
 For two argument functions:
 def foldLeft(initialValue: Int, operator: (Int, Int) => Int)= { ... }
