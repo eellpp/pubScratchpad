@@ -95,88 +95,125 @@ Unit in scala is like Void
 ### Passing function as an argument
 '''java
 def breakable(op: => Unit) { ... }
-```
+'''
 The special right arrow (=>) lets Scala know that the breakable function expects a function as a parameter. The right side of the => defines the return type of the function—in this case it’s Unit (similar to Java void)
 For two argument functions:
+'''java
 def foldLeft(initialValue: Int, operator: (Int, Int) => Int)= { ... }
+'''
 
 --
-Printing elements of array
+### Printing elements of array
+'''java
 scala> array.foreach(println)
---
+'''
+### Mutable and Immutable data structures
+
 The Array is a mutable data structure in scala
+
 In Scala, List is immutable and makes functional-style programming easy.
+```java
 scala> val oldList = List(1, 2)
 scala> val newList = 3 :: oldList
-
+```
+### Nil object
 Scala provides a special object called Nil to represent an empty List, and you can use it to create new lists easily:
+```java
 scala> val myList = "This" :: "is" :: "immutable" :: Nil 
 myList: List[java.lang.String] = List(This, is, immutable)
+```
 --
 Eg: remove an element from list
+```java
 scala> val afterDelete = newList.filterNot(_ == 3)
+```
 --
-scala> val configFile = if(useDefault) "custom.txt" else "default.txt"
 scala does not support ternary operator
+```java
+scala> val configFile = if(useDefault) "custom.txt" else "default.txt"
+```
 ---
 
-For loop 
+#### For loop 
+```java
 val files = new java.io.File(".").listFiles
         for(file <- files) {
             val filename = file.getName
             if(fileName.endsWith(".scala")) println(file)
        }
 OR
+for{
+    file <- files
+    fileName = file.getName
+    if(fileName.endsWith(".scala"))
+} println(fileName)
+
+
+OR
 for(
     file <- files;
     fileName = file.getName;
     if(fileName.endsWith(".scala"))
-) println(file)
+) println(fileName)
+
+
+```
+for expressions may be defined with parenthesis or curly braces, but using curly braces means you don’t have to separate your filters with semicolons. Most of the time, you’ll prefer using curly braces when you have more than one filter, assignment, etc.
+
+Reference on for loop
+
+https://docs.scala-lang.org/tutorials/FAQ/yield.html
 
 ------
-switch case 
-
+### switch case 
+```java
 def rangeMatcher(num:Int) = num match {
 case within10 if within10 <= 10 => println("with in 0 to 10")
 case within100 if within100 <= 100 => println("with in 11 to 100")
 case beyond100 if beyond100 < Integer.MAX_VALUE => println("beyond 100")
 }
+```
 
 And you no longer need to provide a break for each case because in Scala you can’t overflow into other case clauses 
 (causing multiple matches) as in Java, and there’s no default statement. In Scala, default is replaced with case _ to match everything else.
 
+```java
 scala> List(1, 2, 3, 4) match {
         case f :: s :: rest => List(f, s)
         case _ => Nil
       }
 res7: List[Int] = List(1, 2)
-
+```
 ------------------------------
 
-Returns are discouraged
+### Returns are discouraged
 In fact, odd problems can occur if you use return statements in Scala because it changes the meaning of your program. For this reason, return statement usage is discouraged.
+
 The return keyword is not “optional” or “inferred”; it changes the meaning of your program, and you should never use it.
 http://tpolecat.github.io/2014/05/09/return.html
 
-Important thing in scala collection
+### Scala collection
 
-Basic : Seq, MaP and Set
+- Basic : Seq, Map and Set
 In seq we 
-Indexed
-Buffer
-Linear
+-- Indexed
+-- Buffer
+-- Linear
 
-Where indexed is of type : array, range, vector
-Linear is of type : List, Stack, Queue
-Buffer  : ArrayBuffer and ListBuffer
+Where `indexed` is of type : array, range, vector
 
-For mutable seq where you want to keep changing elements, use the buffer type. Decide list or array based on whether accessing by index or traversing the elements
+`Linear` is of type : List, Stack, Queue
+
+`Buffer`  : ArrayBuffer and ListBuffer
+
+For `mutable seq` where you want to keep changing elements, use the buffer type. Decide list or array based on whether accessing by index or traversing the elements
 
 
-When to use listBuffer
+### When to use listBuffer
 If there is list that is constantly changing then use list buffer and later convert to list. List by itself is immutable.
-If however you accessing a random element like x(1000) then better use ArrayBuffer which is indexed.
+If however you are accessing a random element like x(1000) then better use ArrayBuffer which is indexed.
 
+```java
 t.append(123)
 t += (6,6,6) 
 
@@ -187,32 +224,35 @@ t.remove(0)
 t.remove(0,1)  
 x.update(0,9)
 
-You can also use --= to delete multiple elements that are specified in another collection:
+// You can also use --= to delete multiple elements that are specified in another collection:
 
 scala> val x = ListBuffer(1, 2, 3, 4, 5, 6, 7, 8, 9)
 x: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 scala> x --= Seq(1,2,3)
 res0: x.type = ListBuffer(4, 5, 6, 7, 8, 9)
+```
 
 
-
-Q: What type should my API accept as input?
+#### Q: What type should my API accept as input?
 Answer: As general as possible. In most cases this will be Traversable <- Seq <- List.
 Explanation: We want our API consumers to be able to call our code without needing them to convert types. If our function takes a Traversable, the caller can put almost any type of collection. This is usually sufficient if we just map(), fold(), head(), tail(), drop(), find(), filter() or groupBy(). In case you want to use length(), make it a Seq. If you need to efficiently prepend with ::, use a List.
 
-Q: What type should my API return?
+#### Q: What type should my API return?
 
 Answer: As specific as possible. Typically you want to return a List, Vector, Stack or Queue.
 Explanation: This will not put any constraints on your API consumers but will allow them to eventually process returned data in optimal way and worry less about conversions.
 
-Vectors
+### Vectors
 
 vectors are faster than list for random access of elements . 
-List is better when most of usage is around accessing the head or tail of the list
-vectors are immutable. The update method gives a new vector that differs in only single element
-vectors are implemented as tree
 
+List is better when most of usage is around accessing the head or tail of the list
+
+vectors are immutable. The update method gives a new vector that differs in only single element
+
+vectors are implemented as tree
+```java
 // Begin with an empty vector.
 val vector = scala.collection.immutable.Vector.empty
 
@@ -250,33 +290,38 @@ res74: Vector[Int] = Vector(1, 3, 5, 7, 9)
 // calculate with the index of length 
 Vector.tabulate(10){ _*5} 
 res75: Vector[Int] = Vector(0, 5, 10, 15, 20, 25, 30, 35, 40, 45)
+```
 
-Q: Should I use List or Vector?
+#### Q: Should I use List or Vector?
 Answer: You most probably want a Vector, unless your algorithm can be expressed only using ::, head and tail, then use a List.
 Scala Vector has a very effective iteration implementation and, comparing to List is faster in traversing linearly (which is weird?), so unless you are planning to do quite some appending, Vector is a better choice. Additionally, Lists don’t work well with parallel algorithms, it’s hard to break them down into pieces and put together in an efficient way.
 
 
-Useful factory methods on collections
+#### Useful factory methods on collections
 
 http://www.scala-lang.org/docu/files/collections-api/collections_45.html
 
 
-Scala Operators
+#### Scala Operators
 ->, ||=, ++=, <=, _._, ::, and :+=.
 http://stackoverflow.com/questions/7888944/what-do-all-of-scalas-symbolic-operators-mean
 
 
-Lazy Val
+#### Lazy Val
 Lazy val are evaluated once when they are used. They are only evaluated once. 
 Sometimes its useful to have a lazy val than a function
 
+```java
 lazy  val x = { println(“do something”); “some value”}
+```
 The value of x will be evaluated only once when first used.
 
-Partial functions
+#### Partial functions
+```java
 val t :PartialFunction[Int,String] = { case i:Int  if i > 10 => i.toString}
+```
 This is partial since the function is defined only for few values of i 
-
+``` java
 @ t.isDefinedAt(2) 
 res10: Boolean = false
 
@@ -295,8 +340,9 @@ res15: List[String] = List("12")
 res30: String = "21"
 @ t.lift(2) map( _.toString) getOrElse "0" 
 res31: String = "0"
+```
 
-Chaining partial functions
+#### Chaining partial functions
 
 The orElse method defined on the PartialFunction trait allows you to chain an arbitrary number of partial functions, creating a composite partial function. The first one, however, will only pass on to the next one if it isn’t defined for the given input.
 
@@ -304,22 +350,23 @@ val handler = fooHandler orElse barHandler orElse bazHandler
 
 Where fooHandler, barHandler etc can come from different traits. So this allows composition 
 
-Infix operations in scala
+#### Infix operations in scala
  1 + 5*2 is same as 1.+(5*2)
 
-Apply
+#### Apply
 Every function in Scala can be treated as an object and it works the other way too - every object can be treated as a function, provided it has the apply method. Such objects can be used in the function notation:
-
+```java
 // we will be able to use this object as a function, as well as an object
 object Foo {
   var y = 5
   def apply (x: Int) = x + y
 }
 Foo (1) // using Foo object in function notation 
+```
 
 This is useful for the factory pattern.
 
-Package
+#### Package
 
 package create a lexical namespace in which classes are declared. To help segregate code in such a way that it doesn't conflict with one another.
 
@@ -328,12 +375,13 @@ you can use import anywhere inside the client Scala file, not just at the top of
 By using the underscore , you effectively tell the Scala compiler that all of the members inside BigInteger should be brought into scope.
 
 
-Trait Self Annotation
+#### Trait Self Annotation
 
 self : Base => 
 
 Consider the examples below where both the traits are providing same functionalities. 
 
+```java
 class Base {
   def magic = "bibbity bobbity boo!!"
 }
@@ -347,7 +395,7 @@ trait SelfTyper {
   
   def myMethod = "I can "+magic
 }
-
+```
 But the two are completely different. 
 Extender can be mixed in with any class and adds both the "magic" and "myMethod" to the class it is mixed with. 
 SelfTyper can only be mixed in with a class that extends Base and SelfTyper only adds the method "myMethod" NOT "magic". 
@@ -355,8 +403,8 @@ SelfTyper can only be mixed in with a class that extends Base and SelfTyper only
 Why is the "self annotations" useful? Because it allows several provides a way of declaring dependencies. One can think of the self annotation declaration as the phrase "I am useable with" or "I require a".
 
 
-implicit
-
+#### implicit
+```java
 > val i: Int = 3.5
 <console>:5: error: type mismatch;
 found   : Double(3.5)
@@ -368,20 +416,25 @@ doubleToInt: (Double)Int
   
 scala> val i: Int = 3.5
 i: Int = 3
-http://www.artima.com/pins1ed/implicit-conversions-and-parameters.html
+// http://www.artima.com/pins1ed/implicit-conversions-and-parameters.html
+```
 
-Use Option not null
+#### Use Option not null
 Option is an abstract class in Scala and defines two subclasses, Some and None.
+
 Every now and then you encounter a situation where a method needs to return a value or nothing. But in the case of Scala, Option is the recommended way to go when you have a function return an instance of Some or otherwise return None.
+
 You can use Option with pattern matching in Scala, and it also defines methods like map, filter, and flatMap so that you can easily use it in a for-comprehension.
 
 Use get for getting the map values
 
+```java
 scala> val t = Map(("k1","v1") , ("k2","v2"))
 scala> t.get("k1")
 res4: Option[String] = Some(v1)
 scala> t.get("k1").toString.length
 res7: Int = 8
+```
 
 Convert scala list to java list
 
