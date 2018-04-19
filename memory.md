@@ -67,7 +67,10 @@ If we go to a new home and notice all the things there, all the spacial informat
 
 >I decided to make memorizing a part of my daily routine.  Each morning, after waking up and having my coffee, but before reading the newspaper or showering or even putting on proper clothes, I sat down behind my desk and tried to spend ten to fifteen minutes working through a poem.
 
-
+Remembering numbers
+> Major System
+> PAO System (Person Action Object)
+To be maximally memorable, one’s images have to appeal to one’s own sense of what is colorful and interesting.
 
 
 
