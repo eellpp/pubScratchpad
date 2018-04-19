@@ -34,4 +34,44 @@ Monotony collapses time; novelty unfolds it. You can exercise daily and eat heal
 
 Knowing that breakfast is the first meal of the day is a semantic memory. Episodic memories are located in time and space: They have a where and a when attached to them. Semantic memories are located outside of time and space, as free-floating pieces of knowledge. These two different types of remembering seem to make use of different neural pathways, and rely on different regions of the brain, though both are critically dependent on the hippocampus and other structures within the medial temporal lobes. 
 
+That our memory of distant past is more clear than of the just happened
+>  It suggests something profound: that our memories are not static. Somehow, as memories age, their complexion changes. Each time we think about a memory, we integrate it more deeply into our web of other memories, and therefore make it more stable and less likely to be dislodged.
+
+> Sigmund Freud first noted the curious fact that older memories are often remembered as if captured by a third person holding a camera, whereas more recent events tend to be remembered in the first person, as if through one’s own eyes.
+
+habits form unconscious memories. The consiquence of this are actions which we do instinctively but are hard to reason about as we have no memory of them.
+
+> What our early human and hominid ancestors did need to remember was where to find food and resources, and the route home, and which plants were edible and which were poisonous. Those are the sorts of vital memory skills that they depended on every day, and it was—at least in part —in order to meet those demands that human memory evolved as it did.
+
+>The principle underlying all memory techniques is that our brains don’t remember all types of information equally well. As exceptional as we are at remembering visual imagery (think of the two-picture recognition test), we’re terrible at remembering other kinds of information, like lists of words or numbers. 
+
+To remember something, you have to make it exciting to yourself
+>The general idea with most memory techniques is to change whatever boring thing is being inputted into your memory into something that is so colorful, so exciting, and so different from anything you’ve seen before that you can’t possibly forget it,
+
+Find some spacial memory that excites you and you can imagine it in mind
+> To use Simonides’ technique, all one has to do is convert something unmemorable, like a string of numbers or a deck of cards or a shopping list or Paradise Lost, into a series of engrossing visual images and mentally arrange them within an imagined space, and suddenly those forgettable items become unforgettable.
+
+Seperate memory palaces needs to be build to hold different memories
+> Dr. Yip Swee Chooi, the effervescent Malaysian memory champ, used his own body parts as loci to help him memorize the entire 56,000-word, 1,774-page Oxford Chinese-English dictionary. One might have dozens, hundreds, perhaps even thousands of memory palaces, each built to hold a different set of memories.
+
+If we go to a new home and notice all the things there, all the spacial information is similar to amount of words in a novel. Just in matter of minutes we memorise all this spacial information. Our brains are designed by evolution of hunter gatherers to remember spacial information.
+
+> The crucial thing was to choose a memory palace with which I was intimately familiar
+
+> My first assignment was to begin collecting architecture. Before I could embark on any serious degree of memory training, I first needed a stockpile of memory palaces at my disposal. I went for walks around the neighborhood. I visited friends’ houses, the local playground, Oriole Park at Camden Yards in Baltimore, the East Wing of the National Gallery of Art. And I traveled back in time: to my high school, to my elementary school, to the house on Reno Road where my family lived until I was four years old. I focused on wallpaper and the arrangement of furniture. I tried to feel the flooring under my feet. I reminded myself of emotionally resonant incidents that occurred in each room. And then I carved each building up into loci that would serve as cubbyholes for my memories. The goal, as Ed explained it, was to know these buildings so thoroughly—to have such a rich and textured set of associations with every corner of every room—that when it came time to learn some new body of information, I could speed through my palaces, scattering images as quickly as I could sketch them in my imagination. The better I knew the buildings, and the more each felt like home, the stickier my images would be, and the easier it would be to reconstruct them later. Ed figured I’d need about a dozen memory palaces just to begin my training. He has several hundred, a metropolis of mental storehouses.
+
+
+> To really learn a text, one had to memorize it. As the early-eighteenth-century Dutch poet Jan Luyken put it, “One book, printed in the Heart’s own wax / Is worth a thousand in the stacks.”
+
+> One didn’t just memorize texts; one ruminated on them— chewed them up and regurgitated them like cud—and in the process, became intimate with them in a way that made them one’s own.
+
+>I decided to make memorizing a part of my daily routine.  Each morning, after waking up and having my coffee, but before reading the newspaper or showering or even putting on proper clothes, I sat down behind my desk and tried to spend ten to fifteen minutes working through a poem.
+
+
+
+
+
+
+
+ 
 
