@@ -15,24 +15,61 @@ S kept his memories rigidly organized by mapping them onto structures and places
 
 When S wanted to recall the information a day, month, year, or decade later, all he would have to do was rewalk the path where that particular set of memories was stored, and he would see each image in the precise spot where he originally left it
 
-Researchers have studied the exceptional memories of doctors, baseball fans, violinists, soccer players, snooker players, ballet dancers, abacus wranglers, crossword puzzlers, and volleyball defenders. Pick any human endeavor in which people excel, and I’ll give you even odds that some psychologist somewhere has written a paper about the exceptional memories possessed by experts in that field.
+### Experts in a field
+Pick any field of human endeavor like doctors, baseball fans, violinists, soccer players, snooker players, ballet dancers, abacus wranglers, crossword puzzlers, volleyball defenders and you would find others amazed by the exceptional memories possessed by experts in that field.
 
-What Ericsson expected to learn from these accounts was the same thing he’s found in every other field of expertise that he’s studied: Experts see the world differently. They notice things that nonexperts don’t see. They home in on the information that matters most, and have an almost automatic sense of what to do with it. And most important, experts process the enormous amounts of information flowing through their senses in more sophisticated ways. They can overcome one of the brain’s most fundamental constraints: the magical number seven.
+Experts see the world differently. They notice things that nonexperts don’t see. They home in on the information that matters most, and have an almost automatic sense of what to do with it. And most important, experts process the enormous amounts of information flowing through their senses in more sophisticated ways.
 
-Our working memories serve a critical role as a filter between our perception of the world and our long-term memory of it.
+### Stages of memory
+1. Encoding
 
-He discovered that he could take meaningless bits of information, run them through a filter that applied meaning to them, and make that information much stickier. He had taken his past experiences and used them to shape how he perceived the present. He was using associations in his long-term memory to see the numbers differently.
+- Visual (Image)
+- Acoustic (Sound)
+- Semantic (Meaning)
 
-We don’t remember isolated facts; we remember things in context. A board of randomly arranged chess pieces has no context—there are no similar boards to compare it to, no past games that it resembles, no ways to meaningfully chunk it.
+2. Storage
+3. Retrieval
 
-what we call expertise is really just “vast amounts of knowledge, pattern- based retrieval, and planning mechanisms acquired over many years of experience in the associated domain.” In other words, a great memory isn’t just a by-product of expertise; it is the essence of expertise.
+Evidence suggests that acoustic is the principle coding system in short-term memory (STM) is acoustic coding.  When a person is presented with a list of numbers and letters, they will try to hold them in STM by rehearsing them (verbally).  Rehearsal is a verbal process regardless of whether the list of items is presented acoustically (someone reads them out), or visually (on a sheet of paper).
 
-Our lives are structured by our memories of events. Event X happened just before the big Paris vacation. I was doing Y in the first summer after I learned to drive. Z happened the weekend after I landed my first job. We remember events by positioning them in time relative to other events. Just as we accumulate memories of facts by integrating them into a network, we accumulate life experiences by integrating them into a web of other chronological memories. The denser the web, the denser the experience
-of time.
+The principle encoding system in long-term memory (LTM) appears to be semantic coding (by meaning).  However, information in LTM can also be coded both visually and acoustically.
 
+STM is stored and retrieved sequentially.  For example, if a group of participants are given a list of words to remember, and then asked to recall the fourth word on the list, participants go through the list in the order they heard it in order to retrieve the information.
+
+LTM is stored and retrieved by `association`.  This is why you can remember what you went upstairs for if you go back to the room where you first thought about it.
+
+### Associate by Applying contexts to past experience
+We don’t remember isolated facts; we remember things in context. A board of randomly arranged chess pieces has no context—there are no similar boards to compare it to, no past games that it resembles, no ways to meaningfully chunk it. This is challenging for a chess grandmaster to remember. However when seeing a random snapshot of a chess game, they process information differently. They are not seeing the individual peices, but the various connections and patterns. It happens unconsciously. Same with a doctor, a football coach. 
+
+They could take meaningless bits of information, run them through a filter that applied meaning to them, and make that information much stickier.
+
+What we call expertise is really just “vast amounts of knowledge, pattern- based retrieval, and planning mechanisms acquired over many years of experience in the associated domain.” In other words, a great memory isn’t just a by-product of expertise; it is the essence of expertise.
+
+
+
+### Dullness is the enemy of strong memory
 Monotony collapses time; novelty unfolds it. You can exercise daily and eat healthily and live a long life, while experiencing a short one. If you spend your life sitting in a cubicle and passing papers, one day is bound to blend unmemorably into the next—and disappear. That’s why it’s important to change routines regularly, and take vacations to exotic locales, and have as many new experiences as possible that can serve to anchor our memories. Creating new memories stretches out psychological time, and lengthens our perception of our lives.
 
-Knowing that breakfast is the first meal of the day is a semantic memory. Episodic memories are located in time and space: They have a where and a when attached to them. Semantic memories are located outside of time and space, as free-floating pieces of knowledge. These two different types of remembering seem to make use of different neural pathways, and rely on different regions of the brain, though both are critically dependent on the hippocampus and other structures within the medial temporal lobes. 
+To remember something, you have to make it exciting to yourself
+>The general idea with most memory techniques is to change whatever boring thing is being inputted into your memory into something that is so colorful, so exciting, and so different from anything you’ve seen before that you can’t possibly forget it. This to associate the memory with feelings, color, sensations. When we get excited, these associations automatically happen. 
+
+### Semantic and Episodic memories
+- Episodic memory represents our memory of experiences and specific events in time in a serial form, from which we can reconstruct the actual events that took place at any given point in our lives. Eg: I was doing Y in the first summer after I learned to drive. Z happened the weekend after I landed my first job. We remember events by positioning them in time relative to other events.
+- Semantic memeories are general factual knowledge, independent of personal experience and of the spatial/temporal context in which it was acquired. They don't have time and space and free floating. Eg: Sun is a star.
+
+Episodic memory are structured by our memories of events. Event X happened just before the big Paris vacation.  Just as we accumulate memories of facts by integrating them into a network, we accumulate life experiences by integrating them into a web of other chronological memories. The denser the web, the denser the experience of time.
+
+This stickness with time can be used to provide context to information. Eg: a doctor giving pills to patient explains it in order in which it has to be carried out throughout the day.
+
+### Building spatial Association
+By evolution we are good a spatial memory. 
+> What our early human and hominid ancestors did need to remember was where to find food and resources, and the route home, and which plants were edible and which were poisonous. Those are the sorts of vital memory skills that they depended on every day, and it was—at least in part —in order to meet those demands that human memory evolved as it did.
+
+If we go to a new home and notice all the things there, all the spacial information is similar to amount of words in a novel. Just in matter of minutes we memorise all this spacial information. Our brains are designed by evolution of hunter gatherers to remember spacial information.
+
+ This is why you can remember what you went upstairs for if you go back to the room where you first thought about it. Or when finding the misplaced keys you try to revisit your actions during the day to trigger the memory of placing the key.
+
+-----------
 
 That our memory of distant past is more clear than of the just happened
 >  It suggests something profound: that our memories are not static. Somehow, as memories age, their complexion changes. Each time we think about a memory, we integrate it more deeply into our web of other memories, and therefore make it more stable and less likely to be dislodged.
@@ -41,12 +78,10 @@ That our memory of distant past is more clear than of the just happened
 
 habits form unconscious memories. The consiquence of this are actions which we do instinctively but are hard to reason about as we have no memory of them.
 
-> What our early human and hominid ancestors did need to remember was where to find food and resources, and the route home, and which plants were edible and which were poisonous. Those are the sorts of vital memory skills that they depended on every day, and it was—at least in part —in order to meet those demands that human memory evolved as it did.
+ 
+### Use different tricks to remember different things
+The principle underlying all memory techniques is that our brains don’t remember all types of information equally well. As exceptional as we are at remembering visual imagery (think of the two-picture recognition test), we’re terrible at remembering other kinds of information, like lists of words or numbers. 
 
->The principle underlying all memory techniques is that our brains don’t remember all types of information equally well. As exceptional as we are at remembering visual imagery (think of the two-picture recognition test), we’re terrible at remembering other kinds of information, like lists of words or numbers. 
-
-To remember something, you have to make it exciting to yourself
->The general idea with most memory techniques is to change whatever boring thing is being inputted into your memory into something that is so colorful, so exciting, and so different from anything you’ve seen before that you can’t possibly forget it,
 
 Find some spacial memory that excites you and you can imagine it in mind
 > To use Simonides’ technique, all one has to do is convert something unmemorable, like a string of numbers or a deck of cards or a shopping list or Paradise Lost, into a series of engrossing visual images and mentally arrange them within an imagined space, and suddenly those forgettable items become unforgettable.
@@ -54,7 +89,7 @@ Find some spacial memory that excites you and you can imagine it in mind
 Seperate memory palaces needs to be build to hold different memories
 > Dr. Yip Swee Chooi, the effervescent Malaysian memory champ, used his own body parts as loci to help him memorize the entire 56,000-word, 1,774-page Oxford Chinese-English dictionary. One might have dozens, hundreds, perhaps even thousands of memory palaces, each built to hold a different set of memories.
 
-If we go to a new home and notice all the things there, all the spacial information is similar to amount of words in a novel. Just in matter of minutes we memorise all this spacial information. Our brains are designed by evolution of hunter gatherers to remember spacial information.
+
 
 > The crucial thing was to choose a memory palace with which I was intimately familiar
 
