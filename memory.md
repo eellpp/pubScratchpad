@@ -69,6 +69,29 @@ If we go to a new home and notice all the things there, all the spacial informat
 
  This is why you can remember what you went upstairs for if you go back to the room where you first thought about it. Or when finding the misplaced keys you try to revisit your actions during the day to trigger the memory of placing the key.
 
+### Learn in Chunks
+ If you want to learn something, do it in chunks over a period of time. Each time you access that memory again you are increasing its storage strength. 
+ 
+ The spacing intervals are important. Increasing the intervals between learning sessions, and thereby reducing the accessibility of information, actually fosters deeper learning. When you struggle to remember something that you learned a few days ago, you’re forced to work hard and engage with the material more. 
+
+### Phased repetition with Quiz and not with reading
+To deepen the long term memory, recall with a short quiz. Try to explain it to a friend. 
+- After each learning session, prepare a short quiz to help recall during the next learning session
+
+By phased repetition, recall with quiz, presentation etc we are trying to get the brain work on strategies for deeper learning. 
+
+### Randomize the recall
+Randomize the recall sessions and the pop quiz, so that the brain is forced to learn new strategies to retrieve information.
+
+ So you might study something on Monday, do some follow up on Tuesday, take a quiz on Thursday and then another quiz the following week. The gaps between study should initially be small and gradually increase. You want the memories to be difficult to access, but not impossible (there’s no benefit to studying things a year apart).
+ 
+
+## Building cues
+The information is stored in memory. But to recall that single peice of information, we need a cue. Like an index. Eg: If you tell your friend: "Here is the 20$ i owe you", he may not be able to recall. 20$ is too general and vague term. Instead you would have to provide a cue by telling :"when we went to mall to buy a shirt and my credit card did not work". This cue will trigger the stored memory.
+
+### Memory palace trick
+The  “memory palace” technique is espoused by the Greeks and Romans. This involves creating a kind of mental geography — say a walk from your front door out to the street — and using strong imagery to link certain words to key points along your “mental walk.” Again, bizarre and distinctive imagery works best.
+
 -----------
 
 That our memory of distant past is more clear than of the just happened
