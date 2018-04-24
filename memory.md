@@ -3,17 +3,15 @@ In corporate environment, this happens very often. People make the same mistakes
 
 > What you have to understand is that even average memories are remarkably powerful if used properly. It’s all about technique and understanding how the memory works. ANyone could do it. 
 
-What we have been doing over the last century is defining memory incorrectly, understanding it incompletely, applying it inappropriately, and condemning it because it doesn’t work and isn’t enjoyable
-
 “The brain is like a muscle,” he said, and memory training is a form of mental workout. Over time, like any form of exercise, it’ll make the brain fitter, quicker, and more nimble.
 
 older people who keep their minds active with crossword puzzles and chess can stave off Alzheimer’s and progressive dementia
 
-> The nonlinear associative nature of our brains makes it impossible for us to consciously search our memories in an orderly way. A memory only pops directly into consciousness if it is cued by some other thought or perception—some other node in the nearly limitless interconnected web. 
+The nonlinear associative nature of our brains makes it impossible for us to consciously search our memories in an orderly way. A memory only pops directly into consciousness if it is cued by some other thought or perception—some other node in the nearly limitless interconnected web. 
 
-S kept his memories rigidly organized by mapping them onto structures and places he already knew well. One image might be placed at the doorway of a house, another near a streetlamp, another on top of a picket fence, another in a garden, another on the ledge of a store window. All this happened in his mind’s eye as effortlessly as if he were placing real objects along a real street.
+> S kept his memories rigidly organized by mapping them onto structures and places he already knew well. One image might be placed at the doorway of a house, another near a streetlamp, another on top of a picket fence, another in a garden, another on the ledge of a store window. All this happened in his mind’s eye as effortlessly as if he were placing real objects along a real street. When S wanted to recall the information a day, month, year, or decade later, all he would have to do was rewalk the path where that particular set of memories was stored, and he would see each image in the precise spot where he originally left it
 
-When S wanted to recall the information a day, month, year, or decade later, all he would have to do was rewalk the path where that particular set of memories was stored, and he would see each image in the precise spot where he originally left it
+To properly encode a memory, you must first be paying attention. Since you cannot pay attention to everything all the time, most of what you encounter every day is simply filtered out.
 
 ### Experts in a field
 Pick any field of human endeavor like doctors, baseball fans, violinists, soccer players, snooker players, ballet dancers, abacus wranglers, crossword puzzlers, volleyball defenders and you would find others amazed by the exceptional memories possessed by experts in that field.
@@ -44,11 +42,14 @@ Memories of visual images (e.g., dinner plates) are stored in what is called vis
 Memories like what you had for dinner are stored in visual short-term memory—particularly, in a kind of short-term memory often called “visual working memory.” Visual working memory is where visual images are temporarily stored while your mind works away at other tasks—like a whiteboard on which things are briefly written and then wiped away.
 
 ### Associate by Applying contexts to past experience
-- If you can connect that image to something else, it increases the chances you'll remember it later
-- Provide a context
+- If you can connect that image to something else you already know, it increases the chances you'll remember it later
+- Provide a context. 
 - Build a multisensory association (visual, smell, taste, feelings ..)
 
-The 
+Person you saw is a doctor in hospital you aunt works. The medicinal smell of hospital, learned man etc. Try to think of these and form connections
+
+Essentially, the more connections a new memory has to knowledge you have, the more likely it is you'll remember that information. 
+
 We don’t remember isolated facts; we remember things in context. A board of randomly arranged chess pieces has no context—there are no similar boards to compare it to, no past games that it resembles, no ways to meaningfully chunk it. This is challenging for a chess grandmaster to remember. However when seeing a random snapshot of a chess game, they process information differently. They are not seeing the individual peices, but the various connections and patterns. It happens unconsciously. Same with a doctor, a football coach. 
 
 They could take meaningless bits of information, run them through a filter that applied meaning to them, and make that information much stickier.
