@@ -1,6 +1,6 @@
 ### Links
-https://intuitive-math.club/
-https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/videos (3Blue1Brown)
+- https://intuitive-math.club/
+- https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/videos (3Blue1Brown)
 
 ### Tom M
 http://www.cs.cmu.edu/~ninamf/courses/601sp15/index.html
