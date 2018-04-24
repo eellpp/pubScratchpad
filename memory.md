@@ -38,7 +38,17 @@ STM is stored and retrieved sequentially.  For example, if a group of participan
 
 LTM is stored and retrieved by `association`.  This is why you can remember what you went upstairs for if you go back to the room where you first thought about it.
 
+### Working memory or Short term memory (STM)
+Memories of visual images (e.g., dinner plates) are stored in what is called visual memory. Our minds use visual memory to perform even the simplest of computations; from remembering the face of someone we’ve just met, to remembering what time it was last we checked.
+
+Memories like what you had for dinner are stored in visual short-term memory—particularly, in a kind of short-term memory often called “visual working memory.” Visual working memory is where visual images are temporarily stored while your mind works away at other tasks—like a whiteboard on which things are briefly written and then wiped away.
+
 ### Associate by Applying contexts to past experience
+- If you can connect that image to something else, it increases the chances you'll remember it later
+- Provide a context
+- Build a multisensory association (visual, smell, taste, feelings ..)
+
+The 
 We don’t remember isolated facts; we remember things in context. A board of randomly arranged chess pieces has no context—there are no similar boards to compare it to, no past games that it resembles, no ways to meaningfully chunk it. This is challenging for a chess grandmaster to remember. However when seeing a random snapshot of a chess game, they process information differently. They are not seeing the individual peices, but the various connections and patterns. It happens unconsciously. Same with a doctor, a football coach. 
 
 They could take meaningless bits of information, run them through a filter that applied meaning to them, and make that information much stickier.
