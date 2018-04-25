@@ -18,6 +18,26 @@ Pick any field of human endeavor like doctors, baseball fans, violinists, soccer
 
 Experts see the world differently. They notice things that nonexperts don’t see. They home in on the information that matters most, and have an almost automatic sense of what to do with it. And most important, experts process the enormous amounts of information flowing through their senses in more sophisticated ways.
 
+### Memory Types
+
+`Sensory memory` — This is where we store our first impressions of sights, sounds, and touch. Sensory memory is unlimited, and we can store vast amounts of sensory input.
+
+`Long-term memory` — This is where we store information for longer periods of time, anywhere from thirty seconds to a lifetime. Long-term memory is unlimited in capacity. When you teach, you want your child to store the information you introduce in her long-term memory.
+
+`Short-term memory` — This can be divided into immediate memory and working memory. It is a temporary holding place for new information that comes in through sensory memory. Short-term memory then pays attention to some of that input and integrates it into long-term memory.
+The capacity of short- term memory is more like three to four “chunks” of information. For example, we remember phone numbers in groupings: the first three numbers, then the last four numbers.
+
+Working memory is critical for learning, as this initial repository of information. Research has shown that working memory is actually a much better indicator than IQ is of how easily a person can learn.
+
+### Memory Funnel
+You can imagine learning as the process of passing information through a funnel. The ones that pass through the funnel are retained in long term memory.
+
+When you are learning something where a lot of distinct new concepts are introduced, then the working memory gets overloaded and either dumps the information entirely or is only able to store fragmented peices of information.
+
+However, if the information is structured in a way to provide a context through which they get connected to each other easily, then the distinct peices of information pass through the funnel as a single context. eg: 10 different words, but which are related to food from morning to evening, for specific regions of world etc.
+
+Use analogies to make connections for new information to what already exists in brain.
+
 ### Stages of memory
 1. Encoding
 
@@ -36,10 +56,23 @@ STM is stored and retrieved sequentially.  For example, if a group of participan
 
 LTM is stored and retrieved by `association`.  This is why you can remember what you went upstairs for if you go back to the room where you first thought about it.
 
+### Multisensory perception
+It seems logical that learning begins with the brain, but it doesn’t. Learning actually begins with your senses: sight, sound, touch, smell, and taste. When we teach reading, we can engage three senses: sight, sound, and touch.
+The more receptors you involve, the better the chance that the information will be retained by the brain.
+
+Three sensory pathways to brain
+- Hands on learning (Kinesthetic)
+- Visual
+- Audio
+
+When we are taught using all three pathways to the brain—the visual, the auditory, and the kinesthetic—they learn even more than when they are taught only through our strongest pathway. Essentially we are making more connections in brain when learning in multisensory way.
+
 ### Working memory or Short term memory (STM)
 Memories of visual images (e.g., dinner plates) are stored in what is called visual memory. Our minds use visual memory to perform even the simplest of computations; from remembering the face of someone we’ve just met, to remembering what time it was last we checked.
 
 Memories like what you had for dinner are stored in visual short-term memory—particularly, in a kind of short-term memory often called “visual working memory.” Visual working memory is where visual images are temporarily stored while your mind works away at other tasks—like a whiteboard on which things are briefly written and then wiped away.
+
+
 
 ### Associate by Applying contexts to past experience
 - If you can connect that image to something else you already know, it increases the chances you'll remember it later
@@ -86,10 +119,15 @@ If we go to a new home and notice all the things there, all the spacial informat
  The spacing intervals are important. Increasing the intervals between learning sessions, and thereby reducing the accessibility of information, actually fosters deeper learning. When you struggle to remember something that you learned a few days ago, you’re forced to work hard and engage with the material more. 
 
 ### Phased repetition with Quiz and not with reading
+Without review or repetition we are leaving the memory to chance. It may persist or it may not. The review must be phased/timed properly.
+When a new concept is introduced, it should be reviewed daily for next few days.Then it can phased out over weeks and months. In this way lots new ideas can accomodated in review. This way the learning is retained for years.
+
 To deepen the long term memory, recall with a short quiz. Try to explain it to a friend. 
 - After each learning session, prepare a short quiz to help recall during the next learning session
 
 By phased repetition, recall with quiz, presentation etc we are trying to get the brain work on strategies for deeper learning. 
+
+Learning are never retired. They have to be recalled now and then. You should have a process to go through these in years to come.
 
 ### Randomize the recall
 Randomize the recall sessions and the pop quiz, so that the brain is forced to learn new strategies to retrieve information.
