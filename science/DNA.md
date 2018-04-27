@@ -15,6 +15,8 @@ The human genome contains approximately 3 billion of base pairs, which reside in
 
 http://www.edinformatics.com/math_science/human_genome.htm
 
+https://ghr.nlm.nih.gov/primer/basics/dna
+
 DNA bases pair up with each other, A with T and C with G, to form units called base pairs. Each base is also attached to a sugar molecule and a phosphate molecule. Together, a base, sugar, and phosphate are called a nucleotide. Nucleotides are arranged in two long strands that form a spiral called a double helix. The structure of the double helix is somewhat like a ladder, with the base pairs forming the ladder’s rungs and the sugar and phosphate molecules forming the vertical sidepieces of the ladder.
 
 
