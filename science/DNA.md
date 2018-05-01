@@ -1,6 +1,23 @@
+#### Chromosomes
+In the nucleus of each cell, the DNA molecule is packaged into thread-like structures called chromosomes. Each chromosome is made up of DNA tightly coiled many times around proteins that support its structure.
+
+The chromosome is a single double-stranded double helix, made of `two DNA molecules` hydrogen-bonded to each other. We are diploid, and we have 23 pairs of chromosomes, for a total of 46 chromosomes. 
+
+In humans, each cell normally contains 23 pairs of chromosomes, for a total of 46. Twenty-two of these pairs, called autosomes, look the same in both males and females. The 23rd pair, the sex chromosomes, differ between males and females. Females have two copies of the X chromosome, while males have one X and one Y chromosome.
+
+- A chromosome is made of 2 DNA molecule
+- A chromosome id double stranded double helix
+- Human cell has 23 chromosome (and 46 when replicating)
+
+Analogy to chromosomes and DNA base pair is like a multi part book and words in those books.
+-  A 1-book story, like The Hobbit. (E. coli bacteria is a single cell organism that contains only one chromosome. This one chromosome contains 5,000 protein-coding genes,)
+- But for others, it is split into several books (chromosomes), like The Lord of the Rings, which is split into 3 books (3 chromosomes).
+- for humans its split into 23 books
 
 #### What is a gene?
-A gene is the basic physical and functional unit of heredity. Genes, which are made up of DNA.
+Genes are fragments or strands into which the DNA is divided.
+
+The human genome has around 25,000 to 30,000 genes. So that’s around 25,000 to 30,000 genes distributed in 23 chromosome pair.
 
 The Human Genome Project has estimated that humans have between 20,000 and 25,000 genes.
 
@@ -12,6 +29,8 @@ DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost a
 The information in DNA is stored as a code made up of four chemical bases: adenine (A), guanine (G), cytosine (C), and thymine (T). Human DNA consists of about 6 billion bases, and more than 99 percent of those bases are the same in all people. The order, or sequence, of these bases determines the information available for building and maintaining an organism, similar to the way in which letters of the alphabet appear in a certain order to form words and sentences.
 
 The human genome contains approximately 3 billion of base pairs, which reside in the 23 pairs of chromosomes within the nucleus of all our cells. Each chromosome contains hundreds to thousands of genes, which carry the instructions for making proteins.
+
+That makes a total of 6 billion base pairs of DNA per cell.
 
 http://www.edinformatics.com/math_science/human_genome.htm
 
