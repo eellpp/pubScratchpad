@@ -21,6 +21,6 @@ Each study should come with a review plan. Weekly , monthly etc. While taking no
 
 `Google calendar` for scheduling tests
 
-`Quizlet` for flashcard based review tests
+`Quizlet` , `Anki` for flashcard based review tests
 
 
