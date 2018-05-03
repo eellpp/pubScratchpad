@@ -141,6 +141,24 @@ The information is stored in memory. But to recall that single peice of informat
 ### Memory palace trick
 The  “memory palace” technique is espoused by the Greeks and Romans. This involves creating a kind of mental geography — say a walk from your front door out to the street — and using strong imagery to link certain words to key points along your “mental walk.” Again, bizarre and distinctive imagery works best.
 
+
+## Memory Destroyers
+
+### Strong feelings
+
+While feeding in information, if something happens that arouses strong emotions, then it wipes off the working memory. This can be experimented in daily life
+
+A person who takes every success/failure, every praise/insult, every embarassement/rejection personally and too seriously creates weapons of memory destruction internally. These feelings and their recall will be so strong that they will dilute the subtle cues that recalls other millions of memories. 
+
+Dullness is bad for memory. We need to have sensory experience of new things. But holding traumatic memories of essentially inconsequential things is bad.
+
+### Digital distraction
+The news and video world tries to garner attention by accentuating every event irrespective of whether its a statistical outlier. Thus the headlines are always sharp statements that arouses feelings. In ranked forums the top posts will be the one which has got many agitated. 
+
+Thus when between work, if you happen to just wander into these for even just few moments, they cause immense damage to working memory. 
+From the monotony of work, we need a distraction. Just get up from seat, walk around or find some other activity which is casual and not emotional.
+
+
 -----------
 
 That our memory of distant past is more clear than of the just happened
