@@ -23,4 +23,13 @@ Each study should come with a review plan. Weekly , monthly etc. While taking no
 
 `Quizlet` , `Anki` for flashcard based review tests
 
+`TopTracker` for project/work timetracking
+
+`Progress Chart`
+
+Simply divide a piece of paper into two columns. At the end of the day, check your records in TopTracker and write down the times on the left side and what you’ve accomplished on the right side. This shows the progress you achieved
+
+### Split learning goals
+
+
 
