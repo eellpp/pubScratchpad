@@ -74,17 +74,18 @@ scala> def toList[A](value:A) = List(value)
 ```
 
 #### Adding Numbers in a list
-'''java
+```java
 val evenNumbers :List[Int] = List(2,4,6,7,8)
 val sum = evenNumbers.foldLeft(0) { (a :int, b :int) => a + b}
 scala> val sum = evenNumbers.foldLeft(0) { (a, b ) => a + b}
 scala> val sum = evenNumbers.foldLeft(0) { _ + _}
-'''
+```
+
 In Scala you can use underscores in various places, and their meaning is determined solely by the context and where they’re used.
 . Function literals are a common idiom in Scala, and you’ll find occurrences of them in Scala libraries and codebases.
-'''java
+```java
 val hasUpperCase = name.exists(_.isUpper)
-'''
+```
 In this case you’re invoking the given function literals for each character in the name string; when it finds an uppercase character, it will exit. 
 
 ---
