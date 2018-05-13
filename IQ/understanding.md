@@ -14,3 +14,5 @@ When you feel like your being distracted, focus as much as you can on a pressent
 
 Bad food habits, overeating, lethargy, bad emotional handling, worrying, hypertension, lack of exercise, taking everything too seriously are all the root causes of various diseases. These then inturn let the brain cell get unused and die. 
 
+`pickup a challenge` : Keep challenging yourself to keep the mind sharp
+
