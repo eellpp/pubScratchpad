@@ -10,3 +10,7 @@ When you feel like your being distracted, focus as much as you can on a pressent
 
 `Detached Thinking`: Stop identifiing with your thoughts. Observe your thoughts witout judging them
 
+> A person may sustain or even improve information processing speed by paying close attention to vascular risk factors, engaging in regular aerobic exercise, eating well and continuing to challenge oneself intellectually.
+
+Bad food habits, overeating, lethargy, bad emotional handling, worrying, hypertension, lack of exercise, taking everything too seriously are all the root causes of various diseases. These then inturn let the brain cell get unused and die. 
+
