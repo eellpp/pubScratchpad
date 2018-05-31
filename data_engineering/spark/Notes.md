@@ -16,11 +16,13 @@ https://docs.databricks.com/spark/latest/gentle-introduction/sparksession.html
 
 
 ## Spark RDD vs Dataset/Dataframe
-DataSet was introduced in spark2
 - `RDD` : The inmemory distributed dataset that spark creates for faster computation and reduce the I/O. Choose this format if the data is unstructured.
 - `Dataframe` : Like RDD but for data having tabular structure. Similar to dataframe's in R, but with distributed computation and optimizations built in. Dataframe's are untyped and does not provide compile time type checks. 
 DataFrame is simply a type alias of Dataset[Row]
 - `DataSet` : Introduced in spark2 . Like Dataframe but with compile time type safety. 
+
+DataSet was introduced in spark2.
+
 Run time of RDD's are much slower than the dataset/dataframe counterparts. This is because spark leverages on the structured view of data to do optimizations while performing operations on data. (RDD can be 3/4x slower)
 Another benefit of this new Dataset API is the reduction in memory usage. Since Spark understands the structure of data in Datasets, it can create a more optimal layout in memory when caching Datasets.
 DataFrame is an alias to Dataset[Row]. As we mentioned before, Datasets are optimized for typed engineering tasks, for which you want types checking and object-oriented programming interface, while DataFrames are faster for interactive analytics and close to SQL style.
