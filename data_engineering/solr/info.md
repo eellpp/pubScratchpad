@@ -21,5 +21,19 @@ SolrCloud uses sharding and replication for scaling.
 ### Solr and Zookeeper
 SolrCloud is flexible distributed search and indexing, without a master node to allocate nodes, shards and replicas. Instead, Solr uses ZooKeeper to manage these locations, depending on configuration files and schemas. Queries and updates can be sent to any server. Solr will use the information in the ZooKeeper database to figure out which servers need to handle the request.
 
+### Logical concepts
+- A Cluster can host multiple Collections
+- A collection can be partitioned into multiple Shards
+- The amount of parallelization that is possible for an individual search request is determined by number of shards
+
+### Physical concepts
+- A Cluster is made up of one or more Solr Nodes (JVM processes)
+- Each Node is a JVM process that can host multiple Cores
+- A Solr core is basically an index of the text and fields found in documents. A single Solr Node can contain multiple "cores"
+
+
+## No Master Slave
+Solr does not have master slave concept. Instead we have a distributed search where indexes are shareded across nodes.
+If you have bootstrapped Solr with numShards=2, for example, your indexes are split across both shards
 
 
