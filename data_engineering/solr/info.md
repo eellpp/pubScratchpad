@@ -32,8 +32,29 @@ SolrCloud is flexible distributed search and indexing, without a master node to 
 - A Solr core is basically an index of the text and fields found in documents. A single Solr Node can contain multiple "cores"
 
 
-## No Master Slave
+### No Master Slave
 Solr does not have master slave concept. Instead we have a distributed search where indexes are shareded across nodes.
 If you have bootstrapped Solr with numShards=2, for example, your indexes are split across both shards
 
+### Solrctl
+For collection configuration, users have the option of 
+- interacting directly with ZooKeeper using the instancedir option (solrctl instancedir )or 
+- using Solr's ConfigSet API using the config option (solrctl config )
+
+The difference between both is that using the config api is more secure. Compared in the link
+- https://www.cloudera.com/documentation/enterprise/5-7-x/topics/search_solrctl_managing_solr.html#concept_h44_bbc_mt
+
+
+#### instancedir
+Each SolrCloud collection must be associated with an instance directory, though note that different collections can use the same instance directory.
+```bash
+Generate the config files for the collection:
+$ solrctl instancedir --generate $HOME/solr_configs2
+Upload the instance directory to ZooKeeper. This base config cane be used by multiple collections
+$ solrctl instancedir --create collection_base $HOME/solr_configs2
+# create the config
+$solrctl config --create collection1 collection_base
+# create the collection with 2 shard
+$solrctl collection --create collection1 -s 2
+```
 
