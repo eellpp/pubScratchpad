@@ -48,9 +48,9 @@ The difference between both is that using the config api is more secure. Compare
 #### instancedir
 Each SolrCloud collection must be associated with an instance directory, though note that different collections can use the same instance directory.
 ```bash
-Generate the config files for the collection:
+#Generate the config files for the collection:
 $ solrctl instancedir --generate $HOME/solr_configs2
-Upload the instance directory to ZooKeeper. This base config cane be used by multiple collections
+#Upload the instance directory to ZooKeeper. This base config cane be used by multiple collections
 $ solrctl instancedir --create collection_base $HOME/solr_configs2
 # create the config
 $solrctl config --create collection1 collection_base
@@ -58,3 +58,21 @@ $solrctl config --create collection1 collection_base
 $solrctl collection --create collection1 -s 2
 ```
 
+#### Batch ingestion with cloudera morphline
+Morphlines replaces Java programming with simple configuration steps, reducing the cost and effort of doing custom ETL.
+
+Morphline is a configuration file which can be used for doing ETL transformation on incoming data and ingest them into Solr. Morphline reads data from HDFS. It can read files in CSV, JSON, AVRO, RCFILE etc: 
+
+The Morphlines library takes in a Morphlines configuration file that defines a set and order of transformations in a JSON-like format. In this way, you can use the Morphlines library and write little or no Java code at all. 
+
+References
+- http://cloudera.github.io/cdk/docs/current/cdk-morphlines/morphlinesReferenceGuide.html
+- https://blog.cloudera.com/blog/2013/07/morphlines-the-easy-way-to-build-and-integrate-etl-apps-for-apache-hadoop/
+- https://github.com/cloudera/cdk/tree/master/cdk-morphlines
+
+Example of ingesting data in parquet format:
+- https://medium.com/@bkvarda/index-parquet-with-morphlines-and-solr-20671cd93a41
+
+With Envelope:
+- Morphline is one of the derivers for cloudera envelope. 
+- The morphline file can be provided to the Spark executors from spark2-submit using the --files option.
