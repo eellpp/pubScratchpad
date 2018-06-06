@@ -14,6 +14,8 @@ public class SpringJdbcConfig {
         return dataSource;
     }
 }
+
+JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 ```
 ### Querying
 ```java
