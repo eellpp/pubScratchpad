@@ -41,3 +41,18 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
 String query = "SELECT * FROM EMPLOYEE WHERE ID = ?";
 List<Employee> employees = jdbcTemplate.queryForObject(query, new Object[] { id }, new EmployeeRowMapper());
 ```
+
+### Using the Row Callback handler to process results in batches
+```java
+JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
+jdbcTempate.setFetchSize(1000);
+
+jdbcTemplate.query("select first_name from customer", new RowCallbackHandler() {
+      public void processRow(ResultSet resultSet) throws SQLException {
+        while (resultSet.next()) {
+          // send email to resultSet.getString(1)
+        }
+      }
+    });
+ ```
