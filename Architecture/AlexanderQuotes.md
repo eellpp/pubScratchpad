@@ -16,7 +16,10 @@
 
 > In an organic environment, every place is unique, and the different places also cooperate, with no parts left over, to create a global whole - a whole which can be identified by everyone who is part of it. 
 
-“It is possible to make buildings by stringing together patterns, in a rather loose way. A building made like this, is an assembly of patterns. It is not dense. It is not profound. But it is also possible to put patterns together in such a way that many patterns overlap in the same physical space: the building is very dense; it has many meanings captured in a small space; and through this density, it becomes profound.” 
+### On observing patterns
+> “Every place is given its character by certain patterns of events that keep on happening there.... These patterns of events are locked in with certain geometric patterns in the space. Indeed, each building and each town is ultimately made out of these patterns in the space, and out of nothing else; they [patterns in the space] are the atoms and molecules from which a building or a town is made.”
+
+> “It is possible to make buildings by stringing together patterns, in a rather loose way. A building made like this, is an assembly of patterns. It is not dense. It is not profound. But it is also possible to put patterns together in such a way that many patterns overlap in the same physical space: the building is very dense; it has many meanings captured in a small space; and through this density, it becomes profound.” 
 
 
 ### Flexible Designs
@@ -27,6 +30,4 @@
 
 
 ### Others
-> Speaking as a builder, if you start something, you must have a vision of the thing which arises from your instinct about preserving and enhancing what is there
-
-> “Every place is given its character by certain patterns of events that keep on happening there.... These patterns of events are locked in with certain geometric patterns in the space. Indeed, each building and each town is ultimately made out of these patterns in the space, and out of nothing else; they [patterns in the space] are the atoms and molecules from which a building or a town is made.” 
+> Speaking as a builder, if you start something, you must have a vision of the thing which arises from your instinct about preserving and enhancing what is there 
