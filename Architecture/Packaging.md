@@ -2,7 +2,7 @@
 ## Package by feature, Layer and others 
 
 http://www.javapractices.com/topic/TopicAction.do?Id=205
-#### package by layer
+#### package by feature
 Package-by-feature uses packages to reflect the feature set. It tries to place all items related to a single feature (and only that feature) into a single directory/package. This results in packages with high cohesion and high modularity, and with minimal coupling between packages. Items that work closely together are placed next to each other. They aren't spread out all over the application. It's
 
 For example, a drug prescription application might have these packages:
@@ -40,3 +40,9 @@ The last three principles are about the couplings between packages, and talk abo
 4) ADP	The Acyclic Dependencies Principle	The dependency graph of packages must have no cycles.
 5) SDP	The Stable Dependencies Principle	Depend in the direction of stability.
 6) SAP	The Stable Abstractions Principle	Abstractness increases with stability
+
+#### Example of putting classes that are used together in same package
+For example, your Logging utility classes are not necessarily used together with your file io classes. So package all logging them separately. But logging classes could be related to one another. So create a sort of complete product for logging, say, for the want of better name commons-logging package it in a (re)usable jar and another separate complete product for io utilities, again for the want of better name, say commons-io.jar. 
+
+Now, let's say you wanted your logging utility classes to support structured logging for say some sort of log analysis by tools like splunk. Some clients of your logging utility may want to update to your newer version; some others may not. So when you release a new version, package all classes which are needed and reused together for migration. So some clients of your utility classes can safely delete your old commons-logging jar and move to commons-logging-new jar. Some other clients are still ok with older jar. However no clients are needed to have both these jars (new and old) just because you forced them to use some classes for older packaged jar.
+
