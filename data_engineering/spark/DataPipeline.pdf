@@ -1,0 +1,12 @@
+
+### Using Spark Streaming for logging data pipeline
+
+https://databricks.com/blog/2017/02/23/working-complex-data-formats-structured-streaming-apache-spark-2-1.html
+
+At Databricks, we collect logs from our services and use them to perform real-time monitoring to detect issues, before our customers are affected. Log files are unstructured files, but they are parseable because they have a well-defined Log4j format. We run a log collector service that sends each log entry and additional metadata about the entry (e.g. source) in JSON to Kinesis. These JSON records are then batch-uploaded to S3 as files. Querying these JSON logs to answer any question is tedious: these files contain duplicates, and for answering any query, even if it involves a single column, the whole JSON record may require deserialization.
+
+To address this issue, we run a pipeline that reads these JSON records and performs de-duplication on the metadata. Now we are left with the original log record, which may be in JSON format or as unstructured text. If we’re dealing with JSON, we use from_json() and several of the transformations described above to format our data. If it is text, we use methods such as regexp_extract() to parse our Log4j format into a more structured form. Once we are done with all of our transformations and restructuring, we save the records in Parquet partitioned by date. This gives us 10-100x speed-up when answering questions like ”how many ERROR messages did we see between 10:00-10:30 for this specific service”? The speed-ups can be attributed to:
+
+We no longer pay the price of deserializing JSON records
+We don’t have to perform complex string comparisons on the original log message
+We only have to extract two columns in our query: the time, and the log level
