@@ -20,3 +20,8 @@ UOB KayHian confirmed that “housing loans and building & construction accounte
 - 2017: The number of purchases by foreigners that are Non-Permanent Residents (NPR) was about 7.1% of total home sales. (rose by 44.7% to 1,549 homes)
 
 - some foreigners choose to get permanent resident status first before acquiring a property, in order to qualify for a lower ABSD rate
+
+- https://sbr.com.sg/residential-property/news/why-foreign-home-buyers-prefer-singapore-over-prime-cities-property-market
+- https://www.icompareloan.com/resources/foreign-property-buyers-demand-jump/
+- https://www.businesstimes.com.sg/banking-finance/property-cooling-measures-2018/singapore-banks-to-gain-from-property-cooling
+- https://www.propwise.sg/property-prices-to-double-by-2030-4-questions-on-dbs-banks-property-report/
