@@ -1,9 +1,18 @@
 
 ### Package vs module vs class
-A Python module is simply a Python source file, which can expose classes, functions and global variables.
+A module is a Python file that (generally) has only definitions of variables, functions, and classes.
+To import all the variables, functions and classes from moduletest.py into another program you are writing, we use the import operator. 
 
-When imported from another Python source file, the file name is treated as a namespace.
+```bash
+import moduletest
+# import only required objects
+from moduletest import ageofqueen
+from moduletest import printhello
+```
+`Class`:
+A module can consist of multiple classes or functions.
 
+`Package`:
 A Python package is simply a directory of Python module(s).
 
 For example, imagine the following directory tree in /usr/lib/python/site-packages:
@@ -39,3 +48,31 @@ Project/
 ```
 https://stackoverflow.com/questions/193161/what-is-the-best-project-structure-for-a-python-application
 
+### Class Syntax
+The syntax for a subclass definition looks like this:
+```bash
+class BaseClass:
+  Body of base class
+
+class DerivedClass(BaseClass):
+
+  def __init__(self, first, last):
+        self.firstname = first
+        self.lastname = last
+
+class MultiDerived(Base1, Base2):
+    pass
+ ```
+ 
+ `__init__` is a special method in Python classes, it is the constructor method for a class.
+ 
+ `self` represents the instance of the class. By using the "self" keyword we can access the attributes and methods of the class in python.
+ 
+ Every class in Python is derived from the class object. It is the most base type in Python.
+
+In the multiple inheritance scenario, any specified attribute is searched first in the current class. If not found, the search continues into parent classes in depth-first, left-right fashion without searching same class twice.
+ 
+ `super` : Use super() to access the base class methods
+ 
+ 
+ 
