@@ -93,3 +93,9 @@ Select algorithm strategies via API tags: \
 - to provide multiple content recommendations per page, sitewide, insection.
 Change all configuration in real time with no redeployment. \
 Dynamic optimisation with multi-armed bandits. 
+
+
+References
+- https://getstream.io/blog/best-practices-feed-personalization/
+- https://www.quora.com/Which-algorithms-are-used-in-recommender-systems
+- https://techcrunch.com/2016/09/06/ultimate-guide-to-the-news-feed/
