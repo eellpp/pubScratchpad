@@ -22,3 +22,74 @@ Let Y be the n dimensional column vector representing the rating of an user for 
 Let W be d dimensional row vector representing the coefficients of each word in the linear function relating word frequency to ratings
 
 Y ~ D(W)Transpose
+
+## Algorithms
+---
+
+### User Clusters
+Improve relevance of recommendations in high churn media services.\
+Cluster users based on historical activity.\
+configurable taxonomy (category, price range, brand, visit referrer, ..)\
+unsupervised (fuzzy k-means)\
+Apache Spark to handle large historical data sizes.\
+Load user clusters into front-end servers periodically and count content hits for users in same cluster\
+Decay counts to provide activity dynamics as new content is published.\
+Recommend by combining counts for content based on cluster membership of user.\
+Real-time stream processing for adding short-term dynamics to recommendations.
+
+### Tag Affinity
+Combine metadata with trending articles\
+Model associates users with weights to tags from content.\
+At runtime find trending articles with tags associated with user.\
+Combine results for recommendations.\
+Can be used to find niche user clusters.
+
+### Item Activity Correlation
+Built for static slowly changing historical inventory\
+Similar to Amazon’s “people who bought this also bought…”\
+Use historical user activity to find items that share similar user activity.\
+Apache Spark scalable offline implementation.\
+Upload for each item: top-N similar items.\
+For each user: item recommendations based on their historical activity.
+
+### Topic Models
+Built for sites needing long tail recommendation \
+Assume activity is associated with a set of topics. \
+Users individuals tastes are covered by a subset of topics. \
+Describe users by the set of keywords for the items they have interacted with.\
+Built with Apache Spark and Vowpal Wabbit implementation of Latent Dirichlet Allocation.\
+Online serving layer scores user association with items in real time.
+
+### Latent Factor Models
+Best for e-commerce sites lower churn sites \
+Netflix Prize winning solution. \
+Use Matrix Factorization to reduce activity matrix to two low dimension user and item factor matrices. \
+Load factors into API servers and score users and items in real time.\
+Fold-in new users and items until next batch update of model. \
+Utilize Apache Spark mllib and streaming modules.
+
+### Content Similarity
+Built for services with rich metadata and high sparsity \
+Requirement – fast content based technique to match user history to similar content based on text/tags of content. \
+Utilize random vectors technique. Each word/tag is assigned a random high-dimensional vector. \
+Open-source Semantic-Vectors implementation. \ 
+Periodically process recent content into vectors and update servers. \
+Servers load vectors into memory. \
+Recommendation on recent user activity to find similar content in real-time. 
+
+### Association Rules
+Suggested the next best item given current set of items \
+A form of basket analysis that is useful in e-commerce to provide recommendations for which items could be added to a basket given a current set of items. \
+There are two Spark jobs that need to be run consecutively: \
+1. Basket Analysis: break up the actions event stream and process the add-to-basket and remove-from-basket events and create a set of session baskets. \
+2. Association Rules : This will process the baskets , find frequent item sets using the Spark MLib FP Growth algorithm and create association rules. \
+
+### Algorithm Optimization
+Cascade multiple algorithms to cover different users. \
+Combine algorithm results in different ways, e.g. weighted scores, rank combine. \
+Run A/B and Multivariate tests with no redeploy \
+Select algorithm strategies via API tags: \
+- to handle user cohorts: mobile users, desktop, tablet
+- to provide multiple content recommendations per page, sitewide, insection.
+Change all configuration in real time with no redeployment. \
+Dynamic optimisation with multi-armed bandits. 
