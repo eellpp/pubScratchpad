@@ -1,4 +1,8 @@
 
+### A Product Recommendation System Using Vector Space Model and Association Rule
+This paper presents an alternative product recommendation system for Business-to-customer e-commerce purposes. The system recommends the products to a new user. It depends on the purchase pattern of previous users whose purchase pattern are close to that of new user. The system is based on vector space model to find out the closest user profile among the profiles of all users in database. It also implements Association rule mining based recommendation system, taking into consideration the order of purchase, in recommending more than one product. \
+https://www.researchgate.net/publication/232634921_A_Product_Recommendation_System_Using_Vector_Space_Model_and_Association_Rule
+
 ### User Profile Vector
 This is based on user feedback. User feedback canbe explicit and implicit. Implicit feedback is based on user actions and is considered more accurate.
 
