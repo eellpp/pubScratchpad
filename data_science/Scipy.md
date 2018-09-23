@@ -77,6 +77,8 @@ cosine_similarity(X=csc_matrix(x),Y=csc_matrix(y))
 
 ### Cosine similarity between a vector and dataframe in spark ( without using sparse matrix optimizations)
 
+https://hashnode.com/post/cosine-similarity-between-a-static-vector-and-each-vector-in-a-spark-data-frame-cjctjlump0074dlwtfaoe0pwj
+
 ```bash
 # imports we'll need
 import numpy as np
