@@ -105,4 +105,59 @@ def cos_sim(a,b):
 df = df.withColumn("coSim", udf(cos_sim, FloatType())(col("myCol"), array([lit(v) for v in static_array])))
 df.limit(10).toPandas()
 ```
+References:
+- https://stackoverflow.com/a/46764347
+- https://medium.com/@rantav/large-scale-matrix-multiplication-with-pyspark-or-how-to-match-two-large-datasets-of-company-1be4b1b2871e
 
+```bash
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+# these would realistically get read from files or dataframes. 
+a = ['google inc', 'medium.com', ...] 
+b = ['google', 'microsoft', ...]
+stopwords = ['ltd', ...]
+vect = CountVectorizer(stop_words=stopwords)
+# this can be done with less memory overhead by using a generator
+vocabulary =  vect.fit(a + b).vocabulary_
+tfidf_vect = TfidfVectorizer(stop_words=stopwords,
+                             vocabulary=vocabulary)
+a_mat = tfidf_vect.fit_transform(a)
+b_mat = tfidf_vect.fit_transform(b)
+a_mat_para = parallelize_matrix(a_mat, rows_per_chunk=100)
+b_mat_dist = broadcast_matrix(a_mat)
+a_mat_para.flatMap(
+        lambda submatrix:
+        find_matches_in_submatrix(csr_matrix(submatrix[1],
+                                             shape=submatrix[2]),
+                                   b_mat_dist,
+                                   submatrix[0]))
+def find_matches_in_submatrix(sources, targets, inputs_start_index,
+                              threshold=.8):
+    cosimilarities = cosine_similarity(sources, targets)
+    for i, cosimilarity in enumerate(cosimilarities):
+        cosimilarity = cosimilarity.flatten()
+        # Find the best match by using argsort()[-1]
+        target_index = cosimilarity.argsort()[-1]
+        source_index = inputs_start_index + i
+        similarity = cosimilarity[target_index]
+        if cosimilarity[target_index] >= threshold:
+            yield (source_index, target_index, similarity)
+def broadcast_matrix(mat):
+    bcast = sc.broadcast((mat.data, mat.indices, mat.indptr))
+    (data, indices, indptr) = bcast.value
+    bcast_mat = csr_matrix((data, indices, indptr), shape=mat.shape)
+    return bcast_mat
+def parallelize_matrix(scipy_mat, rows_per_chunk=100):
+    [rows, cols] = scipy_mat.shape
+    i = 0
+    submatrices = []
+    while i < rows:
+        current_chunk_size = min(rows_per_chunk, rows - i)
+        submat = scipy_mat[i:i + current_chunk_size]
+        submatrices.append((i, (submat.data, submat.indices, 
+                                submat.indptr),
+                            (current_chunk_size, cols)))
+        i += current_chunk_size
+    return sc.parallelize(submatrices)
+```
