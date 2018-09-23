@@ -53,7 +53,18 @@ z = np.array([[1,1,1,1]])
 cosine_similarity(X=x,Y=y)
 ## array([[1.        , 0.80178373],
 ##       [0.80178373, 1.        ]])
-
 ```
+
+For visualizing the similarity matrix output of the last one we can think as :\
+x= [ a1 , a2] \
+y = [b1 , b2] \
+the sim matrix is \
+......b1....................b2  
+a1....1.....................0.80178373  \
+a2....0.80178373.............1 
+
+
+
+
 
 
