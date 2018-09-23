@@ -63,7 +63,8 @@ the sim matrix is \
 a1....1.....................0.80178373  \
 a2....0.80178373.............1 
 
-
+If X is the matrix representing the document vectors and Y is user profile matrix. Both X and Y vectors are based on same set of tags (named entities), then the rows of the resultant matrix will represent the similarity of each document to each of the user.\
+For document recommendation to users, we have iterate through each row (document) and find columns (users) whose sim scores are greater than threshold. 
 
 
 
