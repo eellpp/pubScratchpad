@@ -66,6 +66,14 @@ a2....0.80178373.............1
 If X is the matrix representing the document vectors and Y is user profile matrix. Both X and Y vectors are based on same set of tags (named entities), then the rows of the resultant matrix will represent the similarity of each document to each of the user.\
 For document recommendation to users, we have iterate through each row (document) and find columns (users) whose sim scores are greater than threshold. 
 
+Since a user/document matrix would have high sparsity (> 95%), it is better to use the sparse representation for matrix computation
+
+```bash
+x = np.array([[2,3,1,0]])
+y = np.array([[2,3,1,0],[1,1,1,1]])
+cosine_similarity(X=csc_matrix(x),Y=csc_matrix(y))
+## array([[1.        , 0.80178373]])
+```
 
 
 
