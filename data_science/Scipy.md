@@ -106,7 +106,6 @@ df = df.withColumn("coSim", udf(cos_sim, FloatType())(col("myCol"), array([lit(v
 df.limit(10).toPandas()
 ```
 References:
-- https://stackoverflow.com/a/46764347
 - https://medium.com/@rantav/large-scale-matrix-multiplication-with-pyspark-or-how-to-match-two-large-datasets-of-company-1be4b1b2871e
 
 ```bash
@@ -161,3 +160,15 @@ def parallelize_matrix(scipy_mat, rows_per_chunk=100):
         i += current_chunk_size
     return sc.parallelize(submatrices)
 ```
+
+
+### Distributed matrix in spark : RowMatrix,IndexedRowMatrix,CoordinateMatrix and Block Matrix
+https://spark.apache.org/docs/2.3.0/mllib-data-types.html
+
+A `RowMatrix` is a row-oriented distributed matrix without meaningful row indices, e.g., a collection of feature vectors. It is backed by an RDD of its rows, where each row is a local vector. We assume that the number of columns is not huge for a RowMatrix so that a single local vector can be reasonably communicated to the driver and can also be stored / operated on using a single node.\ 
+An `IndexedRowMatrix` is similar to a RowMatrix but with row indices, which can be used for identifying rows and executing joins. \
+A `CoordinateMatrix` is a distributed matrix stored in coordinate list (COO) format, backed by an RDD of its entries. \
+A `BlockMatrix` is a distributed matrix backed by an RDD of MatrixBlock which is a tuple of (Int, Int, Matrix).
+
+- https://stackoverflow.com/a/46764347
+
