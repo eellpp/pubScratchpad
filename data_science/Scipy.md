@@ -28,3 +28,32 @@ Once the matrices are build using one of the a) types, to perform manipulations 
 Coo (Coordinate) and DOK (Dictionary of Keys) are easier to construct, and can then be converted to CSC or CSR via matrix.tocsc() or matrix.tocsr().
 
 https://en.wikipedia.org/wiki/Sparse_matrix
+
+### Using cosine_similarity from sklearn
+
+cosine_similarity function is between two matrices.\
+A numpy array of shape(m,n) is a matrix where m is number of rows and n is number of columns\
+The cosine_similarity function calculates similarity betweeb each row of the matrix A with that of matrix B
+
+```bash
+from sklearn.metrics.pairwise import cosine_similarity
+x = np.array([[2,3,1,0]])
+y = np.array([[1,1,1,1]])
+cosine_similarity(X=x,Y=y)
+## array([[0.80178373]])
+
+x = np.array([[2,3,1,0]])
+y = np.array([[2,3,1,0],[1,1,1,1]])
+cosine_similarity(X=x,Y=y)
+## array([[1.        , 0.80178373]])
+
+x = np.array([[2,3,1,0],[1,1,1,1]])
+y = np.array([[2,3,1,0],[1,1,1,1]])
+z = np.array([[1,1,1,1]])
+cosine_similarity(X=x,Y=y)
+## array([[1.        , 0.80178373],
+##       [0.80178373, 1.        ]])
+
+```
+
+
