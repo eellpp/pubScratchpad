@@ -177,7 +177,7 @@ A `BlockMatrix` is a distributed matrix backed by an RDD of MatrixBlock which is
 
 
 ### References
-[Sparse Matrices For Efficient Machine Learning](https://dziganto.github.io/Sparse-Matrices-For-Efficient-Machine-Learning/)
-[Working with Sparse Matrices](http://www.mathcs.emory.edu/~cheung/Courses/561/Syllabus/3-C/sparse.html)
-[Sparse Matrix Representations & Iterative Solvers](http://www.bu.edu/pasi/files/2011/01/NathanBell1-10-1000.pdf)
+[Sparse Matrices For Efficient Machine Learning](https://dziganto.github.io/Sparse-Matrices-For-Efficient-Machine-Learning/)\
+[Working with Sparse Matrices](http://www.mathcs.emory.edu/~cheung/Courses/561/Syllabus/3-C/sparse.html)\
+[Sparse Matrix Representations & Iterative Solvers](http://www.bu.edu/pasi/files/2011/01/NathanBell1-10-1000.pdf)\
 [Sparse matrices - scipy.sparse](https://docs.scipy.org/doc/scipy/reference/sparse.html)
