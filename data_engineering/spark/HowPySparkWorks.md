@@ -1,8 +1,22 @@
 
-PySpark requires py4j on the driver machine. PY4J starts the JVM process which creates the spark session. If any of the data operation on the nodes require custom python code execution, then the RDD and python code is serialized/pickled and piped to a new python process created to execute this work.\
+PySpark is responsible for linking the python API to the spark core and initializing the spark context.Data is processed in Python and cached / shuffled in the JVM.
+
+On start, Python Driver programs access Spark through a SparkContext, and SparkContext uses Py4J to launch a JVM and create a JavaSparkContext. JavaSparkContext communicates with the spark cluster.
+
+PySpark requires py4j on the driver machine. PY4J starts the JVM process which creates the JavaSparkContents. If any of the data operation on the nodes require custom python code execution, then the RDD and python code is serialized/pickled and piped to a new python process created to execute this work.\
 Note that py4J is used on only the spark driver. The executors don't use py4j. Instead they use unix pipes to communicate\
 
 PySpark relies on Py4J to execute Python code that can call objects that reside in the JVM. To do that, Py4J uses a gateway server to communicate between the JVM and the Python interpreter, and PySpark sets it up for you.\
+
+RDD transformations in Python are mapped to transformations on PythonRDD objects in Java. On remote worker machines, PythonRDD objects launch Python subprocesses and communicate with them using pipes, sending the user's code and the data to be processed.
+
+##### shipping code
+User-defined functions (e.g. lambdas or functions passed to map, flatMap) are serialized using PiCloud's cloudpickle library and shipped to remote Python workers. 
+
+##### shipping data
+Inside JVM PythonRDD Data objects are serialized using the Python cPickle serializer and send over
+
+### Execution steps
 From the pyspark python driver code we can access code in jvm by 
 ```bash
 sc._jvm.com.myJavaModule.hello()
@@ -10,8 +24,8 @@ sc._jvm.com.myJavaModule.hello()
  The jar file of the dependency should be added to classpath
 
 Questions
-1. On spark submit how the python env is setup\
-2. Where is python kickstarting py4J jvm process\
+1. On spark submit how the python env is setup
+2. Where is python kickstarting py4J jvm process
 3. How are java rdd and python files piped to python processes on nodes
 
 ### Submitting Spark Job
@@ -87,5 +101,39 @@ val gatewayServer = new py4j.GatewayServer.GatewayServerBuilder()
 
  ```
  
+### How scala code in cluster can communicates to python with pipedRDD
 
+example of pipe out to a python script using Scala and Spark and a regular Python script.
+
+
+```bash
+### test.py
+#!/usr/bin/python
+import sys
+
+for line in sys.stdin:
+  print "hello " + line
+```
+
+spark-shell (scala)
+```bash
+val data = List("john","paul","george","ringo")
+
+val dataRDD = sc.makeRDD(data)
+
+val scriptPath = "./test.py"
+
+val pipeRDD = dataRDD.pipe(scriptPath)
+
+pipeRDD.foreach(println)
+Output
+
+hello john
+
+hello ringo
+
+hello george
+```
+Every process has three streams associated with it. They are stdin - standard input, stdout - standard output and stderr - Standard error.
+The JVM process writes each row of the PythonRDD 
 
