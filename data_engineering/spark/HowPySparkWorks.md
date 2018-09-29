@@ -10,6 +10,15 @@ PySpark relies on Py4J to execute Python code that can call objects that reside 
 
 RDD transformations in Python are mapped to transformations on PythonRDD objects in Java. On remote worker machines, PythonRDD objects launch Python subprocesses and communicate with them using pipes, sending the user's code and the data to be processed.
 
+### Python and JVM communication
+
+**Pyspark Driver:**\
+The communication occurs over the Py4J gateway server socket. Here python code is able to call methods in JVM classes.
+
+**Executors:**\
+The communication occures over IO stream (unix pipes). PythonRDD objects ande code are serialized and pickled and passed over the IO stream for the underlying python process 
+
+
 ##### shipping code
 User-defined functions (e.g. lambdas or functions passed to map, flatMap) are serialized using PiCloud's cloudpickle library and shipped to remote Python workers. 
 
