@@ -1,5 +1,7 @@
 
-
+> Step one is to develop just enough to get couple of sales from target market segment. Validate the market from analysing the customer requirement. What ever happened till now is a pilot. A throwaway effort or code. Most of the time you would have no sale and go back to square one, trying something new.  Once you have crossed this stage, take it to beta level by putting proper software stack and practices in place. Start thinking about team , scalability etc. 
+---
+> Hardest step in business is go from 0 to $1K recurring monthly profit. This will force you to get your market segment figured out and all the hard work done. Most people, from outside, think that difficulty in running business is linear and would put all the effort in developing fancy stuff based on their mental model of the problem. They know that running business is multi disciplinary process but underestimate on how steep is the difficulty , in each of those disciplines, during those first steps. 
 ---
 > For people who’re in a financial position to handle some paycheck risk, I’ts recommended to do a startup. Either from social background or by virtue of being in place and time where your skills are in great demand.
 
