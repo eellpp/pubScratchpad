@@ -17,6 +17,27 @@ Bitcoin is the incentive for the miners to keep building blockchain blocks.
 
 ---
 ## Create own blockchain and currency with multichain
+
+https://www.multichain.com/getting-started/
+
 https://www.youtube.com/watch?v=k6iqualPYtc
 
 Create a blockchain and currency. Send currency between nodes. 
+
+---
+
+Global diamond giant De Beers announced Thursday that it tracked 100 high-value diamonds from the mine to the retailer using blockchain technology. The effort was reportedly undertaken to enhance consumer confidence and public trust that De Beers diamonds were non-conflict, in addition to increasing efficiency in the supply chain. Conflict diamonds are uncut diamonds mined in a war-zone and traded to illicitly fund the fighting.
+
+Tracr assigns a unique “Global Diamond ID” which records individual diamond characteristics such as carat, clarity, and color. The data is then consolidated onto an immutable digital ledger. Tracr then verifies said data at each milestone of the diamond’s movement from the mine to the retailer. 
+
+---
+Chain plans to explore the use of blockchain technology in charitable donations, charity tracking, transparent management\
+China’s Supreme Court ruled that evidence authenticated with blockchain technology is binding in legal disputes.
+---
+Walmart IBM tracking food with blockchain
+> At each stop along the way, people handling produce for Walmart will make an entry on the blockchain, signing off when they receive it and then when they move it onto the next person in the chain. IBM and Walmart say they are already tracking other products like yogurt and poultry on the system. 
+
+> Blockchains are supposed to make it possible to keep updated databases without any central authority in charge. But currently, all of the records for the Walmart blockchain are being stored on IBM’s cloud computers, for Walmart’s use. That has led to questions about why a distributed database like a blockchain is even necessary 
+
+
+
