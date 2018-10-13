@@ -31,8 +31,11 @@ Global diamond giant De Beers announced Thursday that it tracked 100 high-value 
 Tracr assigns a unique “Global Diamond ID” which records individual diamond characteristics such as carat, clarity, and color. The data is then consolidated onto an immutable digital ledger. Tracr then verifies said data at each milestone of the diamond’s movement from the mine to the retailer. 
 
 ---
-Chain plans to explore the use of blockchain technology in charitable donations, charity tracking, transparent management\
+## Block chain News
+---
+Chain plans to explore the use of blockchain technology in charitable donations, charity tracking, transparent management \
 China’s Supreme Court ruled that evidence authenticated with blockchain technology is binding in legal disputes.
+
 ---
 Walmart IBM tracking food with blockchain
 > At each stop along the way, people handling produce for Walmart will make an entry on the blockchain, signing off when they receive it and then when they move it onto the next person in the chain. IBM and Walmart say they are already tracking other products like yogurt and poultry on the system. 
