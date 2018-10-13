@@ -14,3 +14,9 @@ Bitcoin is the incentive for the miners to keep building blockchain blocks.
 - consesus based : Majority of nodes must agree on transcations for the block to valid. Once a node validates the newly added block, it start to compute the key for the new block on top so as to be the first one to do so.
 - immutable : Past blocks cannot be changed. Only appending is possible
 - proof of work : Each miner need to compute a random number which is a key to join the existing block to new block. The first one to do so earns the commision.
+
+---
+## Create own blockchain and currency with multichain
+https://www.youtube.com/watch?v=k6iqualPYtc
+
+Create a blockchain and currency. Send currency between nodes. 
