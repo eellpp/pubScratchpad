@@ -21,3 +21,11 @@
 
 You get so much value from reading about specific aspects than from general startup books. Learn how each LEGO piece works and learn it well. You know, you’re going to have to rely on these specifics to actually get your business rolling.If you want to know something specific say accounting, read a book about that specific area. If you want to know more about the “general” aspects of startups - listen to interviews of founders about which unique chellenges they faced.
 
+---
+
+> The prospects for business ideas are not all the same. Some require investments at start or hard selling. The product is solving big company problem then it would require established company credibilty etc and long sales cycles.
+
+---
+the average age of entrepreneurs at the time they founded their companies is 42 (HBR)
+https://news.ycombinator.com/item?id=18212409
+
