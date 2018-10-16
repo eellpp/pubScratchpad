@@ -98,6 +98,9 @@ Select algorithm strategies via API tags: \
 Change all configuration in real time with no redeployment. \
 Dynamic optimisation with multi-armed bandits. 
 
+### Books
+Building Recommendation Engines
+
 
 References
 - https://getstream.io/blog/best-practices-feed-personalization/
