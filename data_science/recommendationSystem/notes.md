@@ -72,7 +72,7 @@ LSA puts documents together even if they don't have common words. Instead it tri
 
 Term Document Matrix A : m X n \
 Term Matrix U : m X r \ 
-Sigma Matrix S : r x r \
+Sigma Matrix S : r X r \
 Document Matrix V: r X n
 
 A =(decomposed to)= U S V \
@@ -80,5 +80,8 @@ Then dimension reduction is done \
 Now recreating A with reduced dimension gives the weights of terms in documents which can be used for similarity computation
 
 ### Probabilistic LSA (PLSA)
-PLSA adds a statistical foundation to LSA based methods
+PLSA adds a statistical foundation to LSA based methods. PLSA generates a model and maximizes its predictive power. Since PLSA has strong statistical foundation, it can select the optimal params to maximize its predictive power. In LSA the params are generated on heuristic 
 
+
+#### References
+- https://courses.cs.washington.edu/courses/cse573/12sp/lectures/17-ir.pdf
