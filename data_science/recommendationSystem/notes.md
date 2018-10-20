@@ -52,6 +52,33 @@ Items are represented in vector space and similarity between items is calculated
 ### Model Based Recommendation
 The similarity based recommendation system invovles loading the entire past historical data into memory. This makes them slow and not suitable for real-time recommendations. \
 In model based approach , using historical data a model is build with weights learned automatically. New predictions regarding the product will be made using learned weight each time user action is performed. In similarity based approach the weights are not learned real-time\
-1. Probabilistic models
+1. Probabilistic models like Naive Bayes
+2. Non Probabilistic models like logistic regression, SVM, clustering etc
 2. Matrix Factorization models like SVD
+
+
+#### Vector Space Model vs Exact Boolean Match
+When exact match is required we can use the boolean query method. When approx match is required, we can use the similarity based method. 
+
+Boolean : This is yes or no match \
+Similarity : These are partial matches between 0 and 1. 
+
+### Issues with Similarity based approaches
+Synonyms and polysems (same word with multiple meanings : java)
+
+### LSA (latent semantic analysis)
+LSA aims to discover something about the meaning behind the words; about the topics in the documents which are latent.\
+LSA puts documents together even if they don't have common words. Instead it tries to see if the documents share co-occuring terms
+
+Term Document Matrix A : m X n \
+Term Matrix U : m X r \ 
+Sigma Matrix S : r x r \
+Document Matrix V: r X n
+
+A =(decomposed to)= U S V \
+Then dimension reduction is done \
+Now recreating A with reduced dimension gives the weights of terms in documents which can be used for similarity computation
+
+### Probabilistic LSA (PLSA)
+PLSA adds a statistical foundation to LSA based methods
 
