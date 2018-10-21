@@ -85,3 +85,5 @@ PLSA adds a statistical foundation to LSA based methods. PLSA generates a model 
 
 #### References
 - https://courses.cs.washington.edu/courses/cse573/12sp/lectures/17-ir.pdf
+- [Model Base Collaborative Filtering alorithms - medium blog ](https://medium.com/recombee-blog/machine-learning-for-recommender-systems-part-1-algorithms-evaluation-and-cold-start-6f696683d0ed)
+- [various implementations of collaborative model based recommendations] (https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0)
