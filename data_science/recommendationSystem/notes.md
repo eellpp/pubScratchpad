@@ -63,10 +63,10 @@ When exact match is required we can use the boolean query method. When approx ma
 Boolean : This is yes or no match \
 Similarity : These are partial matches between 0 and 1. 
 
-### Issues with Similarity based approaches
+#### Issues with Similarity based approaches
 Synonyms and polysems (same word with multiple meanings : java)
 
-### LSA (latent semantic analysis)
+#### LSA (latent semantic analysis)
 LSA aims to discover something about the meaning behind the words; about the topics in the documents which are latent.\
 LSA puts documents together even if they don't have common words. Instead it tries to see if the documents share co-occuring terms
 
@@ -79,11 +79,20 @@ A =(decomposed to)= U S V \
 Then dimension reduction is done \
 Now recreating A with reduced dimension gives the weights of terms in documents which can be used for similarity computation
 
-### Probabilistic LSA (PLSA)
+#### Probabilistic LSA (PLSA)
 PLSA adds a statistical foundation to LSA based methods. PLSA generates a model and maximizes its predictive power. Since PLSA has strong statistical foundation, it can select the optimal params to maximize its predictive power. In LSA the params are generated on heuristic 
+
+#### LDA
+Latent Dirichlet allocation (LDA) addresses the problems faced by PLSA \
+This is widely used for topic modelling.
 
 ### Memory based vs Model based
 
+
+### Model based approaches
+- Clustering based (KNN, SVD)
+- Matrix Factorization ()
+- Deep Learning based
 
 ### General Notes
 Given a dataset based on some documents and their categories tags, the simplest approach is to start with a content/collaborative method where the a past n months user profile dataset is created and loaded in memory. The cosine similarity between unread new documents and this user profile gives the weights for each document for the user. This becomes the data on the which the recommendations can be performed.\
@@ -95,7 +104,9 @@ Advantages
 - cannot perform statistical optimizations based on hyper params selection for model selection
 
 
+
 #### References
 - https://courses.cs.washington.edu/courses/cse573/12sp/lectures/17-ir.pdf
 - [Model Base Collaborative Filtering alorithms - medium blog ](https://medium.com/recombee-blog/machine-learning-for-recommender-systems-part-1-algorithms-evaluation-and-cold-start-6f696683d0ed)
 - [various implementations of collaborative model based recommendations] (https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0)
+- [using embeddings to create a model based system](https://towardsdatascience.com/structured-deep-learning-b8ca4138b848)
