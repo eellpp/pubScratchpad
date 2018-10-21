@@ -82,6 +82,18 @@ Now recreating A with reduced dimension gives the weights of terms in documents 
 ### Probabilistic LSA (PLSA)
 PLSA adds a statistical foundation to LSA based methods. PLSA generates a model and maximizes its predictive power. Since PLSA has strong statistical foundation, it can select the optimal params to maximize its predictive power. In LSA the params are generated on heuristic 
 
+### Memory based vs Model based
+
+
+### General Notes
+Given a dataset based on some documents and their categories tags, the simplest approach is to start with a content/collaborative method where the a past n months user profile dataset is created and loaded in memory. The cosine similarity between unread new documents and this user profile gives the weights for each document for the user. This becomes the data on the which the recommendations can be performed.\
+Advantages
+- simple intuitive approach 
+- works well on small dataset where content tags is clearly described (without synomys and polynyms)
+- not scalable
+- cannot be used on large datasets where latent features needs to used
+- cannot perform statistical optimizations based on hyper params selection for model selection
+
 
 #### References
 - https://courses.cs.washington.edu/courses/cse573/12sp/lectures/17-ir.pdf
