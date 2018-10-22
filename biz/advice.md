@@ -1,6 +1,9 @@
 
-A necessary skill for entrepreneur is to be a sales person. \
-Your idea is only a hobby until someone pays money to buy your product/service. \
+
+A necessary skill for entrepreneur is to be a sales person.
+
+Your idea is only a hobby until someone pays money to buy your product/service. 
+
 ---
 > Step one is to develop just enough to get couple of sales from target market segment. Validate the market from analysing the customer requirement. What ever happened till now is a pilot. A throwaway effort or code. Most of the time you would have no sale and go back to square one, trying something new.  Once you have crossed this stage, take it to beta level by putting proper software stack and practices in place. Start thinking about team , scalability etc. 
 ---
