@@ -1,4 +1,7 @@
 
+A necessary skill for entrepreneur is to be a sales person. \
+Your idea is only a hobby until someone pays money to buy your product/service. \
+---
 > Step one is to develop just enough to get couple of sales from target market segment. Validate the market from analysing the customer requirement. What ever happened till now is a pilot. A throwaway effort or code. Most of the time you would have no sale and go back to square one, trying something new.  Once you have crossed this stage, take it to beta level by putting proper software stack and practices in place. Start thinking about team , scalability etc. 
 ---
 > Hardest step in business is go from 0 to $1K recurring monthly profit. This will force you to get your market segment figured out and all the hard work done. Most people, from outside, think that difficulty in running business is linear and would put all the effort in developing fancy stuff based on their mental model of the problem. They know that running business is multi disciplinary process but underestimate on how steep is the difficulty , in each of those disciplines, during those first steps. 
@@ -29,3 +32,19 @@ You get so much value from reading about specific aspects than from general star
 the average age of entrepreneurs at the time they founded their companies is 42 (HBR)
 https://news.ycombinator.com/item?id=18212409
 
+---
+1. Create more niche "properties" that provide a small to medium services. focus on something people might need, be willing to pay a small amount for, and ideally can run with minimal supervision.
+
+2. Rinse repeat #1 until a few of those are ongoing. 8 euros per month becomes maybe 800 and growing over time.
+
+3. Don't try to be Zuckerberg. There is only one of him, thank all the gods.
+
+4. Don't even think about the words "startup", "exit", "investment" etc. Focus on stuff that will provide you with a lifestyle of your choice.
+
+5. Try to make each "property" the best you can. Focus on making a "Good Product" (tm). Good products have better chance of being used. Give each one the love it needs. Stay focused. Complete the project. Take it slowly, there is no rush. You have no Boss here. No deadlines.
+
+6. One of these days, one of those niche idea becomes semi-niche, broader audience. Go with it.
+
+7. Remember there is no magic formula, no secret sauce, luck is a huge factor and there is no guarantee for anything.
+
+8. Aim for lifestyle. It's a good aim.
