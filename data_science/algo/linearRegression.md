@@ -25,3 +25,16 @@ So, the gradient descent allows to save a lot of time on calculations. Moreover,
 Additionally, there are versions of gradient descent when you keep only a piece of your data in memory, lowering the requirements for computer memory. Overall, for extra large problems it's more efficient than linear algebra solution.
 
 This becomes even more important as the dimensionality increases, when you have thousands of variables like in machine learning.
+
+#### Example with number of columns > 1000
+
+If you are performing feature extraction from text, image or sound corpus, you may end up with data with more columns than number of rows. 
+For example look into TfidfVectorizer (4.1. Feature extraction), it gives you a sparse matrix, but if you convert it to conventional dense matrix, the columns can easily go beyond 1000, and if you have less than 1000 samples, you have a data that has 1000+ columns and m < n.
+
+Genetic data is the classic example, and a lot of the best research on this type of data structure has been pioneered by computational biologists. It is not usual to only have dozens of rows with tens of thousands to millions of columns.
+
+Medical research often has significantly more measurements per person (i.e. columns, features, etc) than persons in the study.
+
+A lot of market research data sources have more columns than rows. Often, the respondents have to select from long lists of brands etc. which produces a lot of 0/1 variables because these are not single or exclusive items.
+
+Time series data, for example.  I could have daily stock prices for S&P500 stocks, for each day for a decade.  One representation would be to have a column for each day.
