@@ -8,7 +8,9 @@ https://stats.stackexchange.com/a/1845
 ### Other Estimation Methods
 https://en.wikipedia.org/w/index.php?title=Linear_regression&action=edit&section=12
 
-In a big data set when number of predictors are huge then gradient descent is used for linear regression estimation
+### Gradient descent method for estimation of regression params
+In a big data set when number of features are huge then gradient descent is used for linear regression estimation \
+When n (number of features ) is low (n < 1000 or n < 10000) you can think of normal equations as the better option for calculation theta, however for greater values Gradient Descent is much more faster, so the only reason is the time
 
 https://stats.stackexchange.com/a/278794
 
