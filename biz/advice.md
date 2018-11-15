@@ -1,5 +1,12 @@
 
 
+Companies can be analysed based on where you are, and where you are going.
+- `where you are` : Is the net revenue, profit you make
+- `where you are going` : Is the yearly growth rate.
+
+For paying the bills, you need to look at `where you are` metrics. While investors would look at `where you are going` metrics as investment is a bet on future prospect of something.
+
+----
 A necessary skill for entrepreneur is to be a sales person.
 
 Your idea is only a hobby until someone pays money to buy your product/service. 
