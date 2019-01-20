@@ -9,3 +9,9 @@ Its popularity comes from these facts
 
 ### programming Languages does spark support
 Sparks core API is written in Scala. But it has interfaces written in Java, Scala, Python and R. Python is used merely as frontend or a thin wrapper around native scala classes. 
+
+
+### Spark Ecosystem and outline of its major components
+Spark consists of Spark Core API's and other decoupled components. 
+
+Spark Core API provides the generalized execution engine and all the other functionalities are build on top of it. 
