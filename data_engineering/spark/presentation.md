@@ -15,3 +15,6 @@ Sparks core API is written in Scala. But it has interfaces written in Java, Scal
 Spark consists of Spark Core API's and other decoupled components. 
 
 Spark Core API provides the generalized execution engine and all the other functionalities are build on top of it. 
+
+### RDD
+RDD is one of the spark data structures. It is schemaless and immutable JVM objects
