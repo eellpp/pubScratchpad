@@ -43,6 +43,16 @@ The sum of all the possible states of A and B is 1
 
 Based on the above Joint distribution , it seems the mystery can be solved if we find some evidence 
 
+### Prior and Likelihood function
+Our initial probability distribution over the random variable of P(murderer) is a `Prior` . P(murderer = grey) = 0.3 is a value/state of this distribution  
+The value P(weapon = Revolver| murderer = Grey) = 0.9 is an outcome of  `likelihood function`. The distribution for this can be written as P(weapon/murderer). The likelihood function is a function over the random variable murderer  
+The distribution P(murderer/weapon) is the `Posterior` since it is the distribution after the fact of finding the weapon.  
+
+The Joint distribution is calculated using `Prior` and `Likelihood Function`
+
+Definition of Likelihood function:  
+The likelihood of P(B/A) is function of random variable A when we are observing B, while we are trying to infer A
+ 
 ### A probabilistic model
 A probabilitic model has two essential thing  
 1) Random Variables  
