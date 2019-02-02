@@ -87,4 +87,33 @@ P(murderer/Weapon) ~ P(Weapon/Murderer) * p(Murderer)
 
 Here P(Weapon) can be replaced with a normaliser such as to scale the values to 1  
 
+### Notations
+The variables that are included in joint distribution is called as factor.  
+Eg: P(B/A) and P(A) are two factors. One with two variables and other with single variable.  
 
+In practical system, there could be thousands/millions of factors that make up the model
+
+### Adding more factors to model for better inference
+The 66% probability is not good enough to convict grey. On further analysis, the detectives find a silver men hair near crime scene. It is Grey's hair strand. Either grey placed it there or it was deliberately placed by Auberey
+
+ Likelihood of finding a silver hair at crime scene and murderer is grey : P(hair = true | murderer = Grey) = 0.50  
+ Likelihood of finding a silver hair at crime scene and murderer is Aubrey : P(hair = true | murderer = Aubrey) = 0.05
+ 
+ Also the variable hair is independent of weapon variable  
+ P(hair|weapon,murderer) = p(hair | murderer)
+ 
+ Inference with Bayes Rule
+ 
+ P(murderer| hair, weapon) ~ P(murderer) * P(Weapon/Murderer)*P(Hair/Murderer)  
+ 
+ P(Murderer = Grey| hair, weapon) = 0.66 *0.5 = 0.35  
+ P(Murderer = Grey| hair, weapon) = 0.34 *0.05 = 0.017  
+ After normalising  
+ P(Murderer = Grey| hair, weapon) =  0.95  
+ P(Murderer = Grey| hair, weapon) = 0.05  
+ 
+ 
+ 
+ 
+ 
+ 
