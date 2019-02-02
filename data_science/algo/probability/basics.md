@@ -67,4 +67,14 @@ The joint probabilities (Prior) are adjusted to get new JP (Posterior) based on 
 JP of Grey being murder and using revolver =  0.27 /(0.27 + 0.14) = 0.66  
 JP of Aubrey being murder and using revolver = 0.14/(0.27 + 0.14)  = 0.34
 
-This makes intuitive sense since revolver indicates Grey should be prime suspect.  
+This makes intuitive sense since revolver indicates Grey should be prime suspect. 
+
+### Inference Using Bayes Rule
+The same inference above can be formalised and calculated optimally using Bayes Rule
+
+P(murderer/Weapon) = P(Weapon/Murderer) * p(Murderer)/ P(Weapon)  
+P(murderer/Weapon) ~ P(Weapon/Murderer) * p(Murderer)  
+
+Here P(Weapon) can be replaced with a normaliser such as to scale the values to 1  
+
+
