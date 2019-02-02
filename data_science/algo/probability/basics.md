@@ -107,11 +107,12 @@ The 66% probability is not good enough to convict grey. On further analysis, the
  P(murderer| hair, weapon) ~ P(murderer) * P(Weapon/Murderer)*P(Hair/Murderer)  
  
  P(Murderer = Grey| hair, weapon) = 0.66 *0.5 = 0.35  
- P(Murderer = Grey| hair, weapon) = 0.34 *0.05 = 0.017  
+ P(Murderer = Aubrey| hair, weapon) = 0.34 *0.05 = 0.017  
  After normalising  
  P(Murderer = Grey| hair, weapon) =  0.95  
- P(Murderer = Grey| hair, weapon) = 0.05  
+ P(Murderer = Aubrey| hair, weapon) = 0.05  
  
+ So with further evidence we are able to conclude the case.
  
  
  
