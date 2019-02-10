@@ -1,5 +1,13 @@
 
+In short term, the success of company would be dependent on market conditions, technology etc. On long term it is dependent on core skills of the person leading it. The material success of a company can be seen as a symptom of the personality traits of person leading the firm.    
+For a startup, the person leading it should have deep unassailable charecterstics of profit seeking. This single strong personality trait will guide him through various decision making during early years of company. Like a craftsman moulding a claypot, the inner traits of the person would shape the company , chasing profit, as the force to to find ways in keeping the company alive and sustainable.  
 
+The weaker this trait gets in the leading person, the higher the chances of dithering.  
+
+As we go through different stages of life, our inclination towards these inner traits changes. It is through self evaluation, we need to realize where we are.   
+A hardworking, kind and responsible person could that it takes much longer time and heavier effort to reach the same monetary goals than a profit seeking, egoistical person. An the latter person could find it similary hard in other endeavors
+
+---
 Companies can be analysed based on where you are, and where you are going.
 - `where you are` : Is the net revenue, profit you make
 - `where you are going` : Is the yearly growth rate.
