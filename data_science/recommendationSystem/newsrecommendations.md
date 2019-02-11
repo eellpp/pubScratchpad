@@ -37,3 +37,10 @@ The back-off approach makes a more conservative estimate of preferences, allowin
 3. For each people topic  
   a) Calculate the cosine similarity (optionally applying Pivoted Unique Pivoted Normalization) among the topic vector and content TF-IDF vectors  
   b) Recommends more similar contents to person user topics, which user has not yet People Topic Modeling and Content Recommendations algorithm  
+
+----
+https://medium.com/@varruunjain/collaborative-topic-modelling-using-natural-language-processing-b2f3b3b2f87b
+> The approach has intuitive appeal: If a user read ten articles tagged with the word “GDP Growth,” they would probably like future “GDP Growth”-tagged articles. And this technique performs as well on fresh content as it does on older content since it relies on data available at the time of publishing.
+But content-based method provides a limit degree of novelty since it has to match up the features of profile and items. A totally perfect content-based filtering may suggest nothing “surprising”. Also, for a new user: when there’s not enough information to build a solid profile for a user, the recommendation cannot be provided correctly.
+
+> To accommodate the shortcomings of the previous method Collaborative topic modelling (CTM) comes handy. CTM, model contents, it adjusts this model by viewing signals from readers, models reader preference and makes recommendations by the similarity between preference and content.
