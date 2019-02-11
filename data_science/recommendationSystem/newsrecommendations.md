@@ -26,3 +26,14 @@ we needed a quick way to calculate reader preferences, which can occur after fin
 The back-off approach makes a more conservative estimate of preferences, allowing us to be more robust to noisy data. It also, we’ve noticed, brings readers out of niches and exposes them to different, “serendipitous” recommendations.  
 
 
+---------
+## People Topic Modelling and Content Recommendation Algorithm  
+1. Groups all touchpoints (user interactions) by person  
+2. For each person  
+  a) Selects contents user has interacted  
+  b) Clusters contents TF-IDF vectors to model (e.g. LDA, NMF, Kmeans) person’ topics of interest (varying the k from a range (1-5) and selecting the model whose clusters best describe cohesive topics, penalizing large k)  
+  c) Weights clusters relevance (to the user) by summing touchpoints strength (view, like, bookmark, …) of each cluster, with a time decay on interaction age (older interactions are less relevant to current person interest)  
+  d) Returns highly relevant topics vectors for the person,labeled by its three top keywords  
+3. For each people topic  
+  a) Calculate the cosine similarity (optionally applying Pivoted Unique Pivoted Normalization) among the topic vector and content TF-IDF vectors  
+  b) Recommends more similar contents to person user topics, which user has not yet People Topic Modeling and Content Recommendations algorithm  
