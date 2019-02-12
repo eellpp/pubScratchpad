@@ -4,7 +4,7 @@ There are two kinds of data available for user interaction: explicit and implici
 - `Explicit`: A score, such as a rating or a like
 - `Implicit`: Not as obvious in terms of preference, such as a click, view, or purchase
 
-![Implicit](img/Implicit Feedbacks.png)
+![Implicit](img/ImplicitFeedbacks.png)
 
 [Famous paper called "Collaborative Filtering for Implicit Feedback Datasets"](http://yifanhu.net/PUB/cf.pdf) 
 
