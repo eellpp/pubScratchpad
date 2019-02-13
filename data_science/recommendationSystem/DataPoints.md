@@ -11,7 +11,7 @@ Trending can be based on :
 
 Other Popularity based measures:
 `Popularity - Basic`: The candidate set is all items in the dataset.  
-`Popularity - Geolocation`: The candidate set is all items that have been read by users in the same geographical location as the target user. 
+`Popularity - Geolocation`: The candidate set is all items that have been read by users in the same geographical location as the target user.   
 `Popularity - Item`: Categories Every item is associated with zero or more  news categories (business, sports, politics, etc.). The candidate set is all items whose categories intersect with the target article’s categories.  
 `Popularity - Weekday`: The candidate set is all items that have been seen at least once in the same week day as the target article.  
 `Popularity - Hour`: The candidate set is all items that have been seen at least once in the same hour as the target article.  
