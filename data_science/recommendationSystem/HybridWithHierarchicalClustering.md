@@ -20,6 +20,11 @@ https://blog.insightdatascience.com/news4u-recommend-stories-based-on-collaborat
 
 >  The predicted score from the recommending system is the cosine similarity between the topics of an article and the topics in a user group, which ranges from 0 to 1.
 
+### Testing in User Group
+> If the article is retweeted by more than a threshold number of users in a group, it is considered as good (1) else bad (0) 
+
+>  From 10 rounds of validations with 1000 hold-out articles, the average precision score of our recommending system is 65.9%, while the average recall is 66.5%.
+
 
 
 
