@@ -1,4 +1,5 @@
 
+An Analysis of Recommender Algorithms for Online News  
 https://pdfs.semanticscholar.org/43d1/f2063fe51a65b2c41e909c2b56f72ae7bfe3.pdf
 
 `Ensemble Recommendations` are produced based on a combination of all the popularity- and content-based recommenders below. The candidate set is the union of candidate sets from each recommender. Candidate articles are then ranked using the sum of the rankings for the top n articles from each recommender. If, for any recommender, an article does not occur in the top n recommendations, it receives the maximum ranking of n, plus a penalty of 1, as in equation 1. We set n = 100 in these experiments.
