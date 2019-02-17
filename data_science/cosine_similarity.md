@@ -53,4 +53,37 @@ def get_cosine(vec1, vec2):
             return float(numerator) / denominator
 ```
 
+### Cosine similarity vs pearson correlation
+Pearson correlation and cosine similarity are invariant to scaling, i.e. multiplying all elements by a nonzero constant. Pearson correlation is also invariant to adding any constant to all elements. For example, if you have two vectors X1 and X2, and your Pearson correlation function is called pearson(), pearson(X1, X2) == pearson(X1, 2 * X2 + 3). This is a pretty important property because you often don't care that two vectors are similar in absolute terms, only that they vary in the same way.
+
+### Intuition for cosine sim
+Given a set of docs with freq of terms A and B :  
+doc1 = [5,9]  
+doc2 = [8,18]  
+cosine_sim can be used to calculate how similar these two docs are. The way its calculating that by hypothesising that if the co-occurance frequency of terms in doc1 and doc2 are same, then they are similar. Just that doc2 is longer than doc1, but in meaning its similar to doc1.  
+
+```bash
+# import from sklearn pariwise
+cosine_similarity([[5,9]] , [[8,18]])  
+0.99605
+
+# import from scipy
+pearsonr([5,9],[8,18])  
+(1,0)
+```
+
+Lets assume that the idf calculated for term A and B are 1.5 and 0.05 respectively . So using the tfidf scores for each doc  
+
+```bash
+# import from sklearn pariwise
+cosine_similarity([[5*1.5,9*0.05]] , [[8*1.5,18*0.05]])  
+0.99469
+
+# import from scipy
+pearsonr([5*1.5,9*0.05],[8*1.5,18*0.05])  
+(1,0)
+```
+pearson correleation is not affected by the IDF measurse. Since idf scales the same term across docs in constant way, it has no effect in calculating correlation  
+
+
 
