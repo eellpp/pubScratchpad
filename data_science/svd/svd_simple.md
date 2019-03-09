@@ -4,7 +4,6 @@ Our model is : y = mx + b
 Loss function is : L = mean_square_error(y - y_predicted) = mean_square_error(y - (mx +b))  
 mean_square_error : 1/n * sum(error ** 2) = 1/n * sum((y - (mx +b)) ** 2)
 
-![equation](https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;L}{\partial&space;m}&space;=&space;-&space;2/n&space;*&space;\sum&space;x&space;*&space;(y&space;-&space;(mx&space;&plus;b))))
 
 ```python
 
