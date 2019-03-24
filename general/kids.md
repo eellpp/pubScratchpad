@@ -1,6 +1,6 @@
 
 solving rubiks cube  
-https://www.youtube.com/watch?v=D3g1BH6Yo8M
+https://www.youtube.com/watch?v=1t1OL2zN0LQ
 
 
 
