@@ -2,6 +2,16 @@ matrix factorization (MF) methods are designed to cope with sparsity
 
 KNN are not so good with sparse data. 
 
+## CF with memory based method (Cosine Similarity)
+Memory-Based Collaborative Filtering approaches can be divided into two main sections: user-item filtering and item-item filtering. A user-item filtering takes a particular user, find users that are similar to that user based on similarity of ratings, and recommend items that those similar users liked. In contrast, item-item filtering will take an item, find users who liked that item, and find other items that those users or similar users also liked. It takes items and outputs other items as recommendations.  
+
+In the above, memory based appeoach we are not learning any parameter using any optimization algo (eg: gradient descent). In model based approach we use these optimization algo to build our model.
+
+## CF with Model based approach
+1. Clustering : KNN
+2. Matrix Factorization : SVD, ALS 
+3. Deep Learning : multiple layers including neural networks
+
 ### CF with embeddings
 part1 : https://towardsdatascience.com/collaborative-filtering-and-embeddings-part-1-63b00b9739ce
 part2 : https://towardsdatascience.com/structured-deep-learning-b8ca4138b848
