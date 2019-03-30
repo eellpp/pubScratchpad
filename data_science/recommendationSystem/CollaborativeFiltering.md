@@ -3,6 +3,7 @@ Collaborative filtering models can be generally split into two classes:
 2. item-based collaborative filtering. 
 In either scenario, one builds a similarity matrix. For user-based collaborative filtering, the user-similarity matrix will consist of some distance metric that measures the similarity between any two pairs of users. Likewise, the item-similarity matrix will measure the similarity between any two pairs of items.
 
+
 matrix factorization (MF) methods are designed to cope with sparsity  
 
 KNN are not so good with sparse data. 
@@ -11,6 +12,8 @@ KNN are not so good with sparse data.
 Memory-Based Collaborative Filtering approaches can be divided into two main sections: user-item filtering and item-item filtering. A user-item filtering takes a particular user, find users that are similar to that user based on similarity of ratings, and recommend items that those similar users liked. In contrast, item-item filtering will take an item, find users who liked that item, and find other items that those users or similar users also liked. It takes items and outputs other items as recommendations.  
 
 In the above, memory based appeoach we are not learning any parameter using any optimization algo (eg: gradient descent). In model based approach we use these optimization algo to build our model.
+
+https://www.ethanrosenthal.com/2015/11/02/intro-to-collaborative-filtering/
 
 ## CF with Model based approach
 1. Clustering : KNN
