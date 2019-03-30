@@ -1,3 +1,8 @@
+Collaborative filtering models can be generally split into two classes: 
+1. user- and 
+2. item-based collaborative filtering. 
+In either scenario, one builds a similarity matrix. For user-based collaborative filtering, the user-similarity matrix will consist of some distance metric that measures the similarity between any two pairs of users. Likewise, the item-similarity matrix will measure the similarity between any two pairs of items.
+
 matrix factorization (MF) methods are designed to cope with sparsity  
 
 KNN are not so good with sparse data. 
