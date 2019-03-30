@@ -37,8 +37,12 @@ If we can express each user as a vector of their taste values, and at the same t
 http://yifanhu.net/PUB/cf.pdf  (by Hu, Korenand and Volinsky (and used by Facebook and Spotify))   
 https://medium.com/radon-dev/als-implicit-collaborative-filtering-5ed653ba39fe  
 
-To calculate the similarity between items we compute the dot-product between our item vectors and it’s transpose. So if we want artists similar to say Joy Division we take the dot product between all item vectors and the transpose of the Joy Division item vector. This will give us the similarity score:  
+To calculate the similarity between items we compute the dot-product between our item vectors and it’s transpose. So if we want artists similar to artistXXX, we take the dot product between all item vectors and the transpose of the artistXXX item vector. This will give us the similarity score:  
 To make recommendations for a given user we take a similar approach. Here we calculate the dot product between our user vector and the transpose of our item vectors. This gives us a recommendation score for our user and each item:  
 
+##### Implicit Feedback
+There are different ways to factor a matrix, like Singular Value Decomposition (SVD) or Probabilistic Latent Semantic Analysis (PLSA) if we’re dealing with explicit data.
+
+With implicit data the difference lies in how we deal with all the missing data in our very sparse matrix. For explicit data we treat them as just unknown fields that we should assign some predicted rating to. But for implicit we can’t just assume the same since there is information in these unknown values as well. As stated before we don’t know if a missing value means the user disliked something, or if it means they love it but just don’t know about it. 
 
 
