@@ -29,8 +29,21 @@ Based on User feature matrix find the similarity of users with other users
 
 
 ### Using Alternating Least Squares (ALS) ito find similarity 
-ALS is a matrix factorization algorithm. The idea is basically to take a large (or potentially huge) matrix and factor it into some smaller representation of the original matrix. ... Here we can actually use matrix factorization to mathematically reduce the dimensionality of our original “all users by all items” matrix into something much smaller that represents “all items by some taste dimensions” and “all users by some taste dimensions”. These dimensions are called latent or hidden features and we learn them from our data.  
+ALS is a matrix factorization algorithm. The idea is basically to take a large (or potentially huge) matrix and factor it into some smaller representation of the original matrix. ... Here we can actually use matrix factorization to mathematically reduce the dimensionality of our original “all users by all items” matrix into something much smaller that represents “all items by some taste dimensions” and “all users by some taste dimensions”. These dimensions are called latent or hidden features and we learn them from our data.    
 If we can express each user as a vector of their taste values, and at the same time express each item as a vector of what tastes they represent. You can see we can quite easily make a recommendation.  
+
+##### ALS method
+ALS is an iterative optimization process where we for every iteration try to arrive closer and closer to a factorized representation of our original data.
+
+`R = U X V`  
+where  
+R : Original Matrix of users X Items  
+U : factorized matrix of users X LatentFeatures  
+V : factorized matrix of LatentFeatures X Items  
+
+By randomly assigning the values in U and V and using least squares iteratively we can arrive at what weights yield the best approximation of R. The least squares approach in it’s basic forms means fitting some line to the data, measuring the sum of squared distances from all points to the line and trying to get an optimal fit by minimising this value.
+
+With the alternating least squares approach we use the same idea but iteratively alternate between optimizing U and fixing V and vice versa. We do this for each iteration to arrive closer to R = U x V.
 
 
 ### Collaborative Filtering for Implicit Feedback Datasets using ALS
