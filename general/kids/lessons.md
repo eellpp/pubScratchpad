@@ -24,8 +24,8 @@ https://www.youtube.com/embed/vKij6y1jGWM?start=177&end=260
 
 ![Alt text](images/lesson4_1.jpg?raw=true "Title")  
 
-![Alt text](images/lesson4_2.png?raw=true "Title")  
+![Alt text](images/lesson4_2.jpg?raw=true "Title")  
 
-![Alt text](images/lesson4_3.png?raw=true "Title")  
+![Alt text](images/lesson4_3.jpg?raw=true "Title")  
 
 https://www.youtube.com/embed/vKij6y1jGWM?start=263&end=344
