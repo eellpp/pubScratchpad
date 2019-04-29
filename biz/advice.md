@@ -18,6 +18,9 @@ When I do this, once I do Google for existing solutions, I usually find that all
 
 Finally, I’ll say this: if you see your idea has already been done and you no longer care about it, then it probably wasn’t something you were passionate enough about in the first place; it was just a neat idea to you.
 
+`The last mover advantage`   
+What's the one thing you can do 10x better than your competitors
+
 ----
 
 In short term, the success of company would be dependent on market conditions, technology etc. On long term it is dependent on core skills of the person leading it. The material success of a company can be seen as a symptom of the personality traits of person leading the firm.    
