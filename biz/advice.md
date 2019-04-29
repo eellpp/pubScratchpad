@@ -1,4 +1,10 @@
 
+#### On thinking that idea and software are the only essential parts
+
+However additionally I would add that if you think that it is the software alone that will make or break the company, then it is obvious that this is your first time doing this and that you have never brought a product to market. There are a ton of examples where one product that was of less quality absolutely annihilated another excellent product where the difference was the rest of the "business" machinery (marketing, sales, support, operations, etc).
+
+----
+
 #### On an Idea that's already implemented
 You come up with a brilliant idea, you obsess over it, you Google some info, and on your screen lies your idea, being done by someone else, for the last two years. You’re all too familiar with that sinking feeling in your stomach that follows. You abandon the idea almost immediately after all that excitement and ideation.
 
