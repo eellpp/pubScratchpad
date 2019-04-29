@@ -1,4 +1,19 @@
 
+#### On an Idea that's already implemented
+You come up with a brilliant idea, you obsess over it, you Google some info, and on your screen lies your idea, being done by someone else, for the last two years. You’re all too familiar with that sinking feeling in your stomach that follows. You abandon the idea almost immediately after all that excitement and ideation.
+
+First (as already mentioned), existing solutions prove your idea — their existence proves that you’re trying to solve a real problem that people might pay to have solved. And it proves that you’re heading in a direction that makes sense to others, too.
+
+Second, and this is the biggie: The moment you see someone else’s solution, you mar and limit your ideas. It suddenly becomes a lot more difficult to think outside the box because before, you were exploring totally new territory. Your mind was pioneering in a frontier that had no paths. But now, you’ve seen someone else’s path. It becomes much harder to see any other potential paths. It becomes much harder to be freely creative.
+
+Next time you come up with that great idea, don’t Google it for a week. Let your mind fester on the idea, allow it to grow like many branches from a trunk. Jot down all of the tangentially related but equally exciting ideas that inevitably follow. Allow your mind to take the idea far into new places. No, you won’t build 90% of them, but give yourself the time to enjoy exploring the idea totally.
+
+When I do this, once I do Google for existing solutions, I usually find that all the other things I came up with in the ensuing week are far better than what’s already out there. I have more innovative ideas for where it could go next; I have a unique value proposition that the other folks haven’t figured out yet. But had I searched for them first, I never would have come up with those better ideas at all.
+
+Finally, I’ll say this: if you see your idea has already been done and you no longer care about it, then it probably wasn’t something you were passionate enough about in the first place; it was just a neat idea to you.
+
+----
+
 In short term, the success of company would be dependent on market conditions, technology etc. On long term it is dependent on core skills of the person leading it. The material success of a company can be seen as a symptom of the personality traits of person leading the firm.    
 For a startup, the person leading it should have deep unassailable charecterstics of profit seeking. This single strong personality trait will guide him through various decision making during early years of company. Like a craftsman moulding a claypot, the inner traits of the person would shape the company , chasing profit, as the force to to find ways in keeping the company alive and sustainable.  
 
