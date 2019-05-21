@@ -37,4 +37,9 @@ I'm sure as I become a more knowledgeable and skilled writer I'd identify other 
     4) If you’re still stuck after trying the first three, it’s possible that you may have hit some sort of natural difficulty limit and may not be able to make progress.
 5) If the original hard thing is now easy, you’re done. If not, go back to step 2.
 
+### Case Study
 A case study for this would be to learn to solve rubix cube. You would be a learn to solve it layer by layer where at each layer you will find different set of challenges. But by breaking it into parts and focusing on one part at a time even 7 year olds can learn to solve the cube in no time
+
+
+
+
