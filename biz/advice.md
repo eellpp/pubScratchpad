@@ -3,6 +3,37 @@
 
 However additionally I would add that if you think that it is the software alone that will make or break the company, then it is obvious that this is your first time doing this and that you have never brought a product to market. There are a ton of examples where one product that was of less quality absolutely annihilated another excellent product where the difference was the rest of the "business" machinery (marketing, sales, support, operations, etc).
 
+A successful startup requires all aspects of a business:
+
+- leadership
+
+- sales
+
+- marketing
+
+- market research
+
+- competitor research
+
+- product research
+
+- product development
+
+- product shipping & deployment
+
+- contacts in key areas related to your business
+
+- strategic planning
+
+- financial management
+
+- employee management
+
+- investor management
+
+- lots and lots and lots and lots of paperwork
+
+- and of course a million other little things you discover along the way
 ----
 
 #### On an Idea that's already implemented
