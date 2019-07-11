@@ -1,0 +1,903 @@
+Testing started at 11:09 PM ...
+getwebpage: https://www.amazingborneo.com
+parseCount: 1 , domainsParsedCount:1,  domainsToParse:159
+getwebpage: https://www.amazingborneo.com/sarawak/quick-facts
+parseCount: 2 , domainsParsedCount:2,  domainsToParse:159
+getwebpage: https://www.amazingborneo.com/sabah/mount-kinabalu/trail-maps
+parseCount: 3 , domainsParsedCount:3,  domainsToParse:166
+getwebpage: https://www.amazingborneo.com/package/kinabalu-park-with-rumah-terbalik-desa-cow-farm
+parseCount: 4 , domainsParsedCount:4,  domainsToParse:173
+getwebpage: https://www.amazingborneo.com/go/to/mantanani
+parseCount: 5 , domainsParsedCount:5,  domainsToParse:199
+getwebpage: https://amazingborneo.com/sarawak/tours/kuching
+parseCount: 6 , domainsParsedCount:6,  domainsToParse:222
+getwebpage: https://amazingborneo.com/sabah/transport-and-services
+parseCount: 7 , domainsParsedCount:7,  domainsToParse:229
+getwebpage: https://www.amazingborneo.com/sabah/mount-kinabalu/introduction
+parseCount: 8 , domainsParsedCount:8,  domainsToParse:228
+getwebpage: https://www.amazingborneo.com/packages/hotels/sabah-papar
+parseCount: 9 , domainsParsedCount:9,  domainsToParse:237
+getwebpage: https://www.amazingborneo.com/packages/tours/sarawak-mulu-tours
+parseCount: 10 , domainsParsedCount:10,  domainsToParse:241
+getwebpage: https://www.amazingborneo.com/packages/tours/sabah-danum-valley-packages
+parseCount: 11 , domainsParsedCount:11,  domainsToParse:252
+getwebpage: https://amazingborneo.com/sarawak/tours
+parseCount: 12 , domainsParsedCount:12,  domainsToParse:251
+getwebpage: https://amazingborneo.com/sabah/tours/sipadan-island
+parseCount: 13 , domainsParsedCount:13,  domainsToParse:271
+getwebpage: https://amazingborneo.com/sabah-sipadan-island-10.jpg
+  self._sock = None
+  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+  parseCount: 14 , domainsParsedCount:14,  domainsToParse:270
+  getwebpage: https://amazingborneo.com/sarawak-kuching-9.jpg
+    self._sock = None
+    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+    parseCount: 15 , domainsParsedCount:15,  domainsToParse:269
+    getwebpage: https://amazingborneo.com/packages/hotels
+    parseCount: 16 , domainsParsedCount:16,  domainsToParse:362
+    getwebpage: https://www.amazingborneo.com/package/3d2n-starlight-with-turtles-sunrise-with-orangutans-libaran-island-sepilok
+    parseCount: 17 , domainsParsedCount:17,  domainsToParse:367
+    getwebpage: https://www.amazingborneo.com/package/hotel-sixty3
+    parseCount: 18 , domainsParsedCount:18,  domainsToParse:370
+    getwebpage: https://www.amazingborneo.com/package/horizon-hotel
+    parseCount: 19 , domainsParsedCount:19,  domainsToParse:373
+    getwebpage: https://www.amazingborneo.com/package/2d1n-glamping-under-the-stars-libaran-island
+    parseCount: 20 , domainsParsedCount:20,  domainsToParse:378
+    getwebpage: https://www.amazingborneo.com/package/imperial-palace-hotel
+    parseCount: 21 , domainsParsedCount:21,  domainsToParse:381
+    getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htsrw-imp
+    parseCount: 22 , domainsParsedCount:22,  domainsToParse:380
+    getwebpage: https://www.amazingborneo.com/package/liwagu-suite
+    parseCount: 23 , domainsParsedCount:23,  domainsToParse:383
+    getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkp-ls
+    parseCount: 24 , domainsParsedCount:24,  domainsToParse:382
+    getwebpage: https://www.amazingborneo.com/package/ibis-style-kota-kinabalu-inanam
+    parseCount: 25 , domainsParsedCount:25,  domainsToParse:385
+    getwebpage: https://amazingborneo.com/sarawak/tours/bako-national-park
+    parseCount: 26 , domainsParsedCount:26,  domainsToParse:395
+    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/absrw-np02
+    parseCount: 27 , domainsParsedCount:27,  domainsToParse:394
+    getwebpage: https://www.amazingborneo.com/package/4d3n-relaxing-kuching-escape
+    parseCount: 28 , domainsParsedCount:28,  domainsToParse:396
+    getwebpage: https://www.amazingborneo.com/package/cycling-kiulu-countryside-fun-ride-beginner
+    parseCount: 29 , domainsParsedCount:29,  domainsToParse:401
+    getwebpage: https://book.amazingborneo.com/tour/htkk-hrz
+    parseCount: 30 , domainsParsedCount:30,  domainsToParse:404
+    getwebpage: https://www.amazingborneo.com/booking/private-policy
+    parseCount: 31 , domainsParsedCount:31,  domainsToParse:404
+    getwebpage: https://www.amazingborneo.com/package/the-peak-lodge
+    parseCount: 32 , domainsParsedCount:32,  domainsToParse:407
+    getwebpage: https://www.amazingborneo.com/travel/penampang-triumph-in-mr-kaamatan-buvazoi-tavantang-2019
+    parseCount: 33 , domainsParsedCount:33,  domainsToParse:415
+    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/absrw-kh01
+    parseCount: 34 , domainsParsedCount:34,  domainsToParse:414
+    getwebpage: https://www.amazingborneo.com/package/kota-kinabalu-airport-transfers
+    parseCount: 35 , domainsParsedCount:35,  domainsToParse:418
+    getwebpage: https://www.amazingborneo.com/package/kota-kinabalu-airport-transfers/print
+    parseCount: 36 , domainsParsedCount:36,  domainsToParse:417
+    getwebpage: https://www.amazingborneo.com/package/the-hill-lodge
+    parseCount: 37 , domainsParsedCount:37,  domainsToParse:420
+    getwebpage: https://amazingborneo.com/index.php/overnight-packages/3d2n-mantanani-island-discovery--mari-mari-backpackers-lodge
+      self._sock = None
+      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+      parseCount: 38 , domainsParsedCount:38,  domainsToParse:419
+      getwebpage: https://amazingborneo.com/sarawak-bako-national-park-3.jpg
+        self._sock = None
+	ResourceWarning: Enable tracemalloc to get the object allocation traceback
+	parseCount: 39 , domainsParsedCount:39,  domainsToParse:418
+	getwebpage: https://amazingborneo.com/sabah-sipadan-island-6.jpg
+	  self._sock = None
+	  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+	  parseCount: 40 , domainsParsedCount:40,  domainsToParse:417
+	  getwebpage: https://amazingborneo.com/sabah/tours/mount-trusmadi
+	  parseCount: 41 , domainsParsedCount:41,  domainsToParse:427
+	  getwebpage: https://www.amazingborneo.com/corporates
+	  parseCount: 42 , domainsParsedCount:42,  domainsToParse:426
+	  getwebpage: https://www.amazingborneo.com/malaysia
+	  parseCount: 43 , domainsParsedCount:43,  domainsToParse:425
+	  getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/absk-li01
+	  parseCount: 44 , domainsParsedCount:44,  domainsToParse:424
+	  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-kp03
+	  parseCount: 45 , domainsParsedCount:45,  domainsToParse:423
+	  getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-ds10
+	  parseCount: 46 , domainsParsedCount:46,  domainsToParse:422
+	  getwebpage: https://amazingborneo.com/sabah/tours/turtle-island
+	  parseCount: 47 , domainsParsedCount:47,  domainsToParse:430
+	  getwebpage: https://www.amazingborneo.com/package/2d1n-sandakan-selingan-turtle-island-escape
+	  parseCount: 48 , domainsParsedCount:48,  domainsToParse:436
+	  getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/absk-wa1510
+	  parseCount: 49 , domainsParsedCount:49,  domainsToParse:435
+	  getwebpage: https://www.amazingborneo.com/travel/the-official-launching-event-of-sabahtravel
+	  parseCount: 50 , domainsParsedCount:50,  domainsToParse:434
+	  getwebpage: https://amazingborneo.com/index.php/day-excursions/mantanani-island-day-trip-snorkeling
+	    self._sock = None
+	    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+	    parseCount: 51 , domainsParsedCount:51,  domainsToParse:433
+	    getwebpage: https://www.amazingborneo.com/package/the-executive-hotel
+	    parseCount: 52 , domainsParsedCount:52,  domainsToParse:436
+	    getwebpage: https://www.amazingborneo.com/package/the-executive-hotel/print
+	    parseCount: 53 , domainsParsedCount:53,  domainsToParse:435
+	    getwebpage: https://book.amazingborneo.com/tour/htld-exc
+	    parseCount: 54 , domainsParsedCount:54,  domainsToParse:434
+	    getwebpage: https://www.amazingborneo.com/packages/hotels/sabah-beach-resorts
+	    parseCount: 55 , domainsParsedCount:55,  domainsToParse:433
+	    getwebpage: https://www.amazingborneo.com/packages/hotels/sabah-kinabalu-park
+	    parseCount: 56 , domainsParsedCount:56,  domainsToParse:432
+	    getwebpage: https://www.amazingborneo.com/about/contact-us
+	    parseCount: 57 , domainsParsedCount:57,  domainsToParse:431
+	    getwebpage: https://www.amazingborneo.com/sarawak/about-sarawak
+	    parseCount: 58 , domainsParsedCount:58,  domainsToParse:430
+	    getwebpage: https://www.amazingborneo.com/package/north-borneo-railway
+	    parseCount: 59 , domainsParsedCount:59,  domainsToParse:436
+	    getwebpage: https://www.amazingborneo.com/package/4d3n-relaxing-kuching-escape/print
+	    parseCount: 60 , domainsParsedCount:60,  domainsToParse:435
+	    getwebpage: https://amazingborneo.com/sabah/tours/discover-sabah-multi-day-full-package-tours
+	    parseCount: 61 , domainsParsedCount:61,  domainsToParse:453
+	    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-ds06
+	    parseCount: 62 , domainsParsedCount:62,  domainsToParse:452
+	    getwebpage: https://www.amazingborneo.com/package/avangio-hotel-kota-kinabalu
+	    parseCount: 63 , domainsParsedCount:63,  domainsToParse:455
+	    getwebpage: https://www.amazingborneo.com/forms/hotels/booking/htkk-avg
+	    parseCount: 64 , domainsParsedCount:64,  domainsToParse:454
+	    getwebpage: https://amazingborneo.com/img/map/mountkinabalusummittrailmapamazingborneo.jpg
+	      self._sock = None
+	      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+	      parseCount: 65 , domainsParsedCount:65,  domainsToParse:453
+	      getwebpage: https://amazingborneo.com/sarawak-bako-national-park-2.jpg
+	        self._sock = None
+		ResourceWarning: Enable tracemalloc to get the object allocation traceback
+		parseCount: 66 , domainsParsedCount:66,  domainsToParse:452
+		getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkk-avg
+		parseCount: 67 , domainsParsedCount:67,  domainsToParse:451
+		getwebpage: https://www.amazingborneo.com/about/career/career
+		parseCount: 68 , domainsParsedCount:68,  domainsToParse:451
+		getwebpage: https://www.amazingborneo.com/sarawak/getting-to-sarawak
+		parseCount: 69 , domainsParsedCount:69,  domainsToParse:450
+		getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkp-hl
+		parseCount: 70 , domainsParsedCount:70,  domainsToParse:449
+		getwebpage: https://book.amazingborneo.com/tour/abk-trf03
+		parseCount: 71 , domainsParsedCount:71,  domainsToParse:448
+		getwebpage: https://www.amazingborneo.com/sabah/mount-kinabalu/gallery
+		parseCount: 72 , domainsParsedCount:72,  domainsToParse:447
+		getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htkp-hl
+		parseCount: 73 , domainsParsedCount:73,  domainsToParse:446
+		getwebpage: https://www.amazingborneo.com/package/north-borneo-cruises-kk-city-night-dinner-cruise
+		parseCount: 74 , domainsParsedCount:74,  domainsToParse:454
+		getwebpage: https://www.amazingborneo.com/package/borneo-kellybays-paradise-mangrove-sea
+		parseCount: 75 , domainsParsedCount:75,  domainsToParse:459
+		getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-nbc02
+		parseCount: 76 , domainsParsedCount:76,  domainsToParse:458
+		getwebpage: https://www.amazingborneo.com/package/hotel-shangri-la-downtown
+		parseCount: 77 , domainsParsedCount:77,  domainsToParse:461
+		getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-mtm03
+		parseCount: 78 , domainsParsedCount:78,  domainsToParse:460
+		getwebpage: https://amazingborneo.com/sarawak-kuching-7.jpg
+		  self._sock = None
+		  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+		  parseCount: 79 , domainsParsedCount:79,  domainsToParse:459
+		  getwebpage: https://www.amazingborneo.com/sarawak/people-culture
+		  parseCount: 80 , domainsParsedCount:80,  domainsToParse:458
+		  getwebpage: https://www.amazingborneo.com/package/2d1n-glamping-under-the-stars-libaran-island/print
+		  parseCount: 81 , domainsParsedCount:81,  domainsToParse:457
+		  getwebpage: https://amazingborneo.com/sabah-turtle-island-5.jpg
+		    self._sock = None
+		    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+		    parseCount: 82 , domainsParsedCount:82,  domainsToParse:456
+		    getwebpage: https://www.amazingborneo.com/about/career/team-job-scope
+		    parseCount: 83 , domainsParsedCount:83,  domainsToParse:455
+		    getwebpage: https://www.amazingborneo.com/packages/tours/sabah-full-package-tours
+		    parseCount: 84 , domainsParsedCount:84,  domainsToParse:463
+		    getwebpage: https://www.amazingborneo.com/sabah/living-cost
+		    parseCount: 85 , domainsParsedCount:85,  domainsToParse:463
+		    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-ls02
+		    parseCount: 86 , domainsParsedCount:86,  domainsToParse:462
+		    getwebpage: https://www.amazingborneo.com/packages/hotels/sabah-tawau-semporna
+		    parseCount: 87 , domainsParsedCount:87,  domainsToParse:461
+		    getwebpage: https://www.amazingborneo.com/packages/tours/sabah-education-tours
+		    parseCount: 88 , domainsParsedCount:88,  domainsToParse:466
+		    getwebpage: https://www.amazingborneo.com/package/education-programme-best-of-sabah-full-board
+		    parseCount: 89 , domainsParsedCount:89,  domainsToParse:468
+		    getwebpage: https://www.amazingborneo.com/package/education-programme-best-of-sabah-full-board/print
+		    parseCount: 90 , domainsParsedCount:90,  domainsToParse:467
+		    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-edu03
+		    parseCount: 91 , domainsParsedCount:91,  domainsToParse:466
+		    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-edu01
+		    parseCount: 92 , domainsParsedCount:92,  domainsToParse:465
+		    getwebpage: https://www.amazingborneo.com/agent
+		    parseCount: 93 , domainsParsedCount:93,  domainsToParse:464
+		    getwebpage: https://www.amazingborneo.com/packages/tours/sabah-snorkeling
+		    parseCount: 94 , domainsParsedCount:94,  domainsToParse:465
+		    getwebpage: https://www.amazingborneo.com/go/to/nbc
+		    parseCount: 95 , domainsParsedCount:95,  domainsToParse:492
+		    getwebpage: https://amazingborneo.com/video-gallery.html
+		      self._sock = None
+		      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+		      parseCount: 96 , domainsParsedCount:96,  domainsToParse:491
+		      getwebpage: https://amazingborneo.com/index.html
+		        self._sock = None
+			ResourceWarning: Enable tracemalloc to get the object allocation traceback
+			parseCount: 97 , domainsParsedCount:97,  domainsToParse:490
+			getwebpage: https://amazingborneo.com/privacy.html
+			  self._sock = None
+			  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+			  parseCount: 98 , domainsParsedCount:98,  domainsToParse:489
+			  getwebpage: https://amazingborneo.com/private-charter.html
+			    self._sock = None
+			    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+			    parseCount: 99 , domainsParsedCount:99,  domainsToParse:488
+			    getwebpage: https://amazingborneo.com/how-to-get-here.html
+			      self._sock = None
+			      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+			      parseCount: 100 , domainsParsedCount:100,  domainsToParse:487
+			      getwebpage: https://amazingborneo.com/north-borneo-cruises-kk-city-night-dinner-cruise
+			        self._sock = None
+				ResourceWarning: Enable tracemalloc to get the object allocation traceback
+				parseCount: 101 , domainsParsedCount:101,  domainsToParse:486
+				getwebpage: https://www.amazingborneo.com/package/3d2n-starlight-with-turtles-sunrise-with-orangutans-libaran-island-sepilok/print
+				parseCount: 102 , domainsParsedCount:102,  domainsToParse:485
+				getwebpage: https://amazingborneo.com/sabah/tours/danum-valley
+				parseCount: 103 , domainsParsedCount:103,  domainsToParse:491
+				getwebpage: https://amazingborneo.com/sabah-danum-valley-7.jpg
+				  self._sock = None
+				  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+				  parseCount: 104 , domainsParsedCount:104,  domainsToParse:490
+				  getwebpage: https://book.amazingborneo.com/tour/abk-s05
+				  parseCount: 105 , domainsParsedCount:105,  domainsToParse:489
+				  getwebpage: https://amazingborneo.com/sabah-danum-valley-2.jpg
+				    self._sock = None
+				    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+				    parseCount: 106 , domainsParsedCount:106,  domainsToParse:488
+				    getwebpage: https://www.amazingborneo.com/package/nexus-resort-spa-karambunai
+				    parseCount: 107 , domainsParsedCount:107,  domainsToParse:491
+				    getwebpage: https://amazingborneo.com/sabah-turtle-island-6.jpg
+				      self._sock = None
+				      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+				      parseCount: 108 , domainsParsedCount:108,  domainsToParse:490
+				      getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-s05
+				      parseCount: 109 , domainsParsedCount:109,  domainsToParse:489
+				      getwebpage: https://amazingborneo.com/sabah/tours/kinabatangan-river-sukau-bilit
+				      parseCount: 110 , domainsParsedCount:110,  domainsToParse:494
+				      getwebpage: https://www.amazingborneo.com/package/shangri-la-tanjung-aru-resort-spa
+				      parseCount: 111 , domainsParsedCount:111,  domainsToParse:497
+				      getwebpage: https://amazingborneo.com/sabah-kinabatangan-river-1.jpg
+				        self._sock = None
+					ResourceWarning: Enable tracemalloc to get the object allocation traceback
+					parseCount: 112 , domainsParsedCount:112,  domainsToParse:496
+					getwebpage: https://www.amazingborneo.com/package/mengalum-island-day-tour-snorkeling
+					parseCount: 113 , domainsParsedCount:113,  domainsToParse:502
+					getwebpage: https://www.amazingborneo.com/package/kota-kinabalu-city-day-tour-&-filipino-market-shopping
+					parseCount: 114 , domainsParsedCount:114,  domainsToParse:505
+					getwebpage: https://amazingborneo.com/sarawak-kuching-2.jpg
+					  self._sock = None
+					  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+					  parseCount: 115 , domainsParsedCount:115,  domainsToParse:504
+					  getwebpage: https://www.amazingborneo.com/package/skan-styles-hotel
+					  parseCount: 116 , domainsParsedCount:116,  domainsToParse:507
+					  getwebpage: https://www.amazingborneo.com/package/skan-styles-hotel/print
+					  parseCount: 117 , domainsParsedCount:117,  domainsToParse:506
+					  getwebpage: https://book.amazingborneo.com/tour/abk-s03
+					  parseCount: 118 , domainsParsedCount:118,  domainsToParse:505
+					  getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htsk-siw
+					  parseCount: 119 , domainsParsedCount:119,  domainsToParse:504
+					  getwebpage: https://amazingborneo.com/packages/tours
+					  parseCount: 120 , domainsParsedCount:120,  domainsToParse:546
+					  getwebpage: https://www.amazingborneo.com/package/5d4n-mount-kinabalu-climb-with-ferrata-lpc-water-rafting-kk-city-stay-intermediate
+					  parseCount: 121 , domainsParsedCount:121,  domainsToParse:552
+					  getwebpage: https://www.amazingborneo.com/package/sandakan-gomantong-cave-kinabatangan-river-cruise
+					  parseCount: 122 , domainsParsedCount:122,  domainsToParse:555
+					  getwebpage: https://www.amazingborneo.com/package/3d2n-mount-kinabalu-climb-with-ferrata-highland-resort-stay-lows-peak-circuit
+					  parseCount: 123 , domainsParsedCount:123,  domainsToParse:558
+					  getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-mk10
+					  parseCount: 124 , domainsParsedCount:124,  domainsToParse:557
+					  getwebpage: https://book.amazingborneo.com/tour/absk-wa1503
+					  parseCount: 125 , domainsParsedCount:125,  domainsToParse:556
+					  getwebpage: https://book.amazingborneo.com/tour/abk-mk13
+					  parseCount: 126 , domainsParsedCount:126,  domainsToParse:555
+					  getwebpage: https://www.amazingborneo.com/package/padi-open-water-diving-course
+					  parseCount: 127 , domainsParsedCount:127,  domainsToParse:559
+					  getwebpage: https://www.amazingborneo.com/package/2d1n-kinabalu-park-poring-canopy-walk-desa-cow-farm-tour
+					  parseCount: 128 , domainsParsedCount:128,  domainsToParse:562
+					  getwebpage: https://www.amazingborneo.com/package/kudat-golf-and-marina-resort
+					  parseCount: 129 , domainsParsedCount:129,  domainsToParse:565
+					  getwebpage: https://book.amazingborneo.com/tour/htkd-kgmr
+					  parseCount: 130 , domainsParsedCount:130,  domainsToParse:564
+					  getwebpage: https://amazingborneo.com/sabah-sipadan-island-2.jpg
+					    self._sock = None
+					    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+					    parseCount: 131 , domainsParsedCount:131,  domainsToParse:563
+					    getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkp-pl
+					    parseCount: 132 , domainsParsedCount:132,  domainsToParse:562
+					    getwebpage: https://amazingborneo.com/images/gallery/gallery-front/img_5733_snapseed.jpg
+					      self._sock = None
+					      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+					      parseCount: 133 , domainsParsedCount:133,  domainsToParse:561
+					      getwebpage: https://www.amazingborneo.com/package/4d3n-mount-kinabalu-climb-kinabalu-park-stay-water-rafting-beginner
+					      parseCount: 134 , domainsParsedCount:134,  domainsToParse:563
+					      getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-fm05
+					      parseCount: 135 , domainsParsedCount:135,  domainsToParse:562
+					      getwebpage: https://www.amazingborneo.com/package/3d2n-myne-resort-package-sandakan-sukau-bilit-kinabatangan-river
+					      parseCount: 136 , domainsParsedCount:136,  domainsToParse:565
+					      getwebpage: https://book.amazingborneo.com/tour/absk-myne02
+					      parseCount: 137 , domainsParsedCount:137,  domainsToParse:564
+					      getwebpage: https://www.amazingborneo.com/package/hilton-hotel-kuching
+					      parseCount: 138 , domainsParsedCount:138,  domainsToParse:567
+					      getwebpage: https://www.amazingborneo.com/package/tambunan-rafflesia-centre-kipandi-butterfly-park-mahua-waterfall
+					      parseCount: 139 , domainsParsedCount:139,  domainsToParse:569
+					      getwebpage: https://www.amazingborneo.com/package/tambunan-rafflesia-centre-kipandi-butterfly-park-mahua-waterfall/print
+					      parseCount: 140 , domainsParsedCount:140,  domainsToParse:568
+					      getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkk-srl
+					      parseCount: 141 , domainsParsedCount:141,  domainsToParse:567
+					      getwebpage: https://amazingborneo.com/corporate-events.html
+					        self._sock = None
+						ResourceWarning: Enable tracemalloc to get the object allocation traceback
+						parseCount: 142 , domainsParsedCount:142,  domainsToParse:566
+						getwebpage: https://www.amazingborneo.com/packages/tours/sabah-jungle-trekking-adventure
+						parseCount: 143 , domainsParsedCount:143,  domainsToParse:565
+						getwebpage: https://www.amazingborneo.com/sabah/events-calendar
+						parseCount: 144 , domainsParsedCount:144,  domainsToParse:564
+						getwebpage: https://amazingborneo.com/sabah-discover-sabah-multi-day-packages-4.jpg
+						  self._sock = None
+						  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+						  parseCount: 145 , domainsParsedCount:145,  domainsToParse:563
+						  getwebpage: https://www.amazingborneo.com/packages/tours/sabah-daily-local-tours
+						  parseCount: 146 , domainsParsedCount:146,  domainsToParse:562
+						  getwebpage: https://amazingborneo.com/sabah
+						  parseCount: 147 , domainsParsedCount:147,  domainsToParse:561
+						  getwebpage: https://www.amazingborneo.com/sarawak
+						  parseCount: 148 , domainsParsedCount:148,  domainsToParse:560
+						  getwebpage: https://www.amazingborneo.com/package/the-hill-lodge/print
+						  parseCount: 149 , domainsParsedCount:149,  domainsToParse:559
+						  getwebpage: https://www.amazingborneo.com/package/semenggoh-orang-utan-centre
+						  parseCount: 150 , domainsParsedCount:150,  domainsToParse:561
+						  getwebpage: https://amazingborneo.com/blog/valentines-day-romantic-dinner-cruise-13-14-february-2019
+						  parseCount: 151 , domainsParsedCount:151,  domainsToParse:560
+						  getwebpage: https://www.amazingborneo.com/package/3d2n-mount-trus-madi-climb
+						  parseCount: 152 , domainsParsedCount:152,  domainsToParse:563
+						  getwebpage: https://www.amazingborneo.com/package/kinabalu-park-premier-chalet-summit-lodge
+						  parseCount: 153 , domainsParsedCount:153,  domainsToParse:566
+						  getwebpage: https://www.amazingborneo.com/package/cycling-kiulu-countryside-ride-intermediate
+						  parseCount: 154 , domainsParsedCount:154,  domainsToParse:569
+						  getwebpage: https://www.amazingborneo.com/sabah/things-to-do
+						  parseCount: 155 , domainsParsedCount:155,  domainsToParse:568
+						  getwebpage: https://www.amazingborneo.com/packages/tours/sabah-sea-adventure-and-diving
+						  parseCount: 156 , domainsParsedCount:156,  domainsToParse:567
+						  getwebpage: https://www.amazingborneo.com/package/seatangos-ballroom
+						  parseCount: 157 , domainsParsedCount:157,  domainsToParse:570
+						  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-mk10
+						  parseCount: 158 , domainsParsedCount:158,  domainsToParse:569
+						  getwebpage: https://www.amazingborneo.com/go/to/mk
+						  parseCount: 159 , domainsParsedCount:159,  domainsToParse:575
+						  getwebpage: http://www.amazingborneo.com
+						  parseCount: 160 , domainsParsedCount:160,  domainsToParse:574
+						  getwebpage: https://amazingborneo.com/tips/important-tips
+						    self._sock = None
+						    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+						    parseCount: 161 , domainsParsedCount:161,  domainsToParse:573
+						    getwebpage: https://www.amazingborneo.com/package/hotel-shangri-la-downtown/print
+						    parseCount: 162 , domainsParsedCount:162,  domainsToParse:572
+						    getwebpage: https://www.amazingborneo.com/package/kawa-kawa-river-cruise-wildlife-fireflies
+						    parseCount: 163 , domainsParsedCount:163,  domainsToParse:575
+						    getwebpage: https://www.amazingborneo.com/package/gayana-marine-resort
+						    parseCount: 164 , domainsParsedCount:164,  domainsToParse:578
+						    getwebpage: https://amazingborneo.com/sarawak-kuching-5.jpg
+						      self._sock = None
+						      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+						      parseCount: 165 , domainsParsedCount:165,  domainsToParse:577
+						      getwebpage: https://www.amazingborneo.com/package/ibis-style-kota-kinabalu-inanam/print
+						      parseCount: 166 , domainsParsedCount:166,  domainsToParse:576
+						      getwebpage: https://www.amazingborneo.com/packages/hotels/sabah-kota-kinabalu-city
+						      parseCount: 167 , domainsParsedCount:167,  domainsToParse:575
+						      getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abld-dvfc02
+						      parseCount: 168 , domainsParsedCount:168,  domainsToParse:574
+						      getwebpage: https://www.amazingborneo.com/package/borneo-wildlife-safari-resort-retreat-6-days
+						      parseCount: 169 , domainsParsedCount:169,  domainsToParse:578
+						      getwebpage: https://www.amazingborneo.com/package/kudat-the-northern-tip-of-borneo
+						      parseCount: 170 , domainsParsedCount:170,  domainsToParse:581
+						      getwebpage: https://www.amazingborneo.com/sarawak/things-to-do
+						      parseCount: 171 , domainsParsedCount:171,  domainsToParse:580
+						      getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-lt12
+						      parseCount: 172 , domainsParsedCount:172,  domainsToParse:579
+						      getwebpage: https://www.amazingborneo.com/package/sandakan-sepilok-orang-utan-centre
+						      parseCount: 173 , domainsParsedCount:173,  domainsToParse:582
+						      getwebpage: https://www.amazingborneo.com/package/the-cottage-hotel-kundasang
+						      parseCount: 174 , domainsParsedCount:174,  domainsToParse:585
+						      getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htrk-cot
+						      parseCount: 175 , domainsParsedCount:175,  domainsToParse:584
+						      getwebpage: https://www.amazingborneo.com/booking
+						      parseCount: 176 , domainsParsedCount:176,  domainsToParse:583
+						      getwebpage: https://amazingborneo.com/sabah-sipadan-island-1.jpg
+						        self._sock = None
+							ResourceWarning: Enable tracemalloc to get the object allocation traceback
+							parseCount: 177 , domainsParsedCount:177,  domainsToParse:582
+							getwebpage: https://www.amazingborneo.com/package/horizon-hotel/print
+							parseCount: 178 , domainsParsedCount:178,  domainsToParse:581
+							getwebpage: https://www.amazingborneo.com/package/nepenthes-lodge
+							parseCount: 179 , domainsParsedCount:179,  domainsToParse:584
+							getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkk-ger
+							parseCount: 180 , domainsParsedCount:180,  domainsToParse:583
+							getwebpage: https://amazingborneo.com/sabah-discover-sabah-multi-day-packages-11.jpg
+							  self._sock = None
+							  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+							  parseCount: 181 , domainsParsedCount:181,  domainsToParse:582
+							  getwebpage: https://www.amazingborneo.com/packages/tours/sabah-incentive-tours
+							  parseCount: 182 , domainsParsedCount:182,  domainsToParse:581
+							  getwebpage: https://www.amazingborneo.com/booking/payment-option
+							  parseCount: 183 , domainsParsedCount:183,  domainsToParse:580
+							  getwebpage: https://amazingborneo.com/payment-policy
+							    self._sock = None
+							    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+							    parseCount: 184 , domainsParsedCount:184,  domainsToParse:579
+							    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/absrw-np01
+							    parseCount: 185 , domainsParsedCount:185,  domainsToParse:578
+							    getwebpage: https://www.amazingborneo.com/package/3d2n-orou-sapulot-mystical-borneo-cave-pinnacles-adventure-with-waterfall-hunting
+							    parseCount: 186 , domainsParsedCount:186,  domainsToParse:581
+							    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-wa05
+							    parseCount: 187 , domainsParsedCount:187,  domainsToParse:580
+							    getwebpage: https://www.amazingborneo.com/sarawak/maps
+							    parseCount: 188 , domainsParsedCount:188,  domainsToParse:579
+							    getwebpage: https://www.amazingborneo.com/package/perkasa-hotel-mt-kinabalu
+							    parseCount: 189 , domainsParsedCount:189,  domainsToParse:582
+							    getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkp-mkhr
+							    parseCount: 190 , domainsParsedCount:190,  domainsToParse:581
+							    getwebpage: https://book.amazingborneo.com/tours/sabah/top-packages-month
+							    parseCount: 191 , domainsParsedCount:191,  domainsToParse:580
+							    getwebpage: https://book.amazingborneo.com/tour/abk-kp02
+							    parseCount: 192 , domainsParsedCount:192,  domainsToParse:579
+							    getwebpage: https://www.amazingborneo.com/booking/booking-terms
+							    parseCount: 193 , domainsParsedCount:193,  domainsToParse:578
+							    getwebpage: https://www.amazingborneo.com/package/kapalai-island-sipadan-kapalai-dive-resort
+							    parseCount: 194 , domainsParsedCount:194,  domainsToParse:581
+							    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abtw-d03
+							    parseCount: 195 , domainsParsedCount:195,  domainsToParse:580
+							    getwebpage: https://book.amazingborneo.com/tour/abtw-d03
+							    parseCount: 196 , domainsParsedCount:196,  domainsToParse:579
+							    getwebpage: https://www.amazingborneo.com/package/gaya-island-resort
+							    parseCount: 197 , domainsParsedCount:197,  domainsToParse:582
+							    getwebpage: https://www.amazingborneo.com/package/cititel-express
+							    parseCount: 198 , domainsParsedCount:198,  domainsToParse:585
+							    getwebpage: https://www.amazingborneo.com/package/sutera-harbour-resort-the-magellan-sutera
+							    parseCount: 199 , domainsParsedCount:199,  domainsToParse:588
+							    getwebpage: https://amazingborneo.com/gallery.html
+							      self._sock = None
+							      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+							      parseCount: 200 , domainsParsedCount:200,  domainsToParse:587
+							      getwebpage: http://www.amazingborneo.com/travel/mount-kinabalu-news-update
+							      parseCount: 201 , domainsParsedCount:201,  domainsToParse:588
+							      getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htkp-ls
+							      parseCount: 202 , domainsParsedCount:202,  domainsToParse:587
+							      getwebpage: https://www.amazingborneo.com/package/education-programme-discover-sabah-full-board
+							      parseCount: 203 , domainsParsedCount:203,  domainsToParse:589
+							      getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-edu01
+							      parseCount: 204 , domainsParsedCount:204,  domainsToParse:588
+							      getwebpage: https://book.amazingborneo.com/tour/htsrw-hlt
+							      parseCount: 205 , domainsParsedCount:205,  domainsToParse:587
+							      getwebpage: https://www.amazingborneo.com/package/a-journey-through-sabah-10-days
+							      parseCount: 206 , domainsParsedCount:206,  domainsToParse:589
+							      getwebpage: https://book.amazingborneo.com/tour/abk-ds02
+							      parseCount: 207 , domainsParsedCount:207,  domainsToParse:588
+							      getwebpage: https://www.amazingborneo.com/package/kokol-haven-resort
+							      parseCount: 208 , domainsParsedCount:208,  domainsToParse:591
+							      getwebpage: https://www.amazingborneo.com/package/kokol-haven-resort/print
+							      parseCount: 209 , domainsParsedCount:209,  domainsToParse:590
+							      getwebpage: https://amazingborneo.com/sabah-mount-trusmadi-6.jpg
+							        self._sock = None
+								ResourceWarning: Enable tracemalloc to get the object allocation traceback
+								parseCount: 210 , domainsParsedCount:210,  domainsToParse:589
+								getwebpage: https://www.amazingborneo.com/forms/hotels/booking/htkk-khv
+								parseCount: 211 , domainsParsedCount:211,  domainsToParse:588
+								getwebpage: https://www.amazingborneo.com/package/kuching-city-tour
+								parseCount: 212 , domainsParsedCount:212,  domainsToParse:590
+								getwebpage: https://book.amazingborneo.com/tour/absrw-dt201
+								parseCount: 213 , domainsParsedCount:213,  domainsToParse:589
+								getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htkk-ctl
+								parseCount: 214 , domainsParsedCount:214,  domainsToParse:588
+								getwebpage: https://www.amazingborneo.com/package/2d1n-mount-kinabalu-climb
+								parseCount: 215 , domainsParsedCount:215,  domainsToParse:590
+								getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-mk01
+								parseCount: 216 , domainsParsedCount:216,  domainsToParse:589
+								getwebpage: https://book.amazingborneo.com/tour/abk-bc03
+								parseCount: 217 , domainsParsedCount:217,  domainsToParse:588
+								getwebpage: https://www.amazingborneo.com/package/imperial-palace-hotel/print
+								parseCount: 218 , domainsParsedCount:218,  domainsToParse:587
+								getwebpage: https://www.amazingborneo.com/book
+								  self._sock = None
+								  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+								  parseCount: 219 , domainsParsedCount:219,  domainsToParse:586
+								  getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htsk-siw
+								  parseCount: 220 , domainsParsedCount:220,  domainsToParse:585
+								  getwebpage: https://book.amazingborneo.com/tour/abk-edu01
+								  parseCount: 221 , domainsParsedCount:221,  domainsToParse:584
+								  getwebpage: https://book.amazingborneo.com/tour/abk-wa05
+								  parseCount: 222 , domainsParsedCount:222,  domainsToParse:583
+								  getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htkk-star
+								  parseCount: 223 , domainsParsedCount:223,  domainsToParse:582
+								  getwebpage: https://book.amazingborneo.com/tour/absk-li01
+								  parseCount: 224 , domainsParsedCount:224,  domainsToParse:581
+								  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-mk13
+								  parseCount: 225 , domainsParsedCount:225,  domainsToParse:580
+								  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/absk-li01
+								  parseCount: 226 , domainsParsedCount:226,  domainsToParse:579
+								  getwebpage: https://www.amazingborneo.com/package/5d4n-jewels-of-danum-valley-combo
+								  parseCount: 227 , domainsParsedCount:227,  domainsToParse:581
+								  getwebpage: https://www.amazingborneo.com/package/5d4n-jewels-of-danum-valley-combo/print
+								  parseCount: 228 , domainsParsedCount:228,  domainsToParse:580
+								  getwebpage: https://amazingborneo.com/sarawak-bako-national-park-5.jpg
+								    self._sock = None
+								    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+								    parseCount: 229 , domainsParsedCount:229,  domainsToParse:579
+								    getwebpage: https://www.amazingborneo.com/package/scuba-diving-adventure-cert-diver
+								    parseCount: 230 , domainsParsedCount:230,  domainsToParse:582
+								    getwebpage: https://amazingborneo.com/sabah-sipadan-island-3.jpg
+								      self._sock = None
+								      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+								      parseCount: 231 , domainsParsedCount:231,  domainsToParse:581
+								      getwebpage: https://www.amazingborneo.com/package/sutera-harbour-resort-the-pacific-sutera
+								      parseCount: 232 , domainsParsedCount:232,  domainsToParse:584
+								      getwebpage: https://book.amazingborneo.com/tour/htkk-pac
+								      parseCount: 233 , domainsParsedCount:233,  domainsToParse:583
+								      getwebpage: https://www.amazingborneo.com/package/sutera-harbour-resort-the-pacific-sutera/print
+								      parseCount: 234 , domainsParsedCount:234,  domainsToParse:582
+								      getwebpage: https://book.amazingborneo.com/tour/abk-lt12
+								      parseCount: 235 , domainsParsedCount:235,  domainsToParse:581
+								      getwebpage: https://amazingborneo.com/index.php/links
+								        self._sock = None
+									ResourceWarning: Enable tracemalloc to get the object allocation traceback
+									parseCount: 236 , domainsParsedCount:236,  domainsToParse:580
+									getwebpage: https://www.amazingborneo.com/package/8-days-7-nights-birding-wildlife-in-mystical-borneo
+									parseCount: 237 , domainsParsedCount:237,  domainsToParse:582
+									getwebpage: https://amazingborneo.com/about-us.html
+									  self._sock = None
+									  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+									  parseCount: 238 , domainsParsedCount:238,  domainsToParse:581
+									  getwebpage: https://www.amazingborneo.com/package/3d2n-mount-kinabalu-climb-kinabalu-park-stay-private-room
+									  parseCount: 239 , domainsParsedCount:239,  domainsToParse:584
+									  getwebpage: https://www.amazingborneo.com/help/general-faq
+									  parseCount: 240 , domainsParsedCount:240,  domainsToParse:584
+									  getwebpage: https://www.amazingborneo.com/package/pendant-hut
+									  parseCount: 241 , domainsParsedCount:241,  domainsToParse:587
+									  getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htkk-six
+									  parseCount: 242 , domainsParsedCount:242,  domainsToParse:586
+									  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-dvc01
+									  parseCount: 243 , domainsParsedCount:243,  domainsToParse:585
+									  getwebpage: https://amazingborneo.com/cruise-info.html
+									    self._sock = None
+									    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+									    parseCount: 244 , domainsParsedCount:244,  domainsToParse:584
+									    getwebpage: https://book.amazingborneo.com/tour/abk-bt01
+									    parseCount: 245 , domainsParsedCount:245,  domainsToParse:583
+									    getwebpage: https://www.amazingborneo.com/package/nepenthes-lodge/print
+									    parseCount: 246 , domainsParsedCount:246,  domainsToParse:582
+									    getwebpage: https://book.amazingborneo.com/tour/htkk-star
+									    parseCount: 247 , domainsParsedCount:247,  domainsToParse:581
+									    getwebpage: https://www.amazingborneo.com/package/seatango-sunset-cruise
+									    parseCount: 248 , domainsParsedCount:248,  domainsToParse:584
+									    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-s02
+									    parseCount: 249 , domainsParsedCount:249,  domainsToParse:583
+									    getwebpage: https://www.amazingborneo.com/package/3d2n-cat-city-kuching-express
+									    parseCount: 250 , domainsParsedCount:250,  domainsToParse:585
+									    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-edu02
+									    parseCount: 251 , domainsParsedCount:251,  domainsToParse:584
+									    getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkk-pac
+									    parseCount: 252 , domainsParsedCount:252,  domainsToParse:583
+									    getwebpage: https://amazingborneo.com/sabah/mount-kinabalu/via-ferrata
+									    parseCount: 253 , domainsParsedCount:253,  domainsToParse:582
+									    getwebpage: http://www.amazingborneo.com/package/north-borneo-cruises-sunset-dinner-cruise
+									    parseCount: 254 , domainsParsedCount:254,  domainsToParse:585
+									    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-mk02vip
+									    parseCount: 255 , domainsParsedCount:255,  domainsToParse:584
+									    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-s05
+									    parseCount: 256 , domainsParsedCount:256,  domainsToParse:583
+									    getwebpage: https://www.amazingborneo.com/package/mega-hotel-miri
+									    parseCount: 257 , domainsParsedCount:257,  domainsToParse:586
+									    getwebpage: https://amazingborneo.com/sabah-sipadan-island-9.jpg
+									      self._sock = None
+									      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+									      parseCount: 258 , domainsParsedCount:258,  domainsToParse:585
+									      getwebpage: https://www.amazingborneo.com/package/mercure-hotel-kota-kinabalu
+									      parseCount: 259 , domainsParsedCount:259,  domainsToParse:588
+									      getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkk-amc
+									      parseCount: 260 , domainsParsedCount:260,  domainsToParse:587
+									      getwebpage: https://book.amazingborneo.com/tour/htkp-pl
+									      parseCount: 261 , domainsParsedCount:261,  domainsToParse:586
+									      getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htkk-amc
+									      parseCount: 262 , domainsParsedCount:262,  domainsToParse:585
+									      getwebpage: https://www.amazingborneo.com/package/top-of-the-world-sunrise-leisure-hike-st-veronicas-hill
+									      parseCount: 263 , domainsParsedCount:263,  domainsToParse:588
+									      getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-sv01
+									      parseCount: 264 , domainsParsedCount:264,  domainsToParse:587
+									      getwebpage: https://www.amazingborneo.com/package/top-of-the-world-sunrise-leisure-hike-st-veronicas-hill/print
+									      parseCount: 265 , domainsParsedCount:265,  domainsToParse:586
+									      getwebpage: https://book.amazingborneo.com/tour/abk-sv01
+									      parseCount: 266 , domainsParsedCount:266,  domainsToParse:585
+									      getwebpage: https://amazingborneo.com/sabah-danum-valley-1.jpg
+									        self._sock = None
+										ResourceWarning: Enable tracemalloc to get the object allocation traceback
+										parseCount: 267 , domainsParsedCount:267,  domainsToParse:584
+										getwebpage: https://www.amazingborneo.com/package/mabul-island-mabul-water-bungalow-smart
+										parseCount: 268 , domainsParsedCount:268,  domainsToParse:587
+										getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htsrw-meg
+										parseCount: 269 , domainsParsedCount:269,  domainsToParse:586
+										getwebpage: https://www.amazingborneo.com/sabah/mount-kinabalu/tips
+										parseCount: 270 , domainsParsedCount:270,  domainsToParse:585
+										getwebpage: https://www.amazingborneo.com/packages/tours/sabah-kinabatangan-packages
+										parseCount: 271 , domainsParsedCount:271,  domainsToParse:584
+										getwebpage: https://www.amazingborneo.com/forms/tours/reserve/absrw-kh02
+										parseCount: 272 , domainsParsedCount:272,  domainsToParse:583
+										getwebpage: https://amazingborneo.com/sarawak-kuching-3.jpg
+										  self._sock = None
+										  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+										  parseCount: 273 , domainsParsedCount:273,  domainsToParse:582
+										  getwebpage: https://amazingborneo.com/index.php/overnight-packages/4d3n-mantanani-island-indulgence--mari-mari-backpackers-lodge
+										    self._sock = None
+										    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+										    parseCount: 274 , domainsParsedCount:274,  domainsToParse:581
+										    getwebpage: https://www.amazingborneo.com/package/nexus-resort-spa-karambunai/print
+										    parseCount: 275 , domainsParsedCount:275,  domainsToParse:580
+										    getwebpage: https://book.amazingborneo.com/tour/absk-li02
+										    parseCount: 276 , domainsParsedCount:276,  domainsToParse:579
+										    getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-bc05
+										    parseCount: 277 , domainsParsedCount:277,  domainsToParse:578
+										    getwebpage: https://amazingborneo.com/packages/3d2n-mount-kinabalu-climb-kinabalu-park-stay
+										      self._sock = None
+										      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+										      parseCount: 278 , domainsParsedCount:278,  domainsToParse:577
+										      getwebpage: https://www.amazingborneo.com/packages/tours/sarawak
+										      parseCount: 279 , domainsParsedCount:279,  domainsToParse:576
+										      getwebpage: https://amazingborneo.com/index.php/accommodation/mari-mari-backpackers-lodge
+										        self._sock = None
+											ResourceWarning: Enable tracemalloc to get the object allocation traceback
+											parseCount: 280 , domainsParsedCount:280,  domainsToParse:575
+											getwebpage: https://www.amazingborneo.com/package/4d3n-danum-valley-field-centre-nature-lover-experience-budget
+											parseCount: 281 , domainsParsedCount:281,  domainsToParse:577
+											getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abld-dvfc02
+											parseCount: 282 , domainsParsedCount:282,  domainsToParse:576
+											getwebpage: https://book.amazingborneo.com/tour/abk-mk06
+											parseCount: 283 , domainsParsedCount:283,  domainsToParse:575
+											getwebpage: https://www.amazingborneo.com/package/corporate-meeting-package-with-team-building
+											parseCount: 284 , domainsParsedCount:284,  domainsToParse:577
+											getwebpage: https://www.amazingborneo.com/package/corporate-meeting-package-with-team-building/print
+											parseCount: 285 , domainsParsedCount:285,  domainsToParse:576
+											getwebpage: https://book.amazingborneo.com/tour/abk-mp01
+											parseCount: 286 , domainsParsedCount:286,  domainsToParse:575
+											getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-mp01
+											parseCount: 287 , domainsParsedCount:287,  domainsToParse:574
+											getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkk-six
+											parseCount: 288 , domainsParsedCount:288,  domainsToParse:573
+											getwebpage: https://www.amazingborneo.com/package/borneo-jungle-trek-2d1n-survival-learning-camp-in-kiau
+											parseCount: 289 , domainsParsedCount:289,  domainsToParse:575
+											getwebpage: https://www.amazingborneo.com/package/3d2n-borneo-natural-sukau-bilit-resort-kinabatangan-river-cruises-jungle-walk-budget
+											parseCount: 290 , domainsParsedCount:290,  domainsToParse:578
+											getwebpage: https://www.amazingborneo.com/forms/tours/reserve/absk-bsn02
+											parseCount: 291 , domainsParsedCount:291,  domainsToParse:577
+											getwebpage: https://www.amazingborneo.com/package/3d2n-borneo-natural-sukau-bilit-resort-kinabatangan-river-cruises-jungle-walk-budget/print
+											parseCount: 292 , domainsParsedCount:292,  domainsToParse:576
+											getwebpage: https://www.amazingborneo.com/package/3d2n-mount-kinabalu-climb-with-ferrata-wtt-lpc-2-nights-panalaban
+											parseCount: 293 , domainsParsedCount:293,  domainsToParse:579
+											getwebpage: https://www.amazingborneo.com/package/3d2n-mount-kinabalu-climb-with-ferrata-wtt-lpc-2-nights-panalaban/print
+											parseCount: 294 , domainsParsedCount:294,  domainsToParse:578
+											getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-lt07
+											parseCount: 295 , domainsParsedCount:295,  domainsToParse:577
+											getwebpage: https://www.amazingborneo.com/package/2d1n-bilit-rainforest-lodge-sepilok-orangutan-kinabatangan-river-gomantong-cave-sandakan
+											parseCount: 296 , domainsParsedCount:296,  domainsToParse:580
+											getwebpage: https://book.amazingborneo.com/tour/absk-wa1504
+											parseCount: 297 , domainsParsedCount:297,  domainsToParse:579
+											getwebpage: https://www.amazingborneo.com/package/gaya-island-resort/print
+											parseCount: 298 , domainsParsedCount:298,  domainsToParse:578
+											getwebpage: https://www.amazingborneo.com/
+											parseCount: 299 , domainsParsedCount:299,  domainsToParse:577
+											getwebpage: https://www.amazingborneo.com/package/2d1n-bako-national-park-tour
+											parseCount: 300 , domainsParsedCount:300,  domainsToParse:579
+											getwebpage: https://amazingborneo.com/cruise-routes.html
+											  self._sock = None
+											  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+											  parseCount: 301 , domainsParsedCount:301,  domainsToParse:578
+											  getwebpage: https://www.amazingborneo.com/help/travel-advice
+											  parseCount: 302 , domainsParsedCount:302,  domainsToParse:577
+											  getwebpage: https://www.amazingborneo.com/package/mabul-island-seaventures-dive-resort-dive-rig
+											  parseCount: 303 , domainsParsedCount:303,  domainsToParse:580
+											  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abtw-d04
+											  parseCount: 304 , domainsParsedCount:304,  domainsToParse:579
+											  getwebpage: https://www.amazingborneo.com/about/why-travel-with-us
+											  parseCount: 305 , domainsParsedCount:305,  domainsToParse:578
+											  getwebpage: https://www.amazingborneo.com/package/kasih-sayang-health-resort
+											  parseCount: 306 , domainsParsedCount:306,  domainsToParse:581
+											  getwebpage: https://www.amazingborneo.com/package/kasih-sayang-health-resort/print
+											  parseCount: 307 , domainsParsedCount:307,  domainsToParse:580
+											  getwebpage: https://www.amazingborneo.com/package/3d2n-mount-trus-madi-climb/print
+											  parseCount: 308 , domainsParsedCount:308,  domainsToParse:579
+											  getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htmk-pen
+											  parseCount: 309 , domainsParsedCount:309,  domainsToParse:578
+											  getwebpage: https://book.amazingborneo.com/tour/abk-s02
+											  parseCount: 310 , domainsParsedCount:310,  domainsToParse:577
+											  getwebpage: https://www.amazingborneo.com/hotels-resorts
+											  parseCount: 311 , domainsParsedCount:311,  domainsToParse:576
+											  getwebpage: https://www.amazingborneo.com/package/3d2n-kota-kinabalu-free-easy-package
+											  parseCount: 312 , domainsParsedCount:312,  domainsToParse:578
+											  getwebpage: https://book.amazingborneo.com/tour/abk-fne01
+											  parseCount: 313 , domainsParsedCount:313,  domainsToParse:577
+											  getwebpage: https://www.amazingborneo.com/package/3d2n-kota-kinabalu-free-easy-package/print
+											  parseCount: 314 , domainsParsedCount:314,  domainsToParse:576
+											  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-fne01
+											  parseCount: 315 , domainsParsedCount:315,  domainsToParse:575
+											  getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/absk-bsn02
+											  parseCount: 316 , domainsParsedCount:316,  domainsToParse:574
+											  getwebpage: https://www.amazingborneo.com/sabah/mice/corporate
+											  parseCount: 317 , domainsParsedCount:317,  domainsToParse:573
+											  getwebpage: https://www.amazingborneo.com/travel/regatta-lepa-25-silver-jubilee
+											  parseCount: 318 , domainsParsedCount:318,  domainsToParse:572
+											  getwebpage: https://www.amazingborneo.com/package/the-little-kinabatangan-proboscis-monkey-fireflies-river-cruise
+											  parseCount: 319 , domainsParsedCount:319,  domainsToParse:575
+											  getwebpage: https://book.amazingborneo.com/tour/abk-wa04
+											  parseCount: 320 , domainsParsedCount:320,  domainsToParse:574
+											  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-wa04
+											  parseCount: 321 , domainsParsedCount:321,  domainsToParse:573
+											  getwebpage: https://www.amazingborneo.com/go/to/csr
+											  parseCount: 322 , domainsParsedCount:322,  domainsToParse:585
+											  getwebpage: https://amazingborneo.com/img/home-gallery/full/2.jpg
+											    self._sock = None
+											    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+											    parseCount: 323 , domainsParsedCount:323,  domainsToParse:584
+											    getwebpage: https://amazingborneo.com/img/home-gallery/full/8.jpg
+											      self._sock = None
+											      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+											      parseCount: 324 , domainsParsedCount:324,  domainsToParse:583
+											      getwebpage: https://amazingborneo.com/img/home-gallery/full/7.jpg
+											        self._sock = None
+												ResourceWarning: Enable tracemalloc to get the object allocation traceback
+												parseCount: 325 , domainsParsedCount:325,  domainsToParse:582
+												getwebpage: https://amazingborneo.com/img/home-gallery/full/4.jpg
+												  self._sock = None
+												  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+												  parseCount: 326 , domainsParsedCount:326,  domainsToParse:581
+												  getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-kp03
+												  parseCount: 327 , domainsParsedCount:327,  domainsToParse:580
+												  getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-ds02
+												  parseCount: 328 , domainsParsedCount:328,  domainsToParse:579
+												  getwebpage: https://amazingborneo.com/packages/tours/sabah-daily-local-tours
+												  parseCount: 329 , domainsParsedCount:329,  domainsToParse:578
+												  getwebpage: https://www.amazingborneo.com/package/ethnic-cooking-rumah-terbalik-upside-down-house-tour
+												  parseCount: 330 , domainsParsedCount:330,  domainsToParse:581
+												  getwebpage: https://book.amazingborneo.com/tour/abk-lt13
+												  parseCount: 331 , domainsParsedCount:331,  domainsToParse:580
+												  getwebpage: http://www.amazingborneo.com/package/scuba-diving-adventure-tarp-island
+												    self._sock = None
+												    ResourceWarning: Enable tracemalloc to get the object allocation traceback
+												    parseCount: 332 , domainsParsedCount:332,  domainsToParse:579
+												    getwebpage: https://www.amazingborneo.com/about/life-at-amazing-borneo
+												    parseCount: 333 , domainsParsedCount:333,  domainsToParse:578
+												    getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-sd02
+												    parseCount: 334 , domainsParsedCount:334,  domainsToParse:577
+												    getwebpage: https://www.amazingborneo.com/travel/tag/official-events
+												    parseCount: 335 , domainsParsedCount:335,  domainsToParse:596
+												    getwebpage: https://www.amazingborneo.com/travel/amazing-borneo-presents-donations-to-parties-affected-by-the-ranau-earthquake
+												    parseCount: 336 , domainsParsedCount:336,  domainsToParse:598
+												    getwebpage: https://www.amazingborneo.com/travel/4d3n-adventure-sabah-trip-contest-dont-miss-your-chance-to-win-the-trip-of-your-life
+												    parseCount: 337 , domainsParsedCount:337,  domainsToParse:597
+												    getwebpage: https://www.amazingborneo.com/travel/world-rainforest-music-festival
+												    parseCount: 338 , domainsParsedCount:338,  domainsToParse:598
+												    getwebpage: https://www.amazingborneo.com/travel/an-authentic-adventure-in-borneo
+												    parseCount: 339 , domainsParsedCount:339,  domainsToParse:597
+												    getwebpage: https://www.amazingborneo.com/travel/miss-sabah-tourism-2015-promoting-community-work
+												    parseCount: 340 , domainsParsedCount:340,  domainsToParse:596
+												    getwebpage: http://www.amazingborneo.com/package/damai-beach-resort
+												    parseCount: 341 , domainsParsedCount:341,  domainsToParse:599
+												    getwebpage: https://www.amazingborneo.com/travel/mount-kinabalu-safety-upgrades-july-2016
+												    parseCount: 342 , domainsParsedCount:342,  domainsToParse:600
+												    getwebpage: https://www.amazingborneo.com/travel/7-reasons-why-you-should-join-bim
+												    parseCount: 343 , domainsParsedCount:343,  domainsToParse:604
+												    getwebpage: https://amazingborneo.com/package/beautiful-twin-islands-hopping
+												    parseCount: 344 , domainsParsedCount:344,  domainsToParse:607
+												    getwebpage: https://www.amazingborneo.com/package/the-limetree-hotel-kuching
+												    parseCount: 345 , domainsParsedCount:345,  domainsToParse:610
+												    getwebpage: https://www.amazingborneo.com/forms/hotels/reserve/htsrw-ltr
+												    parseCount: 346 , domainsParsedCount:346,  domainsToParse:609
+												    getwebpage: https://book.amazingborneo.com/tour/htsrw-ltr
+												    parseCount: 347 , domainsParsedCount:347,  domainsToParse:608
+												    getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htsrw-ltr
+												    parseCount: 348 , domainsParsedCount:348,  domainsToParse:607
+												    getwebpage: https://www.amazingborneo.com/package/2d1n-mount-kinabalu-climb-with-ferrata-walk-the-torq
+												    parseCount: 349 , domainsParsedCount:349,  domainsToParse:609
+												    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-mk03
+												    parseCount: 350 , domainsParsedCount:350,  domainsToParse:608
+												    getwebpage: https://www.amazingborneo.com/sabah/quick-facts
+												    parseCount: 351 , domainsParsedCount:351,  domainsToParse:607
+												    getwebpage: https://www.amazingborneo.com/package/danum-valley-rainforest-beauty-experience
+												    parseCount: 352 , domainsParsedCount:352,  domainsToParse:610
+												    getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abld-brl01
+												    parseCount: 353 , domainsParsedCount:353,  domainsToParse:609
+												    getwebpage: https://www.amazingborneo.com/travel/miss-sabah-tourism-2015-gala-dinner
+												    parseCount: 354 , domainsParsedCount:354,  domainsToParse:609
+												    getwebpage: https://book.amazingborneo.com/tour/absk-bsn02
+												    parseCount: 355 , domainsParsedCount:355,  domainsToParse:608
+												    getwebpage: https://www.amazingborneo.com/packages/hotels/sabah-sandakan
+												    parseCount: 356 , domainsParsedCount:356,  domainsToParse:607
+												    getwebpage: https://book.amazingborneo.com/tour/abk-dvc01
+												    parseCount: 357 , domainsParsedCount:357,  domainsToParse:606
+												    getwebpage: https://www.amazingborneo.com/travel
+												    parseCount: 358 , domainsParsedCount:358,  domainsToParse:616
+												    getwebpage: https://www.amazingborneo.com/travel/becoming-an-explorer-on-the-klias-river-cruise
+												    parseCount: 359 , domainsParsedCount:359,  domainsToParse:617
+												    getwebpage: https://www.amazingborneo.com/travel/life-lessons-from-scuba-diving
+												    parseCount: 360 , domainsParsedCount:360,  domainsToParse:618
+												    getwebpage: https://www.amazingborneo.com/travel/love-sabah-be-a-responsible-eco-traveler
+												    parseCount: 361 , domainsParsedCount:361,  domainsToParse:620
+												    getwebpage: https://amazingborneo.com/package/gayana-eco-resort
+												      self._sock = None
+												      ResourceWarning: Enable tracemalloc to get the object allocation traceback
+												      parseCount: 362 , domainsParsedCount:362,  domainsToParse:619
+												      getwebpage: https://www.amazingborneo.com/travel/kundasang
+												      parseCount: 363 , domainsParsedCount:363,  domainsToParse:620
+												      getwebpage: https://www.amazingborneo.com/travel/the-scuba-tiger-x-perience
+												      parseCount: 364 , domainsParsedCount:364,  domainsToParse:621
+												      getwebpage: https://www.amazingborneo.com/travel/top-5-jungle-trails-in-sabah
+												      parseCount: 365 , domainsParsedCount:365,  domainsToParse:620
+												      getwebpage: https://www.amazingborneo.com/travel/22-million-acres-of-new-protected-areas-in-sarawak
+												      parseCount: 366 , domainsParsedCount:366,  domainsToParse:623
+												      getwebpage: http://www.amazingborneo.com/blog/orangutans-may-be-extinct-in-only-10-years
+												      parseCount: 367 , domainsParsedCount:367,  domainsToParse:625
+												      getwebpage: https://www.amazingborneo.com/travel/tamu-gaya-gaya-street-sunday-market
+												      parseCount: 368 , domainsParsedCount:368,  domainsToParse:626
+												      getwebpage: https://www.amazingborneo.com/travel/harvest-festival
+												      parseCount: 369 , domainsParsedCount:369,  domainsToParse:626
+												      getwebpage: https://amazingborneo.com/sabah-sipadan-island-4.jpg
+												        self._sock = None
+													ResourceWarning: Enable tracemalloc to get the object allocation traceback
+													parseCount: 370 , domainsParsedCount:370,  domainsToParse:625
+													getwebpage: https://www.amazingborneo.com/travel/pulau-tiga-day-trip
+													parseCount: 371 , domainsParsedCount:371,  domainsToParse:625
+													getwebpage: https://www.amazingborneo.com/travel/padas-white-water-rafting-amazing-borneo
+													parseCount: 372 , domainsParsedCount:372,  domainsToParse:625
+													getwebpage: https://www.amazingborneo.com/travel/outdoor-ethnic-cooking-class-amazing-borneo
+													parseCount: 373 , domainsParsedCount:373,  domainsToParse:625
+													getwebpage: https://book.amazingborneo.com/tour/htkp-hl
+													parseCount: 374 , domainsParsedCount:374,  domainsToParse:624
+													getwebpage: https://www.amazingborneo.com/package/kapalai-island-sipadan-kapalai-dive-resort/print
+													parseCount: 375 , domainsParsedCount:375,  domainsToParse:623
+													getwebpage: https://www.amazingborneo.com/package/3d2n-tabin-wildlife-observation-n-nature
+													parseCount: 376 , domainsParsedCount:376,  domainsToParse:626
+													getwebpage: https://www.amazingborneo.com/package/hotel-sixty3/print
+													parseCount: 377 , domainsParsedCount:377,  domainsToParse:625
+													getwebpage: https://www.amazingborneo.com/forms/tours/reserve/abk-sb01
+													parseCount: 378 , domainsParsedCount:378,  domainsToParse:624
+													getwebpage: https://www.amazingborneo.com/travel/up-your-instagram-game-18-fun-interesting-things-to-do-while-climbing-mount-kinabalu
+													parseCount: 379 , domainsParsedCount:379,  domainsToParse:623
+													getwebpage: https://www.amazingborneo.com/packages/tours/sarawak-daily-local-tours
+													parseCount: 380 , domainsParsedCount:380,  domainsToParse:622
+													getwebpage: https://book.amazingborneo.com/tour/abk-kp03
+													parseCount: 381 , domainsParsedCount:381,  domainsToParse:621
+													getwebpage: https://amazingborneo.com/about/contact-us
+													parseCount: 382 , domainsParsedCount:382,  domainsToParse:620
+													getwebpage: https://book.amazingborneo.com/tour/absrw-dt202
+													parseCount: 383 , domainsParsedCount:383,  domainsToParse:619
+													getwebpage: https://amazingborneo.com/sabah-discover-sabah-multi-day-packages-9.jpg
+													  self._sock = None
+													  ResourceWarning: Enable tracemalloc to get the object allocation traceback
+													  parseCount: 384 , domainsParsedCount:384,  domainsToParse:618
+													  getwebpage: https://www.amazingborneo.com/package/shangri-la-rasa-ria-resort
+													  parseCount: 385 , domainsParsedCount:385,  domainsToParse:621
+													  getwebpage: https://www.amazingborneo.com/forms/hotels/enquiry/htkk-rrr
+													  parseCount: 386 , domainsParsedCount:386,  domainsToParse:620
+													  getwebpage: https://www.amazingborneo.com/forms/tours/enquiry/abk-lt13
+													  parseCount: 387 , domainsParsedCount:387,  domainsToParse:619
+													  getwebpage: https://www.amazingborneo.com/go/to/brfl
+													  parseCount: 388 , domainsParsedCount:388,  domainsToParse:627
+													  Traceback (most recent call last):
+													    File "/Applications/PyCharm CE.app/Contents/helpers/pycharm/_jb_unittest_runner.py", line 35, in <module>
+													        main(argv=args, module=None, testRunner=unittestpy.TeamcityTestRunner, buffer=not JB_DISABLE_BUFFERING)
+														      self.runTests()
+															    self.result = testRunner.run(self.test)
+															      File "/Applications/PyCharm CE.app/Contents/helpers/pycharm/teamcity/unittestpy.py", line 304, in run
+															          return super(TeamcityTestRunner, self).run(test)
+																        test(result)
+																	      return self.run(*args, **kwds)
+																		    test(result)
+																		          return self.run(*args, **kwds)
+																			        test(result)
+																				      return self.run(*args, **kwds)
+																					    testMethod()
+																					          spider.start()
+																						        self.getWebPage(url)
+																							      time.sleep(self.requestDelay)
+																							      KeyboardInterrupt
+
+																							      Process finished with exit code 1
