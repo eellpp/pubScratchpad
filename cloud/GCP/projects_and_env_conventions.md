@@ -11,7 +11,7 @@ If you choose to create your microservices application by using only multiple se
 
 Alternatively, if you choose to create your microservices application by using multiple projects, you can achieve the same separation between environments, but you'll need to use more projects, such as web-app-dev, web-app-prod, user-service-dev, and user-service-prod. You will need to use code patterns to ensure that the dev projects only call other dev projects and the prod projects only call other prod projects.  
 
-`Deploying in DEV UAT and Prodcution environement`  
+`Deploying in DEV, UAT and Production environment`  
 The recommended way to isolate environments in Google Cloud Platform (and therefore also Firebase) is to create different projects for each environment.  
 Store the environment related data (cloud storage bucket, Cloud SQL url etc) in a configuration file that is loaded by the application. If you use Java, I personnally use a properties file that is populated by Maven based on two profiles (dev and prod, dev being the default one).  
 Another important point is to separate environments from the start. Once you've started assuming that both environments will live in the same application, a lot of your code will be developed based on that assumption and it will be harder to move back to two different projects.  
