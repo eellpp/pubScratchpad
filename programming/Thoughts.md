@@ -1,4 +1,11 @@
 
+### Software Development is knowledge building
+`The main value in software is not the code produced, but the knowledge accumulated by the people who produced it.`  
+ref : https://www.csc.gov.sg/articles/how-to-build-good-software  
+
+You have to start with bad software, keep building your knowhow. Keep pruning and improving. Their would be multiple iterations of code increase and code reduction (refactoring technical debt). Their would be occasional pivot.  
+All these are knowledge that team building the software keeps. This knowledge is lost when observing only the final source code as the output. When the team holding that knowledge departs, the software degrades. The future updates will miss the key insights from past. It will be long time when the new team makes the same mistakes and learns over in iterations.  
+If there is constant team overhauls, then software will turn to crap.  
 
 #### Why use popular frameworks
 
