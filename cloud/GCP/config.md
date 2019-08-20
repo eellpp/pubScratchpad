@@ -13,4 +13,8 @@ gcloud topic configuration
 gcloud info --format='get(config.paths.active_config_path)'
 
 ```
-You can set the default project in the config `core` section of ini file. Or use --project option with commands
+You can set the 
+- default project in the config `core` section of ini file. Or use --project option with commands
+- default compute zone and region
+
+
