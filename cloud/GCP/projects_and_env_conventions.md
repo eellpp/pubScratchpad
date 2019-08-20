@@ -1,4 +1,6 @@
 
+A key aspect of the Google Cloud Platform (GCP) is its project-centered organization. All billing, permissions, resources and settings are grouped within a user-defined project which basically acts as a global namespace. This not only simplifies the interconnected mapping of the resources you use (storage, databases, instances, ...) but also access management from role-based permissions to actual ssh keys and security.  
+
 ### Best Practices for Enterprise customers
 https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations
 
