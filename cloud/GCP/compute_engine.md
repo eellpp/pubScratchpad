@@ -16,6 +16,17 @@ To recap, when you launch a new instance, GCE starts by attaching a persistent d
 Specific Deep Learning VM images are available to suit your choice of framework and processor. There are currently images supporting TensorFlow, PyTorch, and generic high-performance computing, with versions for both CPU-only and GPU-enabled workflows.  
 https://cloud.google.com/deep-learning-vm/docs/images
 
+### Sharing images between environments
+The recommeded approach is to segregate env based on projects. Eg myproject-dev , myproject-prod.  
+A dev project image can be shared to prod project  
+https://cloud.google.com/compute/docs/images/sharing-images-across-projects#share  
+
+Get the Google APIs service account ( [PROJECT_NUMBER]@cloudservices.gserviceaccount.com) of the project to which the image access is to be provided from IAM. Add this to the current project where image is created and provide access roles.  
+
+Create the instance from the shared image:  
+```bash
+gcloud compute instances create test-instance --image database-image-a --image-project database-images
+```
 
 ### Configuring Development and Prod instances while app migration
 Imagine you're running a VM instance as part of your web-based application, and are moving from development to production. You can now configure your instance exactly the way you want it and then save your golden config as an instance template. You can then use the template to launch as many instances as you need, configured exactly the way you want. In addition, you can tweak VMs launched from an instance template using the override capability.  
