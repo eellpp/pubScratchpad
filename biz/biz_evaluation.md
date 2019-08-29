@@ -8,7 +8,7 @@ Cash flow is the net amount of cash and cash-equivalents being transferred into 
 - investing cash flow and 
 - financing cash flow  
 Positive cash flow indicates that a company's liquid assets are increasing, enabling it to settle debts, reinvest in its business, return money to shareholders, pay expenses and provide a buffer against future financial challenges.
-3) **Free Cash Flow** 
+3) **Free Cash Flow**  
 Free cash flow = operating cash flow - capital expenditures - dividends (though some companies don’t because dividends are viewed as discretionary)  
 it shows what money the company has left over to expand the business or return to shareholders, after paying dividends, buying back stock or paying off debt.
 
