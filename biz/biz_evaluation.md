@@ -13,5 +13,9 @@ Free cash flow = operating cash flow - capital expenditures - dividends (though 
 it shows what money the company has left over to expand the business or return to shareholders, after paying dividends, buying back stock or paying off debt.
 
 
+We have a highly efficient go-to-market model, which consists of 
+- a self-service tier,   
+- a high velocity inside sales team,  
+- and an enterprise sales force  
 
 
