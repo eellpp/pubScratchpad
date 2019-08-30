@@ -12,6 +12,8 @@ Positive cash flow indicates that a company's liquid assets are increasing, enab
 Free cash flow = operating cash flow - capital expenditures - dividends (though some companies don’t because dividends are viewed as discretionary)  
 it shows what money the company has left over to expand the business or return to shareholders, after paying dividends, buying back stock or paying off debt.
 
+**From Data Dog S1 2019**  
+We generated `revenue` of $100.8 million and $198.1 million in 2017 and 2018, respectively, representing year-over-year growth of 97%. Our revenue was $85.4 million in the six months ended June 30, 2018 compared to $153.3 million in the six months ended June 30, 2019, representing period-over-period growth of 79%. Substantially all of our revenue is subscription software sales. Our `net (loss) income` was $(2.6) million, $(10.8) million, $0.5 million and $(13.4) million for the years ended December 31, 2017 and 2018 and the six months ended June 30, 2018 and 2019, respectively. We generated `operating cash flow` of $13.8 million, $10.8 million, $10.6 million and $3.0 million in 2017 and 2018 and the six months ended June 30, 2018 and 2019, respectively. Our `free cash flow` was $6.0 million, $(5.0) million, $1.5 million and $(6.4) million in 2017 and 2018 and the six months ended June 30, 2018 and 2019, respectively
 
 We have a highly efficient go-to-market model, which consists of 
 - a self-service tier,   
