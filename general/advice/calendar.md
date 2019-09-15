@@ -11,4 +11,11 @@ Come out of the urge to put everything on calendar so that it can be done . Aka 
 Check daily to see what is upcoming and if you have missed on something
 
 
+### Task Vs Calendar Event
+Event have to done at specific time.  
+Task are things to be done, not specifically at a certain time.  
+An Event may require certain tasks done before it or after it.  
+
+
+
 
