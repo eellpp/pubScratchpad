@@ -16,14 +16,16 @@ https://www.youtube.com/watch?v=v_ONFix_e4k
 
 If you are eating saturated fats, then the risk of brain damage is 3x more. Saturated fats are typically solid at room temperature. These are found in fatty beef, lamb, pork, poultry with skin, beef fat (tallow), lard and cream, butter, cheese and other dairy products.  
 mild cognitive impairment is found in people who eat more of saturated fats  
-Vitamin E is the fire extinguisher for brain. Vitamin E is in spinach, and it's in mangoes, and it's especially in nuts and seeds. And the beauty of this is vitamin E is an antioxidant it knocks out free radicals (from excess iron, copper etc ).  Research showed that people getting eight milligrams a day of vitamin E cut their risk of Alzheimer's by about half compared to people getting less than that.  
-Nature has eight forms of vitamin E. Eating the pill gives you only one of the form. If I put some nuts or seeds into the palm of my hand, by the time it hits your fingers, that's just one ounce, and that's about five milligrams of vitamin E, right there.  
-A grape has to sit on the vine, all day long under the sun, and exposed to the elements, and it has no protection.Or does it? That purple color, those anthocyanins happen to be powerful antioxidants, just like vitamin E, but they're the grape form, and if you consume them, they go into your bloodstream. And if that's true, it doesn't have to be grapes, it could be anything that has that color. Like blueberries.  
+>> Vitamin E is the fire extinguisher for brain. Vitamin E is in spinach, and it's in mangoes, and it's especially in nuts and seeds. And the beauty of this is vitamin E is an antioxidant it knocks out free radicals (from excess iron, copper etc ).  Research showed that people getting eight milligrams a day of vitamin E cut their risk of Alzheimer's by about half compared to people getting less than that.  
+
+>> Nature has eight forms of vitamin E. Eating the pill gives you only one of the form. If I put some nuts or seeds into the palm of my hand, by the time it hits your fingers, that's just one ounce, and that's about five milligrams of vitamin E, right there.  
+>> A grape has to sit on the vine, all day long under the sun, and exposed to the elements, and it has no protection.Or does it? That purple color, those anthocyanins happen to be powerful antioxidants, just like vitamin E, but they're the grape form, and if you consume them, they go into your bloodstream. And if that's true, it doesn't have to be grapes, it could be anything that has that color. Like blueberries.  
 
 >> You walk into the grocery store, and from a hundred feet away, looking at the produce department, you can recognize beta-carotene, lycopene, anthocyanins. Your retina can detect them because that's the orange color of a carrot, or the red color of a tomato, or the purple color of a grape. And the brain also tells you they're pretty, they're attractive, you can recognize antioxidants, you're drawn to them.  
 So, we devised a plate that said fruits, and grains, and legumes and vegetables, those should be the staples.  
 
-Excercise : The exercisers found that their hippocampus was a little bit bigger, and a little bit bigger, and a little bit bigger, it was as if time was going backwards: It reversed brain shrinkage, and on memory tests, they did substantially better.  
+`Excercise` :  
+>> The exercisers found that their hippocampus was a little bit bigger, and a little bit bigger, and a little bit bigger, it was as if time was going backwards: It reversed brain shrinkage, and on memory tests, they did substantially better.  
 40 minutes brisk walk, three times a week is all you need to improve memory and reverse brain shrinkage.  
 
 
