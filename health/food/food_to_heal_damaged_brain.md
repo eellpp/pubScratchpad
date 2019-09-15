@@ -1,4 +1,5 @@
 
+### Brain scans show that physical deterioration of brain causes various diseases  
 https://www.youtube.com/watch?v=esPRsT-lmw8&t=6s
 
 Brain scans show that there is physical deterioration of brain for people suffering from memory losses, depressions, mood disorders or injuries. It is possible to heal the brain.  
@@ -11,7 +12,7 @@ Brain scans show that there is physical deterioration of brain for people suffer
 >> So after 22 years and 83,000 scans, the single most important lesson my colleagues and I have learned is that you can literally change people's brains. And when you do, you change their life.  
 >> where we put players on a brain-smart program and demonstrated that 80% of them could improve in the areas of blood flow, memory, and mood, that you are not stuck with the brain you have, you can make it better on a brain-smart program.  
 
-
+### Food and habits to heal and reverse brain damage  
 https://www.youtube.com/watch?v=v_ONFix_e4k
 
 If you are eating saturated fats, then the risk of brain damage is 3x more. Saturated fats are typically solid at room temperature. These are found in fatty beef, lamb, pork, poultry with skin, beef fat (tallow), lard and cream, butter, cheese and other dairy products.  
