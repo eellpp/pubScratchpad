@@ -11,5 +11,8 @@ if you compete on price, you’re betting that you are, or will be, the most eff
 
 you can also compete on being better in many other dimensions, which is lumped into the broad differentiation strategy category. you are then betting that you are better on your dimension and that customers really value that dimension (more than price).  
 
-A classic example (presented to my MBA class) was the two adjacent pizza parlors in NYC competing on price and driving the selling price of a pizza down to less than a dollar, whilst a shop a block away and around a corner was able to keep normal pricing.  
+A classic example (presented to my MBA class) was the two adjacent pizza parlors in NYC competing on price and driving the selling price of a pizza down to less than a dollar, whilst a shop a block away and around a corner was able to keep normal pricing. 
+
+### Two types of entrepreneurs
+Distinguish two kind of entrepreneurs. First who assembles crew and systems to fulfill existing need. Another who like Harley Davidson builds up a brand that people want to associate with thus going beyond the needs. People don't buy harley as a transport vehicle (for that you buy Suzuki). They buy to belong to a group having a distinct identity
 
