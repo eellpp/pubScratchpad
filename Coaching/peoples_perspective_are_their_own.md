@@ -12,5 +12,7 @@ The reality is that nothing people say or do to you is actually about you – it
 
 When you get upset by something someone said to you, it’s about your own fears and experiences, which makes it essential to deal with this.
 
+You can’t blame your parents for how they raised you. That’s what they were taught by their parents and the environment around them
+
 https://github.com/eellpp/pubScratchpad/blob/master/Coaching/book/four_agreements.md
 
