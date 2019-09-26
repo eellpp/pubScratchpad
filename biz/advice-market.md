@@ -4,7 +4,7 @@
 
 Basically build a story around a product. Make people feel better while purchasing your product. They should feel smarter when in discussion about the product with others. This is way things have been sold from time immortal.
 
-### compete on price (cost strategy), or on value (differentiation strategy).
+### Compete on price (cost strategy), or on value (differentiation strategy).
 business school teaches you that you can compete on price (cost strategy), or on value (differentiation strategy).
 
 if you compete on price, you’re betting that you are, or will be, the most efficient provider in the market (e.g., walmart and its supply chain dominance). it’s completely viable/acceptable to compete on price. what you don’t ever want to do is price on cost, rather than on value provided.
@@ -16,3 +16,13 @@ A classic example (presented to my MBA class) was the two adjacent pizza parlors
 ### Two types of entrepreneurs
 Distinguish two kind of entrepreneurs. First who assembles crew and systems to fulfill existing need. Another who like Harley Davidson builds up a brand that people want to associate with thus going beyond the needs. People don't buy harley as a transport vehicle (for that you buy Suzuki). They buy to belong to a group having a distinct identity
 
+### Fulfill existing market needs
+Fulfill existing needs than inventing needs. If people are not buying what you showed them then either you are talking to wrong people or you have wrong product for the need. If they don’t tell other people then you are wrong, if yes then then you are on your way. Finding the right need product . Satisfy the need in a way that is not the cheapest. 
+
+### First Ten kickstart strategy
+https://seths.blog/2009/04/first-ten/  
+Find ten people. Ten people who trust you/respect you/need you/listen to you…
+
+Those ten people need what you have to sell, or want it. And if they love it, you win. If they love it, they’ll each find you ten more people (or a hundred or a thousand or, perhaps, just three). Repeat.
+
+If they don’t love it, you need a new product. Start over
