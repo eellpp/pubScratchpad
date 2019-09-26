@@ -4,3 +4,5 @@ These marginals effects are because of better mental modals.
 - follow process for better productivity. Calendar, tasks
 - listen to smart people for advices
 - Stay aware of personal limitations and keep trying to get better 
+
+The small improvements causes exponential difference in derived benefits from their resulting actions.
