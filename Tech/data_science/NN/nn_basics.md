@@ -56,5 +56,8 @@ This notion of room or capacity is really important to keep in your mind. Think 
 Now, imagine clay made of very fine-grained sand. It’s made up of millions and millions of small stones that can fit into every nook and cranny of a fork. This is what gives big neural networks the expressive power they often use to overfit to a dataset.  
 
 
-  
+### Individual vs Batch Gradient Descent  
+Individual training examples are very noisy in terms of the weight updates they generate. Thus, averaging them makes for a smoother learning process.
+
+Instead of training on one training example at a timeand updating the weights after each example, Train 100 training examples at a time, averaging the weight updates among all 100 examples. The effect is that training accuracy has smoother trend. Thus averaging makes for smoother training process.
 
