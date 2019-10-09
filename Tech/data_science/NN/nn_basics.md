@@ -1,5 +1,10 @@
 Any given set of weights optimizes to learn how to correlate its input layer with what the output layer says it should be.
 
+Neural Network layer & weights are essentially matrix multiplication. 
+
+input.dot(layer_1_matrix) = output
+
+
 What an earlier layer says it should be can be determined by taking what a later layer says it should be and multiplying it by the weights in between them. This way, later layers can tell earlier layers what kind of signal they need, to ultimately find correlation with the output. This cross-communication is called backpropagation.  
 When a neuron in the final layer says, “I need to be a little higher,” it then proceeds to tell all the neurons in the layer immediately preceding it, “Hey, previous layer, send me higher signal.” They then tell the neurons preceding them, “Hey. Send us higher signal.” 
 
