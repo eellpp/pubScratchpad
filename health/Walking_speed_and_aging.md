@@ -9,3 +9,4 @@ Lifelong compromised brain health—including poor neurocognitive functioning as
 ### Why City people walk slow
 https://www.citylab.com/life/2012/03/why-people-cities-walk-fast/1550/
 
+The more agile and active you in middle age, the better your sleep quality probably is, and both of these are a proxy for how well you will age, apart from genes.
