@@ -10,6 +10,7 @@ The above may seem like they're outcomes. But understanding problems and buildin
 Every other skill (writing well, communicating well, selling the visions, giving good demos and customer service) is in service of the above.  
 
 The three of them form a triangle. Each side of a triangle is as important as other.  
+
 ---
 > How did you tackle problem (2) above? trade shows or something? How do you go from 0 (no connections to industry X, or people who face problem Y) to being able to do 2 without some inside connection?    
 - using Gabe Weinberg’s Bullseye framework.  
