@@ -9,7 +9,8 @@ You should dip the headlights to low-beam when another oncoming vehicle is withi
 Normal bus lanes are denoted by a continous yellow line
 
 You may overtake on the left only when you want to turn left at a junction.
-You may overtake another vehicle on the left : If the driver in front signals his intention to turn right.
+You may overtake another vehicle on the left : If the driver in front signals his intention to turn right.  
+When should you start to keep left after overtaking ? When you can see the overtaken vehicle in your rear view mirror inside the cabin.  
 
 Which traffic light comes after the amber light? red light  
 The light turns red as you approach a traffic junction, when stopping you should : brake firmly and depress the clutch pedal as the car comes to a stop.  
@@ -38,3 +39,20 @@ You are driving on a three-lane carriageway at 80 km/h. There is no traffic ahea
 Unless otherwise stated, the maximum speed limit of all roads in Singapore is : 50 km/hr  
 
 Class 3/3A can carry no more than seven passengers (excluding driver)
+
+What is the maximum unladen weight of the vehicle a Class 3/Class 3A driver is allowed to drive? 3000 KG
+
+light goods vehicle speed limit : 60km/hr when carrying workers onboard  
+
+PDL:  
+After passing your BTT, you may apply for a Provisional Driving Licence (PDL)   
+A PDL is valid for 2 years from the date of grant and can be renewed subsequently for every 2 years  
+As a PDL holder, you must display two 18 cm square ‘L’ plates, in a conspicuous position on both the front and back of your motor vehicle during your driving lessons and driving tests  
+
+Probation period:  
+New drivers are motorists who hold a new class of driving licence for less than one year from the date of grant of licence. They shall be under probation for one year from the date of grant of the new driving licence to them.  
+During the one year probation period, all new Class 2B, Class 3/3A and Class 3C/3CA drivers are required to display a distinguishing mark (i.e. Probation Plate) at the front and rear of their vehicles when driving. 
+
+As per the traffic regulations, who are required to wear seat belts?  driver and all passengers, 3 demerit points on failure  
+
+
