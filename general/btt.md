@@ -1,8 +1,6 @@
-http://bttsg.blogspot.com/  
+https://www.police.gov.sg/~/media/spf/files/tp/online%20learning%20portal/final%20english%20updated%20cover%20v2%2010th%20edition%20btt%20(270218).pdf
 
 https://www.tptest.sg/
-
-http://www.basictheorytestsg.com/question_list.php
 
 You should dip the headlights to low-beam when another oncoming vehicle is within 100 meters
 
