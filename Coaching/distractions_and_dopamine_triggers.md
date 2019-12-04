@@ -2,3 +2,7 @@ Dopamine is a brain chemical that literally makes us happy, and it is released e
 
 But Distractions have thought switching cost. It makes you more error prone. It disrupts the hypnotic trance and brings back prefrontal reasoning/awareness middle man. It takes considerable effort to get back to zone again. 
 
+
+
+
+
