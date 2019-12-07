@@ -19,6 +19,9 @@ Fortunately, muscles also have large stores of a carbohydrate, called glycogen, 
 #### aerobic respiration (marathon runner, 15 km )
 Within two minutes of exercise, the body starts to supply working muscles with oxygen. When oxygen is present, aerobic respiration can take place to break down the glucose for ATP.  
 
+### Sequence for energy for HIT 
+Creatine phosphate is always the first source of energy in any type of exercise that is used up, as it replenishes ATP after the conversion to ADP (see article on Creatine Basics). Additionally, glycolysis extracts energy quickly from glucose that is derived from blood glucose or glucose extracted from glycogen phosphorylation. When the body uses all of the glycogen-derived glucose anaerobically, it must then rely on liver breakdown of proteins and lipolysis for the body�s energy. 
+
 https://health.howstuffworks.com/wellness/diet-fitness/exercise/sports-physiology.htm  
 https://www.sciencelearn.org.nz/resources/1920-energy-for-exercise  
 http://umich.edu/~medfit/resistancetraining/timingiseverything101705.html  
