@@ -1,6 +1,11 @@
-step 1) Reserve a block of time each day to write
 
-step 2) Write during that scheduled block of time
+Two steps into achieving any life goals. Whether its becoming writer, business, reducing weight etc. Anything that looks daunting to achieve with current life. 
+
+Eg: To become a writer 
+
+**step 1)** Reserve a block of time each day to write
+
+**step 2)** Do nothing but just write during that scheduled block of time
 - if you are feeling good , relaxed then write with that
 - if you are feeling angry annoyed etc then write with that
 - if you are feeling confused, distracted, depressed then write with that
