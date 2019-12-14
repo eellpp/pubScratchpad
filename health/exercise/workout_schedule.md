@@ -27,4 +27,9 @@ Total : 18 min
 180 sec HIT
 Total : 15 min HIT to burn fat and build muscles.
 
-Gym 2 times a week. Weekend and weekday
+#### Running Strategy 3
+Sprint uphill and jog downhill 
+
+https://www.verywellfit.com/get-fit-faster-with-30-second-sprints-3120562
+
+
