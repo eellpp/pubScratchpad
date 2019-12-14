@@ -3,6 +3,6 @@ If there is only one thing that i can suggest to people to improve their overall
 
 Not eating to full: daily  
 Intermittent fasting: weekly  
-Full day fasting : monthlhy  
+Full day fasting : monthly  
 
 
