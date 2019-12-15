@@ -6,7 +6,7 @@ You should dip the headlights to low-beam when another oncoming vehicle is withi
 
 Normal bus lanes are denoted by a continous yellow line
 
-You may overtake on the left only when you want to turn left at a junction.
+You may overtake on the left only when you want to turn left at a junction.  
 You may overtake another vehicle on the left : If the driver in front signals his intention to turn right.  
 When should you start to keep left after overtaking ? When you can see the overtaken vehicle in your rear view mirror inside the cabin.  
 
