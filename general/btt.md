@@ -6,9 +6,26 @@ You should dip the headlights to low-beam when another oncoming vehicle is withi
 
 Normal bus lanes are denoted by a continous yellow line
 
+#### Turn Left Right Rule
 You may overtake on the left only when you want to turn left at a junction.  
 You may overtake another vehicle on the left : If the driver in front signals his intention to turn right.  
 When should you start to keep left after overtaking ? When you can see the overtaken vehicle in your rear view mirror inside the cabin.  
+How many demerit points for Forming up incorrectly when turning left or right : 4  
+
+With hard signal, how would car driver  
+- show intention to turn left : making circles  
+- show intention to slow down : hand up and down  
+
+You should only use the righthand lane when overtaking or when you are about to turn right or make a U-turn.  
+
+If you are turning right, you must give way to traffic going straight from all directions, as well as traffic turning right from the right and traffic turning left from the opposite direction.  
+
+If you are turning left, you must give way to traffic going straight from the right.  
+When turning right into a two-waystreet, turn in to the lane just left of the centreline of the road you  are turning into.   
+When turning right into a one-way street,turnin to the extreme right lane of the road you are turning into.  
+
+
+---
 
 Which traffic light comes after the amber light? red light  
 The light turns red as you approach a traffic junction, when stopping you should : brake firmly and depress the clutch pedal as the car comes to a stop.  
