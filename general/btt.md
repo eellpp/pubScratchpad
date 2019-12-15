@@ -53,4 +53,13 @@ During the one year probation period, all new Class 2B, Class 3/3A and Class 3C/
 
 As per the traffic regulations, who are required to wear seat belts?  driver and all passengers, 3 demerit points on failure  
 
+Under the Driver Improvement Points System (DIPS), the duration of license suspention for the first time is : 12 weeks  
+
+When should you start to keep left after overtaking:  When you can see the overtaken vehicle in your rear view mirror inside the cabin.  
+
+Penatly for probationary drivers who neglect to display the probationary plates for the first time is : fine  
+
+With your probationary license, how many demerit points can you accumulate, before it will be revoked?  13 demerit points within 12 months  
+
+
 
