@@ -1,6 +1,9 @@
 https://www.police.gov.sg/~/media/spf/files/tp/online%20learning%20portal/final%20english%20updated%20cover%20v2%2010th%20edition%20btt%20(270218).pdf
 
-https://www.tptest.sg/
+https://www.tptest.sg/  
+
+https://www.onemotoring.com.sg/content/onemotoring/home/driving/road_safety_and_vehicle_rules/driving-rules.html  
+
 
 You should dip the headlights to low-beam when another oncoming vehicle is within 100 meters
 
@@ -27,6 +30,8 @@ When turning right into a one-way street,turnin to the extreme right lane of the
 #### Expressway 
 Vehicles which have a speed limit of  60km/h and below shall be driven along the left hand lane of the expressway.
 
+If a motorist reverses his vehicle on an expressway, without a valid reason, he/she is liable for how many demerit points? 6  
+
 #### Blindspot
 The areas on the right and left of your vehicle which cannot be viewed in your mirrors are known as “blind spots”. You have to turn your head and look over your shoulder to the left or the right to check for traffic in the “blind spots” before changing lane, overtaking, turning and stopping.  
 
@@ -34,7 +39,16 @@ The areas on the right and left of your vehicle which cannot be viewed in your m
 After passing through water, the brakes become ineffective. To dry the brakes, pump the brake pedal repeatedly until braking action returns.  
 You can also dry the brakes by gently depressing the brake pedal with your left foot while pressing the accelerator with the right foot.  
 
+#### Charged in court
+Any driver caught using a mobile communication device whilst driving will be charged in court. The penalty for this offence is a fine not exceeding $1,000 or imprisonment not exceeding 6 months, or both. The offender’s driving licence is also likely to be disqualified.  
 
+Failing to conform to traffic light signals - (12 demerit point and charged in court)  
+Drink driving  
+Displaying a parking coupon with any irregularity which indicates that the coupon has been tampered with (e.g. tabs with folded/creased marks) is a serious offence. Such offences are chargeable in Court.
+
+---
+
+What would you do if your view is blocked when reversing?  Stop and ask for help  
 
 Which traffic light comes after the amber light? red light  
 The light turns red as you approach a traffic junction, when stopping you should : brake firmly and depress the clutch pedal as the car comes to a stop.  
@@ -46,12 +60,42 @@ When should you start to keep left after overtaking ? When you can see the overt
 You hold a driving license. However, found that it has expired three years ago. You should do which of the following before driving again? 
 Pass basic theory, final theory and practical driving test  
 
-If a motorist reverses his vehicle on an expressway, without a valid reason, he/she is liable for how many demerit points? 6  
-What would you do if your view is blocked when reversing?  Stop and ask for help  
-
 When the amber traffic light is flashing continuously, you should : slow down and proceed with caution.  
 
-You are driving at 60km/hr. What distance should you maintain between your vehicle and the vehicle in front of you? 4 car length  
+#### Speed
+You are driving at 60km/hr. What distance should you maintain between your vehicle and the vehicle in front of you? 4 car length    
+
+Unless otherwise stated, the maximum speed limit of all roads in Singapore is : 50 km/hr  
+
+light goods vehicle speed limit : 60km/hr when carrying workers onboard  
+
+Speed limit : 
+- Black background with red circle with 60 : Drive at 60 
+- black backgrou with red dotted ring with 60  in tunnel : Drive below 60 
+- white background with red circle with 60 : Drive below 60  
+
+When transporting workers on the carriage deck, the vehicle must not travel faster than the posted road speed limit or the vehicle speed limit of 60 km/h, whichever is lower.  
+
+1 car length per 16km/h rule  
+- 48 km/hr : 3 car length gap
+- 64 km/hr : 4 car length  
+- 80 hm/hr : 5 car length  
+
+Adjust your speed to the speed of the traffic around you so as not to slow down traffic behind you(roadhogging).Even when you are driving on the left hand side of the roadway, do not drive slowly at below 15km/h of the stipulated speed limits of the road.  
+
+As the vehicle speed increases, your field of vision would be reduced  
+
+As speed increases, surface water builds up under the vehicle’s tyres. When this happens, your vehicle will glide on the surface of the road, and this is known as ‘Aquaplaning’.  
+
+Vehicle with speed limit of 40km/h and below and prohibited within tunnel  
+
+ Unless otherwise stated, the speed limit of all roads in Singapore is 50km/h, 40km/h in School Zones, and when it is feasible to lower the speed limit, 40km/h in Silver Zones.  
+ 
+
+
+---
+Class 3A can carry 7 passengers, exclusive of the driver. (1,3,3) in long SUV . Max vehicle weight is 3000 kg
+
 If a motorists exceeds the road/vehicle speed limit by more than 60km/hr, which of the following penalty would apply? 24 demerit points and charged in court 
 
 When parking your vehicle at a parking lot, always ensure that you park: at the centre of the parking lot  
@@ -60,13 +104,13 @@ Which of the following could lead to you being charged for drunk driving? 35 mic
 
 You are driving on a three-lane carriageway at 80 km/h. There is no traffic ahead. Which lane should you use? left lane  
 
-Unless otherwise stated, the maximum speed limit of all roads in Singapore is : 50 km/hr  
+
 
 Class 3/3A can carry no more than seven passengers (excluding driver)
 
 What is the maximum unladen weight of the vehicle a Class 3/Class 3A driver is allowed to drive? 3000 KG
 
-light goods vehicle speed limit : 60km/hr when carrying workers onboard  
+
 
 PDL:  
 After passing your BTT, you may apply for a Provisional Driving Licence (PDL)   
@@ -83,9 +127,30 @@ Under the Driver Improvement Points System (DIPS), the duration of license suspe
 
 When should you start to keep left after overtaking:  When you can see the overtaken vehicle in your rear view mirror inside the cabin.  
 
-Penatly for probationary drivers who neglect to display the probationary plates for the first time is : fine  
+Carrying passengers when the clear floor space of the open deck of a goods vehicle available for each passenger is insufficient : 6 demirt points  
 
-With your probationary license, how many demerit points can you accumulate, before it will be revoked?  13 demerit points within 12 months  
+
+#### Probation
+Penatly for probationary drivers who neglect to display the probationary plates for the first time is : fine  
+Repeat offenders with at least 2 offences of failing to display the Probation Plate during their one year probation period will have their licence revoked.
+
+With your probationary license, how many demerit points can you accumulate, before it will be revoked?  Less than 13   
+(A new driver who accumulates 13 or more demerit points during the one year probation period will also have his/her new driving licence revoked.) 
+
+
+#### Power Assisted Bicycle
+b) Minimum age for Power-Assisted Bicyclists, including pillion passengers, is 16 years old.   
+(c) Protective helmets must be worn when riding Power-Assisted Bicycle.  
+(d) Power-Assisted Bicycle must be registered and affixed with a rear number plate.  
+
+### 9 , 6 , 3 rule for no parking
+9 metre away from bus stop  
+6 metre away from pedi crossing  
+3 metre away from fire hydrant  
+
+If exhaust fumes leak into the passenger compartment, especially if the car is idling with its air-conditioner on, it can be dangerous as there is a likelihood of carbon-monoxide poisoning.  
+
+
 
 
 
