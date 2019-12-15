@@ -7,6 +7,11 @@ egg + veggies + nuts
 
 12:30 - 1:30 am : full meal for the day + fruits 
 
+### Break Days and Weeks
+- Take weekends off from intermittant fasting. Eat 2 to 3 meals at day. But no junk food  
+- Take 2 - 3 weeks off from fasting every 6 months.  
+
+
 
 ### David Sinclair in lifspan :  
 If there is only one thing that i can suggest to people to improve their overall health and wellbeing, then its "EAT LESS"  
