@@ -22,10 +22,19 @@ If you are turning right, you must give way to traffic going straight from all d
 
 If you are turning left, you must give way to traffic going straight from the right.  
 When turning right into a two-waystreet, turn in to the lane just left of the centreline of the road you  are turning into.   
-When turning right into a one-way street,turnin to the extreme right lane of the road you are turning into.  
+When turning right into a one-way street,turnin to the extreme right lane of the road you are turning into.    
+
+#### Expressway 
+Vehicles which have a speed limit of  60km/h and below shall be driven along the left hand lane of the expressway.
+
+#### Blindspot
+The areas on the right and left of your vehicle which cannot be viewed in your mirrors are known as “blind spots”. You have to turn your head and look over your shoulder to the left or the right to check for traffic in the “blind spots” before changing lane, overtaking, turning and stopping.  
+
+#### Drying brakes
+After passing through water, the brakes become ineffective. To dry the brakes, pump the brake pedal repeatedly until braking action returns.  
+You can also dry the brakes by gently depressing the brake pedal with your left foot while pressing the accelerator with the right foot.  
 
 
----
 
 Which traffic light comes after the amber light? red light  
 The light turns red as you approach a traffic junction, when stopping you should : brake firmly and depress the clutch pedal as the car comes to a stop.  
