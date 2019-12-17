@@ -167,7 +167,49 @@ b) Minimum age for Power-Assisted Bicyclists, including pillion passengers, is 1
 If exhaust fumes leak into the passenger compartment, especially if the car is idling with its air-conditioner on, it can be dangerous as there is a likelihood of carbon-monoxide poisoning.  
 
 
-### what is the symbol for : Two-way traffic across a one-way carriageway
+###### what is the symbol for : Two-way traffic across a one-way carriageway
 Traingle with <- and -> arrow
+
+###### remission on their suspension period on which condition
+(a) For 1st suspension, the suspension period will be reduced from 12 weeks to 4 weeks. If none of their traffic offences leading
+to their 1st suspension was involved in a traffic accident, their suspension period will be further reduced to 1 week; and
+(b) For 2nd suspension, it will be reduced from 24 weeks to 12 weeks.
+
+###### Light goods vehicle should have 60 km/hr speed limit during what condition
+When transporting workers on the carriage deck, the vehicle must not travel faster than the posted road speed limit or the vehicle speed limit of 60 km/h, whichever is lower.
+
+##### What is a rounabout signal and what is traffic regulation
+Traingle with broken arrow circle . Slow down and give way to traffic on right. 
+
+###### Under the Driver Improvement Points System (DIPS), the duration of license suspension for repeat offender's license can be upto
+___
+3 years
+ For subsequent suspensions after the 1st suspension,the suspension periods are:  
+ (a) 2nd suspension : 24 weeks;  
+(b) 3rd suspension : 1 year;  
+(c) 4th suspension : 2 years; and  
+(d) 5th suspension (onwards) : 3 years.  
+Where the suspension period lasts a year or longer(i.e.3rd suspensionon wards),the driving licence will be revoked andbecome invalid. The licence holder will have to retake all the necessary driving tests (theory and practical) to obtain a licence to drive/ride again.   
+
+###### Is seat belt for all passengers mandatory and what is the fine 
+Under the Road Traffic (Motor Vehicles, Wearing of Seat Belts) Rules of 2011, the driver of a car has to ensure that every passenger is wearing a seat belt.
+Passengers who are not will be fined S$120.
+
+###### Are cabs exempted from child restrain seat
+Yes. This is required for people below 1.35 mt height  
+Private hire taxis also require booster seat or child restrain for people below 1.35 mt.  
+3 demerit point  
+
+###### After 65, what is rule for 3A and 4A license
+- for 3A , every 3 years medical fitness certificate from singapore registered medical practioner  (no limit )  
+- for 4A every year  till age 74  
+
+##### What is split traffic sign
+Two down 45 degree arrows. Vehicles can pass on either side  
+
+###### During bus lane prohibited hours, motorist is allowed to use the bus lane when 
+trying to avoid collision (not when its empty)  
+
+
 
 
