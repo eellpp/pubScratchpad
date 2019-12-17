@@ -15,13 +15,8 @@ Female: average: 50%, range: 41%–60%
 
 
 ### Fat Percentage
-Fat  
-Age: 20-40 : 8 - 19%  
-Age 40 -59 : 11 -21%  
-Age 60 -78 : 13 - 14  
-
 Essential fat: 2-5%  
 Athletes: 6-13%  
 Fitness	:	14-17%  
-Acceptable: 	18-24%  
+Average: 	18-25%  
 Obesity: 	>25%  
