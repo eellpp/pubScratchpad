@@ -167,6 +167,7 @@ b) Minimum age for Power-Assisted Bicyclists, including pillion passengers, is 1
 If exhaust fumes leak into the passenger compartment, especially if the car is idling with its air-conditioner on, it can be dangerous as there is a likelihood of carbon-monoxide poisoning.  
 
 
-
+### what is the symbol for : Two-way traffic across a one-way carriageway
+Traingle with <- and -> arrow
 
 
