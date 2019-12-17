@@ -99,10 +99,10 @@ Vehicle with speed limit of 40km/h and below and prohibited within tunnel
 `Unbroken Double White Line`  : No Parking allowed, no crossing. While overtaking no crossing of line and keep left of line  
 
 #### Lines at side of road  
-Unbroken Yellow Line : no parking form 7pm to 7 pm  
-Unbroken Double Yellow : no parking, only drop and pickup  
-Single Zig Zag : no parking , drop and pickup . Will get demerit  
-Double Yellow Zig Zag : no parking, no drop and pickup  
+`Unbroken Yellow Line` : no parking form 7pm to 7 pm  
+`Unbroken Double Yellow` : no parking, only drop and pickup  
+`Single Zig Zag` : no parking , drop and pickup . Will get demerit  
+`Double Yellow Zig Zag` : no parking, no drop and pickup  
 
 ### Lines markings on road sides entry
 Broken white line at accelrating lane  
