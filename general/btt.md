@@ -161,7 +161,7 @@ b) Minimum age for Power-Assisted Bicyclists, including pillion passengers, is 1
 
 ### 9 , 6 , 3 rule for no parking
 9 metre away from bus stop  
-6 metre away from pedi crossing  
+6 metre away from intersection or junction  
 3 metre away from fire hydrant  
 
 If exhaust fumes leak into the passenger compartment, especially if the car is idling with its air-conditioner on, it can be dangerous as there is a likelihood of carbon-monoxide poisoning.  
