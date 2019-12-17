@@ -92,6 +92,22 @@ Vehicle with speed limit of 40km/h and below and prohibited within tunnel
  Unless otherwise stated, the speed limit of all roads in Singapore is 50km/h, 40km/h in School Zones, and when it is feasible to lower the speed limit, 40km/h in Silver Zones.  
  
 
+#### Lines at centre (along the road)
+
+`Broken White line` :  
+`Continuous white line ` : No parking allowed , cross only when road ahead is clear and safe  
+`Unbroken Double White Line`  : No Parking allowed, no crossing. While overtaking no crossing of line and keep left of line  
+
+#### Lines at side of road  
+Unbroken Yellow Line : no parking form 7pm to 7 pm  
+Unbroken Double Yellow : no parking, only drop and pickup  
+Single Zig Zag : no parking , drop and pickup . Will get demerit  
+Double Yellow Zig Zag : no parking, no drop and pickup  
+
+### Lines markings on road sides entry
+Broken white line at accelrating lane  
+Broken white line at decelarating lane  
+
 
 ---
 Class 3A can carry 7 passengers, exclusive of the driver. (1,3,3) in long SUV . Max vehicle weight is 3000 kg
