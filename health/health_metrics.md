@@ -22,6 +22,6 @@ Average: 	18-25%
 Obesity: 	>25%  
 
 ### Body fat estimate from BMI
-(Adult) body fat percentage=1.39*BMI + 0.16*age -10.34*gender - 9  
+(Adult) body fat percentage=1.39 * BMI + 0.16 * age -10.34*gender - 9  
 where, again, gender (sex) is 0 if female and 1 if male to account for the lower body fat percentage of men.  
 
