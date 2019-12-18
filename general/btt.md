@@ -202,7 +202,7 @@ Private hire taxis also require booster seat or child restrain for people below 
 
 ###### After 65, what is rule for 3A and 4A license
 - for 3A , every 3 years medical fitness certificate from singapore registered medical practioner  (no limit )  
-- for 4A every year  till age 74  
+- for 4A every year medical test + driving profeiciency test  till age 74  
 
 ##### What is split traffic sign
 Two down 45 degree arrows. Vehicles can pass on either side  
