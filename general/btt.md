@@ -15,6 +15,8 @@ You may overtake another vehicle on the left : If the driver in front signals hi
 When should you start to keep left after overtaking ? When you can see the overtaken vehicle in your rear view mirror inside the cabin.  
 How many demerit points for Forming up incorrectly when turning left or right : 4  
 
+You should signal for at least 5 seconds before you start overtaking.  
+
 With hard signal, how would car driver  
 - show intention to turn left : making circles  
 - show intention to slow down : hand up and down  
