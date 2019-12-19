@@ -104,7 +104,7 @@ Vehicle with speed limit of 40km/h and below and prohibited within tunnel
 
 `Broken White line` :  
 `Continuous white line ` : No parking allowed , cross only when road ahead is clear and safe  
-`Unbroken Double White Line`  : No Parking allowed, no crossing. While overtaking no crossing of line and keep left of line  
+`Unbroken Double White Line`  : No Parking allowed, no crossing. While overtaking no crossing of line and keep left of line . 4 demerit
 
 #### Lines at side of road  
 `Unbroken Yellow Line` : no parking form 7pm to 7 pm  
@@ -179,8 +179,9 @@ If exhaust fumes leak into the passenger compartment, especially if the car is i
 Traingle with <- and -> arrow
 
 ###### remission on their suspension period on which condition
+They should take the retraining course to correct driving behaviour  
 (a) For 1st suspension, the suspension period will be reduced from 12 weeks to 4 weeks. If none of their traffic offences leading
-to their 1st suspension was involved in a traffic accident, their suspension period will be further reduced to 1 week; and
+to their 1st suspension was involved in a traffic accident, their suspension period will be further reduced to 1 week; and  
 (b) For 2nd suspension, it will be reduced from 24 weeks to 12 weeks.
 
 ###### Light goods vehicle should have 60 km/hr speed limit during what condition
@@ -193,7 +194,8 @@ Traingle with broken arrow circle . Slow down and give way to traffic on right.
 ___
 3 years
  For subsequent suspensions after the 1st suspension,the suspension periods are:  
- (a) 2nd suspension : 24 weeks;  
+ First suspension : 12 weeks | 24 demerit in 24 months
+ (a) 2nd suspension : 24 weeks;  | 12 poiints in 12 
 (b) 3rd suspension : 1 year;  
 (c) 4th suspension : 2 years; and  
 (d) 5th suspension (onwards) : 3 years.  
