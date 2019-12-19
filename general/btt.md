@@ -221,5 +221,12 @@ Two down 45 degree arrows. Vehicles can pass on either side
 trying to avoid collision (not when its empty)  
 
 
+When you have to stop , pull in as close to the edge of the road as possible.  
+
+#### What are mandatory signs . What are other kinds of signs
+Mandatory signs are compulsory signs. Its a offence to disobey them.  
+
+Others are prohibitory signs, warning signs, regulatory signs, informational , directional etc  
+
 
 
