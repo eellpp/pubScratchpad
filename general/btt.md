@@ -48,6 +48,12 @@ Failing to conform to traffic light signals - (12 demerit point and charged in c
 Drink driving  
 Displaying a parking coupon with any irregularity which indicates that the coupon has been tampered with (e.g. tabs with folded/creased marks) is a serious offence. Such offences are chargeable in Court.
 
+#### Serious Matters
+Driving reckless/dangerous driving is most serious offence. 24 demerit points and charged in court  
+Use of mobile phone : 12 points and charged in court  
+Failing to confirm to traffice lights : 12 points
+
+
 ---
 
 What would you do if your view is blocked when reversing?  Stop and ask for help  
