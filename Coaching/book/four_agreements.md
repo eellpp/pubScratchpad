@@ -1,21 +1,24 @@
 
 The key message of this book is that from the moment we’re born, we are made to conform to society’s rules. This stops us from finding our true selves  
 
-### The First Agreement : impeccable word
-The First Agreement is to be impeccable with your word, and never use it against yourself or others. What does “impeccable” mean? In this context, it comes from a Latin word that means “without sin”. Being impeccable with your internal language means not judging or blaming yourself. Simply having those thoughts means you’re sinning against yourself. You need to change this, and start telling yourself how great you actually are, and giving yourself some TLC.
-A key point is that we should remember is that the words we choose to use are powerful – they can liberate or enslave you and others. How many times have you told yourself you’re stupid, or no good at something? Every time you do this, you are making an agreement and choosing to stick by it.
+### The First Agreement : Your words programme the your brain, they can librate or enslave. Impeccable in choosing words. 
+Being impeccable with your internal language means not judging or blaming yourself. Simply having those thoughts means you’re sinning against yourself. You need to change this, and start telling yourself how great you actually are, and giving yourself some TLC.  
+A key point is that we should remember is that the words we choose to use are powerful – they can liberate or enslave you and others. How many times have you told yourself you’re stupid, or no good at something? Every time you do this, you are making an agreement and choosing to stick by it.  
+- Use powerful words. Take note of them when you come across  
+- Avoid words like : fool, stupid, moron etc for self.  
 
 **Solution: Your words transform the way you think, and affect the opinions of others, so choose them wisely.**
 
 ### The Second Agreement: Don't take it personally
-The Second Agreement says that you won’t need to take things personally if you have a strong sense of yourself.
 When people are rude to us, it can often stay in our mind for too long, and we constantly repeat the words in our heads. When you take things personally, you begin inadvertently agreeing with the slight and making it yours, even if it had nothing too do with you.
 
 **Solution: The reality is that nothing people say or do to you is actually about you – it’s all about them. When you get upset by something someone said to you, it’s about your own fears and experiences, which makes it essential to deal with this.**
 
+- Don't give others the power to hurt you again and again in your thoughts.  
+
 Overcoming this issue means you have to know who you are, because then you don’t need to have other people’s acceptance, and nothing they say will hurt you. Everyone looks at the world from a different viewpoint, and you should also recognize your own perspective in this.
 
-### The Third Agreement : Don't make Asuumption
+### The Third Agreement : Don't make Assumptions
 The Third Agreement tells us that instead of making assumptions, we should ask questions instead.
 We often jump to conclusions and make assumptions that are wildly wrong. If you say “hi” to a friend, and they don’t reply, you would perhaps make the assumption that they were mad at you without any real evidence.
 
@@ -26,10 +29,10 @@ We also make assumptions about ourselves, such as whether or not we can do a par
 **Solution: You need to replace assumptions with questions instead. This can be difficult, but it’s the only way to get the answers you need.**
 
 ### The Fourth Agreement: Do your best
-The Fourth Agreement shows you how to put the first three into practice. This agreement is to always do your best, even if your best constantly changes.
-If you were told to always do your best as a child, it was actually sound advice. Doing your best depends on the situation you are in, and is not a one-size-fits-all thing. On certain days your best will be world-beating, and on others maybe it’s just a struggle to get something positive done, but you do something.
+Always do your best, even if your best constantly changes.  
+On certain days your best will be world-beating, and on others maybe it’s just a struggle to get something positive done, but you do something.  
 
-**Solution: To do your best, you should do things because you want to, not because of external motivation like a paycheck. Doing a job that you dislike just for a salary is difficult and joyless, and is sometimes the reason you will end up drinking and partying at the weekend, just to forget your frustration.**
+**Solution: To do your best, you should do things because you want to, not because of external motivation like a paycheck. Doing a job that you dislike just for a salary is difficult and joyless, and is sometimes the reason you will end up drinking and partying at the weekend, just to forget your frustration.**  
 
 If you love the job or task you’re doing, you’ll do your best without even trying. Your work will feel effortless and you’ll perform much better. This final agreement will help you to increase the power of the other agreements, while freeing yourself from old patterns.
 
