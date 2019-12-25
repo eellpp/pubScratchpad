@@ -5,6 +5,9 @@ In brain its a neurotransmitter-a chemical messenger that sends information in b
 It is also produced in blood, kidney, guts and other parts.  
 Dopamine does not cross the blood-brain barrier. So its synthesis and functions in peripheral areas are to a large degree independent of its synthesis and functions in the brain.   
 
+Dopamine levels can affect a person's mood, attention, motivation, and movement. Dopamine also regulates the brain's reward system, with its levels increasing in the brain when a person experiences something pleasurable, such as eating food or having sex.  
+
+
 ### Action in brain
 Dopamine is released by a neuron into the synapse (the small gap between two neurons), where it binds to specialized proteins called dopamine receptors on the neighboring neuron. By this process, dopamine acts as a chemical messenger, carrying a signal from neuron to neuron.  
 More the dopamine released, more the intensity of pleasure.  
@@ -37,14 +40,15 @@ Dopamine can affect the amount of food to eat before you feel satisfied. This co
 ### Sleep and Tiredness
 Dopamine helps us feel more awake, and the body naturally produces more of it during daytime hours when we are more stimulated. As night falls, dopamine levels fall as well, helping us feel tired and ready for bed. People with low dopamine or with conditions such as Parkinson's, which is associated with low dopamine levels, may feel chronic tiredness during all hours of the day.  
 
-### Dopamine Determines Impulsive Behavior
-Impulsive behaviour is when a person can’t resist the temptation to carry out certain activities. Some people may do an activity without giving any thought to the future or to long-term consequences, and it can have a big impact on the person affected and those around them. When these behaviours are more severe they are classed as impulse control disorders.  
+### Higher dopamine levels make us act more impulsively
+Impulsive behaviour (Instant gratification) is when a person can’t resist the temptation to carry out certain activities. Some people may do an activity without giving any thought to the future or to long-term consequences, and it can have a big impact on the person affected and those around them. When these behaviours are more severe they are classed as impulse control disorders.  
 
-Biologically more implusive
-people who were more impulsive might have less active dopamine receptors in their midbrain but their brains would be more likely to fire off large quantities of the neurotransmitter when stimulated. The people who had the highest levels of dopamine release reported subjectively stronger cravings.   
+Biologically more implusive people have less active dopamine receptors in their midbrain but their brains would be more likely to fire off large quantities of the neurotransmitter when stimulated. The people who had the highest levels of dopamine release reported subjectively stronger cravings.   
 
 Root cause: 
 We have shown for the first time that impulsive behaviour in mice is only triggered when dopamine signals are received and passed on to an unexpected part of the brain -- from the amygdala to the BNST . The BNST is a complex brain structure that orchestrates emotional and behavioural responses to stress.  
 
+
+https://knowingneurons.com/2016/03/10/dopamine-makes-people-impulsive/  
 
 
