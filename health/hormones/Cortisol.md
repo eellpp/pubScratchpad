@@ -103,19 +103,19 @@ In this episode, you'll discover:
   *  - Holy basil (sense of the divine in one's world)
   *  - Cordyceps powder (in coffee, shakes)
   * Critical nutrients:
-  *   Intravenous NAD+ ( use code: BEN2020 at check-out to get a 15% off of products and phone consult).
-  *   Peptides: (use code: BEN2020 at check-out to get a 15% off of products and phone consult)
-  *   Hexarelin
-  *   Epithalon
-  *   Ipamorelin
-  *   GHRP 6 and GHRP 2
-  *   Intranasal and intravenous stem cells
-  *   Hydrocortisone replacement (don't surpass 35 mg per day)
-  *   Phosphatidylserine (100-300 mg)
-  *   Ashwagandha (use at bedtime – 300 – 3000mg)
-  *   Glycine (great for the liver, 1000-5000 mg at bedtime)
-  *   CBD (bedtime)
-  *   Good correlation between HRV and cortisol; collect morning and evening times
-  *   Cortisol helps be your best cognitively
+  *  - Intravenous NAD+ ( use code: BEN2020 at check-out to get a 15% off of products and phone consult).
+  *  - Peptides: (use code: BEN2020 at check-out to get a 15% off of products and phone consult)
+  *  - Hexarelin
+  *  - Epithalon
+  *  - Ipamorelin
+  *  - GHRP 6 and GHRP 2
+  *  - Intranasal and intravenous stem cells
+  *  - Hydrocortisone replacement (don't surpass 35 mg per day)
+  *  - Phosphatidylserine (100-300 mg)
+  *  - Ashwagandha (use at bedtime – 300 – 3000mg)
+  *  - Glycine (great for the liver, 1000-5000 mg at bedtime)
+  *  - CBD (bedtime)
+  *  - Good correlation between HRV and cortisol; collect morning and evening times
+  *  - Cortisol helps be your best cognitively
 
 If you're feeling tired, stressed and anxious, check your cortisol levels
