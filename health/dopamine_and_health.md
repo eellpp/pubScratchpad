@@ -1,5 +1,5 @@
 
-Dopamine is produced in brain and across body. 
+Dopamine is produced in brain and across body.  It functions both as hormone and neurotransmitter.
 
 In brain its a neurotransmitter-a chemical messenger that sends information in between neurons.   
 It is also produced in blood, kidney, guts and other parts.  
