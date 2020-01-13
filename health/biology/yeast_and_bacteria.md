@@ -40,3 +40,8 @@ Cheese-making uses bacteria, and different types of bacteria give the cheeses th
 
 #### But what do bacteria eat?
 Well, many bacteria eat starches and sugars which can be found on more or less all organic matter.  For other bacteria their diet is not very different from yours because they live in your mouth or digestive system and eat the food you eat!  Other bacteria eat or dead and decaying matter (they are, along with fungi the ‘decomposers’ of organic matter) and some even eat waste products or dangerous materials like oil.  Basically, there are lots of different bacteria out there and between them they will eat just about anything!
+
+---
+Candida is a strain of fungus that can cause an infection in your skin, among other locations. In normal conditions, your skin may host small amounts of this fungus.  
+Candida skin infections can occur on almost any area of the body, but they are more commonly found in intertriginous regions. This is where two skin areas touch or rub together. Such areas include the armpits, groin, and skin folds, as well as the area between your fingers and toes. The fungus thrives in warm, moist, and sweaty conditions.  
+
