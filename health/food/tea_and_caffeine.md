@@ -1,10 +1,12 @@
-Tea:
+
 Tea has an amino acid theanine that is shown to reduce stress. And when you combine theanine with caffeine, it helps to boost your brain activity as well as your mood. Tea is also full of antioxidants  
 
+### Theanine in tea
 Theanine is an amino acid found in tea. It is also found in some mushrooms. Some people take theanine by mouth for anxiety and stress, depression, schizophrenia, for preventing Alzheimer's disease, for treating attention deficit-hyperactivity disorder (ADHD), and improving mental performance and attention.  
 
 Theanine has calming effect on body. Theanine + caffenine improves brain performance and mood.  
 
+### Caffeine in tea
 Tea leaves actually contain more caffeine than coffee beans. Before brewing, tea leaves contain more caffeine than coffee beans.  
 Tea leaves contain 3.5% caffeine, while coffee beans have 1.1–2.2%. However, the coffee brewing process uses hotter water, which extracts more of the caffeine from the beans. Typically, you also use more coffee beans than you’d use tea leaves for a drink (12).Therefore, 1 cup (237 ml) of brewed coffee generally has more caffeine than a cup of tea.  
 
