@@ -27,7 +27,32 @@ Decaf coffee…………….............………………… less than 5mg
 Cup of black tea……………………………...……… 70mg  
 Green Tea………………………………………......… 15-50mg  
 
+### Catechins in green tea and benefits
+Green tea contains more catechins than the other teas, mainly because of the way it is processed after harvesting.  Once in the body, the catechins undergo metabolic processing in the liver and small intestine and colon.  
+Various studies in humans have found that the peak concentrations of catechins and their metabolites occur in blood plasma between 1.5 and 2 hours after ingestion and in urine between 4 and 6 hours after ingestion.  
 
+The antimicrobial effects of green tea catechins (GTCs) on microorganisms have been studied for many years. Green tea has been shown to combat these organisms in various ways, directly and indirectly, and has been shown to work synergistically with some antibiotic agents.  
+
+One of the major properties of GTCs is the ability to bind to bacterial cell membranes.  An important result of green tea binding is the loss of bacterial ability to bind to host cells.  
+Green tea catechins have also been shown to be effective against a number of viruses, parasites, fungi, and even prions. 
+
+There are also many areas across the globe where the cost of drugs is currently beyond the earning power of most of the population. Green tea is relatively inexpensive and fairly easy to obtain for most people. It could prove to be an answer for improving health on a global scale.  
+
+### catechins in blacks tea  
+Catechins are the major components of green tea leaves. In black tea, they are oxidized and dimerized during fermentation to the yellow-orange “pigments,” TF, or polymerized to the red “pigments” called thearubigins.
+
+
+### Green And Black Tea Come From The Same Plant 
+To make green tea, young opened leaves and buds are cut from the plants. The leaves are left to wither ― which allows the water to evaporate ― and they are then steamed or pan-fired. This prevents the enzymes that are naturally found in the leaves from oxidizing. The leaves are then dried while maintaining their green color.  
+
+To make black tea, freshly plucked leaves are withered, similar to green tea. They are then rolled to release the enzymes from the leaves. After rolling, the leaves are laid out to oxidize. This is what gives the leaves their characteristic black color. Only once sufficiently oxidized are the leaves dried (which stops further oxidation). The oxidation is what gives black tea its deep flavor.
+
+#### Should we drink green tea early morning empty stomach ?
+Drinking green tea on an empty stomach in the morning can cause bad effects on the liver because of its high content of catechins.
+
+Green tea has compounds called catechins, so the amount of green tea consumed must be controlled. The higher concentration of catechins can cause liver damage. Drink green tea in the morning around 10:00 to 11:00 pm or early at night  
+
+You can drink a cup of green tea between meals, for example, two hours before or after to maximize the nutrient intake and iron absorption  
 ### Drink green tea before exercise
 Green tea contains caffeine and L-theanine, both of which can enhance alertness and attention, which is especially beneficial in the morning. Also, drinking this tea before exercise may increase fat burning and reduce muscle damage.  
 
@@ -45,7 +70,5 @@ These substances can reduce the formation of free radicals in the body, protecti
 EGCG (Epigallocatechin Gallate) is one of the most powerful compounds in green tea. It has been studied to treat various diseases and may be one of the main reasons green tea has such powerful medicinal properties
 
 ### By Mixing tea , milk and sugar , tea’s antioxidant will not be absorb by our body .
-
-
 
 
