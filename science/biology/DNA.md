@@ -41,6 +41,23 @@ DNA bases pair up with each other, A with T and C with G, to form units called b
 
 An important property of DNA is that it can replicate, or make copies of itself. Each strand of DNA in the double helix can serve as a pattern for duplicating the sequence of bases. This is critical when cells divide because each new cell needs to have an exact copy of the DNA present in the old cell.
 
+### What is genome
+ A genome is an organism's complete set of DNA, including all of its genes. Each genome contains all of the information needed to build and maintain that organism. In humans, a copy of the entire genome—more than 3 billion DNA base pairs—is contained in all cells that have a nucleus
+
+### Does all cells in body have same DNA
+Yes. But new research is showing that due to mutation there might be cells with different DNA
+
+https://www.freethink.com/articles/your-dna-is-not-the-same
+
+
+### How long is DNA
+The DNA in your cells is packaged into 46 chromosomes in the nucleus. As well as being a naturally helical molecule, DNA is supercoiled using enzymes so that it takes up less space.
+
+Try holding a piece of string at one end, and twisting the other. As you add twist, the string creates coils of coils; and eventually, coils of coils of coils. Your DNA is arranged as a coil of coils of coils of coils of coils! This allows the 3 billion base pairs in each cell to fit into a space just 6 microns across.
+
+If you stretched the DNA in one cell all the way out, it would be about 2m long and all the DNA in all your cells put together would be about twice the diameter of the Solar System.
+
+### DNA Similarity between species and humans
 Here's some other common animals and our genetic similarites (these numbers are consistent across all reliable sources):
 
 - Cat: 90%
