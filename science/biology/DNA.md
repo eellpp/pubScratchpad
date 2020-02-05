@@ -1,3 +1,8 @@
+#### Difference between DNA and Gene
+A gene is is a section of DNA that is capable of transcribing to an RNA which is further translated to form protein. Gene is a specific section of DNA that is responsible for doing something like hair color  
+DNA are packaged into chromosomes. Chromosomes comes in pairs of 2. One chromosome from dad and another from mom.  
+
+
 #### Chromosomes
 In the nucleus of each cell, the DNA molecule is packaged into thread-like structures called chromosomes. Each chromosome is made up of DNA tightly coiled many times around proteins that support its structure.
 
