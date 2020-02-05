@@ -2,6 +2,11 @@
 A gene is is a section of DNA that is capable of transcribing to an RNA which is further translated to form protein. Gene is a specific section of DNA that is responsible for doing something like hair color  
 DNA are packaged into chromosomes. Chromosomes comes in pairs of 2. One chromosome from dad and another from mom.  
 
+### DNA and RNA
+DNA stays inside the nucleus. RNA can move out into the cytoplasm.   
+mRNA is messenger RNA that carries the message from DNA with instruction to make protein.  
+Other types of RNA are tRNA and rRNA  
+
 
 #### Chromosomes
 In the nucleus of each cell, the DNA molecule is packaged into thread-like structures called chromosomes. Each chromosome is made up of DNA tightly coiled many times around proteins that support its structure.
