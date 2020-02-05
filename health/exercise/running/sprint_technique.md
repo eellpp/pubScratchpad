@@ -3,7 +3,7 @@
 ### Land on middle feet
 A common mistake many sprinters make is striking the ground on their toes resulting in massive ankle amortization and increased ground contact times. The goal of these drills is to get the athlete to develop a flat foot strike by overemphasizing landing flat on the heel. The result will be a flat foot strike during sprinting (landing on the forefoot or where the track spikes are).  
 
-A Complete Guide To Proper Sprinting Form](https://xpollinationproductions.com/proper-sprinting-form/)
+### [A Complete Guide To Proper Sprinting Form](https://xpollinationproductions.com/proper-sprinting-form/)
 
 Sprinting isn’t just “running faster.” Sprinting is about applying the maximum amount of force down to the ground.
 
