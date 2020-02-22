@@ -1,11 +1,15 @@
 By logic, as people get older, they should get leaner to reduce the negative effects of fat and weight related issues on mobility and health.   
 But in a counterintuitive way, the body fat increases. Why ?
 
+Everyone of a certain age recognizes that it takes ever more effort to evade or get rid of excess fat tissue. why ?
+ 
 ### Reduced Lipid Turnover
 2019: https://www.sciencedaily.com/releases/2019/09/190909193211.htm  
 Many people struggle to keep their weight in check as they get older. Now new research at Karolinska Institutet in Sweden has uncovered why that is: Lipid turnover in the fat tissue decreases during ageing and makes it easier to gain weight, even if we don't eat more or exercise less than before. The study is published in the journal Nature Medicine.
 
 Prior studies have shown that one way to speed up the lipid turnover in the fat tissue is to exercise more.  
+
+Lipids include fats (solid at room temperature) and oils (liquid at room temperature). Lipid Turnover is the breakdown of fats for energy.
 
 ### sarcopenia
 The amount of lean muscle mass we have is the primary determinant of metabolic rate. In other words, the more muscle mass we have, the more calories we will burn. Our muscle mass naturally begins to decline around age 30, and that process, called sarcopenia, accelerates around age 40. Unless something is done to actively protect and build up that lean muscle mass, our bodies will require fewer calories, our metabolisms will slow, and the lost muscle will be replaced by fat.  
