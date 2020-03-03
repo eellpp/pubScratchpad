@@ -19,3 +19,7 @@ https://blog.usejournal.com/i-interviewed-at-six-top-companies-in-silicon-valley
 
 > If you know more, show it. There were multiple examples during my onsites where I would answer a question and mention some other knowledge I had but explain that I didn’t have time in an interview to fully implement that solution. Answering a question about strings? Show off your Unicode knowledge with your solution or explain how to support Unicode. Implementing a private method? Talk about the Objective-C conventions for methods. Updating a table view? Talk about the different animations you can support. Don’t bring something up if you can’t talk all about it, but if you can, it allows you to show knowledge outside of the narrow window provided by the question and gives you a leg up on anyone that sticks strictly to the beaten path.
 
+
+If you have one month to prepare use the Elements of Programming Interviews book. If you have more time check out Udi Manbers book on designing algorithms using induction. It goes into the why and the how. In recent times I’ve observed that the system design interview increasingly plays the deciding role as most candidates can now solve the DS/Algo questions being asked.  
+
+
