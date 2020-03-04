@@ -9,5 +9,5 @@ https://www.sportsinjuryclinic.net/sport-injuries/knee-pain/posterior-knee-pain/
 Exercises to strengthen the hip muscles, in particular the large gluteus maximus muscle may also be beneficial.  
 Avoid doing too many accelerating/decelerating runs or hill work  
 
-###PERMANENT Fix for IT Band Pain  
+### PERMANENT Fix for IT Band Pain  
 https://www.youtube.com/watch?v=1iODncOLJnk
