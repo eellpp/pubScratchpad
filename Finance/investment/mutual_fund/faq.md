@@ -12,6 +12,12 @@ Since the expense ratio is charged on a regular basis, a high expense ratio over
 
 
 ### Websites
+
+Mutual Fund analysis Page
+- https://www.morningstar.in/mutualfunds/f00000sc5w/axis-small-cap-fund-regular-growth/portfolio.aspx
+- https://www.moneycontrol.com/mutual-funds/nav/axis-small-cap-fund-direct-plan-growth/MAA316
+
+
 MF Screener by fee , returns etc  
 https://www.valueresearchonline.com/funds/selector/category/100/equity-large-cap/?end-type=1&exclude=suspended-plans&tab=fee-details  
 https://www.valueresearchonline.com/funds/  
@@ -20,11 +26,15 @@ https://www.valueresearchonline.com/funds/
 Mutual Fiund screener by expense ratio, risk adjusted returns etc ..  
 https://economictimes.indiatimes.com/marketstats/marketcap-,pageno-1,period-r1month,pid-126,primaryobj-equity,secondaryobj-large%2520cap,sortby-expenseratio,sortorder-asc.cms  
 
+Find MF which hold these stocks : https://economictimes.indiatimes.com/marketstats/companyid-13974,pageno-1,pid-136,sortby-numberOfSharesHeld.cms  
+
+
 Moneycontrol MF  
 https://www.moneycontrol.com/mutualfundindia/ 
 screener : https://www.moneycontrol.com/mutual-funds/find-fund/  
 Fund Manager : http://www.moneycontrol.com/mf/mfipo/otherschemes.php?manager=Sankaran%20Naren&classic=true  
-search in google for:  "<FM name> fund manager money control"
+search in google for:  "<FM name> fund manager money control"  
+sectoral companies : https://www.moneycontrol.com/mutual-funds/performance-tracker/returns/sectoralthematic.html  
 
 
 MG Industry informations and ratings  
