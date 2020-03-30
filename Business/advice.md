@@ -1,3 +1,4 @@
+You fire a lot of bullets. You don’t know which will turn into a cannonball. iPod was a bullet that turned to cannonball . Also when you fire a bullet fire it well so that you know it was not mistake in firing. Usually the second extension becomes the big one, intel memory chip to microprocessor, Apple iPod to iPhone : Jim Collins
 
 #### On thinking that idea and software are the only essential parts
 
