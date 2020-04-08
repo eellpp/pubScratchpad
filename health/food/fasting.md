@@ -1,4 +1,4 @@
-
+A typical well-nourished 70-kg man has fuel reserves totaling about 161,000 kcal (670,000 kJ; see Table 30.1). The energy need for a 24-hour period ranges from about 1600 kcal (6700 kJ) to 6000 kcal (25,000 kJ), depending on the extent of activity. Thus, stored fuels suffice to meet caloric needs in starvation for 1 to 3 months. However, the carbohydrate reserves are exhausted in only a day.
 
 ### Eating Schedule:
 
