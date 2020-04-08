@@ -8,6 +8,8 @@ Free radicals are potentially very damaging to cell components such as proteins 
 
 Basically, I think of free radicals as waste products from various chemical reactions in the cell that when built up, harm the cells of the body.
 
+The challenges of inflammation and oxidative stress can lead to DNA damage, protein misfolding, and loss of ATP production in mitochondria. This can result in cell death and loss of cognitive functions in the brain
+
 ### How Free Radical damages cells
 Free radicals can cause damage to parts of cells such as proteins, DNA, and cell membranes by stealing their electrons through a process called oxidation. (This is why free radical damage is also called “oxidative damage.”) When free radicals oxidize important components of the cell, those components lose their ability to function normally, and the accumulation of such damage may cause the cell to die. Numerous studies indicate that increased production of free radicals causes or accelerates nerve cell injury and leads to disease.
 
