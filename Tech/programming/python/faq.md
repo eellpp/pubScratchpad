@@ -18,4 +18,8 @@ Append: Adds its argument as a single element to the end of a list. The length o
 
 extend(): Iterates over its argument and adding each element to the list and extending the list. The length of the list increases by number of elements in it’s argument. 
 
+### How to clone or copy a list?
+https://stackoverflow.com/questions/2612802/how-to-clone-or-copy-a-list  
+
+You can use the builtin list.copy() method (available since Python 3.3)
 
