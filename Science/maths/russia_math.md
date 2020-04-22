@@ -1,5 +1,8 @@
 https://news.ycombinator.com/item?id=22941144  
 
+Free soviat russian books: 
+https://mirtitles.org/
+
 In contrast you cannot approach Soviet text math book without serious thinking effort. You need to overcome some mental barrier to get into. If you cannot do that then this is not yours - choose something else.  
 
 Many US high school (and even undergraduate) textbooks are more or less analogous to taking a look-out-from-the-bus tour of rock climbing sites, or maybe like teaching an advanced wood shop class by making students assemble IKEA furniture.Textbooks should be exciting and fun, but “as easy as possible” is a terrible goal.  
