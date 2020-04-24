@@ -22,4 +22,9 @@ A futures contract is an agreement to buy or sell a financial instrument, such a
 There are two sizes of S&P 500 futures contracts. The most popular is the smaller contract, known as the "E-mini." It is valued at 50 times the level of the S&P 500 Index.  
 
 
+### OIL ETF
+“Retail has been plowing into these oil contracts thinking they’re buying spot crude oil when they’re buying the next front month. So they’re paying $22 a barrel when the spot market’s negative $38. Retail investors are going to get fleeced if they continue to fly into these oil ETFs,”  April 2020  
+
+
+
 
