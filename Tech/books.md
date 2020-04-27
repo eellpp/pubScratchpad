@@ -9,6 +9,11 @@ https://pymotw.com/3/
 How to think like a computer scientist  
 http://greenteapress.com/thinkpython/thinkCSpy/html/  
 
+### Python Data Science Book
+Series of jupyter notebooks 
+https://github.com/jakevdp/PythonDataScienceHandbook  
+https://jakevdp.github.io/PythonDataScienceHandbook/   
+
 ### Javascript 3 online book
 https://eloquentjavascript.net/
 
