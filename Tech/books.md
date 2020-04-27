@@ -1,0 +1,17 @@
+
+### Python books
+A Byte of Python:   
+https://python.swaroopch.com/stdlib.html  
+
+Python standard library  
+https://pymotw.com/3/  
+
+How to think like a computer scientist  
+http://greenteapress.com/thinkpython/thinkCSpy/html/  
+
+### Javascript 3 online book
+https://eloquentjavascript.net/
+
+### D3 Online Book  
+https://www.d3indepth.com/introduction/  
+
