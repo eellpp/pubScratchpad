@@ -14,8 +14,13 @@ Series of jupyter notebooks
 https://github.com/jakevdp/PythonDataScienceHandbook  
 https://jakevdp.github.io/PythonDataScienceHandbook/   
 
+### Python Flask
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+
 ### Javascript 3 online book
 https://eloquentjavascript.net/
+
 
 ### D3 Online Book  
 https://www.d3indepth.com/introduction/  
