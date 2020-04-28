@@ -5,3 +5,9 @@ Modafinil is an oral drug that is used for improving wakefulness in patients wit
 
 Available in brand name Provigil
 
+Risks:  
+https://www.straitstimes.com/singapore/hsa-warns-against-modafinil  
+This comes after a woman in her 30s developed Stevens-Johnson syndrome (SJS), a life-threatening skin condition with blistering and severe peeling of the skin after taking the product Modalert 200.
+
+HSA said in a statement that the woman took modafinil on alternate days for more than three weeks to increase her alertness as she worked long hours. She first developed a rash, which subsequently spread to her whole body.  
+
