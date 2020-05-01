@@ -1,4 +1,9 @@
 
+### Information and resource in india market
+https://freefincal.com/
+
+
+
 ### Current Market Valuations
 Buffett Indicator: Where Are We with Market Valuations?   
 https://www.gurufocus.com/stock-market-valuations.php   
