@@ -7,3 +7,12 @@ Liquid funds aim at providing a high degree of liquidity and safety of the capit
 ### Issues during Short Term Crisis
 It can lead to losses. Even fund can collapse due to redemption.
 
+### Safe Liquid Funds
+Quantum Liquid Fund - Growth  
+https://www.moneycontrol.com/mutual-funds/nav/quantum-liquid-fund-regular/MQU020  
+0.26% expense ratio. Low risk, low return.  
+Fund has 65.12% investment in Debt of which 65.12% in Government securities.  
+Investors who want to invest for very short term and are looking for alternative to bank accounts/deposits.  
+
+
+
