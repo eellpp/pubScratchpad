@@ -7,3 +7,6 @@ Hand over my heart, I truly think that this combination is the most suitable for
 
 ### Fin bloggers
 https://www.firepathlion.com/  
+
+https://frugalinsingapore.com/  
+
