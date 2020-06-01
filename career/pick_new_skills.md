@@ -5,3 +5,10 @@ My biggest piece of advice to anyone who wants a long technical career is to kee
 
 
 I'm 52 and am just starting to look around. Given that I primarily want world-wide remote (I live in Japan), it may be a tad difficult. However, I had no trouble at all attracting interest in my mid 40's when I went to London for a couple of years. It took me less than a month to land a job and I had a couple of options.
+
+
+### Don't ignore fads. Just invest enough time to understand
+Learn just enough about the fads so you can hold a conversation about them, but don't invest heavily in every one of them. You don't need to tech hop every year - give things at least a couple years to shake out. This will let you skip a lot of the time wasting BS that comes with fad driven development.  
+
+The other thing about learning a little bit about all the new fads is that you can fairly quickly figure out bits where going a bit more deeply will help you out in general. For example, I would not recommend using React for every front end project (or even most ;-) ), but playing with React and understanding what it was trying to accomplish legitimately made me a better programmer.  
+
