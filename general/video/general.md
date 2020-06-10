@@ -5,6 +5,10 @@ It is from "The Great Courses" company and it is "Great Minds of the Western Int
 
 ---
 
+### Siddharatha 
+Siddhartha by Hermann Hesse | Audiobook Full  
+https://www.youtube.com/watch?v=L6hUAOmo1yo  
+
 ## NonDuality and the Nature of the Self
 Ira Schepetin / Atma Chaitanya is a student of the ancient Indian Philosophical-Spiritual Tradition of Advaita Vedanta,  
 https://www.youtube.com/watch?v=usu_cLGXLg4  
