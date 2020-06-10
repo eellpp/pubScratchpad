@@ -6,6 +6,7 @@ It is from "The Great Courses" company and it is "Great Minds of the Western Int
 ---
 
 ## NonDuality and the Nature of the Self
+Ira Schepetin / Atma Chaitanya is a student of the ancient Indian Philosophical-Spiritual Tradition of Advaita Vedanta,  
 https://www.youtube.com/watch?v=usu_cLGXLg4  
 https://www.youtube.com/watch?v=RFr_dqhSbOQ  
 
