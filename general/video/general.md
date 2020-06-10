@@ -6,8 +6,9 @@ It is from "The Great Courses" company and it is "Great Minds of the Western Int
 ---
 
 ## NonDuality and the Nature of the Self
-https://www.youtube.com/watch?v=usu_cLGXLg4
-https://www.youtube.com/watch?v=RFr_dqhSbOQ
+https://www.youtube.com/watch?v=usu_cLGXLg4  
+https://www.youtube.com/watch?v=RFr_dqhSbOQ  
+
 
 ## paper folding
 https://www.vanessagould.com/between-the-folds
