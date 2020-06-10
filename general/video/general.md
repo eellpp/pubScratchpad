@@ -1,3 +1,8 @@
+### Good Videos
+Marcus Aurelius-Best Lecture on Stoicism EVER! (full Virtual University lesson)  
+https://www.youtube.com/watch?v=5897dMWJiSM  
+It is from "The Great Courses" company and it is "Great Minds of the Western Intellectual Tradition 2nd Edition - Ancient Philosophy and Faith: From Athens to Jerusalem - Lecture Eleven: Marcus Aurelius' Meditations: The Stoic Ideal (Michael Sugrue, Ph.D. Princeton University)" circa 1995  
+
 
 ## NonDuality and the Nature of the Self
 https://www.youtube.com/watch?v=usu_cLGXLg4
