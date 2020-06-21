@@ -1,5 +1,7 @@
 https://www.reddit.com/r/IndiaInvestments/comments/gthp4h/options_explained_like_a_house/  
 https://www.reddit.com/r/IndiaInvestments/comments/hbp0zq/options_explained_like_a_house_part_2_collar/  
+http://thestockmarketinvestor.com/covered-call/  
+
 
 Insurance for stocks seems like a far fetched idea to new investors. This is because the explanationof the concept of insurance becomes full of jargon.
 
