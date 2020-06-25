@@ -1,3 +1,9 @@
+
+Successful ideas start small in experimental ways. Crude solutions which are fastest to production. Useful tools for self. Extremely flexible at the cost of aesthetics and stability.  
+Idea's that start with a grandiose webapp plan with an apt domain name and requirements etc are formed in rigidity. Difficult to attain and not flexible.  
+First prod version should be most flexible version.
+
+---  
 > I think Dijkstra made a point that when somebody sees something new, they try to project something they know onto it - so with computers, the first thing people tried to do was make machines that thought like people- a project that's still bearing very little fruit. In the meantime, the things you could do really well with computers, like discrete maths, have been fabulously useful.
 I suspect robots are a bit like that. They make very poor substitutes for people. But, they can do a lot of stuff ('dishwashers', for example), that are basically orthogonal to what people do, but reduce workload immensely.
 
