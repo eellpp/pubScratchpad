@@ -1,3 +1,6 @@
+Most of these problems can be avoided by improving bowel habits. Adequate fiber intake with 30 g to 40 g daily is important for many reasons, including improving the quality of stool and preventing colorectal and anal diseases.  
+
+
 ### Hemorrhoid treatment
 Dramatic relief for most hemorrhoid symptoms can be found with simple, home remedies for hemorrhoids. To avoid occasional flare-ups, try the following.
 
@@ -26,3 +29,8 @@ Do you read or play games on your phone while having a bowel movement?
 Do you have anal pain/bleeding/incontinence to stool or gas?  
 How do you clean the area? Do you use any wipes or ointments?  
 Do you currently take a fiber supplement? If yes, which type and how much?  
+
+### Good Practices
+Don’t sit on the toilet for more than a few minutes  
+Don't put off the urge to go to the toilet  
+To help relieve anal pain and discomfort, sit in a shallow bath of warm water for 10 – 20 minutes, several times a day, if possible  
