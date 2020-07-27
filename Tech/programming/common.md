@@ -137,18 +137,6 @@ print(c == a)
 #False
 ```
 
-### Import 
-**`javascript`:**  
-```javascript
-```
-**`python`:**    
-```python
-```
-
-**`bash`**  
-```bash
-```
-
 ### For Loop
 
 **`javascript`:**  
@@ -168,9 +156,76 @@ new_numbers = [i + 10 for i in numbers if i % 2]
 ```bash
 ```
 
+### Functions
+A function definition is a regular binding where the value of the binding is a function  
+
+**`javascript`:**  
+```javascript
+const square = function(x) { return x * x;};
+console.log(square(12));
+
+// Arrow functions : Instead of the function keyword, it uses an arrow (=>) 
+const power = (base, exponent) => {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+};
+
+// for single param can ignore brackets
+const square2 = x => x * x;
+const horn = () => { console.log("Toot");};
+
+```
+**`python`:**    
+```python
+```
+
+**`bash`**  
+```bash
+```
+
+### Function Default Params
+**`javascript`:**  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters  
+
+```javascript
+function connect(hostname = "localhost",
+                 port = 80,
+                 method = "HTTP") {
+  ...
+}
+
+// uses defaults for all parameters (connects to localhost over HTTP)
+connect();
+// overrides hostname, keeps port=80 and method=HTTP
+connect('www.google.com');
+// overrides hostname, port, and method
+connect('www.google.com', 443, 'HTTPS');
+```
+
+**`python`:**    
+```python
+def connect(hostname = "localhost",port = 80,method = "HTTP") :
+ 
+// uses defaults for all parameters (connects to localhost over HTTP)
+connect();
+// overrides hostname, keeps port=80 and method=HTTP
+connect(hostname = 'www.google.com');
+// overrides hostname, port, and method
+connect('www.google.com', 443, 'HTTPS');
+
+```
+
+**`bash`**  
+```bash
+```
+
+
 ---
 ---
-### Import 
+
 **`javascript`:**  
 ```javascript
 ```
