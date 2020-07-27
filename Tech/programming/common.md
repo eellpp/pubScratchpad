@@ -149,13 +149,19 @@ print(c == a)
 ```bash
 ```
 
-### Function signature
+### For Loop
 
 **`javascript`:**  
 ```javascript
+for (let number = 0; number <= 12; number = number + 2) {
+  console.log(number);
+}
 ```
 **`python`:**    
 ```python
+for number in numbers:
+     print(number)
+new_numbers = [i + 10 for i in numbers if i % 2] 
 ```
 
 **`bash`**  
