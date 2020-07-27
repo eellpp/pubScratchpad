@@ -19,7 +19,9 @@ https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 
 ### Javascript 3 online book
-https://eloquentjavascript.net/
+https://eloquentjavascript.net/  
+https://exploringjs.com/deep-js/toc.html  
+
 
 
 ### D3 Online Book  
