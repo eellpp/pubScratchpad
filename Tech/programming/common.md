@@ -1,6 +1,3 @@
-`javascript`:  
-`python`:    
-`bash`:  
 
 
 `javascript`:  https://repl.it/languages/javascript  
@@ -20,6 +17,16 @@
 
 
 ### Concat
-`javascript`:  "hello" + "World" , `${var1} ${var2}`
-`python`:    "hello" + "World" , f"{var1} {var2}"
-`bash`:  "${VAR1} ${VAR2}"
+`javascript`:  "hello" + "World" , `${var1} ${var2}`  
+`python`:    "hello" + "World" , f"{var1} {var2}"  
+`bash`:  "${VAR1} ${VAR2}"  
+
+### Type
+`javascript`:  typeof  
+`python`: type     
+`bash`:   
+
+
+`javascript`: |  
+`python`: |   
+`bash`:  |  
