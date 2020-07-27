@@ -137,14 +137,41 @@ print(c == a)
 #False
 ```
 
----
-`javascript`: 
+### Import 
+**`javascript`:**  
 ```javascript
 ```
-`python`:    
+**`python`:**    
 ```python
 ```
 
-`bash`  
+**`bash`**  
+```bash
+```
+
+### Function signature
+
+**`javascript`:**  
+```javascript
+```
+**`python`:**    
+```python
+```
+
+**`bash`**  
+```bash
+```
+
+---
+---
+### Import 
+**`javascript`:**  
+```javascript
+```
+**`python`:**    
+```python
+```
+
+**`bash`**  
 ```bash
 ```
