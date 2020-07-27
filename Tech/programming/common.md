@@ -33,7 +33,7 @@
 
 
 ### None Comparison
-`javascript`: console.log(NaN == NaN) => false ; console.log(null == null) => true  
+`javascript`: console.log(NaN == NaN) => false ; console.log(null == null) => true ; console.log(false == 0) => true 
 `python`: print(None == None) => True   
 `bash`:   
 
