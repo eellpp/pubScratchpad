@@ -94,6 +94,30 @@ print(int('5'))
 print(str(34))
 ```
 
+### variable scope
+`javascript`
+```javascript
+// `const` is a signal that the identifier won’t be reassigned.
+// `let` is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. 
+//         It also signals that the variable will be used only in the block it’s defined in, which is not always the entire containing function.
+// `var` is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, 
+//         and the variable may or may not be used for an entire function, or just for the purpose of a block or loop.
+```
+
+### Immutable
+
+`javascript`  
+```javscript
+var statement = "I am an immutable value";
+var otherStr = statement.slice(8, 17);
+// the second line in no way changes the string in statement. In fact, no string methods 
+// change the string they operate on, they all return new strings. 
+// The reason is that strings are immutable – they cannot change, we can only ever make new strings.
+var arr = [];
+var v2 = arr.push(2);
+//  Here the arr reference has been updated to contain the number, and v2 contains the new length of arr.
+```
+
 ---
 `javascript`: 
 ```javascript
