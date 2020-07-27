@@ -26,6 +26,57 @@
 `python`: type     
 `bash`:   
 
+### None
+`javascript`: null  
+`python`: None  
+`bash`:   
+
+
+### None Comparison
+`javascript`: console.log(NaN == NaN) => false ; console.log(null == null) => true  
+`python`: print(None == None) => True   
+`bash`:   
+
+### Boolean
+`javascript`: true/false , boolean operator: && ||  
+`python`: True/False , boolean operator: and | or . & | are bitwise operators on integer values   
+`bash`: Use string/value comparison, Boolean operator: && ||  =  
+```bash
+if [[ $varA == 1 && ($varB == "t1" || $varC == "t2") ]]; then
+```
+
+### If bool check
+`javascript`: 
+```javascript
+vvar t1 = true
+if(t1){console.log("true value")}
+var t2 = []
+if(t2){console.log("empty list")}
+var t3 = NaN
+if(t3){console.log("Nan Check")}
+var t4 = null
+if(t4){console.log("null check")}
+
+//true value
+//empty list
+```
+`python`:   
+```python
+var1 = []
+if var1:
+  print("empty list")
+var1 = True
+if var1:
+  print("true value")
+var1 = {'k1':'v1'}
+if 'k1' in var1:
+  print("key in dict")
+
+#true value
+#key in dict
+```
+`bash`:  |  
+
 
 `javascript`: |  
 `python`: |   
