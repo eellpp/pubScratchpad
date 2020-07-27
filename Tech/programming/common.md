@@ -117,6 +117,25 @@ var arr = [];
 var v2 = arr.push(2);
 //  Here the arr reference has been updated to contain the number, and v2 contains the new length of arr.
 ```
+`python`:    
+Objects of built-in types like (int, float, bool, str, tuple, unicode) are immutable.   
+Objects of built-in types like (list, set, dict) are mutable.  
+Custom classes are generally mutable.  
+
+```python
+a = [1,2,3]
+b = [1,2,3]
+c = a
+print(f"Before:id a : {id(a)} ; c: {id(c)}")
+a = [4]
+print(f"After: id a : {id(a)} ; c: {id(c)}")
+print(a == b)
+print(c == a)
+#Before:id a : 140091722773248 ; c: 140091722773248
+#After: id a : 140091722774016 ; c: 140091722773248
+#False
+#False
+```
 
 ---
 `javascript`: 
