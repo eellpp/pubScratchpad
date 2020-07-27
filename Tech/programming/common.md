@@ -48,7 +48,9 @@ if [[ $varA == 1 && ($varB == "t1" || $varC == "t2") ]]; then
 ### If bool check
 `javascript`: 
 ```javascript
-vvar t1 = true
+var1=''
+if(var1){console.log("Empty String")}
+var t1 = true
 if(t1){console.log("true value")}
 var t2 = []
 if(t2){console.log("empty list")}
@@ -71,13 +73,35 @@ if var1:
 var1 = {'k1':'v1'}
 if 'k1' in var1:
   print("key in dict")
+var1 = ''
+if var1:
+  print("Empty String")
 
 #true value
 #key in dict
 ```
-`bash`:  |  
+`bash`:  
 
+### Type cast
+`javascript`: 
+```javascript
+console.log(Number('5.5'))
+console.log(String(5.5))
+```
+`python`:    
+```python
+print(int('5'))
+print(str(34))
+```
 
-`javascript`: |  
-`python`: |   
-`bash`:  |  
+---
+`javascript`: 
+```javascript
+```
+`python`:    
+```python
+```
+
+`bash`  
+```bash
+```
