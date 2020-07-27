@@ -1,3 +1,12 @@
+#### Don't do startup for admiration
+>> Many enjoy the experience of being admired or envied by others, perhaps even more than the original experience itself.People buy expensive watches, or cars, or houses where the maintenance cost itself reminds them every time of the downsides but other people's admiration more than makes up for it.Entire industries were created purely to satisfy such needs, anything containing "luxury" is a good point to start. 
+
+People coming from corporate background have this kind of behaviour. Their decisions are clouded by their basic instinct of being admired.   
+When bootstarting a business, your instinct should be grounded on making money. Turning a profit. Every decision should be pivoted around that.   
+
+Don't do startup if you can't face being rejected, rediculed and ignored.  
+Don't do startup if you have constant need of admiration from others  
+
 #### Seeing where things are headed is the essence of entrepreneurship
   You don't need to be the smartest guy, or the hardest-working. You don't need to be a extraordinary student or techno savvy. What sets entrepreneurs apart, is a tolerance for risk and an intuition about what will happen in the future.
 
