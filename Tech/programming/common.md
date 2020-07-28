@@ -184,6 +184,15 @@ const horn = () => { console.log("Toot");};
 
 **`bash`**  
 ```bash
+function quit {
+   exit
+}  
+function e {
+    echo $1 
+}  
+e Hello
+e World
+quit
 ```
 
 ### Function Default Params
@@ -222,6 +231,42 @@ connect('www.google.com', 443, 'HTTPS');
 ```bash
 ```
 
+### Closure
+ A function that references bindings from local scopes around it is called a closure. This behavior not only frees you from having to worry about lifetimes of bindings but also makes it possible to use function values in some creative ways.
+ 
+**`javascript`:**  
+```javascript
+function wrapValue(n) {
+  let local = n;
+  return () => local;
+}
+// the local bindings are preserved even when the caller function is gone
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1()); // → 1
+console.log(wrap2()); // → 2
+```
+**`python`:**    
+```python
+def make_multiplier_of(n):
+    def multiplier(x):
+        return x * n
+    return multiplier
+
+# Multiplier of 3
+times3 = make_multiplier_of(3)
+# Multiplier of 5
+times5 = make_multiplier_of(5)
+# Output: 27
+print(times3(9))
+# Output: 15
+print(times5(3))
+# Output: 30
+print(times5(times3(2)))
+```
+
+**`bash`**  
+```bash
 
 ---
 ---
