@@ -80,7 +80,25 @@ if var1:
 #true value
 #key in dict
 ```
+
 `bash`:  
+```bash
+if [[ $VAR -gt 10 ]] && [[ $VAR1 -ge $VAR3 ]]
+then
+  echo "The variable is greater than 10."
+elif [[ $VAR -eq 10 ]]
+then
+  echo "The variable is equal to 10."
+else
+  echo "The variable is less than 10."
+fi
+
+## Check empty variable in if statement
+if [[ -z $VAR ]] # - True if the VAR is empty.
+
+## Check of file exists and is readable
+if [[ -r FILE ]] # - True if the FILE exists and is readable.
+```
 
 ### Type cast
 `javascript`: 
@@ -103,6 +121,19 @@ print(str(34))
 // `var` is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, 
 //         and the variable may or may not be used for an entire function, or just for the purpose of a block or loop.
 ```
+
+**`bash`**  
+```bash
+#The let command is used to evaluate arithmetic expressions on shell variables
+# Using let is similar to enclosing an arithmetic expression in double parentheses (( .. ))
+let "v1=2"
+let "v2=3"
+let "v3 = v1 + v2"
+echo $v3 #5
+# Variables used in expressions have scope local to the command. So, for instance, an argument to let will not be aware of other shell variables, unless they are exported.
+
+```
+
 
 ### Immutable
 
