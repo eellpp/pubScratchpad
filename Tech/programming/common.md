@@ -318,11 +318,12 @@ print(times5(3))
 # Output: 30
 print(times5(times3(2)))
 ```
+**`bash`**  
+```bash
 
 ## Data Structures
 
-**`bash`**  
-```bash
+
 **`javascript`:**  
 ```javascript
 let sequence = [1, 2, 3];
@@ -341,9 +342,9 @@ console.log(countries.filter(s => s.name.indexOf("d") > 0 )); // india
 countries.findIndex(s => s.name == "india")
 countries.find(s => s.name == "india")
 countries.forEach(element => console.log(element.name));
-
-
-
+// flatten list
+t = [[1,2,3],[4,5,6]]
+t.reduce((a,b) => a.concat(b))
 
 // Strings all have array like methods
 str.split(" ") // returns array
