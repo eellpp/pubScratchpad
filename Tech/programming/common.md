@@ -319,11 +319,10 @@ print(times5(3))
 print(times5(times3(2)))
 ```
 
-**`bash`**  
-```bash
-
 ## Data Structures
 
+**`bash`**  
+```bash
 **`javascript`:**  
 ```javascript
 let sequence = [1, 2, 3];
@@ -339,6 +338,10 @@ sequence.slice(1,3) // items from 1 to 3
 console.log(sequence.filter(s => s % 2)); // 1, 3
 countries = [{'name':"india"},{'name':"france"}]
 console.log(countries.filter(s => s.name.indexOf("d") > 0 )); // india
+countries.findIndex(s => s.name == "india")
+countries.find(s => s.name == "india")
+countries.forEach(element => console.log(element.name));
+
 
 
 
