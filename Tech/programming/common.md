@@ -204,6 +204,10 @@ new_numbers = [i + 10 for i in numbers if i % 2]
 
 **`bash`**  
 ```bash
+for i in 1 2 3 4 5
+do
+   echo "Welcome $i times"
+done
 ```
 
 ### Functions
@@ -365,6 +369,24 @@ arr[1:]
 
 **`bash`**  
 ```bash
+myarray=(1 2 4 8 16 32 64 128)
+myarray=(1 2 "three" 4 "five")
+echo ${myarray[$i]}
+//Second, to output all the elements of an array, we replace the numeric index with the @
+echo ${myarray[@]}.
+
+for t in ${myarray[@]}; do
+  ./pipeline --threads $t
+done
+
+// declare dicts or associative array in bash
+declare -A animals
+animals=( ["moo"]="cow" ["woof"]="dog")
+animals['key']='value' // to set value
+"${animals[@]}" // to expand the values
+"${!animals[@]}" // (notice the !) to expand the keys
+for sound in "${!animals[@]}"; do echo "$sound - ${animals[$sound]}"; done
+
 ```
 
 
