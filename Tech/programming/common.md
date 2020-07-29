@@ -389,6 +389,29 @@ for sound in "${!animals[@]}"; do echo "$sound - ${animals[$sound]}"; done
 
 ```
 
+### JSON
+**`javascript`:**  
+```javascript
+let string = JSON.stringify({squirrel: false,
+                             events: ["weekend"]});
+console.log(string);
+// → {"squirrel":false,"events":["weekend"]}
+console.log(JSON.parse(string).events);
+// → ["weekend"]
+```
+**`python`:**    
+```python
+import json
+// to string
+json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
+// parse  json from string
+json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
+
+```
+
+**`bash`**  
+```bash
+```
 
 ---
 ---
