@@ -336,6 +336,12 @@ sequence.indexof(3)
 sequence.slice(1) // all items from 1
 sequence.slice(1,3) // items from 1 to 3
 
+console.log(sequence.filter(s => s % 2)); // 1, 3
+countries = [{'name':"india"},{'name':"france"}]
+console.log(countries.filter(s => s.name.indexOf("d") > 0 )); // india
+
+
+
 // Strings all have array like methods
 str.split(" ") // returns array
 words.join(".")
