@@ -147,6 +147,20 @@ var otherStr = statement.slice(8, 17);
 var arr = [];
 var v2 = arr.push(2);
 //  Here the arr reference has been updated to contain the number, and v2 contains the new length of arr.
+
+
+let object1 = {value: 10};
+let object2 = object1;
+let object3 = {value: 10};
+console.log(object1 == object2);
+// → true
+console.log(object1 == object3);
+// → false
+object1.value = 15;
+console.log(object2.value);
+// → 15
+console.log(object3.value);
+// → 10
 ```
 `python`:    
 Objects of built-in types like (int, float, bool, str, tuple, unicode) are immutable.   
@@ -174,6 +188,11 @@ print(c == a)
 ```javascript
 for (let number = 0; number <= 12; number = number + 2) {
   console.log(number);
+}
+
+// works for arrays, strings and other data structures
+for (let entry of JOURNAL) {
+  console.log(`${entry.events.length} events.`);
 }
 ```
 **`python`:**    
@@ -298,6 +317,56 @@ print(times5(times3(2)))
 
 **`bash`**  
 ```bash
+
+## Data Structures
+
+**`javascript`:**  
+```javascript
+let sequence = [1, 2, 3];
+sequence.push(4);
+sequence.pop()
+sequence.length
+// search for item. Returns -1 if not found
+sequence.indexof(3)
+//slice
+sequence.slice(1) // all items from 1
+sequence.slice(1,3) // items from 1 to 3
+
+// Strings all have array like methods
+str.split(" ") // returns array
+words.join(".")
+str.trim()
+
+//objects
+let day1 = {
+  squirrel: false,
+  events: ["work", "touched tree", "pizza", "running"]
+};
+console.log(day1.squirrel);
+// → false
+console.log(day1.wolf);
+// → undefined
+day1.wolf = false;
+console.log(day1.wolf);
+// → false
+
+// get the keys
+console.log(Object.keys({x: 0, y: 0, z: 2}));
+// → ["x", "y", "z"]
+
+```
+**`python`:**    
+```python
+mystr.split(" ")
+".".join(words) 
+arr[1:]
+
+```
+
+**`bash`**  
+```bash
+```
+
 
 ---
 ---
