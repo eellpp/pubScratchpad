@@ -423,6 +423,50 @@ json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
 ```bash
 ```
 
+### OOP
+
+**`javascript`:**
+Javascript objects have prototype. This is a fallback source of properties.   
+When an object gets a request for a property that it does not have, its prototype will be searched for the property, then the prototype’s prototype, and so on.  
+The prototype relations of JavaScript objects form a tree-shaped structure, and at the root of this structure sits Object.prototype. It provides a few methods that show up in all objects, such as toString, which converts an object to a string representation.  
+Many objects don’t directly have Object.prototype as their prototype but instead have another object that provides a different set of default properties. Functions derive from Function.prototype, and arrays derive from Array.prototype.  
+
+```javascript
+class Rabbit {
+  constructor(type) {
+    this.type = type;
+  }
+  speak(line) {
+    console.log(`The ${this.type} rabbit says '${line}'`);
+  }
+}
+
+let killerRabbit = new Rabbit("killer");
+let blackRabbit = new Rabbit("black");
+// Class declarations currently allow only methods—properties that hold functions—to be added to the prototype.
+
+//When you add a property to an object, whether it is present in the prototype or not, the property is added to the object itself. If there was already a property with the same name in the prototype, this property will no longer affect the object, as it is now hidden behind the object’s own property.
+
+Rabbit.prototype.teeth = "small";
+console.log(killerRabbit.teeth);
+// → small
+killerRabbit.teeth = "long, sharp, and bloody";
+console.log(killerRabbit.teeth);
+// → long, sharp, and bloody
+console.log(blackRabbit.teeth);
+// → small
+console.log(Rabbit.prototype.teeth);
+// → small
+```
+**`python`:**    
+```python
+```
+
+**`bash`**  
+```bash
+```
+
+
 ---
 ---
 
@@ -431,6 +475,15 @@ json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
 ```
 **`python`:**    
 ```python
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
 ```
 
 **`bash`**  
