@@ -3,6 +3,15 @@
 https://www.youtube.com/watch?v=5897dMWJiSM  
 It is from "The Great Courses" company and it is "Great Minds of the Western Intellectual Tradition 2nd Edition - Ancient Philosophy and Faith: From Athens to Jerusalem - Lecture Eleven: Marcus Aurelius' Meditations: The Stoic Ideal (Michael Sugrue, Ph.D. Princeton University)" circa 1995  
 
+### 300 Days alone... - The Movie
+https://www.youtube.com/watch?v=leHb2hdCLqo  
+To tame a wild pig or build a shelter, Xavier Rosset, the swiss Robinson Crusoe, spent in 2008 almost 10 months on Tofua, an island in the Pacific Ocean with only a machete and a swiss knife as a tool, not using the obolete construction left by the last inhabitants.  
+It is a true story between solitude and loneliness.  
+
+
+### Into the Wild  
+https://en.wikipedia.org/wiki/Into_the_Wild_(film)  
+
 ---
 
 ### Siddharatha 
