@@ -1,3 +1,12 @@
+### Small Lifestyle business
+"Take a competitor product, remove all features you don’t need, and make it crazy fast."  
+Seems to me there are hundreds of lifestyle businesses just waiting to happen by following this formula. So many good ideas out there could be made so much better by reducing them to their essentials, but making them elegant and "crazy fast".  
+Incumbents over-serve their customers by adding lots of features, complexity, and cost. Upstarts can attack them by focusing on only a few core features and/or low price. The incumbents can't respond without annoying their existing customers who have grown accustomed to all the features the incumbent provides.  
+A small fraction of users of a big service is often enough to run a small, non-VC funded business.  
+The moment your goal shifts from VC-backed acquisition or public offering bid to "I'd like to support myself and some employees comfortably" the things you can do profitably become almost endless.   
+Want to run a little webhosting business focused on small businesses? Tried and true. Want to offer custom software development for some little vertical? Easy enough. Want to just make a really nice and clean note app? That works too.  
+When your goal of success shifts from "mind boggingly rich" to "sufficient for the lifestyle I want", it's much easier to be successful.  
+
 #### Don't do startup for admiration
 >> Many enjoy the experience of being admired or envied by others, perhaps even more than the original experience itself.People buy expensive watches, or cars, or houses where the maintenance cost itself reminds them every time of the downsides but other people's admiration more than makes up for it.Entire industries were created purely to satisfy such needs, anything containing "luxury" is a good point to start. 
 
