@@ -9,11 +9,11 @@ Following the ‘3-3-5’ means you meet all of the following criteria:
 2. Your monthly repayments should not be more than ⅓ of your monthly income 
 3. And the property price should not exceed your annual income by 5x (adjusted by age)
 
-|age-group|ratio
-|---|---|---|
-|30-40|5x|
-|40-50|4x|
-|50-|3x|
+age-group | ratio
+---- | ----
+30-40 | 5x
+40-50 | 4x
+50+ | 3x
 
 
 ### Follow the crowd
