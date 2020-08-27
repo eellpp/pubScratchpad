@@ -1,8 +1,6 @@
 “The first home may not be the one you want the most. But at least you get on the property ladder and then you slowly climb up.”
 
 ### 3-3-5 rule for house buying
-The first is the 3-3-5 rule, popularised by property blogger Property Soul and often criticised for being too conservative. 
-
 Following the ‘3-3-5’ means you meet all of the following criteria: 
 
 1. You should have 30% of your capital ready before you purchase your property
