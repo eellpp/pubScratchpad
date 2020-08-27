@@ -7,7 +7,14 @@ Following the ‘3-3-5’ means you meet all of the following criteria:
 
 1. You should have 30% of your capital ready before you purchase your property
 2. Your monthly repayments should not be more than ⅓ of your monthly income 
-3. And the property price should not exceed your annual income by 5x 
+3. And the property price should not exceed your annual income by 5x (adjusted by age)
+
+age-group|ratio
+---|---|---|
+30-40|5x|
+40-50|4x|
+50-|3x|
+
 
 ### Follow the crowd
 1. Find the average salary in your social group.  
