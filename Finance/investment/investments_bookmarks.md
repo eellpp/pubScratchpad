@@ -1,4 +1,7 @@
 
+### Historical P/E ratio
+https://www.wolframalpha.com/input/?i=p%2Fe%20tesla
+
 ### Information and resource in india market
 https://freefincal.com/
 
