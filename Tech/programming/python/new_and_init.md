@@ -78,3 +78,20 @@ class X:
 
 X = type('X', (object,), dict(a=1))
 ```
+
+### Registry Application
+The base class class get registed in the RegistyHolder
+```python
+class RegistryHolder(type):
+
+    REGISTRY = {}
+
+    def __new__(cls, name, bases, attrs):
+        new_cls = type.__new__(cls, name, bases, attrs)
+        """
+            Here the name of the class is used as key but it could be any class
+            parameter.
+        """
+        cls.REGISTRY[new_cls.__name__] = new_cls
+        return new_cls
+```
