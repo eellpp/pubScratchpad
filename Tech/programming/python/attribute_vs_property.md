@@ -1,5 +1,7 @@
 ### Class attribute vs Property
 
+With a property you have complete control on its getter, setter and deleter methods, which you don't have (if not using caveats) with an attribute.
+
 ```python
 class A(object):
     _x = 0
