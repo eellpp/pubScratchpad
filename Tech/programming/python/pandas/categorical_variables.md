@@ -26,3 +26,7 @@ cat_type = CategoricalDtype(categories=["b", "c", "d"],
 ```
 
 
+References:  
+1. [Using The Pandas Category Data Type](https://pbpython.com/pandas_dtypes_cat.html)
+
+
