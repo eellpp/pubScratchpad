@@ -1,4 +1,16 @@
-Different types of indexes
+### What are index in dataframe
+Like a dict, a DataFrame's index is backed by a hash table. Looking up rows based on index values is like looking up dict values based on a key.  
+In contrast, the values in a column are like values in a list.
+
+Many functions, such as set_index, stack, unstack, pivot, pivot_table, melt, lreshape, and crosstab, all use or manipulate the index. Sometimes we want the DataFrame in a different shape for presentation purposes, or for join, merge or groupby operations. (As you note joining can also be done based on column values, but joining based on the index is faster.) Behind the scenes, join, merge and groupby take advantage of fast index lookups when possible.
+
+Time series have resample, asfreq and interpolate methods whose underlying implementations take advantage of fast index lookups too.
+
+When to Index in group operations :  
+For sufficiently large DataFrames, grouping by the index is faster than grouping on column values. For small DataFrames, grouping on column values can actually be faster. Moreover, calling set_index to convert a column to an index level also takes time, so either the DataFrame has to be sufficiently large or there has to be multiple groupby operations (thus amortizing the cost of calling set_index) to make grouping by the index pay off.  
+
+
+### Different types of indexes
 
 https://pandas.pydata.org/pandas-docs/version/1.0.1/reference/indexing.html  
 
