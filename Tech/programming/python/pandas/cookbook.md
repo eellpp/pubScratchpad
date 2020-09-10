@@ -12,8 +12,11 @@ pandas.Dataframe([{'a':123,'b':'456'},{'a':789,'b':numpy.nan} ])
 df[col] = df[col].astype(str)  
 Here we are using the series function  
 
-### Changing pandas column to datatime
+### Changing pandas column to datetime
 use pandas.to_datetime  
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html#pandas.to_datetime  
 pd.to_datetime(df.col, format='%Y%m%d')  
+
+### Removing duplicate from dataframe
+
 
