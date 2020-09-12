@@ -1,7 +1,7 @@
 ## Pandas Wiki
 
 
-1. [UserGuide](https://guides.github.com/features/mastering-markdown/) 
+1. [UserGuide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html) 
 2. [API Reference](https://pandas.pydata.org/pandas-docs/stable/reference/index.html)
 
 #### Notes
