@@ -51,7 +51,7 @@ df.loc[('2017-01-02', 'r')]
                    ('mammal', 'Primates', np.nan),('mammal', 'Carnivora', 58)],
                   columns=('class', 'order', 'max_speed'))
 >>> df
-class	order	max_speed
+  class	order	max_speed
 0	bird	Falconiformes	389.0
 1	bird	Psittaciformes	24.0
 2	mammal	Carnivora	80.2
@@ -77,7 +77,7 @@ Primates	NaN
 ## move back the index/multi index to columns of dataframe
 >>> d = df.groupby(["class","order"]).max()
 >>> d.reset_index()  
-class	order	max_speed
+  class	order	max_speed
 0	bird	Falconiformes	389.0
 1	bird	Psittaciformes	24.0
 2	mammal	Carnivora	80.2
