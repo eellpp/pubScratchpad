@@ -45,7 +45,45 @@ To be able to slice with a multi-index, you need to sort the index first
 df.sort_index(inplace=True)  
 df.loc[('2017-01-02', 'r')]  
 
-### groupby leads to index
+### groupby leads to index and multi index  
+```bash
+>>> df = pandas.DataFrame([('bird', 'Falconiformes', 389.0),('bird', 'Psittaciformes', 24.0),('mammal', 'Carnivora', 80.2),
+                   ('mammal', 'Primates', np.nan),('mammal', 'Carnivora', 58)],
+                  columns=('class', 'order', 'max_speed'))
+>>> df
+class	order	max_speed
+0	bird	Falconiformes	389.0
+1	bird	Psittaciformes	24.0
+2	mammal	Carnivora	80.2
+3	mammal	Primates	NaN
+4	mammal	Carnivora	58.0           
+
+### gives an index class
+>>> df[["class","max_speed"]].groupby(["class"]).max()
+      max_speed
+class	
+bird	389.0
+mammal	80.2
+
+### gives multindex : class and order
+>>> df.groupby(["class","order"]).max()
+              max_speed
+class	order	
+bird	Falconiformes	389.0
+Psittaciformes	24.0
+mammal	Carnivora	80.2
+Primates	NaN
+
+## move back the index/multi index to columns of dataframe
+>>> d = df.groupby(["class","order"]).max()
+>>> d.reset_index()  
+class	order	max_speed
+0	bird	Falconiformes	389.0
+1	bird	Psittaciformes	24.0
+2	mammal	Carnivora	80.2
+3	mammal	Primates	NaN
+
+```
 
 
 
