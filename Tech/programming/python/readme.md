@@ -2,8 +2,14 @@
 ### Python
 
 #### Interpreter 
+[interpreters.md](https://github.com/eellpp/pubScratchpad/blob/master/Tech/programming/python/lang/interpreters.md)
 
-.pyc files
+
+### .pyc files
+Python bytecode requires Python to run, cannot be ran standalone without Python, and is specific to a particular x.y release of Python.  
+It should be portable across platforms for the same version. Python uses it to optimize out parsing of your .py file on repeated imports.  
+
+
 
 GIL 
 
@@ -18,6 +24,7 @@ GIL
 #### Attribute vs Property
 [attribute_vs_property.md](https://github.com/eellpp/pubScratchpad/blob/master/Tech/programming/python/lang/attribute_vs_property.md)
 
+#### Iterators Vs Generators  
 
 
 #### Examples of well written python packages for reference  
