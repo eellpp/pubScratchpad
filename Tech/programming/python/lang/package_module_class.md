@@ -1,4 +1,3 @@
-
 ### Package vs module vs class
 A module is a Python file that (generally) has only definitions of variables, functions, and classes.
 To import all the variables, functions and classes from moduletest.py into another program you are writing, we use the import operator. 
@@ -28,26 +27,6 @@ or
 from mypackage.mymodule import myclass
 ```
 
-### General structure of Application
-
-```bash
-Project/
-|-- bin/
-|   |-- packageName
-|
-|-- packageName/
-|   |-- test/
-|   |   |-- __init__.py
-|   |   |-- test_main.py
-|   |   
-|   |-- __init__.py
-|   |-- main.py
-|
-|-- setup.py
-|-- README
-```
-https://stackoverflow.com/questions/193161/what-is-the-best-project-structure-for-a-python-application
-
 ### Class Syntax
 The syntax for a subclass definition looks like this:
 ```bash
@@ -72,7 +51,8 @@ class MultiDerived(Base1, Base2):
 
 In the multiple inheritance scenario, any specified attribute is searched first in the current class. If not found, the search continues into parent classes in depth-first, left-right fashion without searching same class twice.
  
- `super` : Use super() to access the base class methods
+ `super` : Use super() to access the base class 
  
- 
- 
+### Script vs Module 
+Scripts are top level files intended for execution and  
+Modules are intended to be imported  
