@@ -23,6 +23,16 @@ conda env create -f environment.yml
 conda should fetch the package mapping to conda or pypi channels
 
 
+### List Env
+conda env list
+
+### Get info on conda env
+conda info --env  
+conda config --get-channels
+
+### search within a channel
+conda search --channel <channel url> <package_name>
+
 ## Conda Config File
 The conda configuration file, .condarc, is an optional runtime configuration file that allows advanced users to configure various aspects of conda, such as which channels it searches for packages, proxy settings, and environment directories. 
 
