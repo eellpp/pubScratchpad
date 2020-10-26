@@ -7,6 +7,37 @@ Dramatic relief for most hemorrhoid symptoms can be found with simple, home reme
 **Get more fiber**  
 Add more fiber to your diet from food, a fiber supplement (such as Metamucil, Citrucel, or Fiber Con), or both. Along with adequate fluid, fiber softens stools and makes them easier to pass, reducing pressure on hemorrhoids. High-fiber foods include broccoli, beans, wheat and oat bran, whole-grain foods, and fresh fruit. Fiber supplements help decrease hemorrhoidal bleeding, inflammation, and enlargement. They may also reduce irritation from small bits of stool that are trapped around the blood vessels. Some people find that boosting fiber causes bloating or gas. Start slowly, and gradually increase your intake to 25–30 grams of fiber per day. Also, increase your fluid intake.
 
+ When food moves through your colon slowly, too much water can be taken out of it. That makes for a hard, dry stool.
+ 
+ Track and eat fibre in each food you eat. Avoid taking anything without mixing it with fiberous food.
+ 
+- Drink lot of warm water. At least 20 minutes before, or 1 hour after eating. Inadequate hydration is linked to constipation.
+- before sleep drink a cup of milk with teaspoon of ghee  
+- Eat Papaya. Tested and proven for constipation relief. Also eating a papaya daily will prolong the process and may make you look 5 years younger than you are. Papaya is rich in Vitamin C, Vitamin E and antioxidants like beta-carotene which helps prevent your skin from free radical damage keeping wrinkles and other signs of ageing at bay. https://github.com/eellpp/pubScratchpad/blob/master/health/food/papaya.md  
+- chia seeds : Chia seeds are a favorite source of fiber of mine, and with 10 grams per ounce, they help to add bulk to your gut," says Alpert. When chia seeds absorb water, they form a gel-like consistency, which can help make your stool more moist and easy to pass  
+- leafy green vegetables  
+- Apple is another fiberous food
+
+**Avoid**
+- Salt in moderation. Salt absorbs water which makes it harder for stools to move around. Avoid fried salty snacks
+- Fried snacks have no fibre. This causes issues
+- Eat eggs with source of fibre like leafy vegetables/tomatoes etc.
+- Use whole grain toast instead of white bread. Low fibre white flour causes constipation
+
+**Vegetables high in fibre**
+- Carrots, beets, and broccoli are fiber-rich.  
+
+### Health Benefits of Insoluble Fiber
+
+Insoluble fiber prevents constipation and complications such as hemorrhoids by bulking up the stool, helping it pass more quickly through the intestines. Insoluble fiber may also help decrease the risk for colorectal cancer by speeding up waste’s movement through the digestive tract. The shorter the amount of time waste spends in your body, the less of chance there is for harmful substances to pass through your intestinal walls into the bloodstream.
+
+- Cooked cauliflower is more than a great side dish; it’s also rich in insoluble fiber. Just one cup contains almost four grams! Note that while raw cauliflower also contains insoluble fiber, the amount almost doubles when you cook it.
+- You already know dark greens are good for you, but did you know they can aid digestion as well? Cooked spinach contains between four and five grams of insoluble fiber per cup, and cooked chard has at least three grams.  
+- Many nuts make good sources of insoluble fiber. Almonds, for example, have more than 14 grams per cup, and pine nuts, 13 grams per cup. Reach for pistachios or peanuts, too. Both have over 10 grams of insoluble fiber per cup
+-  Apple eaten with the skin on, a single apple contains almost three grams. 
+- whole grains. Instead of white flour
+- brown rice
+
 **Exercise**   
 Moderate aerobic exercise, such as brisk walking 20–30 minutes a day, can help stimulate bowel function.
 
