@@ -1,6 +1,14 @@
 I have tested and tried papaya. It is proven relief from constipation. 
 Eat it daily.  
 
+Good for : 
+- digestion and relief from constipation
+- skin and general ageing
+- eyes
+- immunity
+- bones
+
+
 1. Lowers cholesterol  
 Papaya is rich in fibre, Vitamin C and antioxidants which prevent cholesterol build up in your arteries. Too much cholesterol build-up can lead to several heart diseases including heart attack and hypertension.
  
