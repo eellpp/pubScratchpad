@@ -1,3 +1,4 @@
+The main value in software is not the code produced, but the knowledge accumulated by the people who produced it.
 
 ### Restaurant Metaphor:
 
@@ -19,5 +20,6 @@ When you hit 500 books the debt starts to kick in but again you try to solve it 
 
 By the time you hit 1000 books some of the employees are fed up with the time consuming work and quit, the replacements have no clue what is where. Most of the customers were served purely based on the muscle memory of the old employees and now that they have gone the business starts to crumble.  
 
+Technical debt as a lack of understanding  
 https://news.ycombinator.com/item?id=25008587  
 
