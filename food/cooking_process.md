@@ -17,13 +17,5 @@ On a truly good night, the kitchen ends up cleaner by the time dinner is cooked 
 Often the first thing I do before cooking a meal is some cleanup.
 
 
-### The Capability Trap
-The core idea is that you have pressure to deliver a product (get "real" work done), but also maintain or improve your ability to do the work. If you ignore that maintenance portion, you end up being able to produce less over time. And the cost to recover the capability increases over time due to neglect.
-
-In the kitchen example, cleaning and maintaining the fryers every (period of time) means that you can get years, if not decades, out of them. But failing to do so may force you to turn them off (produce less food for customers at a time). Then you have to either replace or pay for expensive maintenance and repair work, which is usually more costly than just having someone come in and drain the system, clean it, and give it a once over every (period of time).  
-
-Nobody Ever Gets Credit for Fixing Problems That Never Happened (2001)  
-https://news.ycombinator.com/item?id=25009980  
-
 
 
