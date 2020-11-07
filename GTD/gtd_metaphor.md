@@ -13,3 +13,4 @@ End of Day:
 - Handle any preparations which needs to be done today for next day. Like marination, slow roast etc  
 - Decide next day menu. Place orders for fish, wine etc.  
 
+https://www.cordonbleu.edu/news/a-day-in-the-life-of-a-chef/en
