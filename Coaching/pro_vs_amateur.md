@@ -1,4 +1,4 @@
-Pro is the guy who knows that to progress he every time he needs to stretch to his pain threshold and keep breaking that limit. Amateur limits himself within the pain threshold.  
+Pro knows that to progress, every time he needs to stretch his pain threshold and keep breaking that limit. Amateur limits himself within the pain threshold.  
 
 Amateur shows up on a fine day when he feels good and does his best on that day. Pro shows up each day no matter what and tries to beats his best even on the worst of the days.  
 
