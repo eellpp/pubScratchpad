@@ -154,3 +154,20 @@ To be someone of great worth.
 To love and be loved in return  
 And make my mark on Earth.  
 
+
+### Overcome fear
+by Anonymous  
+
+And then I realized  
+that to be  
+more alive  
+I had to  
+be less  
+afraid  
+so  
+I did it…  
+I lost my  
+fear  
+and gained  
+my whole life.   
+
