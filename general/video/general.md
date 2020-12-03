@@ -14,6 +14,9 @@ https://en.wikipedia.org/wiki/Into_the_Wild_(film)
 
 ---
 
+### Biggest Ideas of Universe
+https://www.youtube.com/playlist?list=PLrxfgDEc2NxZJcWcrxH3jyjUUrJlnoyzX  
+
 ### Siddharatha 
 Siddhartha by Hermann Hesse | Audiobook Full  
 https://www.youtube.com/watch?v=L6hUAOmo1yo  
