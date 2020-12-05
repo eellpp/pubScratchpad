@@ -3,3 +3,6 @@ The poorest people in the world aren't the ones without money... It's the ones w
 
 Perfect is the enemy of the good  
 
+you’re not going to change until the pain of change is less than the pain of staying the same.  
+
+
