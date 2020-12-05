@@ -3,6 +3,7 @@
 - eating things that are food. Avoid processed food
 - eating fibre rich foods
 - drinking enough water
+- daily 30 minute exercise for blood flow
 
 
 ### Chewing food 32 times
