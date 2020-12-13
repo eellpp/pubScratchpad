@@ -1,4 +1,15 @@
 ### Good Videos
+
+##### Rick Roderick - philosopy lectures
+Philosophy and Human Values (1990)  
+http://rickroderick.org/100-guide-philosophy-and-human-values-1990/    
+https://www.youtube.com/watch?v=XQ_hUxuumk0&list=PL6676C3E8A487FEE6   
+
+The Self Under Siege (1993)  
+http://rickroderick.org/300-guide-the-self-under-siege-1993/  
+
+
+
 ##### Marcus Aurelius-Best Lecture on Stoicism EVER! (full Virtual University lesson) 
 https://www.youtube.com/watch?v=5897dMWJiSM  
 It is from "The Great Courses" company and it is "Great Minds of the Western Intellectual Tradition 2nd Edition - Ancient Philosophy and Faith: From Athens to Jerusalem - Lecture Eleven: Marcus Aurelius' Meditations: The Stoic Ideal (Michael Sugrue, Ph.D. Princeton University)" circa 1995  
