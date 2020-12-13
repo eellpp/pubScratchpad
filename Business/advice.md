@@ -1,3 +1,10 @@
+### The box model
+Imagine your product is getting sold in a box.
+- The front side of the box is customer facing and you can highlight only 2 or 3 key things in bold. What are those. They are your primary MVP features and should get most attention irrespective of how boring or non-challenging they are  
+- At the backside, you have 3 or 4 points more in smaller fonts. These are you next set of features in priority  
+- The sides have some additional stuff in smaller fonts. These are least important features  
+
+
 ### Small Lifestyle business
 "Take a competitor product, remove all features you don’t need, and make it crazy fast."  
 Seems to me there are hundreds of lifestyle businesses just waiting to happen by following this formula. So many good ideas out there could be made so much better by reducing them to their essentials, but making them elegant and "crazy fast".  
@@ -10,7 +17,7 @@ When your goal of success shifts from "mind boggingly rich" to "sufficient for t
 #### Don't do startup for admiration
 >> Many enjoy the experience of being admired or envied by others, perhaps even more than the original experience itself.People buy expensive watches, or cars, or houses where the maintenance cost itself reminds them every time of the downsides but other people's admiration more than makes up for it.Entire industries were created purely to satisfy such needs, anything containing "luxury" is a good point to start. 
 
-People coming from corporate background have this kind of behaviour. Their decisions are clouded by their basic instinct of being admired.   
+In corporate culture people work to be in a position holding power and prestige. Their decisions are clouded by their basic instinct of being admired. Everyday decisions like what to do, whom to meet, where to spending more time on things. In time it appears that you are working towards a lot of things that don't make money but seems to drive interesting conversations  
 When bootstarting a business, your instinct should be grounded on making money. Turning a profit. Every decision should be pivoted around that.   
 
 Don't do startup if you can't face being rejected, rediculed and ignored.  
