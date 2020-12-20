@@ -6,7 +6,7 @@ You use encryption by pressing :X within a vim session. You will be asked for a 
 
 The next time you try to open the file, you will be asked for the pass phrase. Anything other than the correct pass phrase puts you into a buffer of ciphertext gibberish.
 
-Add these to the vimrc for the account you are using to have encrypted files:
+Add these to the vimrc for the account you are using to have encrypted files:   
 set cm=blowfish2  
 set viminfo=  
 set nobackup  
