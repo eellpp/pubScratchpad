@@ -1,0 +1,25 @@
+
+### Set Encryption key
+set cm=blowfish2  
+
+You use encryption by pressing :X within a vim session. You will be asked for a pass phrase (twice), and from now on that file will be saved in encrypted mode. You will see [blowfish2] on the status line at bottom when you write out the file. A salt is used, so each subsequent encryption of the same cleartext with the same pass phrase generates different ciphertext.
+
+The next time you try to open the file, you will be asked for the pass phrase. Anything other than the correct pass phrase puts you into a buffer of ciphertext gibberish.
+
+Add these to the vimrc for the account you are using to have encrypted files:
+set cm=blowfish2  
+set viminfo=  
+set nobackup  
+set nowritebackup  
+
+### viminfo
+The viminfo file is used to store:
+- The command line history.
+- The search string history.
+- The input-line history.
+- Contents of non-empty registers.
+- Marks for several files.
+- File marks, pointing to locations in files.
+- Last search/substitute pattern (for 'n' and '&').
+- The buffer list.
+- Global variables
