@@ -1,4 +1,7 @@
 
+https://tenthousandmeters.com/blog/python-behind-the-scenes-6-how-python-object-system-works/  
+
+
 In Python, every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is’ operator compares the identity of two objects; the id() function returns an integer representing its identity.
 
 Once an object’s reference count drops to zero and it is garbage collected, then its identifying number becomes available and may be used again.
