@@ -1,6 +1,9 @@
 ### Good Videos
 
 ##### Rick Roderick - philosopy lectures
+
+http://rickroderick.org/205-nietzsche-the-eternal-recurrence-1991/  
+
 Philosophy and Human Values (1990)  
 http://rickroderick.org/100-guide-philosophy-and-human-values-1990/    
 https://www.youtube.com/watch?v=XQ_hUxuumk0&list=PL6676C3E8A487FEE6   
