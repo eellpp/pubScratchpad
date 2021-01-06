@@ -1,6 +1,12 @@
 
 ### Python
 
+### Tutorials
+[Beginners Guide](https://wiki.python.org/moin/BeginnersGuide/Programmers)  
+[Standard Library](https://docs.python.org/3/library/)
+[Documentation](https://docs.python.org/3/)
+
+
 #### Interpreter 
 [interpreters.md](https://github.com/eellpp/pubScratchpad/blob/master/Tech/programming/python/lang/interpreters.md)
 
