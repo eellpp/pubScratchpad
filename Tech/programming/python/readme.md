@@ -3,8 +3,8 @@
 
 ### Tutorials
 [Beginners Guide](https://wiki.python.org/moin/BeginnersGuide/Programmers)  
-[Standard Library](https://docs.python.org/3/library/)
-[Documentation](https://docs.python.org/3/)
+[Standard Library](https://docs.python.org/3/library/)  
+[Documentation](https://docs.python.org/3/)  
 
 
 #### Interpreter 
