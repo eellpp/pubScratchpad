@@ -1,4 +1,36 @@
 
+## Build Todoist APP 7 hr tutorial
+Building Todoist From Scratch - React Tutorial - Learn React in 2020  
+https://github.com/karlhadwen/todoist  
+
+https://www.youtube.com/watch?v=HgfA4W_VjmI
+
+0:00:00 - Introduction (What is Todoist?), tech stack talk  
+0:02:26 - Showing the final application (with dark mode!)  
+0:05:00 - Installing create react app  
+0:07:15 - Clearing out what we don't need from create react app  
+0:10:57 - Let's get building our components!  
+0:18:00 - Installing packages using Yarn  
+0:18:22 - Building the Header component  
+0:19:57 - Building the Content component  
+0:20:37 - Building the Sidebar component  
+0:28:27 - Adding Firebase  
+0:40:32 - Adding our React hooks (useState, useEffect)  
+0:49:57 - Adding our function helpers  
+0:53:07 - Back to adding more to our React hooks (useTasks, useProjects)  
+1:06:22 - Building the Tasks component  
+1:08:42 - Building the Checkbox component  
+1:13:10 - Styling our application  
+1:35:02 - Adding Context to our application  
+1:48:26 - Building the Projects component  
+1:55:25 - Adding a composite index in Firebase  
+1:57:21 - Building the IndividualProject component  
+...   
+
+
+---
+## MDN react tutorial
+
 ### Getting started with React
 In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app — learning a bit about how React works in the process  
 https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
