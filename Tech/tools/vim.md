@@ -23,3 +23,29 @@ The viminfo file is used to store:
 - Last search/substitute pattern (for 'n' and '&').
 - The buffer list.
 - Global variables
+
+### g Command
+
+https://vim.fandom.com/wiki/Power_of_g  
+:[range]g/pattern/cmd  
+
+Delete all lines matching a pattern.  
+:g/pattern/d  
+
+Copy lines Matching Pattern  
+qaq  
+:g/pattern/y A  
+:let @+ = @a  
+The first command clears register a. The second appends all matching lines to that register. The third copies register a to the clipboard (register +) for easy pasting into another application.  
+
+Delete all lines that do not match a pattern.    
+:g!/pattern/d  
+
+Copy all lines matching a pattern to end of file.  
+:g/pattern/t$  
+
+Move all lines matching a pattern to end of file.  
+:g/pattern/m$  
+
+Reverse a file (just to show the power of g).  
+:g/^/m0
