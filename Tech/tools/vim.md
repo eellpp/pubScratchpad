@@ -49,3 +49,21 @@ The first command clears register a. The second appends all matching lines to th
 
 ##### Reverse a file (just to show the power of g).  
 :g/^/m0
+
+
+### Find number of matches of a pattern
+User the substitute command 's' with the n flag  
+:%s/pattern//n
+
+### Remove duplicate lines
+:sort u
+
+### Ignore case in search pattern
+:set ic  
+:set ignorecase  
+:set noic  
+
+### show linenumbers
+:set number  
+:set nonumber  
+
