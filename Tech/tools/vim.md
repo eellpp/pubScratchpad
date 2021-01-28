@@ -67,3 +67,5 @@ User the substitute command 's' with the n flag
 :set number  
 :set nonumber  
 
+### Delete From current position to end of search pattern
+d/<pattern>
