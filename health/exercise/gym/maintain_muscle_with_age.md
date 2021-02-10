@@ -7,3 +7,6 @@ If You are obese then go for aerobic more exercise till your weight is in health
 Once you are in healthly weight range, do more of strength training to build muscle mass. This will increase knee strength, bone strength and general good motion in old age. 
 
 Older people typically don’t regain muscle – they regain fat mass – which is “all the more reason for older adults to try and preserve muscle mass during weight loss.
+
+### More Protein with age
+As you age you require more protein for muscle synthesis. Aim for 30gm 3 times a day
