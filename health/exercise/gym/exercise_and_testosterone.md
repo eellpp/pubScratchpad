@@ -16,9 +16,9 @@ Still, you should build an overall exercise plan that also includes cardio and f
 Overdoing it, though, could backfire. Elite athletes (and amateurs who overtrain), can see a drop their testosterone level, which is a sign that they’re doing harm to their bodies. In these cases, they tend to have low testosterone and high cortisol, a stress hormone, Schroeder says. He notes that a rise in cortisol can be linked to a fall in testosterone.  
 
 ### Ashwagandha suppliment 
-Research has shown that ashwagandha may improve body composition and increase strength (4Trusted Source, 20Trusted Source, 22Trusted Source).
+Research has shown that ashwagandha may improve body composition and increase strength
 
-In a study to determine a safe and effective dosage for ashwagandha, healthy men who took 750–1,250 mg of pulverized ashwagandha root per day gained muscle strength after 30 days (4Trusted Source).
+In a study to determine a safe and effective dosage for ashwagandha, healthy men who took 750–1,250 mg of pulverized ashwagandha root per day gained muscle strength after 30 days 
 
 In another study, those who took ashwagandha had significantly greater gains in muscle strength and size. It also more than doubled their reductions in body fat percentage, compared with the placebo group 
 
