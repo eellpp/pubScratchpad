@@ -6,7 +6,7 @@ https://www.health-calc.com/body-composition/waist-to-height-ratio
 1. Measure your waist circumference at a horizontal line one inch above your belly button.  
 2. Enter waist circumference and height by turning the dials  
 
-ration = circumference in cm / Height in cm  
+ratio = circumference in cm / Height in cm  
 If less 0.5 its ok  
 For 165 cm height the max waist is 31 cm   
 
