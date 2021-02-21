@@ -10,3 +10,8 @@ Paneer 5 Cubes| 90 Cal (7 gm fat , 1 gm protein)
 Salmon 500 gm|  1040 Calories
 Chicken Breast 500 gm | 825 Cal
 Boiled Egg | 155 Calories
+10 almonds | 170 calories
+
+
+1 Kg Fat has 7700 Calories  
+Daily Food is around 2000 calories
