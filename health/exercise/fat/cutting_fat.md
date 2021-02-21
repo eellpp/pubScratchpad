@@ -17,3 +17,24 @@ Now I hear some of you say ‘3 kilos? That’s not much for 6 weeks of work…�
 https://www.onefitness.com.au/the-real-facts-about-burning-body-fat  
 
 
+### Exercise Burning Calories
+1-minute sprint = 20 calories burned  
+Doing 6 to 8 minute sprints with breaks can burn around 200 calories.  
+
+Strength Exercises are not a good way of burning calories. Instead do the HIIT method. 
+
+Barbell Complex HIIT :  
+ No Rest between Reps  
+
+Barbell Squat : 12  rep   
+Push Press : 12 Rep  
+Floor Press : 12 Rep  
+Upright Row: 12 Rep  
+Bicep Curl: 12 Rep  
+  
+https://www.coachmag.co.uk/fitness/workouts/barbell-workouts    
+
+
+
+
+
