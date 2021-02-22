@@ -11,6 +11,7 @@ Salmon 500 gm|  1040 Calories
 Chicken Breast 500 gm | 825 Cal
 Boiled Egg | 155 Calories
 10 almonds | 170 calories
+Biscuit Marie Gold 1| 24 calories
 
 
 1 Kg Fat has 7700 Calories  
