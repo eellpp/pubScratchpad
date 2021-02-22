@@ -12,7 +12,20 @@ Chicken Breast 500 gm | 825 Cal
 Boiled Egg | 155 Calories
 10 almonds | 170 calories
 Biscuit Marie Gold 1| 24 calories
+1 Chai, 5% milk no sugar|10 Calories
 
 
 1 Kg Fat has 7700 Calories  
 Daily Food is around 2000 calories
+
+
+### Calorie weight calculator
+Height: 165  
+Age : 40 - 50  
+
+Goal|Calories
+--- | ---- |
+Maintain weight | 2,148 100%Calories/day
+Mild weight loss 0.25 kg/week | 1,898 88% Calories/day
+Weight loss 0.5 kg/week | 1,648 77% Calories/day
+Extreme weight loss | 1 kg/week 1,148 53% Calories/day
