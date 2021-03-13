@@ -14,6 +14,13 @@ After a while doing this I had collected quite a bit of functionality and though
 - I have a free version of open3A which is as useful as possible without any limits but of course it is missing advanced functionality.  
 - If someone wants advanced features, I have a shop. In my shop the users can buy many of the extensions I have developed over the years. The prices are reasonable and start at 20€ (~$24) up to around 80€ (~$96) or so. The price contains updates for this extension for one year which means the next two versions.  
 
+### Turn a simple library to a business without overthinking on it
+https://news.ycombinator.com/item?id=26400595  
+I wrote a Python library to scrape google news [0]  
+We also have it as a service [1]  
+Want to know why? Because devs who can't pay won't pay. Businesses who can pay will rather pay for a service (API in our case), and not care about maintaining it.  
+[0] https://github.com/kotartemiy/pygooglenews  
+[1] https://newscatcherapi.com/google-news-api  
 
 
 ---
