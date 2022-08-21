@@ -1,0 +1,34 @@
+
+## Rabbit Holes
+
+1: Proof of the taylor series expansion of sinx
+
+2: Why any complex number can be written in terms on e
+
+Favourite Eigen Value problems
+https://people.maths.ox.ac.uk/trefethen/dec11.pdf
+Any regular pattern you see in nature probably has something to do with an eigenvalue problem.
+- Where does it get those 16-meter tides you can read about in the Guinness Book of Records? Well, the turning of the earth against the moon provides a gravitational tap every 12 hours and 25 minutes, like pushing a child on a swing, and a natural mode of oscillation of the bay has a period of about 13 hours. So the giant tides come from resonance fed by pumping at a frequency near an eigenvalue. 
+- Musical instruments are built upon eigenvalues. The air in a flute vibrates according to the wave equation with atmospheric pressure at each end, so you get sine waves of pressure at approximately linearly spaced eigenfrequencies.
+- A childs swing is an eigen value problem. There is a natural place in oscillation where application of force will make the swing go higher.The place corresponds to the eigen value of the dynamical system. All dynamical systems have eigen values.
+- Radio tuning circuit to listen on a frequency is eigen value problem
+
+The Swinging bridge: If there is natural freq of oscillation of the bridge and the wind blowing to matching freq such that as a child pushing the swing at the exact moment of swing so as to increase its amplitude.
+
+Eigen values have a role in Fibonacci series and markov process.
+
+
+Matlab eigshow demo
+
+du/dt = au ; has solution => u(t)= e^(at)u(0)
+If a is complex; then a = x + yi then the rate of growth of u is governed by the real part x => e^xt 
+The complex part is just oscillating since e^(yit) = sin(yt) + i cos(yt)
+
+Wikipedia pages
+https://en.wikipedia.org/wiki/Jerk_%28physics%29#Physiological_effects_and_human_perception_of_physical_jerk
+http://physics.stackexchange.com/questions/189000/how-are-the-higher-derivatives-jerk-jounce-of-position-with-respect-to-time-u
+
+Interesting to know
+- Wave equations
+https://www.youtube.com/watch?v=9TQCKWWAVjM
+

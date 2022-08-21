@@ -1,0 +1,7 @@
+
+#Spring Reference Guide
+http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#overview-dependency-injection
+
+# sample project for spring app
+https://github.com/kousen/Spring-Framework-Essentials
+

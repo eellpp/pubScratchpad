@@ -1,0 +1,32 @@
+
+# Proof that simultaneously diagonizable matrices commute
+THE MINIMAL POLYNOMIAL AND SOME APPLICATIONS
+http://www.math.uconn.edu/~kconrad/blurbs/linmultialg/minpolyandappns.pdf
+http://math.stackexchange.com/questions/56307/simultaneous-diagonalization
+
+
+# SVD and LSI
+http://www.cs.wustl.edu/~zhang/teaching/cs517/Spring12/CourseProjects/SVD.pdf
+Information Retrieval. SVD became very useful in Information Retrieval (IR) to deal with
+linguistic ambiguity issues. IR works by producing the documents most associated with a set of
+keywords in a query. Keywords, however, necessarily contain much synonymy (several keywords
+refer to the same concept) and polysemy (the same keyword can refer to several concepts). For
+instance, if the query keyword is "feline", traditional IR methods will not retrieve documents
+using the word "cat" – a problem of synonymy. Likewise, if the query keyword is "java",
+documents on the topic of Java as a computer language, Java as an Island in Indonesia, and Java
+as a coffee bean will all be retrieved – a problem of polysemy. A technique known Latent
+Semantic Indexing (LSI) (Berry et al., 1995) addresses these problems by calculating the best
+rank-l approximation of the keyword-document matrix using its SVD. This produces a lower
+dimensional space of singular vectors that are called eigen-keywords and eigen-documents. Each
+eigen-keyword can be associated with several keywords as well as particular senses of keywords.
+In the synonymy example above, "cat" and "feline" would therefore be strongly correlated with
+the same eigen-keyterm. Similarly, documents using "Java" as a computer language tend to use
+many of the same keywords, but not many of the keywords used by documents describing "Java"
+as coffee or Indonesia. Thus, in the space of singular vectors, each of these senses of "java" is
+associated with distinct eigen-keywords. 
+
+# Intuition between SVD and PCA
+http://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca
+
+#PCA Intuition
+https://www.cs.princeton.edu/picasso/mats/PCA-Tutorial-Intuition_jp.pdf

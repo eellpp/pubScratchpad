@@ -1,0 +1,41 @@
+
+Learning Statistics Phases
+- Sampling/ Resampling methods and tests
+- Distributions and descriptive statistics
+- Inferential statististics
+
+pick up small practical daily life problems to poke your understanding of the concepts and to realize the limits of mathematical procedures involved. By pondering on the results, you will decipher the inherent assumptions in various techniques and whether they are relevant to problem in hand.
+
+https://elitedatascience.com/learn-statistics-for-data-science
+Free books
+- think stats
+- think bayes
+- ML
+
+Learning statistics with R:A tutorial for psychology students and other beginners
+http://www.fon.hum.uva.nl/paul/lot2015/Navarro2014.pdf
+
+
+Statistics I at Elgin Community College, to coincide with the textbook Statistics:Informed Decisions Using Data, Fourth Edition, by Michael Sullivan, III.
+https://faculty.elgin.edu/dkernler/statistics/index.html
+
+## Introductory R info on various statistical tests
+http://www.r-tutor.com/elementary-statistics/inference-about-two-populations/population-mean-between-two-independent-samples
+
+Statistics cheat sheet
+http://web.mit.edu/~csvoss/Public/usabo/stats_handout.pdf
+
+ChiSq Stats
+https://onlinecourses.science.psu.edu/stat500/node/56
+http://www.stat.yale.edu/Courses/1997-98/101/chisq.htm
+http://math.hws.edu/javamath/ryan/ChiSquare.html
+http://stattrek.com/probability-distributions/chi-square.aspx?Tutorial=AP
+
+probability Cheatsheet
+https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf
+
+R - handout - Pathway to Using R For Statistical Analysis
+http://people.vetmed.wsu.edu/jmgay/courses/documents/PathwaytoUsingRForStatisticalAnalysis.pdf
+
+
+http://www.statstutor.ac.uk/resources/uploaded/tutorsquickguidetostatistics.pdf

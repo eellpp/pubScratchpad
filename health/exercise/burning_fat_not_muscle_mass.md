@@ -1,0 +1,7 @@
+### Aerobic exercise for more than 40 minutes
+After 40 minutes of moderate intensity exercise the body burns primarily fatty acids for its energy. This is the time period of exercise that is most beneficial to health and a healthy appearance. Burning the fatty acids reduces the fat on the body, providing the rationale behind having a fat burning workout that lasts longer than 30 minutes. In addition, since the majority of the body fuel is FFAs, the muscle protein is used at a lesser rate. 
+
+### Doing less than 30 minutes just maintains fat status quo and decreases muscle mass
+After the first 30 minutes of exercise, the body runs out of its glycogen storage and then turns mainly to what is left of the glucose in the blood and then finally to fat and amino acids derived from muscle protein. Supporting evidence of fatty acid release comes from physiologic research where human gluteal fat cells isolated after 30 minutes of biking showed that cathecholamine induced lipolysis had increased between 35-50% 4. If exercise does not last until 30 minutes then fat burning is never achieved because all of the glycogen is not used u p. So while one may be able to prevent adding fat to the body, one is not metabolizing fat from the adipose tissues during the exercise. In short, exercises aerobically for less than 30 minutes, one is just maintaining the adipose tissue status quo and decreasing muscle mass.
+
+http://umich.edu/~medfit/resistancetraining/timingiseverything101705.html

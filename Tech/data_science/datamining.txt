@@ -1,0 +1,39 @@
+--------------------------------------------------------------------------------
+Decision trees: CART & Random Forest
+Ensemble methods: Gradient Boosting Machines (GBM)
+Support Vector Machines
+Artificial Neural Networks: Back-Propagation
+k-Nearest Neighbour (kNN)
+Topic modeling: Linear Discriminate Analysis (LDA), LSA
+Clustering: k-Means
+Association Rule Learning: Apriori and FP-growth algorithm
+Dimensionality reduction: Principal Component Analysis (PCA) & Singular Value Decomposition(SVD)
+Hidden Markov Models
+Stochastic Gradient Descent, Simulated Annealing
+Bayes
+word2vec
+
+Check out the intuitive python etc implementation of algorithms.
+The most interesting is not the output or how it works.
+Its the, why it works and when it will not work. 
+Dig into the details of these, to understand the nitty gritty of it.
+In the real physical world there are rare opportunities where you can just apply the algorithm as it is. Most are already solved problem.
+The unsolved ones are there because it requires a variation of these algorithms or more creative thinking.
+Have to look into the details of implementation to understand the nitty gritty of each of these.
+
+Basic requisite 
+- is to have linear algebra/maths concepts very clear
+- know how to read papers. Follow the notations and derive the answers
+- hands on the basic concepts around statistics and probability theory
+
+--------------------------------------------------------------------------------
+Intuitive explanation
+
+Neural Networks
+http://neuralnetworksanddeeplearning.com/chap1.html
+
+http://singularities.com/blog/2015/08/apriori-vs-fpgrowth-for-frequent-item-set-mining
+
+http://ucanalytics.com/blogs/intuitive-machine-learning-gradient-descent-simplified/
+--------------------------------------------------------------------------------
+

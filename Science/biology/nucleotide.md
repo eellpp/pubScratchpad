@@ -1,0 +1,3 @@
+Nucleotide
+
+A nucleotide is an organic molecule that is the building block of DNA and RNA. They also have functions related to cell signaling, metabolism, and enzyme reactions. A nucleotide is made up of three parts: a phosphate group, a 5-carbon sugar, and a nitrogenous base. The four nitrogenous bases in DNA are adenine, cytosine, guanine, and thymine. RNA contains uracil, instead of thymine. A nucleotide within a chain makes up the genetic material of all known living things. They also serve a number of function outside of genetic information storage, as messengers and energy moving molecules.

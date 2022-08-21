@@ -1,0 +1,5 @@
+Knee Pain With Exercise (SURPRISING CAUSE and HOW TO FIX IT!)  
+
+https://www.youtube.com/watch?v=kbe_DqMJfzg  
+
+>> An example from literally yesterday. Over the past few months, I struggled with medial knee pain that was limiting my ability to walk up stairs and do other activities (see other list of goals from above). I had a bunch of observations (pain only when going up stairs, pain goes away oddly enough when running up stairs, clicking noise in knee before onset of pain) but I hadn't spent time trying to root cause it. I had done a bunch of Google searches but to no avail (with scary things like surgery showing up on the list). But then of all things the YouTube algorithm came to the rescue and recommended this: [1]. Turns out it was a weak Gluteus Medius that allowed my femur to rotate medially which in turn caused the kneecap to track in an unnatural way. Once I knew this, I "fixed" it in a day. But it won't stay "fixed" unless I focus on strengthening that muscle.Figure out what you need to do to provide you with sufficient functional strength, focus on root causing pain and then addressing it. Don't ignore the foundations of your body.

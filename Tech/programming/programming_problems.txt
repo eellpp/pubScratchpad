@@ -1,0 +1,52 @@
+
+## general prgramming problems
+https://adriann.github.io/programming_problems.html
+
+## practice problems in python
+http://www.w3resource.com/python-exercises/
+
+
+Q: Read a list of server names and config values from property file
+Q: Read and write json values
+
+General:
+Initialize a list
+CRUD on list
+sort a list
+lazy read on list
+
+Initialize a tuple
+CRUD on tuple
+sort a tuple by first member
+lazy read on tuple
+
+Initialize a dict/hash Map
+CRUD on dict / hashMap
+sort a dict/hashMap by key and value
+lazy read from dic/hashMap
+
+filter operations on list
+- filter even number from list of numbers
+
+nested loop
+- for each number in range 10, 20; if number is even print hello and for odd print world
+
+join items in list by ","
+
+file:
+read all the text from a file
+read all lines from the file
+read a file lazy way, line by line
+
+Difference between generator, iterable and  iterator. When to use what
+
+Anonymous function
+
+Find if a pattern exists in string
+replace a word pattern in string
+
+
+
+
+
+
