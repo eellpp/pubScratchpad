@@ -114,6 +114,8 @@ RDD is one of the spark data structures. It is schemaless and immutable JVM obje
 	- Read only
 	- The inmemory distributed dataset that spark creates for faster computation and reduce the I/O. 
 	- Choose this format if the data is structured or unstructured.
+	- RDD are immutable
+	- RDDs are also fault-tolerant which means that whenever failure happens, they can be recovered automatically.RDD Provides Fault Tolerance Through Lineage Graph. A Lineage Graph keeps A Track of Transformations to be executed after an action has been called.  RDD Lineage Graph helps Recomputed any missing or damaged RDD because of node failures.
 	- RDDs are a set of Java or **[Scala](https://data-flair.training/blogs/why-you-should-learn-scala-introductory-tutorial/)** objects representing data.
 	- We can move from RDD to DataFrame (If RDD is in tabular format)
 	- Run time of RDD's are much slower than the dataset/dataframe counterparts. This is because spark leverages on the structured view of data to do optimizations while performing operations on data. (RDD can be 3/4x slower)

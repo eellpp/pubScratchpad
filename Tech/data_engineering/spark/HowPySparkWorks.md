@@ -2,7 +2,9 @@
 PySpark is responsible for linking the python API to the spark core and initializing the spark context.Data is processed in Python and cached / shuffled in the JVM.
 
 pyspark
-- py4j -> SparkContext -> JavaSparkContext
+
+### py4j -> SparkContext -> JavaSparkContext
+
 On start, Python Driver programs access Spark through a `SparkContext`, and SparkContext uses Py4J to launch a JVM and create a `JavaSparkContext`. JavaSparkContext communicates with the spark cluster.
 
 PySpark requires py4j on the driver machine. PY4J starts the JVM process which creates the JavaSparkContents. If any of the data operation on the nodes require custom python code execution, then the RDD and python code is serialized/pickled and piped to a new python process created to execute this work.

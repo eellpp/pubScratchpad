@@ -80,6 +80,18 @@ For big datasets, schema on read is favourable to make data ingestion faster.
 
 Hive cannot do indexing of columns like RDBMS
 
+**Why is parquet format used for hive?** 
+Parquet to make the advantages of compressed, efficient columnar data representation available to any project in the Hadoop ecosystem.
+
+In big datasets its normal to have hundreds of column in denormalized way. Querying on these for certain columns is efficient if the data is stored in columnar way. 
+Columnar is great when your input side is large, and your output is a filtered subset: from big to little is great. Not as beneficial when the input and outputs are about the same. 
+
+In a columnar format, each column (field) of a record is stored with others of its kind, spread all over many different blocks on the disk -- columns for year together, columns for month together. Lesser disk seeks and reads and so its faster.
+
+https://stackoverflow.com/a/36831549
+
+
+
 **Changing column name:** 
 - alter table <tablename> change oldname newname type
 This will not work for data is stored in parquet format as parquet format contains the column name and data is immutable. The column name though will be changed in hive metasotre
@@ -110,3 +122,8 @@ Steps in Hive Query Processing:
 
 
 Hive
+
+
+
+
+x

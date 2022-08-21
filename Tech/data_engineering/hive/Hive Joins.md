@@ -40,3 +40,19 @@ Steps in reduce side join
 Since in stage five, each key has list of values, the number of reducer tasks that need to performed  is equal to unique count of join key
 
 
+**What is Hash join in sql ?**
+
+The Hash Join Algorithm consists of two steps. In the first step, it creates an in-memory hash table structure from the records of the relation with fewer elements. 
+In the second step, the larger relation is iterated and the smaller table record is located using the previously build hash map:
+
+The Hash Join algorithm may be used by relational database systems when joining relations, if one database relation is rather large and there is enough memory to hold the in-memory HashTable structure that’s needed to be built in the first step.
+
+**What is sort merge join in sql ?**
+In a SORT-MERGE join, Oracle sorts the first row source by its join columns, sorts the second row source by its join columns, and then merges the sorted row sources together. As matches are found, they are put into the result set.
+
+**On what basis is hash join or sort merge join is selected ?**
+-   **Merge join** is used when projections of the joined tables are sorted on the join columns. Merge joins are faster and uses less memory than hash joins. 
+-   **Hash join** is used when projections of the joined tables are not already sorted on the join columns. In this case, the optimizer builds an in-memory hash table on the inner table's join column. The optimizer then scans the outer table for matches to the hash table, and joins data from the two tables accordingly. The cost of performing a hash join is low if the entire hash table can fit in memory. Cost rises significantly if the hash table must be written to disk.
+
+The optimizer automatically chooses the most appropriate algorithm to execute a query, given the projections that are available.
+
