@@ -1,4 +1,18 @@
-### 
+
+
+
+### Take risks according to your means
+
+If you don't have as many resources as your competitors in the market, _reduce your bet size!!!_ Yes, that may mean you cannot challenge a 100Billion company yet, but it will also mean that you can try again if you fail. Match your ambition to your means. Super risky plans with no room for errors make for great movies, but are terrible ideas in real life.
+
+### Personal vs Social Risk
+Say you are driving car then probability is very high, that you would stop for a random group of strangers seeking help on road, than if you are with women/family. 
+People can take heavy risk on themself. But they would be even more risk averse when they have responsibilities to bear
+
+
+
+
+### Are you the one. 
 If you are one who    
 - does not give up. Will persue things till the very end. Its not over until you are over.   
 - has a high pain threshold to withstand every kind of physical,social,emotional,financial setback  
