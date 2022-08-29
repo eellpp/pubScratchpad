@@ -42,7 +42,7 @@ Q: How to package code in Python?
 Q: What is a package manager? What package managers do you know and which one do you recommend?
 
 **What are virtualenvs?**
-A virtual env has python interpretor , linraries and scripts installed into it so that its isolated from other virtual env
+A virtual env has python interpretor , libraries and scripts installed into it so that its isolated from other virtual env
 
 What advantages do NumPy arrays offer over (nested) Python lists?
 

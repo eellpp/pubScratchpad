@@ -1,8 +1,14 @@
 Basho:
 ```text
-old pond
-frog jump in water
-sound of splash
+an ancient pond
+a frog jumps in 
+the splash of water 
+
+
+quietly, quietly,  
+yellow mountain roses fall 
+sound of the rapids
+
 ```
 
 small tree in house
