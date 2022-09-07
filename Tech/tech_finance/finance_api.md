@@ -1,3 +1,7 @@
+
+### market data API. 
+
+https://www.alphavantage.co
 https://alpaca.markets/data
 
 Alpaca's unlimited market data plans are designed for developers, traders, professionals, and Broker API partners.  
