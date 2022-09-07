@@ -26,4 +26,5 @@ Startup comp follows this logic. Enough salary to fund your life and basic savin
 ### Portfolio Visualizer (From 1972)
 https://www.portfoliovisualizer.com/backtest-asset-class-allocation#analysisResults
 
-
+### Stock charts and screener.  
+https://www.tradingview.com
