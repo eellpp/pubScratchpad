@@ -119,3 +119,7 @@ Pandas:
 
 How to sort the dataframe by columns ?
 > df.sort_values()
+
+
+**What is difference between fork and spawn in multiprrocessing module**
+

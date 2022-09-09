@@ -23,7 +23,7 @@
 | Phir Chhiddi Raat                              | https://www.youtube.com/watch?v=j2txOAOr3pI |
 | Aaina mujhse meri                              | https://www.youtube.com/watch?v=_sPbiA37d3Y |
 | Deewaron Se Milkar Rona                        | https://www.youtube.com/watch?v=Xgo3nCUQ1_E |
-|                                                |                                             |
+| Kabhi Kisiko Muqammal Jahan Nahi Milta                                               |   https://www.youtube.com/watch?v=ele3pNFcv_Y                                          |
 
 
 ## Abstract music with dynamic interpretations  
