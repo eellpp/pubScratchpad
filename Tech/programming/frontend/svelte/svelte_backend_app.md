@@ -1,6 +1,28 @@
 
-### deploy the svelte-kit app as a static page, and then making direct requests to your python based service.
+`SSR`: Server side rendering. Uses sveltkit endpoints
 
+`CSR and SPA`: Client side rendering and single page application.  
+- SPA has single html
+- has client side routing which handles the navigation on clicks etc
+- page common layout remain unchanged. Only the contents gets updated. 
+Not good for SEO. Preferred for Login based apps.  
+
+
+`Prerendering`: build and prepare the html of the page   
+
+`SSG`: static site generation where each page of site is pre rendered. 
+adapter-static adaptor does this.  
+
+Hydration:   
+
+`Routing`: Instead of browser navigating to another page on click, svelte will handle the navaigation, and call the necesarry endpoints
+
+https://kit.svelte.dev/docs/appendix
+
+
+### deploy the svelte-kit app as a static page, and then making direct requests to your python based service.
+ This is CSR and SPA approach and let the flask backend handle API calls. 
+ 
 
 ### Proper way to do Sveltekit with same domain backend?
 
