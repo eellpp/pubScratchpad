@@ -45,6 +45,10 @@ create a temporary table on DataFrame by using `createOrReplaceTempView()
 > df_new = spark.sql("SELECT * from STUDENTS")
 
 
+**What is broadcast join?**
+Broadcast join happens when a larger dataframe is joined with a smaller dataframe. To avoid shuffling the smaller dataframe is braodcasted to all nodes. This the network io is minimal   
+
+
 **How to create dataframe with complex datatype columns ?**
 We have to provide a schema 
 We have to import StructType,StructField,StringType etc  classes modules from pyspark.sql module
