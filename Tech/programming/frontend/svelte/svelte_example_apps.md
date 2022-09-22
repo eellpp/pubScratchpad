@@ -11,3 +11,7 @@ https://github.com/sveltejs/realworld
 
 ### Example of HN and svelte.dev app. 
 https://github.com/sveltejs/sites/tree/master/sites
+
+
+### Rueters svelte kit production app
+https://github.com/reuters-graphics/bluprint_graphics-kit
