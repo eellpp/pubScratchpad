@@ -1,4 +1,25 @@
 
+### When Should Async Be Used?
+While asynchronous execution tends to dominate discussions and generate headlines, it's not the best approach for every situation.
+
+It's ideal for I/O-bound operations, when both of these are true:
+- There's a number of operations. 
+- Each operation takes less than a few seconds to finish. 
+
+For example:
+- making HTTP or API calls
+- interacting with a database
+- working with the file system
+
+It's not appropriate for background and long-running tasks as well as cpu-bound operations, like:
+- Running machine learning models
+- Processing images or PDFs
+- Performing backups
+
+Such tasks would be better implemented using a task queue like Celery to manage separate long-running tasks.
+
+https://testdriven.io/blog/flask-async/
+
 ### Concurrency vs threading vs multiprocessing
 multiprocessing is ideal for CPU-bound tasks and threading is suited for IO-bound tasks. 
 
