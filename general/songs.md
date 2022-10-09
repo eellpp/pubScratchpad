@@ -6,6 +6,7 @@
 | Highway Man          | https://www.youtube.com/watch?v=aFkcAH-m9W0 |
 | Highway Man          | https://www.youtube.com/watch?v=XYeuvbhKy4I |
 | Kenny Rogers-Gambler | https://www.youtube.com/watch?v=7hx4gdlfamo |
+|Queen - I Want To Break Free|https://www.youtube.com/watch?v=WUOtCLOXgm8|
  
 
 
