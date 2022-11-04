@@ -1,4 +1,66 @@
 
+### List Interface
+You cannot create an instance of the List interface, but you can create an instance of one of its implementations: ArrayList or LinkedList or an immutable list, and then use it through the common List interface. You will have access to all methods declared in both List<E> and Collection<E> interfaces.
+
+Working with lists through the List interface is considered good practice in programming since your code will not depend on the internal mechanisms of a specific implementation.
+
+// immutable list   
+List<Integer> numbers = List.of(0, 1, 1, 2, 3, 5, 8, 13);   
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);    
+
+
+// mutable 
+List<Integer> numbers = new ArrayList<>();   
+
+numbers.add(15);  
+numbers.add(10);  
+numbers.add(20);  
+
+// comparing lists
+Objects.equals(List.of(1, 2, 3), List.of(1, 2, 3));    
+
+
+### stream processing 
+
+long count = numbers.stream().filter(number -> number > 5).count();    
+
+Creating a stream
+
+(1) Any collection has the stream() method.  
+List<Integer> famousNumbers = List.of(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55);  
+Stream<Integer> numbersStream = famousNumbers.stream();  
+
+Set<String> usefulConcepts = Set.of("functions", "lazy", "immutability");   
+Stream<String> conceptsStream = usefulConcepts.stream();  
+
+(2) Creating stream from Arrays.  
+Stream<Double> doubleStream = Arrays.stream(new Double[]{ 1.01, 1d, 0.99, 1.02, 1d, 0.99 });
+
+Operations on stream.  
+**Intermediate operations**
+
+filter
+limit 
+skip 
+distinct
+sorted 
+peek 
+map 
+
+**Terminal operations**
+
+count
+max / min  
+reduce 
+findFirst / findAny 
+anyMatch 
+forEach 
+collect 
+toArray 
+
+it is impossible to reuse a stream that has been evaluated once;
+
+
 ### List
 List is an interface. The following are implementations of List
 - java.util.ArrayList

@@ -60,3 +60,16 @@ We have to import StructType,StructField,StringType etc  classes modules from py
 **How to convert Spark Dataframe to pandas ?**
 df.toPandas()
 
+**How to handle rows with null value during explode**. 
+Use explode_outer 
+With explode, rows with null values are silently ignored.   
+
+
+**What happens if two datasets with same columns, but different ordering are joined using UNION***. 
+The union will give incorrect results. It will not give errors.  
+
+**What is grouping sets((warehouse) , (product)) do?**.  
+This is same as union of group by warehouse and group by product. 
+
+
+

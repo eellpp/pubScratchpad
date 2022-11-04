@@ -2,6 +2,17 @@
 
 - http://www.oopweb.com/Java/Documents/JavaNotes/VolumeFrames.html
 
+
+### Difference between system.properties and environment variables
+System properties are set on the Java command line using the -Dpropertyname=value syntax. They can also be added at runtime using System.setProperty(String key, String value) or via the various System.getProperties().load() methods.   
+
+To get a specific system property you can use System.getProperty(String key) or System.getProperty(String key, String def).   
+
+Environment variables are set in the OS, e.g. in Linux export HOME=/Users/myusername or on Windows SET WINDIR=C:\Windows etc, and, unlike properties, may not be set at runtime.   
+
+To get a specific environment variable you can use System.getenv(String name).
+
+
 ## Why use OutputBufferedStream
 Java has two kinds of classes for input and output (I/O): streams and readers/writers.
 
@@ -16,7 +27,7 @@ If the stream slows beyond the data rate required to show the data, then the out
 BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 ```
 
-InputStreamReader is the class to read the input stream of bytes.But to read each byte is expensive operation so we are wrapping it around BufferedReader to have it buffered
+InputStreamReader is the clπass to read the input stream of bytes.But to read each byte is expensive operation so we are wrapping it around BufferedReader to have it buffered
 
 
 ##  When to use getters and setters
