@@ -3,6 +3,9 @@ Retirement home should have some of these characterstics
 - near to nature. A river OR mountain. Parks or ocean nearby at walking/cycling distance. 
 - have a backyard with some trees and plants which you take care of and connect. 
 - a community who have social connections/empathy values more than capital aggregation.
+- small and easily maintinable daily without helpers 
+- access to medical facilities like established hostpital/clinics/pharmacy
+- near to transportation like airport/railway/bus and malls 
 
 https://github.com/eellpp/pubScratchpad/blob/master/health/nature_heals.md
 
