@@ -1,4 +1,4 @@
-### song lyrics with philosophical intepretations i like
+### song lyrics i like
 
 
 | song                 | Link                                        |
@@ -25,6 +25,12 @@
 | Aaina mujhse meri                              | https://www.youtube.com/watch?v=_sPbiA37d3Y |
 | Deewaron Se Milkar Rona                        | https://www.youtube.com/watch?v=Xgo3nCUQ1_E |
 | Kabhi Kisiko Muqammal Jahan Nahi Milta                                               |   https://www.youtube.com/watch?v=ele3pNFcv_Y                                          |
+
+#### Songs Sung very well   
+|Song|LInk|
+|---|---| 
+|Jaane kya baat hai |https://www.youtube.com/watch?v=hWEZ2EOVgxg|
+|Jab Deep Jale Aana|https://www.youtube.com/watch?v=GefpYy4knUo|
 
 
 ## Abstract music with dynamic interpretations  
