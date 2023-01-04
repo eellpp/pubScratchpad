@@ -119,3 +119,7 @@ In this episode, you'll discover:
   *  - Cortisol helps be your best cognitively
 
 If you're feeling tired, stressed and anxious, check your cortisol levels
+
+Other Notes:
+- Caffeine increases cortisol secretion in people at rest or undergoing mental stress
+- Caffeine begins to affect your body very quickly. It reaches a peak level in your blood within 30 to 60 minutes.

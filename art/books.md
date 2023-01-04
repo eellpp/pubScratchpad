@@ -18,3 +18,11 @@ One way I did this was by redrawing the same simple picture of a lily 100 times,
 
 ### Pictorial Composition and the Critical Judgment of Pictures by Henry Rankin Poore
 https://www.gutenberg.org/ebooks/26638  
+
+
+### Art Starts with a Line: A creative and interactive guide to the art of line drawing 
+https://www.amazon.com/Art-Starts-Line-creative-interactive/dp/1633224813
+
+
+### Rendering in Pen and Ink: The Classic Book On Pen and Ink Techniques for Artists, Illustrators, Architects, and Designers. 
+https://www.amazon.com/Rendering-Pen-Ink-Techniques-Illustrators/dp/0823045293
