@@ -3,6 +3,10 @@
 
 Goal is to have inflation-adjusted income during retirement  
 
+https://www.advisorperspectives.com/articles/2022/04/18/how-to-plan-retirement-income-for-a-constrained-investor
+
+
+
 ### Who is constrained Investor
 To determine if someone is a constrained investor, calculate the ratio of their minimum annual living expenses (net of Social Security and pension income) to the value of their investment assets. If that ratio is greater than 3%, they are a constrained investor.  
 
