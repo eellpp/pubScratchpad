@@ -1,3 +1,10 @@
+Overall rule of thumb:  
+
+Assuming 3% average investment return, for 1.5 million in investment, you can get income of income of 45k (@ 3750$ per month). 
+
+This is liquid investment return which generates income. Not wealth like home.  
+
+
 ### How much to retire in sg as a couple
 https://lifefinance.com.sg/millennials-guide-to-how-much-does-it-cost-to-retire-early/  
 Excluding children expenses and any mortgages.   
