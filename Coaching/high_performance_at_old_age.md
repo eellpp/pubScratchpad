@@ -37,6 +37,10 @@ Name: Rupert Murdoch
 Occupation: Business. News Media  
 Age: 90 @ 2022  
 https://en.wikipedia.org/wiki/Rupert_Murdoch  
+Even at age 91 (2023) is active as chairman of powerful news corp  that controls FOX tv and TV/Movies etc    
+Divorced 6 months back and now enjoying company of new partner   
+
+
 
 Name: Ridley Scott was born on November 30, 1937 (2022)  
 Occupation: Movie Director/producer  
