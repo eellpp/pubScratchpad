@@ -63,8 +63,17 @@ Hive partition is not same as Spark partition.
 	- repartition(n) to balance the shuffle
 	- If max write stage parallilism is 10, ( to created 10 files), then in a 100 core cluster, 90 of them are sitting idle
 
+The Spark SQL shuffle is a mechanism for redistributing or re-partitioning data so that the data is grouped differently across partitions,  
+Spark shuffle is a very expensive operation as it moves the data between executors or even between worker nodes in a cluster so try to avoid it when possible.   
+Shuffle is the most data intensive part and requires most effort in optimizing.  
+ DataFrame operations that trigger shufflings are join(), and all aggregate functions.   
+ Default shiffle partition is 200. This default shuffle partition number   
 
-Shuffle is the most data intensive part and requires most effort in optimizing
+
+Based on your dataset size, number of cores, and memory, Spark shuffling can benefit or harm your jobs. When you dealing with less amount of data, you should typically reduce the shuffle partitions otherwise you will end up with many partitioned files with a fewer number of records in each partition. which results in running many tasks with lesser data to process.
+
+On another hand, when you have too much data and have less number of partitions results in fewer longer running tasks, and sometimes you may also get out of memory error.
+
 
 **Optimizing shuffle partitions**
 - check the spillage. To reduce the spillage adjust the shuffle partition such that each task has 100 to 200 MB of data. This should increase the speed of job
