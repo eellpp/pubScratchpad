@@ -1,3 +1,10 @@
+### Hardships and struggles of person who sailed around world
+Around The World With A Titanium Spine: Abhilash Tomy’s Incredible Maritime Quest    
+https://www.youtube.com/watch?v=Vno_5TZRu4Q   
+- if the thought crosses your mind, why you are doing this then you have already lost
+- i will keep working on the troubles, till then troubles give up. I am not going to give up. 
+
+
 ### 96-Year-Old Secretary Quietly Amasses Fortune, Then Donates $8.2M
 https://www.nytimes.com/2018/05/06/nyregion/secretary-fortune-donates.html
 > Just before she retired, Mr. Hyams said he saw the 96-year-old Ms. Bloom trudging out of the subway and headed to work in the middle of a fierce snowstorm. “I said, ‘What are you doing here?’ and she said, ‘Why, where should I be?’” he recalled.
