@@ -18,6 +18,11 @@ public class ExampleClass {
     }
 }
 
+Note:
+ SLF4J is a logging facade and does not provide its own logging implementation. Therefore, it's the actual logging implementation (e.g., Logback, Log4j) that determines the specific behavior and limitations of brace-based string extrapolation in your application.  
+
+Why use SLF4J?   
+Overall, using SLF4J as a logging facade provides a level of abstraction, flexibility, and compatibility that makes your code more portable and easier to maintain. It helps decouple your application from the specifics of a logging implementation, enabling you to switch logging frameworks with minimal code changes and take advantage of the features and optimizations provided by different logging implementations.
 ```
 
 ### Java data structures
