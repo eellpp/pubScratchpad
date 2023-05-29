@@ -31,4 +31,17 @@ eg: converting from timestamp to SGT, when running on server with default timezo
 - converts from server timzone to utc
 - from utc converts to sgt
 
+**Hive timestamp datatype**
+When you ingest data into column into hive, internally it is saved as offset to epoch.  
+However viewing data from timestamp field creates wierd results  
+
+The ingested data: "2023-05-12 14:45:34".  
+If this string is in UTC, then to get the unix_timestamp() correct value. 
+First change the spark session to UTC    
+>>> spark.conf.set('spark.sql.session.timeZone', 'UTC' ).   
+now unix_timestamp("<utc time string>") will give correct value. 
+
+
+
+
 
