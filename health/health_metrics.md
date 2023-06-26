@@ -55,3 +55,17 @@ Weight | Healthy Range|
 ---|---|
 < 65 | up to 2.5 kg|
 65 - 95| up to 3.29 kg|
+
+
+### Factors that causes diseases
+Factor | High Risk|Issues|
+---|---|---|
+blood pressure | > 140/90|Stroke|
+Cholestrol| > 240 | Stroke|
+Diabetic|||
+Smoking|||
+Overweight|||
+PhysicalActivity|||
+History Of Stroke/Medical Issues in family|||
+Age|55 and above|||
+

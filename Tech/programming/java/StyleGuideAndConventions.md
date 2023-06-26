@@ -1,5 +1,5 @@
 
-### Apache Folder Structure
+### Apache Maven Standard Folder Structure
 http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 
 ### Java coding guidelines

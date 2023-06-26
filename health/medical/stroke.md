@@ -38,3 +38,24 @@ Symptoms of high blood pressure
 - changes in mental status: muddled thinking, changes in speech, unusual behavior and even simply reduced activity  
 - sudden change in vision — blindness, loss of vision in one eye, changes in part of your field of vision, or perhaps something more subtle  
 - suddenly feeling of nausea or start vomiting and there doesn’t seem to be an obvious cause,
+
+
+### Knowing the Symptoms and Acting F.A.S.T.
+Knowing the common stroke symptoms and having a plan to quickly act can save a life and aide in the prevention of permanent damage. If you or a loved one has a history of strokes in your family and any of these stroke symptoms come on suddenly, call 911 immediately:
+
+- Numbness or weakness in the face, arm, or leg, especially on one side of the body
+- Confusion, trouble speaking, or difficulty understanding speech
+- Loss of vison in one or both eyes
+- Trouble walking, dizziness, loss of balance, or lack of coordination
+- Severe headache with no known cause
+- Time is critical in the treatment plans for stroke patients, and most treatments are only effective if the stroke is recognized and diagnosed within 3 hours of the first symptom. With a stroke, every second counts, and acting F.A.S.T. can help prevent further damage to the brain:
+
+`Face`: Ask the person to smile. Does one side of the face droop?
+
+`Arms`: Ask the person to raise both arms. Does one arm drift downward?
+
+`Speech`: Ask the person to repeat a simple phrase. Is the speech slurred or strange?
+
+`Time`: If you see any of these signs, call 9-1-1 right away.
+
+Note the time when any symptoms first appear. This information helps health care providers determine the best treatment for each person. If the stroke symptoms go away after a few minutes, the attack may have been a TIA. While brief, this is still a serious condition that requires immediate medical attention.
