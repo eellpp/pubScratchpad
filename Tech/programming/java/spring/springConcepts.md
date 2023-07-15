@@ -22,7 +22,6 @@ _Note: Typically one does not configure fine-grained domain objects in the conta
 
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-java
 
-You can use @Bean annotated methods with any Spring @Component, however, they are most often used with @Configuration beans.
 Annotating a class with @Configuration indicates that its primary purpose is as a source of bean definitions. Furthermore, @Configuration classes allow inter-bean dependencies to be defined by simply calling other @Bean methods in the same class. The simplest possible @Configuration class would read as follows:
 
 ```java
