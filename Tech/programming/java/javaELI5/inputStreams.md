@@ -1,6 +1,8 @@
 
 IO Streams are a core concept in Java IO. A stream is a conceptually endless flow of data. You can either read from a stream or write to a stream. A stream is connected to a data source or a data destination. Streams in Java IO can be either byte based (reading and writing bytes) or character based (reading and writing characters).
 
+### Input vs Output Stream
+An input stream is used to read data from the source. And, an output stream is used to write data to the destination
 
 The Java InputStream class is the base class (superclass) of all input streams in the Java IO API. Each subclass of InputStream typically has a very specific use, but can be used as an InputStream. The InputStream subclasses are:
 
