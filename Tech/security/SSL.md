@@ -1,20 +1,55 @@
+SSL Authentication (TLS Authentication):   
+SSL (Secure Sockets Layer) is a cryptographic protocol used to secure communication between a client and a server over the internet. Its successor is TLS (Transport Layer Security), which is commonly referred to as TLS/SSL. SSL/TLS authentication is commonly used in HTTPS connections to authenticate the server and, in some cases, the client.
+
+1) Server Authentication: When a client connects to a server using SSL/TLS, the server presents a digital certificate containing its public key. The client validates this certificate using a trust chain to ensure the server's authenticity. If the validation is successful, the client knows it is communicating with the intended server and establishes a secure connection.
+
+2) Client Authentication: SSL/TLS can also support client authentication, where the client presents its digital certificate to the server. The server verifies the client's certificate to ensure the client's identity before establishing the connection.
+
+SSL/TLS authentication relies on X.509 certificates for identity verification. Certificates are issued and signed by Certificate Authorities (CAs), and clients trust the CAs to validate the authenticity of the certificates.
+
+## SSL over browser - overview
+To operate correctly, SSL relies on a properly configured digital certificate, which the server passes to the browser when it tries to access a secure web page. Amongst other things, the certificate contains the “name” of the server for which the certificate has been issued, an encoded signature unique to the domain, the domain’s public key, and the validity period of the certificate itself. If the certificate has been digitally signed by a Certificate Authority (CA), it also contains the CA’s name and signature. In addition to establishing a relationship of trust, the certificate allows the server and browser to negotiate the encryption algorithm and encryption key used for the browsing session.
+
+Here is a very simplified explanation:
+
+* Your web browser downloads the web server's certificate, which contains the public key of the web server. This certificate is signed with the private key of a trusted certificate authority.
+* Your web browser comes installed with the public keys of all of the major certificate authorities. It uses this public key to verify that the web server's certificate was indeed signed by the trusted certificate authority.
+* The certificate contains the domain name and/or ip address of the web server. Your web browser confirms with the certificate authority that the address listed in the certificate is the one to which it has an open connection.
+* Your web browser generates a shared symmetric key which will be used to encrypt the HTTP traffic on this connection; this is much more efficient than using public/private key encryption for everything. Your browser encrypts the symmetric key with the public key of the web server then sends it back, thus ensuring that only the web server can decrypt it, since only the web server has its private key.
+
+
+
+### Java JKS based encryption
+JKS-based encryption involves storing cryptographic material, such as private keys and certificates, in a Java KeyStore file.
+
+With the key pair securely stored in the JKS, the Java application can use it for various cryptographic operations, such as encrypting data using the public key or decrypting data using the private key. In SSL/TLS communication, the server can present its certificate (containing the public key) to clients for encrypted communication.
+
+
+### Self-Signed Certificates:
+
+A self-signed certificate is a certificate where the entity generating the certificate is also the one signing it. Essentially, the entity acts as its own Certificate Authority. Self-signed certificates are easy to create, as demonstrated in the previous example, but they lack any external validation. They are not signed by a trusted third-party CA, so they do not provide the same level of trust and security as CA-issued certificates.
+
+
+### Certificates Issued by a CA:
+Certificates issued by a trusted Certificate Authority go through a rigorous validation process to ensure the authenticity and identity of the certificate owner. The CA acts as a trusted third party that verifies the identity of the entity requesting the certificate and signs it with the CA's own private key. Web browsers and other applications trust certificates issued by well-known CAs, making them widely recognized and accepted.
+
+
+### creating a self signed JKS keystore
+>>> keytool -genkeypair -alias mykey -keyalg RSA -keysize 2048 -validity 365 -keystore mykeystore.jks
+
+During the process, you'll be prompted to enter information like your name, organization, city, etc. This information will be used to create the self-signed certificate.
+
+Remember to keep the JKS file and its password secure, as it holds sensitive cryptographic material. Also, be cautious when using self-signed certificates in production environments, as they are typically used for testing and development purposes, not for securing real-world applications. In production, it is recommended to use certificates issued by a trusted Certificate Authority (CA).
+
+
 ### How SSL/TLS does encryption
-SSL/TLS encrypts communications between a client and server, primarily web browsers and web sites/applications. SSL (Secure Sockets Layer) encryption, and its more modern and secure replacement, TLS (Transport Layer Security) encryption, protect data sent over the internet or a computer network.  
+ 
 
 The public key of the Server is just used in the beginning (handshaking protocol) to establish a secure key, for Secure key encryption (Symmetric encryption).
 All the communication is over Secret key or Symmetric Key encryption, where the client (browser) and the Server use the same secret key to encrypt and decrypt data.
 TLS (Transport Layer Security) protocol uses a combination of Asymmetric encryption (Public key) and Symmetric Encryption (Secure Key). The main communication with your bank is using symmetric encryption, for which the session keys (secure key) is established safely during TLS handshaking, using asymmetric encryption.
 
 
-### How SSL provides protection from DNS hijacking
-https://security.stackexchange.com/questions/3857/can-a-https-connection-be-compromised-because-of-a-rogue-dns-server   
-In order to connect to any website, through https or not, you need the ip address of the site, and you ask your DNS server for it using the domain name of your site. If your DNS server has not cached the answer, it will try to resolve your request by asking a whole series of DNS servers (the root dns server, the top level domain handler ... until the dns server that is authorative for the domain).
-
-An attacker that controls any of those servers can respond to you with a fake IP address for that website, and this is what your browser will try to visit. This IP address in the general case will have a replica of the website hosted, to make it look the same as the original one, or just act as a silent forwarder of your connection to the correct site after capturing what it needs.
-
-f the website is HTTPS protected there will be many pitfalls. The normal website will have a certificate issued that binds details of the domain name to the website, but this is done using assymetric encryption.
-
-What this means is that through the process of SSL handshake, the website has to prove that it has knowledge of the private key that is associated with the public key in the certificate. Now, the malicious party can very well serve you the original certificate of the website when you try to access the wrong IP under the correct hostname, but he will not have knowledge of the private key so the SSL handshake will never complete.  
 
 ### How browsers protect from fake certificates  
 https://stackoverflow.com/questions/7733881/how-to-recognize-fake-ssl-certificates  
@@ -44,18 +79,6 @@ In this case, the easiest way is to
 `-Djavax.net.ssl.trustStore=keystore.jks -Djavax.net.ssl.trustStorePassword=x`
 
 Detailed overview in following sections.
-
-
-## SSL over browser - overview
-To operate correctly, SSL relies on a properly configured digital certificate, which the server passes to the browser when it tries to access a secure web page. Amongst other things, the certificate contains the “name” of the server for which the certificate has been issued, an encoded signature unique to the domain, the domain’s public key, and the validity period of the certificate itself. If the certificate has been digitally signed by a Certificate Authority (CA), it also contains the CA’s name and signature. In addition to establishing a relationship of trust, the certificate allows the server and browser to negotiate the encryption algorithm and encryption key used for the browsing session.
-
-Here is a very simplified explanation:
-
-* Your web browser downloads the web server's certificate, which contains the public key of the web server. This certificate is signed with the private key of a trusted certificate authority.
-* Your web browser comes installed with the public keys of all of the major certificate authorities. It uses this public key to verify that the web server's certificate was indeed signed by the trusted certificate authority.
-* The certificate contains the domain name and/or ip address of the web server. Your web browser confirms with the certificate authority that the address listed in the certificate is the one to which it has an open connection.
-* Your web browser generates a shared symmetric key which will be used to encrypt the HTTP traffic on this connection; this is much more efficient than using public/private key encryption for everything. Your browser encrypts the symmetric key with the public key of the web server then sends it back, thus ensuring that only the web server can decrypt it, since only the web server has its private key.
-
 
 
 #### Root and Intermediate CA
