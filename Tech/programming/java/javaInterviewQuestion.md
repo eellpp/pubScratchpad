@@ -1,7 +1,5 @@
 ### What is inversion of control for Spring JDBC?
 
-Inversion of Control (IoC) – Spring container takes care of wiring dependencies of various objects instead of creating or looking for dependent objects.
-
 Inversion of Control in the context of Spring means that the framework controls the creation, configuration, and management of application objects and their interactions. This helps in building more modular, maintainable, and testable applications by reducing tight coupling and promoting separation of concerns.
 
 In Spring, you define your application's components (beans) using configuration metadata, which can be XML-based or annotation-based. These configurations tell the Spring container what beans to create and how they are related to each other.
@@ -92,7 +90,7 @@ The Singleton Pattern is a creational design pattern that ensures a class has on
 The Singleton Pattern is commonly used to manage resources that are shared among multiple components of an application.
 
 ### Are Singleton Beans Thread-Safe?
-No, singleton beans are not thread-safe, as thread safety is about execution, whereas the singleton is a design pattern focusing on creation.
+No, singleton beans are not thread-safe
 
 When multiple threads access and modify the same instance of a singleton bean concurrently, you need to take proper synchronization measures to ensure thread safety. 
 
@@ -192,11 +190,15 @@ public class Main {
  ```
 
  In this example, the Shape class is an abstract class with a constructor to set the color of the shape and an abstract method calculateArea() that is meant to be overridden by subclasses. The Circle and Rectangle classes are concrete subclasses that extend the Shape class and provide implementations for the calculateArea() method.
+### JDBC
 
  ### What should you take care while choosing fetch size parameter in jdbc
  Most of the JDBC drivers’ default fetch size is 10. In normal JDBC programming if you want to retrieve 1000 rows it requires 100 network round trips between your application and database server to transfer all data. Definitely this will impact your application response time. The reason is JDBC drivers are designed to fetch small number of rows from database to avoid any out of memory issues.   
 
  Type of Application: Consider the nature of your application. For interactive applications, a lower fetchSize might be preferable to provide faster initial results, while for batch processing, a larger fetchSize can improve throughput.
+
+### What are the differences between ResultSet and RowSet?
+n summary, while both ResultSet and RowSet serve the purpose of representing query results from a database, RowSet provides greater flexibility, portability, and ease of use due to its disconnection from the database and support for various use cases. If you need more advanced features or need to work with data in a disconnected mode, you might find RowSet to be a better choice. However, if you're dealing with simple read-only queries and want to stick to standard JDBC functionality, ResultSet is still a valid option.
 
 
  ### Have you use Spring Boot
@@ -215,7 +217,7 @@ In a typical caching model, when a new client request for a resource comes in, a
 ### What is LRU cache
 A Least Recently Used (LRU) Cache organizes items in order of use, allowing you to quickly identify which item hasn't been used for the longest amount of time.
 
-he Least Recently Used (LRU) cache is a cache eviction algorithm that organizes elements in order of use. In LRU, as the name suggests, the element that hasn't been used for the longest time will be evicted from the cache.
+The Least Recently Used (LRU) cache is a cache eviction algorithm that organizes elements in order of use. In LRU, as the name suggests, the element that hasn't been used for the longest time will be evicted from the cache.
 
 ### What is difference between get and post rest API
 GET and POST are two of the most commonly used HTTP methods in RESTful APIs.
@@ -262,6 +264,11 @@ objectMapper.writeValue
 Streaming Response: The server starts sending data as soon as it's available and continues to send more data in chunks or pieces. The client receives and processes this data incrementally as it arrives. This is particularly useful when the server needs time to generate or fetch data, and it allows the client to start consuming data earlier.
 
 Traditional Response: The server generates the entire response and sends it to the client as a single unit. The client receives the entire response before it can start processing it. This is the conventional way of serving most web pages and responses.
+
+### How would you provide srteaming response for spring boot
+Spring Boot Rest api streaming with StreamingResponseBody is the most easiest and elegant way to create a rest web service to stream content. I generally prefer to use StreamingResponseBody with ResponseEntity, so we can set the headers and HTTP status, in this way we can control the behavior of our API in a much better way.
+
+StreamingResponseBody type is used for async request processing and content can be written directly to the response OutputStream without holding up the threads in the servlet container.
 
 ### What is Hazelcast
 distributed In-Memory Data Grid based on Java. 
