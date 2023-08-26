@@ -5,3 +5,4 @@ You can estimate how close to the event horizon the disk is based on how broad t
 The infrared light collected from distant galaxy is reddened, or redshifted, meaning that as it traverses the cosmos, its wavelengths are stretched by the expansion of space. The extent of that redshift lets astronomers determine a galaxy’s distance, and therefore when it originally emitted its light.
 
 
+<!-- ÷ -->

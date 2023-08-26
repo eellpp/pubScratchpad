@@ -235,6 +235,9 @@ Security: Some data, such as passwords, should not be exposed in the URL. The re
 
 ## JACKSON
 
+Reference: https://jenkov.com/tutorials/java-json/jackson-objectmapper.html
+
+
 ### How would you convert is Json string to a Java Object ?
 
 Using objectMapper readValue
