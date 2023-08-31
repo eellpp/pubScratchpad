@@ -6,8 +6,14 @@ In Spring, you define your application's components (beans) using configuration 
 
 Dependency injection, an aspect of Inversion of Control (IoC), is a general concept stating that we do not create our objects manually but instead describe how they should be created. Then an IoC container will instantiate required classes if needed
 
-### What does @lazy annotation mean in spring
-In Spring Framework, the @Lazy annotation is used to indicate that a bean should be initialized lazily. This means that the bean will be created and initialized only when it is actually needed, rather than during the application startup. This can be particularly useful for improving performance and reducing memory consumption in situations where certain beans might not be used right away or at all during the application's lifecycle.
+### What does @Component annotation mean in spring
+@Component is an annotation that allows Spring to detect our custom beans automatically.
+
+In other words, without having to write any explicit code, Spring will:
+
+Scan our application for classes annotated with @Component
+Instantiate them and inject any specified dependencies into them
+Inject them wherever needed
 
 ### What is the use of @Configuration Annotation in spring
 In Spring Framework, the @Configuration annotation is used to indicate that a class defines one or more beans that should be managed by the Spring IoC container. When a class is annotated with @Configuration, it effectively becomes a configuration class, and Spring treats it as a source of bean definitions. 
@@ -240,6 +246,18 @@ Traditional Response: The server generates the entire response and sends it to t
 Spring Boot Rest api streaming with StreamingResponseBody is the most easiest and elegant way to create a rest web service to stream content. I generally prefer to use StreamingResponseBody with ResponseEntity, so we can set the headers and HTTP status, in this way we can control the behavior of our API in a much better way.
 
 StreamingResponseBody type is used for async request processing and content can be written directly to the response OutputStream without holding up the threads in the servlet container.
+
+
+### Junit : What is the difference between @injectmocks and @mock?
+
+@InjectMocks creates an instance of the class and injects the mocks that are created with the @Mock annotations into this instance. @Mock is used to create mocks that are needed to support the testing of the class to be tested. 
+
+### When should we use @SpringBootTest annotation ?
+The @SpringBootTest annotation is useful when we need to bootstrap the entire container. The annotation works by creating the ApplicationContext that will be utilized in our tests
+
+This should not be used for unit tests as this would be very slow. It should be used as integration test
+
+
 
  ### Have you use Spring Boot
  ### Can you do scheduling in spring boot 
