@@ -192,14 +192,54 @@ public class Main {
  In this example, the Shape class is an abstract class with a constructor to set the color of the shape and an abstract method calculateArea() that is meant to be overridden by subclasses. The Circle and Rectangle classes are concrete subclasses that extend the Shape class and provide implementations for the calculateArea() method.
 ### JDBC
 
- ### What should you take care while choosing fetch size parameter in jdbc
+### What does Statement.setFetchSize(nSize) method really do in SQL Server JDBC driver?   
+ ### What should you take care while choosing fetch size parameter in jdbc.  
+In JDBC, the setFetchSize(int) method is very important to performance and memory-management within the JVM as it controls the number of network calls from the JVM to the database and correspondingly the amount of RAM used for ResultSet processing.
+
+The RESULT-SET is the number of rows marshalled on the DB in response to the query. The ROW-SET is the chunk of rows that are fetched out of the RESULT-SET per call from the JVM to the DB. The number of these calls and resulting RAM required for processing is dependent on the fetch-size setting.
+
+So if the RESULT-SET has 100 rows and the fetch-size is 10, there will be 10 network calls to retrieve all of the data, using roughly 10*{row-content-size} RAM at any given time.
+
+The default fetch-size is 10, which is rather small. In the case posted, it would appear the driver is ignoring the fetch-size setting, retrieving all data in one call (large RAM requirement, optimum minimal network calls).
+
+What happens underneath ResultSet.next() is that it doesn't actually fetch one row at a time from the RESULT-SET. It fetches that from the (local) ROW-SET and fetches the next ROW-SET (invisibly) from the server as it becomes exhausted on the local client.
+
+
  Most of the JDBC drivers’ default fetch size is 10. In normal JDBC programming if you want to retrieve 1000 rows it requires 100 network round trips between your application and database server to transfer all data. Definitely this will impact your application response time. The reason is JDBC drivers are designed to fetch small number of rows from database to avoid any out of memory issues.   
 
  Type of Application: Consider the nature of your application. For interactive applications, a lower fetchSize might be preferable to provide faster initial results, while for batch processing, a larger fetchSize can improve throughput.
 
-### What are the differences between ResultSet and RowSet?
-n summary, while both ResultSet and RowSet serve the purpose of representing query results from a database, RowSet provides greater flexibility, portability, and ease of use due to its disconnection from the database and support for various use cases. If you need more advanced features or need to work with data in a disconnected mode, you might find RowSet to be a better choice. However, if you're dealing with simple read-only queries and want to stick to standard JDBC functionality, ResultSet is still a valid option.
 
+### Is fetch size param literally executed by jdbc driver 
+The fetchSize parameter is a hint to the JDBC driver as to many rows to fetch in one go from the database. But the driver is free to ignore this and do what it sees fit. Some drivers, like the Oracle one, fetch rows in chunks, so you can read very large result sets without needing lots of memory. Other drivers just read in the whole result set in one go, and I'm guessing that's what your driver is doing.
+
+
+
+### How to get export a large amount of data (greater > 10 million) from database in csv format
+Approach 1 : get rows in result set and store in list and return csv
+Approach 2: return csv in streaming manner
+
+read the result set and stream the results (based on each implementation) directly to the OutputStream using our CSVWriterWrapper.  
+
+Json streaming out result set with object mapper.  
+https://www.javacodegeeks.com/2018/09/streaming-jdbc-resultset-json.html
+
+csv streaming out result set with printer writer
+https://www.javacodegeeks.com/2018/12/java-streaming-jdbc-resultset-csv.html  
+
+
+The flush() method of PrintWriter Class in Java is used to flush the stream. By flushing the stream, it means to clear the stream of any element that may be or maybe not inside the stream. 
+
+
+### What is a Streaming API response
+Streaming Response: The server starts sending data as soon as it's available and continues to send more data in chunks or pieces. The client receives and processes this data incrementally as it arrives. This is particularly useful when the server needs time to generate or fetch data, and it allows the client to start consuming data earlier.
+
+Traditional Response: The server generates the entire response and sends it to the client as a single unit. The client receives the entire response before it can start processing it. This is the conventional way of serving most web pages and responses.
+
+### How would you provide srteaming response for spring boot
+Spring Boot Rest api streaming with StreamingResponseBody is the most easiest and elegant way to create a rest web service to stream content. I generally prefer to use StreamingResponseBody with ResponseEntity, so we can set the headers and HTTP status, in this way we can control the behavior of our API in a much better way.
+
+StreamingResponseBody type is used for async request processing and content can be written directly to the response OutputStream without holding up the threads in the servlet container.
 
  ### Have you use Spring Boot
  ### Can you do scheduling in spring boot 
@@ -214,10 +254,19 @@ Caching improves performance by decreasing page load times, and reduces the load
 
 In a typical caching model, when a new client request for a resource comes in, a lookup is done on the temporary storage to see if a similar request came in earlier. 
 
+###  How  to prevent a thread from sharing its state with other threads
+use ThreadLocal.  
+With ThreadLocal, you're explicitly wanting to have one value per thread that reads the variable. That's typically for the sake of context. For example, a web server with some authentication layer might set a thread-local variable early in request handling so that any code within the execution of that request can access the authentication details, without needing any explicit reference to a context object. So long as all the handling is done on the one thread, and that's the only thing that thread does, you're fine.
+
+
+
 ### What is LRU cache
 A Least Recently Used (LRU) Cache organizes items in order of use, allowing you to quickly identify which item hasn't been used for the longest amount of time.
 
 The Least Recently Used (LRU) cache is a cache eviction algorithm that organizes elements in order of use. In LRU, as the name suggests, the element that hasn't been used for the longest time will be evicted from the cache.
+
+ALgo: LRU Cache implementation in java with 
+https://www.enjoyalgorithms.com/blog/implement-least-recently-used-cache
 
 ### What is difference between get and post rest API
 GET and POST are two of the most commonly used HTTP methods in RESTful APIs.
@@ -263,15 +312,7 @@ public class Main {
 objectMapper.writeValue
 
 
-### What is a Streaming API response
-Streaming Response: The server starts sending data as soon as it's available and continues to send more data in chunks or pieces. The client receives and processes this data incrementally as it arrives. This is particularly useful when the server needs time to generate or fetch data, and it allows the client to start consuming data earlier.
 
-Traditional Response: The server generates the entire response and sends it to the client as a single unit. The client receives the entire response before it can start processing it. This is the conventional way of serving most web pages and responses.
-
-### How would you provide srteaming response for spring boot
-Spring Boot Rest api streaming with StreamingResponseBody is the most easiest and elegant way to create a rest web service to stream content. I generally prefer to use StreamingResponseBody with ResponseEntity, so we can set the headers and HTTP status, in this way we can control the behavior of our API in a much better way.
-
-StreamingResponseBody type is used for async request processing and content can be written directly to the response OutputStream without holding up the threads in the servlet container.
 
 ### What is Hazelcast
 distributed In-Memory Data Grid based on Java. 
