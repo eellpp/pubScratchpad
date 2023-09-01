@@ -1,7 +1,7 @@
 ## Spark RDD vs Dataset/Dataframe
 - `RDD` : RDD stands for Resilient Distributed Datasets
 	- Read only
-	- The inmemory distributed dataset that spark creates for faster computation and reduce the I/O. 
+	- The inmemory distributed dataset that spark creates for faster computation and reduce the I/O. It 
 	- Choose this format if the data is structured or unstructured.
 	- RDD are immutable
 	- RDDs are also fault-tolerant which means that whenever failure happens, they can be recovered automatically.RDD Provides Fault Tolerance Through Lineage Graph. A Lineage Graph keeps A Track of Transformations to be executed after an action has been called.  RDD Lineage Graph helps Recomputed any missing or damaged RDD because of node failures.
@@ -83,6 +83,7 @@ Shuffle hash join involves moving the data with the same hash key to same node. 
 
 sort join involves first sorting each of the table and then doing the join. Shuffle sort-merge join involves moving the data with the same hash key to same node, then sorting each of dataset and then doing the join in the node. 
 
+### Which is faster : distinct or groupby when finding unique rows by multiple columns in big data table
 ### Why is distict slower than groupby when operating on lots of columns?
 Distinct creates more shuffles. Spark has while optimization replaces distinct by ReplaceDistinctWithAggregate optimization rule
 Groupby will involve creation of hash by group key and would be faster. 
@@ -95,14 +96,20 @@ Spark knows to avoid a shuffle when a previous transformation has already partit
 
 In general, avoiding shuffle will make your program run faster. All shuffle data must be written to disk and then transferred over the network.
 
+### What is difference between groupByKey and reduceByKey
 -  groupByKey shuffles all the data, which is slow.
 -  reduceByKey shuffles only the results of sub-aggregations in each partition of the data.
 
 ### Optimizing performance
+### what is pros and cons of having too many partitions
 - use parquet format files for faster read operations 
 - not to many small files
 - too few partitions can have some executors being idle. Too many partitions will have execessive overhead in managing small tasks (eg 1000 + partitions where each partitions is small data) Eg:  2 million large json objects split across 25K partitions will run v slowly or out of memory vs the same coalesce to 320 wil run very fast. 
 
+too few (causing less concurrency, data skewing and improper resource utilization) or too many (causing task scheduling to take more time than actual execution time) partitions is not good.
+
+### What is the default partition size in spark
+By default, Spark creates one partition for each block of the file (blocks being 128MB by default in HDFS), but you can also ask for a higher number of partitions by passing a larger value.
 
 **How to create dataframe with complex datatype columns ?**
 We have to provide a schema 
@@ -114,6 +121,9 @@ We have to import StructType,StructField,StringType etc  classes modules from py
 
 **How to convert Spark Dataframe to pandas ?**
 df.toPandas()
+
+### What does explode operation do in spark
+Returns a new row for each element in the given array or map. 
 
 **How to handle rows with null value during explode**. 
 Use explode_outer 
