@@ -123,3 +123,14 @@ How to sort the dataframe by columns ?
 
 **What is difference between fork and spawn in multiprrocessing module**
 
+### How to read a streaming data in python with requests modules
+
+```python
+res = requests.get(url,stream=True)
+
+for line in res.iter_lines():
+    print(line.decode('UTF-8'))
+```
+
+Above you would keep processing the lines before the server has ended sending it. 
+
