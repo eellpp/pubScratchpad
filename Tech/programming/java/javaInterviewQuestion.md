@@ -242,6 +242,16 @@ Streaming Response: The server starts sending data as soon as it's available and
 
 Traditional Response: The server generates the entire response and sends it to the client as a single unit. The client receives the entire response before it can start processing it. This is the conventional way of serving most web pages and responses.
 
+### Reading a json delimited file in stream 
+Each line is json and seperated by newline in file.
+How to to provide a streaming output by reading the file from s3
+// get files in loop. 
+// read a file inputStream from s3. 
+lines = new BuffererReader(new InputStreamReader(inputStream,StandardCharsets.UTF8)).lines().collect(collectors.joining("\n")) 
+outputStream.write(lines.getBytes())   
+outputStream.write("\n")  // so that there is newline seperation in stream for the reader
+
+
 ### How would you provide srteaming response for spring boot
 Spring Boot Rest api streaming with StreamingResponseBody is the most easiest and elegant way to create a rest web service to stream content. I generally prefer to use StreamingResponseBody with ResponseEntity, so we can set the headers and HTTP status, in this way we can control the behavior of our API in a much better way.
 
