@@ -1,3 +1,9 @@
+### If i declare a Map variable as final, can i put values into it later
+yes. Because final marks the reference not the object. You can't make the reference point to another hash table. However you can add new values to it.  
+int is a primitive type, not reference. Means with final you can't change the value of variable. 
+
+### what is computeIfAbsent for map 
+
 ### What is inversion of control for Spring JDBC?
 
 Inversion of Control in the context of Spring means that the framework controls the creation, configuration, and management of application objects and their interactions. This helps in building more modular, maintainable, and testable applications by reducing tight coupling and promoting separation of concerns.
