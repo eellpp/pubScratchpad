@@ -5,3 +5,8 @@ https://www.thekitchn.com/recipes
 https://food52.com/recipes
 
 https://www.budgetbytes.com/
+
+### India food
+https://www.awesomecuisine.com/  
+
+
