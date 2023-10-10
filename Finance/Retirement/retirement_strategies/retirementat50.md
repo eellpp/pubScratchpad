@@ -1,4 +1,10 @@
 
+### Savings for Retirement: Minimum 7x annual household income to 11x household income
+
+Financial experts say that a couple aged 60 with a dual income of $75,000 per year should have seven times their household income in their retirement account. This multiplies to a total of $525,000 saved. Conversely, a couple aged 65 with a sole earner bringing in $75,000 per year should have saved seven and a half times their household income, which adds up to $562,500 in their retirement account.
+
+When you are ready to retire, it’s a good benchmark to strive for at least 9x to 11x your household income in savings
+
 ### To retire at 65, you need 6 times annual income invested at 50, then continue working for next 15 years
 most financial advisors recommend that you have between five and six times your annual income in a 401(k) account or other retirement savings account by age 50. With continued growth over the rest of your working career, this amount should generally let you have enough in savings to retire comfortably by age 65.
 
