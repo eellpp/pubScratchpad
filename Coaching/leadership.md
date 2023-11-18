@@ -12,7 +12,10 @@ Behavioural scientists conducted research into the link between risk-taking and 
 
 As a business leader and entrepreneur, your job is to put courage inside of people— to encourage them.With less fear and more courage, workers take on harder projects, deal better with change and speak up more willingly about important issues. In short, courageous workers try more, trust more and tell more.
 
+### Get the right people than right idea
+ Pixar co-founder Ed Catmull writes in his book, Creativity. Inc.:
 
+"Getting the right people is more important than getting the right idea…If you give a good idea to a mediocre team, they will screw it up. If you give a mediocre idea to a brilliant team, they will either fix it or throw it away and come up with something better."
 
 
 
