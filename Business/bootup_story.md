@@ -1,4 +1,30 @@
 
+
+### ATuin
+[Title](https://ellie.wtf/posts/i-quit-my-job-to-work-full-time-on-my-open-source-project)
+How did I get here?
+
+I started Atuin a few years ago now, to scratch an itch I had. I always felt that the shell should be easier to use, and that the state of shell history was the #1 problem there. I’d be googling commands that I knew I’d ran several times at some point in the past, or booting up my other laptop just to retrieve an incantation from earlier that week.
+
+It turns out, a whole bunch of people felt the same.
+
+Some people even contributed - thank you so much to the more-than-150 people who’ve taken the time to make a PR, no matter how large or small. An extra special thank you to those of you who’ve stuck around a bit longer 
+
+At the beginning of 2023, I spoke at FOSDEM. I had a tonne of fantastic feedback about the tool, both in person and online. This was great for my motivation - after a couple of years, I was starting to feel tired as an OSS maintainer.
+
+I started putting more time and energy into the project, which paid off very well. Our usage grew massively - more contributors, more signups, more active community members, more features in blogs/podcasts/etc. We also moved the GitHub repo from ellie/atuin, to atuinsh/atuin.
+
+I also had to make some improvements to the infrastructure, mostly because we store a lot of data (encrypted blobs don’t compress well…). While it is possible to self host Atuin, many people use the hosted sync server. Some metrics:
+
+We started 2023 with users uploading (in total) around 10,000 lines of history a day. We ended it with users uploading almost 200,000 lines a day.
+
+I’d been paying out of pocket to run the Atuin servers the whole time. While not a huge amount, it also wasn’t tiny - 10s of millions of lines of encrypted shell history add up to a reasonably large amount of storage. Especially when you account for backups and moderate redundancy.
+
+Towards the end of 2022, a friend suggested I setup GitHub sponsors. I didn’t think anything would come of it, but it did! After a few months I received enough sponsorship to cover the server bills, and to offset some of what I’d paid so far.
+
+I really appreciate all of my sponsors for liking my work enough to contribute financially, when there’s no paywall or requirement whatsoever.
+
+
 ### Lead Generation funnel
 ... how beneficial it is to have a decently large highly engaged audience beforehand.
 ConvertKit is an example of this.
