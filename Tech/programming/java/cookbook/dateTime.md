@@ -1,3 +1,14 @@
+### reciepe to solve
+1. given a string date time, how to convert to Local date time, and zoned date time.  
+2. Loop from start_date to end_date 
+3. Convert date time string format 
+4. Convert String with zone date time to epoch milli. From epoch milli get zone date time 
+5. Between two epoch milli get number of days or hours
+6. From a filename extract the date time. Provided the format pattern for date time
+
+
+
+
 
 
 Java8 introduced new java.time package that has three classes
