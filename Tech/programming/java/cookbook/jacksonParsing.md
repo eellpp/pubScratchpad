@@ -1,4 +1,12 @@
 
+### Recipes
+1. Convert a given json dictionary to Java Map<String,String>
+2. Create json from java list of map
+3. Check if json is array of list or object. Then parse it appropriately
+4. Convert a json node to Map . Also from Map create json node
+
+
+
 ### Documentation for Jackson 
 https://github.com/FasterXML/jackson-docs. 
 
