@@ -52,6 +52,13 @@ Twice a week : Eat for 8 hours and then fast for 16 hours.
 **Improper Sleep Time** :
 irregular sleep schedules can contribute to sleep-deprivation and affect the body’s circadian rhythm. When the circadian rhythm is disturbed, the balance between the body’s ability to react to danger (sympathetic nervous system) and its ability to relax after the danger has passed (parasympathetic nervous system) is disrupted, and BP increases. Circadian disruption can also lead to other adverse health effects such as impaired glucose control, obesity, heart attack, stroke and mood disorders
 
+### Food
+
+A study in the Journal of Hypertension found that consuming about 1 cup of nitrate-rich beet juice could help reduce blood pressure. Nitrate converts to nitric oxide, which in turn helps improve the function of blood vessels by widening the vessels allowing greater blood flow.
+
+A 2023 study in the journal Nutrients found that three or more cups of coffee a day may help lower blood pressure. 
+
+
 
 The takeaway
 It's important to remember that lifestyle changes take time to show results. Consult with a healthcare professional before making significant changes to your diet or exercise routine, especially if you have underlying health conditions. By incorporating these tips into your daily life, you can take steps to naturally lower your blood pressure and improve your overall well-being.
