@@ -14,6 +14,14 @@ A special eating plan called “DASH” can help you lower your blood pressure. 
 Since fruits and vegetables are naturally lower in sodium than many other foods, DASH makes it easier to lower sodium in the diet. You can also use less salt when you cook and don't bring the salt shaker to the table. Remember, salt/sodium is found in many restaurant and fast-food meals, processed foods, such as soups, convenience meals from the freezer, some breads and cereals, and salted snacks. Your blood pressure is affected by what you eat.
 
 
+**Reduce Salt and Increase Pottasium** :
+Potassium, on the other hand, is the counter to sodium, helping to flush the mineral out of the body, per the AHA. Potassium also helps to relax blood pressure walls—and more relaxed walls mean lower blood pressure. 
+ 
+Plantains are higher in potassium, magnesium, and vitamin C than bananas. 
+- spinach, pomegranate and bananas
+- leafy green vegetables
+
+
 **Aerobic exercise** :  
 Activities like walking, jogging, swimming, and cycling are excellent for cardiovascular health and blood pressure control.
 Strength training:  
