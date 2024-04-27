@@ -11,6 +11,26 @@
 
 saved in stack/heap in the memory which is managed memory on the other hand object data type or reference data type are allocated objected which is managed by GC
 
+### Lambda Function Types
+Use Supplier if it takes nothing, but returns something.
+
+Use Consumer if it takes something, but returns nothing.
+
+Use Callable if it returns a result and might throw (most akin to Thunk in general CS terms).
+
+Use Runnable if it does neither and cannot throw.
+
+- Supplier       ()    -> x
+- Consumer       x     -> ()
+- BiConsumer     x, y  -> ()
+- Callable       ()    -> x throws ex
+- Runnable       ()    -> ()
+- Function       x     -> y
+- BiFunction     x,y   -> z
+- Predicate      x     -> boolean
+- UnaryOperator  x1    -> x2
+- BinaryOperator x1,x2 -> x3
+
 ### Stack Vs Heap
 
 When a method is called, certain data is placed on the stack. When the method finishes, data is removed from the stack. At other points in a program's execution, data is added to the stack, or removed from it.
