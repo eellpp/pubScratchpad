@@ -1,5 +1,14 @@
 
 
+### High Pain Threshold, Be Less wrong. A lot better product. 
+Musk on starting a company :   
+https://twitter.com/BusinessNerd_/status/1786569924720107873
+
+- It will not bring happiness. It is path to pain and eventually after many years happiness (for few who succeed)
+- You are always wrong. Your goal is be less wrong. Encourage friends to give honest advice 
+- Your product or service should be not little but much better than existing products. Consumers will not switch for little better.  
+
+
 
 ### Take risks according to your means
 
