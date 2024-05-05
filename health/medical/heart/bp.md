@@ -1,3 +1,21 @@
+Blood Pressure is the force of your blood on blood vessel walls     
+Heart Rate is the number of times your heart beats per minute.   
+
+Blood pressure against the artery wall is created when the ventricles contract to pump blood to the body. 
+Increased blood pressure forces the ventricles to work harder to pump the same amount of blood to body. The extra work makes the ventricle wall to thicken and less elastic.  
+The thickened, rigid ventricle causes less blood to pumped to the body from heart
+
+https://watchlearnlive.heart.org/?moduleSelect=highbp
+
+
+## How to measure
+So to get reliable readings, blood pressure is measured on several different days and while you are resting. This means sitting down and relaxing on a chair, and waiting about three minutes before taking a measurement so that your circulatory system comes to rest. The upper arm that is being used for the measurement should rest on a table, at about the same height as the heart, while the reading is being done.
+
+How digital measurement works:   
+Digital blood pressure monitors read the blood pressure automatically based on variations in the volume of blood in the arteries. 
+When taking blood pressure measurements on the wrist, it's important to keep the hand level with the heart. Otherwise it can affect the readings.
+
+
 Normal Range is 120/80
 - Elivated is 130 and more
 - Hyptertension is 140 and more
