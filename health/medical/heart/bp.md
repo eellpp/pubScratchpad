@@ -40,6 +40,10 @@ Plantains are higher in potassium, magnesium, and vitamin C than bananas.
 - leafy green vegetables
 
 
+**Exceess fluid in body**
+The extra fluid in your body can raise your blood pressure and force your heart to work harder. It can also make it hard for you to breathe. Most of your body is made up of water. The body uses minerals like sodium and potassium to help organs such as your heart, kidneys, and liver balance how much water you need.
+
+
 **Aerobic exercise** :  
 Activities like walking, jogging, swimming, and cycling are excellent for cardiovascular health and blood pressure control.
 Strength training:  
@@ -83,7 +87,14 @@ A study in the Journal of Hypertension found that consuming about 1 cup of nitra
 A 2023 study in the journal Nutrients found that three or more cups of coffee a day may help lower blood pressure. 
 
 
-
-
 The takeaway
 It's important to remember that lifestyle changes take time to show results. Consult with a healthcare professional before making significant changes to your diet or exercise routine, especially if you have underlying health conditions. By incorporating these tips into your daily life, you can take steps to naturally lower your blood pressure and improve your overall well-being.
+
+
+### How BP medicine works
+Blood pressure medicines can work several different ways. Blood pressure medicines can keep blood pressure at a healthy level by1:
+
+- Causing your body to get rid of water, which decreases the amount of water and salt in your body to a healthy level
+- Relaxing your blood vessels
+- Making your heart beat with less force
+- Blocking nerve activity that can restrict your blood vessels
