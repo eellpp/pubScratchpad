@@ -5,6 +5,9 @@ Blood pressure against the artery wall is created when the ventricles contract t
 Increased blood pressure forces the ventricles to work harder to pump the same amount of blood to body. The extra work makes the ventricle wall to thicken and less elastic.  
 The thickened, rigid ventricle causes less blood to pumped to the body from heart
 
+**Systolic** blood pressure is the top number and refers to the amount of pressure experienced by the arteries while the heart is beating. 
+**Diastolic** blood pressure is the bottom number and refers to the amount of pressure in the arteries while the heart is resting in between heartbeats.
+
 https://watchlearnlive.heart.org/?moduleSelect=highbp
 
 
@@ -31,6 +34,11 @@ A special eating plan called “DASH” can help you lower your blood pressure. 
 
 Since fruits and vegetables are naturally lower in sodium than many other foods, DASH makes it easier to lower sodium in the diet. You can also use less salt when you cook and don't bring the salt shaker to the table. Remember, salt/sodium is found in many restaurant and fast-food meals, processed foods, such as soups, convenience meals from the freezer, some breads and cereals, and salted snacks. Your blood pressure is affected by what you eat.
 
+
+**Diastolic range**
+When the diastolic blood pressure is high, the blood vessels will become less elastic, harden and atherosclerotic. Normal diastolic blood pressure usually ranges from 60 to 80 mmHg. If your diastolic blood pressure is 80-89 mmHg, special attention is needed because you already have pre-hypertension. Diastolic pressure usually changes throughout the day. 
+
+Normal Diastolic : 
 
 **Reduce Salt and Increase Pottasium** :
 Potassium, on the other hand, is the counter to sodium, helping to flush the mineral out of the body, per the AHA. Potassium also helps to relax blood pressure walls—and more relaxed walls mean lower blood pressure. 
