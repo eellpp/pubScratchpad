@@ -38,7 +38,22 @@ Since fruits and vegetables are naturally lower in sodium than many other foods,
 **Diastolic range**
 When the diastolic blood pressure is high, the blood vessels will become less elastic, harden and atherosclerotic. Normal diastolic blood pressure usually ranges from 60 to 80 mmHg. If your diastolic blood pressure is 80-89 mmHg, special attention is needed because you already have pre-hypertension. Diastolic pressure usually changes throughout the day. 
 
-Normal Diastolic : 
+
+### Exercise and heart rate/ BP
+Your heart starts to pump harder and faster to circulate blood to deliver oxygen to your muscles. As a result, systolic blood pressure rises.  
+
+Exercise increases systolic blood pressure. Systolic blood pressure measures blood vessel pressure when your heart beats. Diastolic blood pressure measures the pressure in the blood vessels between heartbeats. It shouldn’t change significantly during exercise.
+
+It’s normal for systolic blood pressure to rise to between 160 and 220 mm Hg during exercise. Unless you’ve cleared it with your doctor, stop exercising if your systolic blood pressure surpasses 200 mm Hg. Beyond 220 mm Hg, your risk of a heart problem increases.
+
+exercise hypertension is a condition that causes an extreme spike in blood pressure during physical activity. People with exercise hypertension can experience spikes in systolic blood pressure up to 250 mm Hg during exercise
+
+your blood pressure should return to normal within several hours of a workout
+
+- Warm up before exercising to avoid injuries.
+- Stop your exercise activity gradually. A cooldown period is crucial for people with high blood pressure. It allows you to slowly return to your pre-exercise heart rate and blood pressure.
+
+
 
 **Reduce Salt and Increase Pottasium** :
 Potassium, on the other hand, is the counter to sodium, helping to flush the mineral out of the body, per the AHA. Potassium also helps to relax blood pressure walls—and more relaxed walls mean lower blood pressure. 
