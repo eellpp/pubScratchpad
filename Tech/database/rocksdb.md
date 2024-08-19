@@ -18,6 +18,13 @@ RocksDB is used to provide a persistent caching layer that survives application 
 ## As embedded time series database
 https://stackoverflow.com/questions/40110511/why-apache-kafka-streams-uses-rocksdb-and-if-how-is-it-possible-to-change-it
 
+The key is the <minute in ms>@id and value is array of compressed values for each sec.  
+The datastructure is further optimized to store only the offset.    
+As the result, on a decent HW with SATA III connected SSD the storage showed a throughput of 400K data point writes per second and 19K minute series (physical) reads per second.  
+As for the compression efficiency, on average the storage spends around 5.25 bytes per data point. Raw data point data takes 16 bytes, so the compression ratio is around x3. This result is worse than what standalone TS DBs usually show, but it is not terrible and may be sufficient for many use cases, especially when considering how simple the storage is.
+
+Continued ....
+
 ### rocksjava
 https://github.com/facebook/rocksdb/wiki/rocksjava-basics  
 RocksJava is a project to build high performance but easy-to-use Java driver for RocksDB.
