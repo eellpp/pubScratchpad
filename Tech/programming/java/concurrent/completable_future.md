@@ -205,7 +205,7 @@ All IDs have been processed.
 
 This approach efficiently handles multiple IDs in parallel, ensuring that each ID follows the chained tasks while allowing different sleep times for each stage.
 
-3. ## Explanation of CompletableFuture.allOf and allTasks.get in above example
+## **3. Explanation of CompletableFuture.allOf and allTasks.get in above example**
 
 `CompletableFuture.allOf()` and `allTasks.get()` play roles in waiting for tasks to finish, they operate in different ways and serve different purposes.
 
@@ -245,7 +245,7 @@ This approach efficiently handles multiple IDs in parallel, ensuring that each I
 
 Both are related to waiting for tasks to finish, but `CompletableFuture.allOf()` by itself doesn't block; it just creates the combined future. The `get()` call is what actually blocks and waits for everything to finish.
 
-4.  ## Difference between CompletableFuture get and join
+## 4. ** Difference between CompletableFuture get and join
 The primary difference between `CompletableFuture.get()` and `CompletableFuture.join()` in Java lies in their behavior when handling exceptions. Both methods are used to wait for the completion of a `CompletableFuture` and retrieve its result, but they handle exceptions differently.
 
 ### 1. **`CompletableFuture.get()`**
@@ -270,7 +270,7 @@ try {
 ```
 - If the computation fails (e.g., division by zero), the exception is wrapped in an `ExecutionException`, and you are required to handle it with a `try-catch` block.
 
-### 2. **`CompletableFuture.join()`**
+## **4. **`CompletableFuture.join()`**
 
 - **Unchecked Exceptions**: `CompletableFuture.join()` does not throw checked exceptions. Instead, if the computation encounters an exception, it throws an unchecked `CompletionException`. This makes `join()` easier to use in scenarios where you don't want to deal with checked exceptions.
 - **Signature**:
