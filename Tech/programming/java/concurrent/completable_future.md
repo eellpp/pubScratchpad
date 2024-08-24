@@ -79,3 +79,168 @@ completableFuture.get();
 - **Error Handling**: When you need built-in exception handling for asynchronous computations.
 
 In modern Java applications, `CompletableFuture` is typically preferred over `Future` because of its richer feature set, non-blocking capabilities, and ability to chain tasks together.
+
+### Using Completable future for Method Chaining
+`CompletableFuture` example where the `main` function accepts a list of IDs. For each ID, we perform the same three steps: fetch data, process the data, and store the data, with random sleep times for each task. The tasks are chained for each ID, and all the tasks are executed asynchronously.
+
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+
+public class CompletableFutureChainingExample {
+
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        // List of IDs to process
+        List<Integer> ids = Arrays.asList(1, 2, 3, 4, 5);
+
+        // Process each ID asynchronously and chain tasks for each ID
+        CompletableFuture<Void> allTasks = CompletableFuture.allOf(
+            ids.stream()
+                .map(id -> processId(id))
+                .toArray(CompletableFuture[]::new)
+        );
+
+        // Wait for all tasks to complete
+        allTasks.get();
+
+        System.out.println("All IDs have been processed.");
+    }
+
+    // Chain the tasks for each ID
+    private static CompletableFuture<Void> processId(int id) {
+        return CompletableFuture.supplyAsync(() -> {
+            // Step 1: Fetch data asynchronously with random sleep time
+            String fetchedData = fetchData(id);
+            return fetchedData;
+        }).thenApply(fetchedData -> {
+            // Step 2: Process data asynchronously with random sleep time
+            return processData(fetchedData);
+        }).thenAccept(processedData -> {
+            // Step 3: Store data asynchronously with random sleep time
+            storeData(processedData);
+        }).thenRun(() -> {
+            // Completion task for this ID
+            System.out.println("Completed processing for ID: " + id);
+        });
+    }
+
+    // Simulate fetching data with a random delay
+    private static String fetchData(int id) {
+        System.out.println("Fetching data for ID: " + id);
+        sleepRandomTime();
+        return "Data for ID " + id;
+    }
+
+    // Simulate processing data with a random delay
+    private static String processData(String data) {
+        System.out.println("Processing " + data);
+        sleepRandomTime();
+        return data.toUpperCase();
+    }
+
+    // Simulate storing data with a random delay
+    private static void storeData(String processedData) {
+        System.out.println("Storing " + processedData);
+        sleepRandomTime();
+    }
+
+    // Helper method to sleep for a random time (1 to 3 seconds)
+    private static void sleepRandomTime() {
+        Random random = new Random();
+        int sleepTime = 1 + random.nextInt(3); // Random sleep between 1 and 3 seconds
+        try {
+            TimeUnit.SECONDS.sleep(sleepTime);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+}
+```
+
+
+```bash
+Fetching data for ID: 1
+Fetching data for ID: 3
+Fetching data for ID: 2
+Fetching data for ID: 4
+Fetching data for ID: 5
+Processing Data for ID 1
+Processing Data for ID 5
+Processing Data for ID 4
+Processing Data for ID 2
+Storing DATA FOR ID 2
+Processing Data for ID 3
+Completed processing for ID: 2
+Storing DATA FOR ID 1
+Storing DATA FOR ID 5
+Storing DATA FOR ID 4
+Storing DATA FOR ID 3
+Completed processing for ID: 1
+Completed processing for ID: 3
+Completed processing for ID: 5
+Completed processing for ID: 4
+All IDs have been processed.
+```
+
+### Explanation:
+
+1. **Main Function**: 
+   - The main function now accepts a list of IDs (`ids`).
+   - For each ID, we call `processId(id)`, which chains the tasks for that particular ID.
+   - We use `CompletableFuture.allOf()` to wait for all the `CompletableFuture` instances to complete.
+
+2. **`processId` Method**: 
+   - This method chains three asynchronous tasks (`fetchData`, `processData`, `storeData`) for each ID.
+   - Each task is executed asynchronously using the `thenApply()` and `thenAccept()` methods, followed by `thenRun()` to signal the completion for that particular ID.
+
+3. **Random Sleep**:
+   - The `sleepRandomTime()` method introduces a random delay (between 1 and 3 seconds) to simulate varying processing times for each ID during the fetching, processing, and storing stages.
+
+4. **Completion**:
+   - Once all tasks for all IDs are completed, the program prints `"All IDs have been processed."`.
+
+This approach efficiently handles multiple IDs in parallel, ensuring that each ID follows the chained tasks while allowing different sleep times for each stage.
+
+### Explanation of CompletableFuture.allOf and allTasks.get in above example
+
+`CompletableFuture.allOf()` and `allTasks.get()` play roles in waiting for tasks to finish, they operate in different ways and serve different purposes.
+
+### 1. **`CompletableFuture.allOf()`**:
+
+- **Purpose**: `CompletableFuture.allOf()` is used to combine multiple `CompletableFuture` instances into a single `CompletableFuture<Void>`. This resulting `CompletableFuture` completes when **all** of the given `CompletableFuture` instances complete.
+  
+- **Usage in the Example**: 
+  - In the example, we use `CompletableFuture.allOf()` to combine all the `CompletableFuture` instances returned by `processId(id)` into one `CompletableFuture<Void>`.
+  - This means the `CompletableFuture<Void>` created by `CompletableFuture.allOf()` will be marked as completed only when **all** the `CompletableFuture` tasks for each ID have finished.
+
+### 2. **`allTasks.get()`**:
+
+- **Purpose**: `allTasks.get()` is a blocking call that waits for the completion of the `CompletableFuture` on which it is called. In this case, `allTasks.get()` is called on the `CompletableFuture<Void>` returned by `CompletableFuture.allOf()`. 
+
+- **Usage in the Example**: 
+  - `allTasks.get()` is waiting for the completion of the `CompletableFuture<Void>` created by `CompletableFuture.allOf()`.
+  - This means that `allTasks.get()` will block the main thread until **all** the tasks represented by the `CompletableFuture` instances passed to `CompletableFuture.allOf()` are complete.
+
+### Key Differences:
+
+- **`CompletableFuture.allOf()`**:
+  - **Combines futures**: It does not block the thread but instead returns a new `CompletableFuture<Void>`. This `CompletableFuture` represents the combined completion of multiple futures. No actual waiting happens here unless you explicitly wait on this combined future (e.g., by calling `get()` or using `thenRun()`).
+
+- **`allTasks.get()`**:
+  - **Blocks and waits**: This is the method that blocks the main thread until the combined `CompletableFuture` (from `CompletableFuture.allOf()`) is completed. It ensures that the main program flow pauses until all asynchronous tasks are finished.
+
+### How They Work Together in the Example:
+
+- `CompletableFuture.allOf()` is used to **combine** all the individual `CompletableFuture` instances (one for each ID). It produces a new `CompletableFuture<Void>` that completes when **all** tasks for all IDs are complete.
+- `allTasks.get()` is the **blocking call** that actually waits for the completion of this combined `CompletableFuture`. Without calling `get()`, the main thread would not block, and the program might terminate before all tasks are finished.
+
+### Conclusion:
+
+- `CompletableFuture.allOf()` creates a single future that represents the completion of multiple futures.
+- `allTasks.get()` blocks the main thread until that combined future (from `CompletableFuture.allOf()`) is completed.
+
+Both are related to waiting for tasks to finish, but `CompletableFuture.allOf()` by itself doesn't block; it just creates the combined future. The `get()` call is what actually blocks and waits for everything to finish.
