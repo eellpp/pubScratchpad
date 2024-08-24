@@ -244,3 +244,67 @@ This approach efficiently handles multiple IDs in parallel, ensuring that each I
 - `allTasks.get()` blocks the main thread until that combined future (from `CompletableFuture.allOf()`) is completed.
 
 Both are related to waiting for tasks to finish, but `CompletableFuture.allOf()` by itself doesn't block; it just creates the combined future. The `get()` call is what actually blocks and waits for everything to finish.
+
+## Difference between CompletableFuture get and join
+The primary difference between `CompletableFuture.get()` and `CompletableFuture.join()` in Java lies in their behavior when handling exceptions. Both methods are used to wait for the completion of a `CompletableFuture` and retrieve its result, but they handle exceptions differently.
+
+### 1. **`CompletableFuture.get()`**
+
+- **Throws Checked Exceptions**: `CompletableFuture.get()` throws checked exceptions, specifically `InterruptedException` and `ExecutionException`. This means you must handle or declare these exceptions in your code.
+- **Signature**:
+  ```java
+  public T get() throws InterruptedException, ExecutionException
+  ```
+- **Usage**: When you call `get()`, the current thread is blocked until the computation is complete, and if the computation throws an exception, `ExecutionException` will wrap that exception.
+
+#### Example:
+```java
+CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> 1 / 0); // ArithmeticException
+
+try {
+    // This will throw an ExecutionException because of the division by zero
+    Integer result = future.get();
+} catch (InterruptedException | ExecutionException e) {
+    System.out.println("Exception occurred: " + e.getMessage());
+}
+```
+- If the computation fails (e.g., division by zero), the exception is wrapped in an `ExecutionException`, and you are required to handle it with a `try-catch` block.
+
+### 2. **`CompletableFuture.join()`**
+
+- **Unchecked Exceptions**: `CompletableFuture.join()` does not throw checked exceptions. Instead, if the computation encounters an exception, it throws an unchecked `CompletionException`. This makes `join()` easier to use in scenarios where you don't want to deal with checked exceptions.
+- **Signature**:
+  ```java
+  public T join()
+  ```
+- **Usage**: Like `get()`, `join()` also blocks the current thread until the computation is complete, but it propagates exceptions as unchecked exceptions (specifically `CompletionException`). This removes the need for explicit exception handling but requires handling unchecked exceptions if needed.
+
+#### Example:
+```java
+CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> 1 / 0); // ArithmeticException
+
+try {
+    // This will throw a CompletionException because of the division by zero
+    Integer result = future.join();
+} catch (CompletionException e) {
+    System.out.println("Exception occurred: " + e.getCause().getMessage());
+}
+```
+- If the computation fails (e.g., division by zero), the exception is wrapped in a `CompletionException`, which is unchecked, so you don't need to declare it in the method signature.
+
+### Key Differences:
+
+| Feature                | **`CompletableFuture.get()`**                     | **`CompletableFuture.join()`**               |
+|------------------------|---------------------------------------------------|---------------------------------------------|
+| **Exception Handling**  | Throws checked exceptions: `InterruptedException`, `ExecutionException`. | Throws unchecked `CompletionException`. |
+| **Checked Exceptions**  | Must be handled or declared.                     | No need to handle checked exceptions.       |
+| **Checked vs Unchecked**| Returns wrapped exceptions as checked.           | Returns wrapped exceptions as unchecked.    |
+| **Use Case**            | Use when you want explicit handling of exceptions and need to manage `InterruptedException` or `ExecutionException`. | Use when you want simpler code with unchecked exceptions and don’t need to handle checked exceptions explicitly. |
+
+### When to Use `get()` vs `join()`:
+
+- **Use `get()`**: When you are in a context where handling checked exceptions is required or desirable, such as in environments where you are dealing with legacy code or APIs that expect `InterruptedException` or `ExecutionException` to be explicitly managed.
+
+- **Use `join()`**: When you prefer to work with unchecked exceptions, typically in scenarios where you want cleaner code without having to handle checked exceptions, especially in functional programming or stream pipelines. However, you must still be aware that unchecked exceptions (like `CompletionException`) may propagate and need to be handled at some point in the code.
+
+In summary, `get()` requires you to handle checked exceptions, while `join()` simplifies code by using unchecked exceptions but provides similar functionality otherwise.
