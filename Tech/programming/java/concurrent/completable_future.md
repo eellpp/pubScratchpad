@@ -270,7 +270,7 @@ try {
 ```
 - If the computation fails (e.g., division by zero), the exception is wrapped in an `ExecutionException`, and you are required to handle it with a `try-catch` block.
 
-## 4. **`CompletableFuture.join()`**
+### 2. **`CompletableFuture.join()`**
 
 - **Unchecked Exceptions**: `CompletableFuture.join()` does not throw checked exceptions. Instead, if the computation encounters an exception, it throws an unchecked `CompletionException`. This makes `join()` easier to use in scenarios where you don't want to deal with checked exceptions.
 - **Signature**:
