@@ -245,7 +245,7 @@ This approach efficiently handles multiple IDs in parallel, ensuring that each I
 
 Both are related to waiting for tasks to finish, but `CompletableFuture.allOf()` by itself doesn't block; it just creates the combined future. The `get()` call is what actually blocks and waits for everything to finish.
 
-## 4. ** Difference between CompletableFuture get and join
+## 4. ** Difference between CompletableFuture get and join **
 The primary difference between `CompletableFuture.get()` and `CompletableFuture.join()` in Java lies in their behavior when handling exceptions. Both methods are used to wait for the completion of a `CompletableFuture` and retrieve its result, but they handle exceptions differently.
 
 ### 1. **`CompletableFuture.get()`**
