@@ -1,6 +1,26 @@
 
 Here are the key concepts for **Exception Handling** in Java:
 
+ flashcards based on the key concepts from the document on **Exception Handling in Java**:
+
+### Flashcards on Exception Handling
+
+| **Question**                                                              | **Answer**                                   |
+|---------------------------------------------------------------------------|----------------------------------------------|
+| What are the three main types of exceptions in Java?                       | Checked, Unchecked (Runtime), Errors         |
+| What keyword is used to explicitly throw an exception in Java?             | `throw`                                      |
+| What is the purpose of the `finally` block in exception handling?          | To execute code after `try-catch`, regardless of exceptions |
+| What is a checked exception?                                               | An exception that must be declared or handled (e.g., `IOException`) |
+| Why should you avoid throwing `Throwable`, `Error`, or generic `Exception`? | It prevents proper exception handling and recovery |
+| What does `try-with-resources` do?                                         | Automatically closes resources after use     |
+| What is the difference between `Throwable` and `Exception`?                | `Throwable` catches everything, including `Errors`; `Exception` is for recoverable issues |
+| Why is catching `RuntimeException` considered bad practice?                | It's meant for programming errors, not expected control flow |
+| When should you throw an exception?                                        | When the method can't handle an issue and the caller should handle it |
+| What is wrong with using `printStackTrace()` in production code?           | It's poor practice; use proper logging instead |
+
+These flashcards summarize the essential concepts around exception handling in Java, focusing on best practices and key mechanisms.
+
+
 ### 1. **Types of Exceptions**
    - **Checked Exceptions**: Exceptions that must be handled either by using a `try-catch` block or by declaring them in the method signature using `throws`. These are checked at compile time (e.g., `IOException`, `SQLException`).
    - **Unchecked Exceptions (Runtime Exceptions)**: Exceptions that do not need to be explicitly handled or declared. They occur at runtime and are typically programming errors (e.g., `NullPointerException`, `ArrayIndexOutOfBoundsException`).
