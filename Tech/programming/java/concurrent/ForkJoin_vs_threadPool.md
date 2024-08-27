@@ -1,3 +1,30 @@
+flashcards based on the key concepts from the document 
+
+| **Question**                                                        | **Answer**                                    |
+|---------------------------------------------------------------------|-----------------------------------------------|
+| What is a `ForkJoinPool` designed for?                              | Recursive tasks that can be split into subtasks |
+| What algorithm does `ForkJoinPool` use to balance work?             | Work-stealing                                 |
+| What is the primary use case for `ForkJoinPool`?                    | Highly parallelizable tasks, like divide-and-conquer |
+| How does `ForkJoinPool` manage threads?                             | It tries to keep active threads close to the number of available processors |
+| What is a key advantage of `ForkJoinPool`?                          | Efficient for tasks with imbalanced workloads |
+| What is a disadvantage of `ForkJoinPool`?                           | Complexity and overhead for simple tasks      |
+| When should you use `ForkJoinPool`?                                 | For CPU-bound recursive tasks                 |
+| What is an example of a task well-suited for `ForkJoinPool`?        | Parallel sorting or matrix computations       |
+| What does `ExecutorService` manage?                                 | A pool of threads to execute tasks concurrently |
+| How can `ExecutorService` be customized?                            | Fixed, cached, or scheduled thread pools      |
+| What is a key advantage of `ExecutorService`?                       | Flexibility and simplicity for general concurrent tasks |
+| When is `ExecutorService` less efficient than `ForkJoinPool`?       | For parallel recursive tasks                  |
+| What kind of workloads is `ExecutorService` best for?               | I/O-bound or mixed workloads                  |
+| How is task scheduling handled in `ExecutorService`?                | By configuring the thread pool                |
+| What is a drawback of using `ExecutorService`?                      | Manual configuration for optimal performance  |
+| What type of algorithm does `ExecutorService` lack by default?      | Work-stealing                                 |
+| What is a good use case for `ExecutorService`?                      | Handling concurrent tasks in a server         |
+| How does `ForkJoinPool` adjust thread management?                   | Automatically adjusts to available CPU cores  |
+| What is an advantage of `ExecutorService` over `ForkJoinPool`?      | Simpler for non-parallel, independent tasks   |
+| What is a key difference between `ForkJoinPool` and `ExecutorService`? | `ForkJoinPool` is suited for parallel recursive tasks, while `ExecutorService` is for general-purpose concurrent tasks |
+
+
+
 ### **Difference between ForkJoinPool and Custom Executor Service Thread Pool**
 
 Both `ForkJoinPool` and custom `ExecutorService` thread pools in Java are designed to manage threads and execute tasks concurrently. However, they differ in terms of purpose, design, and ideal usage scenarios.
