@@ -1,3 +1,30 @@
+Here are 20 flashcards based on the document about `CompletableFuture`:
+
+| **Question**                                                     | **Answer**                       |
+|------------------------------------------------------------------|----------------------------------|
+| What does `CompletableFuture` extend in Java?                     | `Future`                         |
+| What does `CompletableFuture` provide over `Future`?              | Non-blocking operations          |
+| How does `CompletableFuture` handle exceptions?                   | With `exceptionally()` or `handle()` |
+| What does `CompletableFuture.supplyAsync()` do?                   | Executes a task asynchronously   |
+| How can you manually complete a `CompletableFuture`?              | Using `complete()`               |
+| What method is used to chain tasks in `CompletableFuture`?        | `thenApply()`, `thenCompose()`   |
+| What does `CompletableFuture.allOf()` do?                         | Combines multiple futures        |
+| How does `join()` differ from `get()`?                            | `join()` throws unchecked exceptions |
+| What is thrown by `get()` if the task fails?                      | `ExecutionException`             |
+| What type of exception does `join()` throw?                       | `CompletionException`            |
+| Can `CompletableFuture` be used with functional programming?      | Yes, supports lambdas and method references |
+| How does `thenAccept()` work in `CompletableFuture`?              | It consumes the result without returning a value |
+| What is `thenCompose()` used for in `CompletableFuture`?          | To chain dependent tasks         |
+| What is a key feature of `CompletableFuture`?                     | Asynchronous non-blocking computation |
+| How do you wait for all tasks to finish in `CompletableFuture`?   | Use `CompletableFuture.allOf()`  |
+| What is the purpose of `exceptionally()` in `CompletableFuture`?  | To handle exceptions             |
+| What does `thenRun()` do in `CompletableFuture`?                  | Runs a task after completion without using the result |
+| What does `thenApply()` return?                                   | A transformed result             |
+| What is a key advantage of `CompletableFuture` over `Future`?     | Non-blocking chaining and combination |
+| How can you block until all futures are complete?                 | Use `get()` on `CompletableFuture.allOf()` |
+
+These flashcards cover the key concepts of `CompletableFuture` as discussed in the document.
+
 The key difference between `CompletableFuture` and `Future` lies in their features and capabilities for handling asynchronous computations in Java. Let's explore these differences and understand when to use each.
 
 ### **1. Future** (`java.util.concurrent.Future`)
