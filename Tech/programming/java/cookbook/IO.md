@@ -1,4 +1,33 @@
 
+flashcards based on the key concepts from the document 
+
+### Flashcards on Java I/O
+
+| **Question**                                                              | **Answer**                                   |
+|---------------------------------------------------------------------------|----------------------------------------------|
+| What is the purpose of `InputStream` in Java?                             | To read bytes of data from an input source   |
+| How does `FileInputStream` work?                                          | It reads bytes from a file                   |
+| What does `BufferedInputStream` do?                                       | Buffers input to provide efficient reading of bytes |
+| What is the difference between `Reader` and `InputStream`?                | `Reader` is for reading characters, `InputStream` is for reading bytes |
+| How does `FileReader` work?                                               | It reads characters from a file              |
+| What is the purpose of `BufferedReader`?                                  | Buffers character input for efficient reading |
+| How do `OutputStream` and `InputStream` differ?                           | `OutputStream` writes data, `InputStream` reads data |
+| What does `FileOutputStream` do?                                          | Writes bytes to a file                       |
+| What is the benefit of using `BufferedOutputStream`?                      | Buffers output to improve performance        |
+| How does `PrintWriter` differ from `FileWriter`?                          | `PrintWriter` provides formatted output capabilities |
+| What is `DataInputStream` used for?                                       | Reads primitive data types from an input stream |
+| How does `ObjectOutputStream` work?                                       | Serializes objects to an output stream       |
+| What does `ObjectInputStream` enable in Java I/O?                         | Deserializes objects from an input stream    |
+| How is `RandomAccessFile` different from other I/O streams?               | It allows reading and writing to a file at any position |
+| What is the purpose of `PipedInputStream` and `PipedOutputStream`?        | To enable communication between threads via I/O |
+| How does `FileChannel` work with I/O?                                     | It provides an efficient way to transfer data between files and buffers |
+| How does `InputStreamReader` work?                                        | Converts byte streams to character streams   |
+| What is the use of `OutputStreamWriter`?                                  | Converts character streams to byte streams   |
+| What does `PrintStream` offer over `OutputStream`?                        | It provides methods for writing formatted data |
+| How does `Scanner` improve file reading in Java?                          | It simplifies reading text by parsing primitive types and strings |
+
+
+
 `Input Stream` : Read data from a source
 
 `Output Stream` : Write data to destination
