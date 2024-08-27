@@ -1,6 +1,25 @@
 
 ### Reading from Application properties file
 
+**flashcards** that capture the key concepts from the document 
+
+### Flashcards on Property Resource Files
+
+| **Question**                                                             | **Answer**                                   |
+|--------------------------------------------------------------------------|----------------------------------------------|
+| What class is typically used to read properties files in Java?            | `java.util.Properties`                       |
+| How do you load a properties file in Java?                                | Use `Properties.load(InputStream)`           |
+| What method is used to retrieve a property's value?                       | `getProperty(String key)`                    |
+| How do you save properties to a file?                                     | `store(OutputStream out, String comments)`   |
+| How can you load a properties file from the classpath?                    | `getClassLoader().getResourceAsStream()`     |
+| How do you handle missing properties files?                               | Check for `null` on the input stream before loading |
+| What method in `Properties` allows setting default values for a property? | `getProperty(String key, String defaultValue)`|
+| What Spring annotation allows injecting properties into fields?           | `@Value`                                    |
+| How do you write properties back to a file?                               | Use `Properties.store()`                     |
+| What exception must be handled when loading properties?                   | `IOException`                               |
+
+These flashcards capture the essence of working with property files in Java, including reading, writing, and handling them effectively.
+
 To read from an `application.properties` file in a Java application, you can use several approaches, depending on your environment and framework. Here are some common methods:
 
 ### 1. **Using Spring Boot's `@Value` Annotation**
