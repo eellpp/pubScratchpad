@@ -1,4 +1,4 @@
-Here are 20 flashcards based on the document about `CompletableFuture`:
+These flashcards cover the key concepts of `CompletableFuture` as discussed in the document.
 
 | **Question**                                                     | **Answer**                       |
 |------------------------------------------------------------------|----------------------------------|
@@ -23,7 +23,7 @@ Here are 20 flashcards based on the document about `CompletableFuture`:
 | What is a key advantage of `CompletableFuture` over `Future`?     | Non-blocking chaining and combination |
 | How can you block until all futures are complete?                 | Use `get()` on `CompletableFuture.allOf()` |
 
-These flashcards cover the key concepts of `CompletableFuture` as discussed in the document.
+
 
 The key difference between `CompletableFuture` and `Future` lies in their features and capabilities for handling asynchronous computations in Java. Let's explore these differences and understand when to use each.
 
