@@ -1,5 +1,35 @@
 ### When to use inner classes in Java for helper classes
 
+flashcards based on key concepts from the document "Nested and Inner Classes" on Java:
+
+### Flashcards on Nested and Inner Classes
+
+| **Question**                                                             | **Answer**                                   |
+|--------------------------------------------------------------------------|----------------------------------------------|
+| What is an inner class in Java?                                           | A class defined within another class.        |
+| What is the main advantage of using an inner class?                       | It logically groups classes that are used only in one place. |
+| What is a nested class in Java?                                           | A static inner class that does not have access to the outer class’s instance variables. |
+| How does a nested class differ from a regular inner class?                | A nested class is static, while a regular inner class is non-static and associated with an instance of the outer class. |
+| What is a use case for a static nested class?                             | When the nested class doesn’t require access to the instance fields of the outer class. |
+| Can a static nested class access the instance variables of the outer class? | No, it can only access static variables of the outer class. |
+| What is a local inner class?                                              | A class defined within a method of the outer class. |
+| What is an anonymous inner class?                                         | An inner class without a name, often used for implementing interfaces or extending classes on the fly. |
+| How does an anonymous inner class differ from other inner classes?        | It is unnamed and declared and instantiated at the same time. |
+| What is a common use case for anonymous inner classes?                    | Event handling in GUI applications.          |
+| What access level does a nested class have to the outer class’s static fields? | Full access to static fields and methods.    |
+| Can a local inner class access the local variables of the method it is in? | Yes, but only if they are final or effectively final. |
+| What keyword is used to instantiate an inner class from within the outer class? | `new` with an instance of the outer class.   |
+| What is the benefit of using a local inner class?                         | It keeps the scope of the class limited to a specific method. |
+| Can an inner class have static members?                                   | No, except for static constants.             |
+| How do you create an instance of a nested static class?                   | Using `OuterClass.NestedClass instance = new OuterClass.NestedClass();`. |
+| What is a common use case for static nested classes?                      | Helper classes that are used by the outer class but don't require access to its instance data. |
+| How does encapsulation improve by using inner classes?                    | It hides the inner class from other classes outside the outer class, maintaining a clear separation of concerns. |
+| What keyword is used to access the outer class from an inner class?       | `OuterClass.this`                            |
+| How does Java prevent memory leaks when using inner classes?              | It ensures that inner classes hold an implicit reference to the outer class, making garbage collection of both objects easier. |
+
+These flashcards cover the key concepts of nested and inner classes in Java, explaining when and how to use them effectively.
+
+
 You can use inner classes in Java for helper classes when you want to logically group classes that are only used in one place. They can help encapsulate helper functionality that is specific to an outer class while keeping related code organized and hidden from external access. Here are some scenarios when inner classes are useful:
 
 ### When to Use Inner Classes for Helper Classes:
