@@ -1,3 +1,29 @@
+flashcards based on the key concepts from the document "
+
+| **Question**                                                                 | **Answer**                                   |
+|------------------------------------------------------------------------------|----------------------------------------------|
+| What is `AtomicReference` used for in Java?                                   | Atomic updates to a reference variable       |
+| How does `AtomicReference` perform updates?                                  | Non-blocking and lock-free                   |
+| Which package does `AtomicReference` belong to?                              | `java.util.concurrent.atomic`                |
+| What method is commonly used to update an `AtomicReference` atomically?      | `compareAndSet()`                            |
+| What is the main characteristic of a synchronized method in Java?            | Blocking, only one thread can execute at a time |
+| How does synchronized handle concurrency?                                    | By using intrinsic locks (monitors)          |
+| In what scenario is `AtomicReference` preferred over synchronized?           | When frequent atomic updates are required and performance is critical |
+| When is synchronized preferred over `AtomicReference`?                       | For complex atomic operations across multiple variables |
+| What is the primary advantage of `AtomicReference` over synchronized?        | Better performance in high-concurrency environments |
+| What is the main drawback of synchronized blocks?                            | Higher overhead due to blocking and context switching |
+| Which method in `AtomicReference` checks and updates a reference atomically? | `compareAndSet()`                            |
+| Why is synchronized considered coarser than `AtomicReference`?               | It locks larger sections of code or methods  |
+| What method is used in synchronized blocks to lock critical sections?        | The `synchronized` keyword                   |
+| What kind of operation does `AtomicReference` handle well?                   | Single variable updates                      |
+| Which approach is more suitable for updating multiple variables atomically?  | Synchronized                                 |
+| How does `AtomicReference` improve scalability?                              | By avoiding locks, allowing more parallelism |
+| What scenario is ideal for using synchronized?                               | When complex logic needs to be executed atomically |
+| How does synchronized affect thread performance in high-contention scenarios?| It can reduce performance due to lock contention |
+| What does `synchronized` ensure in multi-threaded environments?              | Exclusive access to critical sections        |
+| What CPU feature does `AtomicReference` leverage for its operations?         | Low-level atomic operations                  |
+
+
 In Java, `AtomicReference` and a synchronized method are two approaches to safely handle concurrent updates in a multithreaded environment. Here are the differences:
 
 ### **1. AtomicReference**
