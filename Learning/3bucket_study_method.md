@@ -7,7 +7,41 @@ Suggested proportion of time allocation in table format based on the 3-bucket st
 | **What You Don't Know You Don't Know**      | 20%                    | Explore new topics and ideas to uncover unknowns and broaden your knowledge.    |
 
 
-Here’s the generalized version of the study method in table format that can apply to any subject:
+
+### Symptoms when spending too little time on  **What You Know**
+When you spend too much time on "What You Don’t Know You Don’t Know" and "What You Don’t Know," you might notice:
+
+1. **Overwhelm and Confusion:** Struggling to connect new information with what you already know.
+2. **Lack of Progress:** Feeling stuck or not seeing improvement in your core skills.
+3. **Diminished Confidence:** Uncertainty about what you actually understand.
+4. **Neglecting Basics:** Overlooking foundational concepts or skills you thought were solid.
+
+These symptoms can signal it's time to refocus on reinforcing "What You Know" to stay balanced and make consistent progress.
+
+
+### Symptoms when spending too little time on  **What You Don't Know**
+When you spend too much time on "What You Know" and "What You Don’t Know You Don’t Know" compared to "What You Don’t Know," you might notice:
+
+1. **Surface-Level Understanding:** You may feel confident but struggle with deeper, practical application or problem-solving.
+2. **Avoidance of Difficult Topics:** You might unconsciously skip over challenging areas that require effort to understand.
+3. **Plateau in Learning:** You experience little to no improvement in core competencies that need attention.
+
+These symptoms suggest it's time to focus on addressing the gaps in "What You Don’t Know" to ensure balanced growth.
+
+
+### Symptoms when spending too little time on  **What You Don't Know You Don't Know**
+When you spend too much time on "What You Know" and "What You Don’t Know" compared to "What You Don’t Know You Don’t Know," you might notice:
+
+1. **Stagnation in Creativity:** You feel like you’re not coming up with new ideas or perspectives.
+2. **Overconfidence:** You become overly comfortable with what you already know, leading to a false sense of mastery.
+3. **Resistance to New Challenges:** You avoid unfamiliar areas, sticking to safe, known topics.
+4. **Missed Opportunities:** You fail to explore new concepts, missing potential growth areas.
+
+These signs indicate it might be time to venture into new, unexplored territory to keep learning dynamic and evolving.
+
+
+
+## Generalized version of the study method in table format that can apply to any subject
 
 
 | **Concept**                              | **Study Strategy**                                                                 | **Example Application**                                                                                     |
