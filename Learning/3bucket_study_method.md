@@ -1,4 +1,14 @@
+Suggested proportion of time allocation in table format based on the 3-bucket study method:
+
+| **Study Category**                          | **Proportion of Time** | **Description**                                                                 |
+|---------------------------------------------|------------------------|---------------------------------------------------------------------------------|
+| **What You Know**                           | 50%                    | Review and reinforce material you are confident about.                          |
+| **What You Don't Know**                     | 30%                    | Focus on understanding and improving areas where you have knowledge gaps.       |
+| **What You Don't Know You Don't Know**      | 20%                    | Explore new topics and ideas to uncover unknowns and broaden your knowledge.    |
+
+
 Here’s the generalized version of the study method in table format that can apply to any subject:
+
 
 | **Concept**                              | **Study Strategy**                                                                 | **Example Application**                                                                                     |
 |-------------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
