@@ -2,9 +2,9 @@ The Visitor pattern is a behavioral design pattern that allows you to add furthe
 
 ### Key Concepts:
 - **Visitor**: An interface or abstract class that declares a visit method for each type of concrete element in the object structure.
-- **Concrete Visitor**: Implements the operations defined in the Visitor interface for each type of element in the object structure.
+    - **Concrete Visitor**: Implements the operations defined in the Visitor interface for each type of element in the object structure.
 - **Element**: An interface or abstract class that declares an `accept` method, which accepts a visitor.
-- **Concrete Element**: Implements the `accept` method, which calls the appropriate method on the visitor to process itself.
+    - **Concrete Element**: Implements the `accept` method, which calls the appropriate method on the visitor to process itself.
 
 ### How It Works:
 1. **Elements (Concrete Elements)** know how to accept a visitor.
