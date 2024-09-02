@@ -6,6 +6,21 @@ The Visitor pattern is a behavioral design pattern that allows you to add furthe
 - **Element**: An interface or abstract class that declares an `accept` method, which accepts a visitor.
     - **Concrete Element**: Implements the `accept` method, which calls the appropriate method on the visitor to process itself.
 
+Elements are stuff like Circle/Triangle/Square etc. Visitors are operations like  Area/Circumferance computation etc.   
+Once you have the elements defined. Addition of new operations does not required changing the Element class or existing other visitoors.   
+However adding a new element requires adding the element specific operation in all existing visitor.   
+
+Visitor pattern choice is a tradeoff. 
+**Appropriate Siutation** :  
+- When you have a stable elment structure, and the operations on that structure are expected to change or expand frequently. Like circle/Square etc are limited. But operations on it will keep changing
+- When you need to perform complex, multi-step operations across a set of elements of different types.
+- When operations need to be applied uniformly across a collection of elements, and you want to centralize that logic.
+
+**Inappropriate Situations**:
+- When your object structure is likely to change frequently, requiring the addition of new element types.
+- When the operations on your objects are relatively simple, and the added complexity of the Visitor pattern is unnecessary.
+- When you need to preserve strict encapsulation, and the visitor’s need to access the internals of elements is a concern.
+
 ### How It Works:
 1. **Elements (Concrete Elements)** know how to accept a visitor.
 2. **Visitor (Concrete Visitor)** knows how to perform operations on each element.
@@ -349,3 +364,38 @@ Tax on Grocery: $3.0
 
 ### Summary:
 In this example, the Visitor pattern allows you to add new operations (like calculating discounts and taxes) without modifying the `Product` classes. This makes the system easier to extend and maintain, as you can add new operations by creating new visitors rather than altering the product classes themselves. This is especially useful in systems that need to perform various operations on objects that belong to different classes and where those operations are subject to change or expansion over time.
+
+
+Yes, the Visitor pattern involves trade-offs, as with any design pattern. While it provides significant benefits in certain contexts, it also comes with potential drawbacks that you need to consider. Understanding these trade-offs helps you make an informed decision on whether the Visitor pattern is the right choice for your situation.
+
+## **Advantages of the Visitor Pattern:**
+1. **Separation of Concerns**:
+   - The Visitor pattern allows you to separate operations from the object structure. This can lead to cleaner, more maintainable code, as it keeps algorithms separate from the objects on which they operate.
+
+2. **Ease of Adding New Operations**:
+   - If you need to add new operations on a set of objects, you can do so by creating new visitor classes. This avoids modifying existing classes, which adheres to the Open/Closed Principle (OCP) of SOLID.
+
+3. **Centralized Behavior**:
+   - Operations are centralized in visitor classes rather than being scattered across multiple object classes. This centralization can make it easier to understand and manage complex operations.
+
+4. **Works Well with Complex Object Structures**:
+   - The Visitor pattern is particularly useful when dealing with complex object structures, like trees or composite patterns, where you need to perform operations across different types of objects.
+
+### **Disadvantages of the Visitor Pattern:**
+1. **Difficulty Adding New Element Types**:
+   - If you need to add new element types (new classes that accept visitors), you must modify the `Visitor` interface and all of its implementations to accommodate the new type. This violates the Open/Closed Principle (OCP) concerning adding new element types and can make the system harder to maintain.
+
+2. **Increased Complexity**:
+   - The Visitor pattern introduces additional classes and interfaces, which can increase the overall complexity of the system. This complexity might not be justified if the operations or object structure are simple.
+
+3. **Tight Coupling Between Visitor and Element**:
+   - The Visitor pattern creates tight coupling between the visitor and the elements it visits. The visitor must know about the different types of elements, which can reduce flexibility if the object structure changes frequently.
+
+4. **Breaking Encapsulation**:
+   - Visitors may require access to the internal state of elements to perform operations. This can lead to breaking the encapsulation of the element classes, as the visitor needs to know and interact with their internal details.
+
+
+### **Conclusion:**
+The Visitor pattern is a powerful tool, particularly in scenarios where you have a complex object structure and need to perform multiple, unrelated operations on those objects. However, it comes with trade-offs, particularly concerning the ease of adding new element types and potential increases in system complexity. 
+
+Before implementing the Visitor pattern, carefully consider the nature of your system and whether the benefits of the pattern outweigh its drawbacks in your specific case.
