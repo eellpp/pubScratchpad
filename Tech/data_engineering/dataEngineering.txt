@@ -1,8 +1,0 @@
-Data Analytics with Hadoop: An Introduction for Data Scientists
-Learning Spark: Lightning-Fast Big Data Analysis
-Kafka: The Definitive Guide: Real-time data and stream processing at scale 
-Streaming Data: Understanding the real-time pipeline
-Building Real-Time Data Pipelines with Spark Streaming, Kafka, and Cassandra
-
-
-https://blog.treasuredata.com/blog/2016/03/15/self-study-list-for-data-engineers-and-aspiring-data-architects/
