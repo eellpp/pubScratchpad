@@ -3,7 +3,7 @@ Immutability is a fundamental concept that plays a significant role in software 
 
 To make a Java collection immutable, you can use several approaches depending on the specific needs of your application. Here are a few common methods:
 
-### 1. Using `Collections.unmodifiable*` Methods
+### 1. Using `Collections.unmodifiable` Methods
 Java provides utility methods in the `Collections` class to create immutable views of collections:
 
 - **List**: `Collections.unmodifiableList(list)`
