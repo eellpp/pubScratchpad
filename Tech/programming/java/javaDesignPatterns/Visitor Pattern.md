@@ -400,3 +400,98 @@ Yes, the Visitor pattern involves trade-offs, as with any design pattern. While 
 The Visitor pattern is a powerful tool, particularly in scenarios where you have a complex object structure and need to perform multiple, unrelated operations on those objects. However, it comes with trade-offs, particularly concerning the ease of adding new element types and potential increases in system complexity. 
 
 Before implementing the Visitor pattern, carefully consider the nature of your system and whether the benefits of the pattern outweigh its drawbacks in your specific case.
+
+## Example of Visitor pattern used for simple predicate operations on Map object
+
+ The Visitor pattern can be used to apply predicate logic (such as `=`, `OR`, `AND`, `!=`) on a data structure like a `HashMap`. The idea is to represent the different operations as visitor classes that can be applied to the data stored in the `HashMap`. Here’s a brief explanation of how this might be structured:
+
+### 1. **Define the Visitor Interface**
+First, define a `PredicateVisitor` interface that declares methods for each type of operation (`equals`, `and`, `or`, `notEquals`).
+
+```java
+interface PredicateVisitor {
+    boolean visitEquals(String key, Object value);
+    boolean visitNotEquals(String key, Object value);
+    boolean visitAnd(PredicateVisitor left, PredicateVisitor right);
+    boolean visitOr(PredicateVisitor left, PredicateVisitor right);
+}
+```
+
+### 2. **Implement Concrete Visitors**
+Next, implement concrete visitors for each operation. These visitors will apply the predicate logic to the data in the `HashMap`.
+
+```java
+class EqualsVisitor implements PredicateVisitor {
+    private HashMap<String, Object> data;
+
+    public EqualsVisitor(HashMap<String, Object> data) {
+        this.data = data;
+    }
+
+    @Override
+    public boolean visitEquals(String key, Object value) {
+        return data.containsKey(key) && data.get(key).equals(value);
+    }
+
+    @Override
+    public boolean visitNotEquals(String key, Object value) {
+        return data.containsKey(key) && !data.get(key).equals(value);
+    }
+
+    @Override
+    public boolean visitAnd(PredicateVisitor left, PredicateVisitor right) {
+        return left.visitEquals(key, value) && right.visitEquals(key, value);
+    }
+
+    @Override
+    public boolean visitOr(PredicateVisitor left, PredicateVisitor right) {
+        return left.visitEquals(key, value) || right.visitEquals(key, value);
+    }
+}
+```
+
+### 3. **Use the Visitor to Apply Predicates**
+You can now use the visitor to apply predicates on the `HashMap`. 
+
+Example:
+```java
+public class VisitorPatternPredicateDemo {
+    public static void main(String[] args) {
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("name", "Alice");
+        data.put("age", 25);
+
+        PredicateVisitor equalsVisitor = new EqualsVisitor(data);
+
+        // Apply a simple equals predicate
+        boolean result = equalsVisitor.visitEquals("name", "Alice");
+        System.out.println("Name equals Alice: " + result); // true
+
+        // Apply a not equals predicate
+        result = equalsVisitor.visitNotEquals("age", 30);
+        System.out.println("Age not equals 30: " + result); // true
+
+        // Apply an AND predicate
+        result = equalsVisitor.visitAnd(
+            new EqualsVisitor(data).visitEquals("name", "Alice"),
+            new EqualsVisitor(data).visitEquals("age", 25)
+        );
+        System.out.println("Name equals Alice AND age equals 25: " + result); // true
+
+        // Apply an OR predicate
+        result = equalsVisitor.visitOr(
+            new EqualsVisitor(data).visitEquals("name", "Alice"),
+            new EqualsVisitor(data).visitEquals("age", 30)
+        );
+        System.out.println("Name equals Alice OR age equals 30: " + result); // true
+    }
+}
+```
+
+### Explanation:
+- **EqualsVisitor**: Implements logic for `visitEquals` and `visitNotEquals` by checking if the value in the `HashMap` matches the expected value.
+- **visitAnd** and **visitOr**: Combine multiple visitors to perform compound logic operations like `AND` and `OR`.
+- **Usage**: The visitors are applied to the `HashMap`, allowing you to evaluate complex predicate logic on the data.
+
+### Summary:
+The Visitor pattern in this context helps separate the logic of predicate evaluation from the data structure (`HashMap`). By using different visitors, you can encapsulate different types of predicate logic (`=`, `!=`, `AND`, `OR`) and apply them in a flexible and extendable way.
