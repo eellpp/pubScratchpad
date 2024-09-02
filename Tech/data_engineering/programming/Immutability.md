@@ -73,6 +73,7 @@ If you need an immutable collection of fixed elements, consider using Java Recor
 
 Each approach has its use cases. The choice depends on your specific needs regarding immutability, performance, and compatibility with the rest of your codebase.
 
+## Why use immutable collections 
 Immutable collections are valuable in various real-life scenarios, particularly where thread safety, security, and stability are critical. Here are some common use cases in applications where immutable collections should be used:
 
 ### 1. **Concurrency and Thread Safety**
