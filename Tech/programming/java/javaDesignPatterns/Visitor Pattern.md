@@ -10,7 +10,8 @@ Elements are stuff like Circle/Triangle/Square etc. Visitors are operations like
 Once you have the elements defined. Addition of new operations does not required changing the Element class or existing other visitoors.   
 However adding a new element requires adding the element specific operation in all existing visitor.   
 
-Visitor pattern choice is a tradeoff. 
+### Visitor pattern choice is a tradeoff. When to use
+
 **Appropriate Siutation** :  
 - When you have a stable elment structure, and the operations on that structure are expected to change or expand frequently. Like circle/Square etc are limited. But operations on it will keep changing
 - When you need to perform complex, multi-step operations across a set of elements of different types.
