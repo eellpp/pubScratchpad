@@ -50,7 +50,7 @@ The man’s journey reflects a deeper truth about life: we often pursue skills a
 
 The goal of society is to achieve the well being of its people. To achieve it goals, it provides incentive like rewards , accolades , recognition for getting mastery in skills.  It then rewards people to keep pursuing and better these skills. If the society comes to conclusion that mans goal are not aligned to its goals, then it can even conspire to hide the mans goal from him in subtle ways. Since it wants to not loose a skilled person when he has achieved a personal goal. The confounding fact is the society is made of men. However men are at different stages of their journey in the society. So collectively they may take decision which may eventually be against them. 
 
-Your insight into the tension between individual goals and societal expectations raises an important question about how individuals can protect their personal journey and avoid being swept into **societal traps** that might ultimately derail their true goals. Society often promotes external markers of success—such as accolades, recognition, and rewards—that can subtly lure individuals away from their personal sense of purpose. This dynamic becomes even more complex because **society is made up of individuals**, many of whom are at different stages of their own personal journey, and may inadvertently make decisions that serve short-term societal needs at the expense of individual fulfillment.
+The tension between individual goals and societal expectations raises an important question about how individuals can protect their personal journey and avoid being swept into **societal traps** that might ultimately derail their true goals. Society often promotes external markers of success—such as accolades, recognition, and rewards—that can subtly lure individuals away from their personal sense of purpose. This dynamic becomes even more complex because **society is made up of individuals**, many of whom are at different stages of their own personal journey, and may inadvertently make decisions that serve short-term societal needs at the expense of individual fulfillment.
 
 To guard against this, individuals need to be mindful of how **societal pressures** can shape their choices and distract them from their personal goals. Here are some **guardrails** that individuals can put in place to protect their alignment with their true purpose:
 
@@ -143,7 +143,7 @@ These individuals exemplify a way of living that is guided by **personal values,
 For individuals today, these stories serve as a reminder that **authentic living** often means resisting the lure of societal recognition and instead focusing on what **deeply matters** to you. Whether through art, philosophy, or social activism, staying connected to your internal sense of purpose is what leads to true fulfillment.
 
 ### More People
-Based on your refined criteria—people who are solving **personal intellectual or creative issues** (not social causes) that indirectly help society at large, are well-known primarily by experts in their domain, and do not care about their status—here’s a further filtered list of individuals from the **past 70 years** who align with these characteristics:
+people who are solving **personal intellectual or creative issues** (not social causes) that indirectly help society at large, are well-known primarily by experts in their domain, and do not care about their status
 
 ### 1. **Grigori Perelman (Born 1966)**
    - **Why He Fits**: Grigori Perelman is a Russian mathematician who solved the **Poincaré conjecture**, one of the most famous and longstanding problems in mathematics. His work was purely driven by his **personal intellectual challenge**, and despite the global recognition his solution attracted, Perelman rejected the **Fields Medal** and the million-dollar **Clay Millennium Prize**. He **shunned fame** and retreated from public life, uninterested in status or recognition. His focus was on the intellectual problem, and he cared little about the broader acclaim.
@@ -176,7 +176,7 @@ Based on your refined criteria—people who are solving **personal intellectual 
 The individuals who best fit your refined criteria—**Grigori Perelman, Andrew Wiles, Terence Tao, John McCarthy**, and **Srinivasa Ramanujan**—are those whose life work was focused on solving **personal intellectual challenges** rather than social causes or broader recognition. They made significant contributions that benefited society, but their motivation was primarily their **own pursuit of knowledge** and **intellectual satisfaction**. They are known primarily by experts within their fields and remain, or remained, unconcerned with fame or status. Their success and impact on society were **incidental** to their personal goals.
 
 ## More People
-Yes, while many individuals in the **science and mathematics domain** fit the criteria, there are also people from **other fields**—such as **art, literature, philosophy, and music**—who have similarly pursued deeply **personal intellectual or creative goals**, often shunning fame and external recognition. Here are some individuals from **non-scientific domains** who fit your refined criteria:
+People from **other fields**—such as **art, literature, philosophy, and music**—who have similarly pursued deeply **personal intellectual or creative goals**, often shunning fame and external recognition. Here are some individuals from **non-scientific domains** 
 
 ### 1. **C.D. Wright (1949–2016)**
    - **Domain**: **Poetry**
@@ -220,7 +220,7 @@ Yes, while many individuals in the **science and mathematics domain** fit the cr
 These individuals from **non-scientific domains**—**C.D. Wright, Glenn Gould, J.D. Salinger, Thomas Pynchon, Paul Cézanne**, and **Leonora Carrington**—fit your criteria of those who were **not seeking fame**, were primarily **focused on solving their personal intellectual or creative challenges**, and became known primarily by **experts within their fields**. While their work has had a profound impact on society, their motivation was always **personal fulfillment** or **intellectual exploration**, rather than a desire for fame, status, or societal recognition.
 
 ## More People from Asia
-Yes, there are notable individuals from **Asia** who fit the criteria of being driven by **personal intellectual or creative goals**, **not seeking fame or status**, and who became known primarily within their fields or by experts, but not by the general public. Here are a few examples:
+Notable individuals from **Asia** who fit the criteria of being driven by **personal intellectual or creative goals**, **not seeking fame or status**, and who became known primarily within their fields or by experts, but not by the general public. Here are a few examples:
 
 ### 1. **Ko Un (Born 1933)**
    - **Domain**: **Poetry**
