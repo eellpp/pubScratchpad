@@ -1,7 +1,6 @@
 
 ```javascript
 const eellpp = {
-    pronouns: "He" | "Him",
     code: ["Python", "Java","R","C","bash"],
     askMeAbout: ["Big Data", "hadoop", "distributed systems", "data science"],
     technologies: {
