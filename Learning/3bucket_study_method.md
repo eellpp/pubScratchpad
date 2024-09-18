@@ -1,14 +1,14 @@
 Three Buckets of knowledge 
-1. **K**
-2. **DK**
-3. **DKDK**
+1. **Know** : Review and Reinforce Time
+2. **Know Don't Know** : Study and Understand Time
+3. **Don'tKDK** : Scout Time
 
 Suggested proportion of time allocation in table format based on the 3-bucket study method:
 
 | **Study Category**                          | **Proportion of Time** | **Description**                                                                 |
 |---------------------------------------------|------------------------|---------------------------------------------------------------------------------|
 | **What You Know**  [K]                         | 50%                    | Review and reinforce material you are confident about.                          |
-| **What You Don't Know**    [DK]                 | 30%                    | Focus on understanding and improving areas where you have knowledge gaps.       |
+| **What Know You Don't Know**    [KDK]                 | 30%                    | Focus on understanding and improving areas where you have knowledge gaps.       |
 | **What You Don't Know You Don't Know** [DKDK]      | 20%                    | Explore new topics and ideas to uncover unknowns and broaden your knowledge.    |
 
 
