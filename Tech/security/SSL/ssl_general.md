@@ -1,4 +1,4 @@
-SSL Authentication (TLS Authentication):   
+**SSL Authentication (TLS Authentication)**:   
 SSL (Secure Sockets Layer) is a cryptographic protocol used to secure communication between a client and a server over the internet. Its successor is TLS (Transport Layer Security), which is commonly referred to as TLS/SSL. SSL/TLS authentication is commonly used in HTTPS connections to authenticate the server and, in some cases, the client.
 
 1) Server Authentication: When a client connects to a server using SSL/TLS, the server presents a digital certificate containing its public key. The client validates this certificate using a trust chain to ensure the server's authenticity. If the validation is successful, the client knows it is communicating with the intended server and establishes a secure connection.
