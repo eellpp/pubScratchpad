@@ -73,6 +73,34 @@
        }
    }
    ```
+same using non nested class for comparison 
+```java
+class OuterClass {
+    void performTask() {
+        // Creating a new instance of the inner class and starting a thread
+        TaskRunner task = new TaskRunner();
+        new Thread(task).start();
+    }
+
+    // Separate inner class implementing Runnable
+    class TaskRunner implements Runnable {
+        @Override
+        public void run() {
+            System.out.println("Task performed by inner class");
+        }
+    }
+
+}
+```
+shortened with lambda
+```java
+class OuterClass {
+    void performTask() {
+        // Using a lambda expression instead of an anonymous class
+        new Thread(() -> System.out.println("Task performed")).start();
+    }
+}
+```
 
 ### Summary: When to Use Inner Classes for Helper Classes
 - **Use Non-static Inner Classes**: When the helper class needs direct access to the instance fields and methods of the outer class, and it logically belongs within the outer class’s context.
