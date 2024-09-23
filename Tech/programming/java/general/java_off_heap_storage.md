@@ -26,3 +26,19 @@ This model reduces memory fragmentation and makes off-heap memory highly efficie
 
 In summary, Hazelcast’s off-heap memory architecture is managed internally, leveraging **Java’s Unsafe class** for direct memory access and avoiding garbage collection-related issues. This is particularly useful for managing large, in-memory datasets efficiently in distributed environments.
 
+### Other popular cache application 
+several popular open-source Java packages use the **`Unsafe` class** for cache management and other memory-intensive operations. A few notable ones include:
+
+1. **Caffeine Cache**:
+   - **Caffeine** is a high-performance Java caching library that provides near-optimal hit rates. It uses the `Unsafe` class for **off-heap memory access** in some configurations, particularly for cache eviction policies that rely on precise memory management.
+   - GitHub: [Caffeine Cache](https://github.com/ben-manes/caffeine)
+
+2. **Apache Ignite**:
+   - **Apache Ignite** is an in-memory data grid that uses `Unsafe` for direct memory access in its **off-heap caching** capabilities. This allows it to store large datasets in memory without putting pressure on the JVM's garbage collector.
+   - GitHub: [Apache Ignite](https://github.com/apache/ignite)
+
+3. **Chronicle Map**:
+   - **Chronicle Map** is an open-source library that provides key-value stores capable of off-heap memory access using the `Unsafe` class. It allows data to be stored directly in memory outside the JVM, making it highly efficient for large-scale caching.
+   - GitHub: [Chronicle Map](https://github.com/OpenHFT/Chronicle-Map)
+
+These libraries leverage Java’s `Unsafe` class for improved performance in memory-intensive operations, especially when handling large-scale, high-performance cache scenarios.
