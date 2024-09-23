@@ -1,4 +1,4 @@
-Here is a comprehensive list of commonly reported **Apache Kafka issues** from the **Confluent community forum** in a **table format**, along with descriptions and potential causes:
+list of commonly reported **Apache Kafka issues** 
 
 | **Issue**                          | **Description**                                                                 | **Possible Causes**                                                                                                                                                 | **Source**                                |
 |------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|
