@@ -73,3 +73,7 @@ These flashcards cover a comprehensive range of design patterns, including creat
 #### References
 https://sourcemaking.com/design_patterns
 
+### Java repo of example patterns
+https://github.com/atanubhowmick/design-pattern-project/tree/main
+
+If there is an object-oriented design interview, then as part of system design there should be some discussion on the design patterns
