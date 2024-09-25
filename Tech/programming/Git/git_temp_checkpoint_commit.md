@@ -31,7 +31,7 @@ Here’s how you can achieve this:
    ```
 
   if you don't know the base-commit 
-  - Use >> `git log -n 10` to see last 10 commits . And then pick the base commit
+  - Use >> `git log --oneline -n 10` to see last 10 commits . And then pick the base commit
   - Use >> `git merge-base <current-branch> master` . This will show the commit from which branch diverged. 
 
 3. **Squash or Edit Commits**:
