@@ -31,8 +31,8 @@ Here’s how you can achieve this:
    ```
 
   if you don't know the base-commit 
-  1. Use >> `git log -n 10` to see last 10 commits . And then pick the base commit 
-  2. Use >> `git merge-base <current-branch> master` . This will show the commit from which branch diverged. 
+  - Use >> `git log -n 10` to see last 10 commits . And then pick the base commit
+  - Use >> `git merge-base <current-branch> master` . This will show the commit from which branch diverged. 
 
 3. **Squash or Edit Commits**:
    - To **combine (squash)** all the quick commits into one, change the command from `pick` to `squash` (or simply `s`) on the lines with the commits you want to combine.
