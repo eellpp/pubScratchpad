@@ -29,7 +29,7 @@ See also: #456
 - **Body**: Provides detailed explanation of what was changed and why, with a focus on explaining the problem (500 error) and the solution (correct error handling).
 - **References**: Includes issue tracking references (`Resolves: #123`), which are placed at the bottom of the commit message.
 
-### Use temp checkpoint commit in local branch and squash later to a good commit
+### Use Temp checkpoint commit in local branch and squash later to a good commit
 Refer to the steps for creating a branch and write checkpoint quick commits while developing in local   
 When completed and pushing to branch write multine good commit and squash off the earlier checkpointing commits   
 https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/Git/git_temp_checkpoint_commit.md
