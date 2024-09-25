@@ -29,6 +29,12 @@ See also: #456
 - **Body**: Provides detailed explanation of what was changed and why, with a focus on explaining the problem (500 error) and the solution (correct error handling).
 - **References**: Includes issue tracking references (`Resolves: #123`), which are placed at the bottom of the commit message.
 
+### Use temp checkpoint commit in local branch and squash later to a good commit
+Refer to the steps for creating a branch and write checkpoint quick commits while developing in local   
+When completed and pushing to branch write multine good commit and squash off the earlier checkpointing commits   
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/Git/git_temp_checkpoint_commit.md
+
+
 ### Git Commit Messages
 
 * Use the present tense ("Add feature" not "Added feature")
@@ -116,3 +122,5 @@ Taking the time to rebase, cleanup, and explain your changes in detail will pay 
 https://chris.beams.io/posts/git-commit/   
 https://github.com/ietf-tools/.github/blob/main/CONTRIBUTING.md#git-commit-messages   
 https://www.conventionalcommits.org/en/v1.0.0/#summary  
+https://git-scm.com/docs/git-commit#_discussion  
+
