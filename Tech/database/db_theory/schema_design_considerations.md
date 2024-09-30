@@ -1,5 +1,10 @@
 Here’s a table summarizing the database and schema design considerations for various scenarios like **high concurrency**, **low latency**, **high write throughput**, and others:
 
+
+- tables are denormalized for high concurrency or very low latency
+- tables are normalized to rich queries, fast edits and low maintainance. 
+
+
 | **Scenario**                         | **Requirements**                                                                                                                                   | **Design Considerations**                                                                                                                                                                                                                                                             | **Suitable Databases**                                                                                     |
 |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | **High Concurrency** (Multiple concurrent read/write) | - Multiple simultaneous read/write operations. <br> - Minimize contention and lock management.                                                      | - **Optimistic Concurrency Control (OCC):** Use versioning or timestamps to handle conflicts. <br> - **Partitioning/Sharding:** Horizontal scaling across partitions/shards to distribute load. <br> - **Light Indexing:** Avoid over-indexing to minimize lock contention.            | - **Cassandra**, **MongoDB**, **DynamoDB** (NoSQL for high concurrency). <br> - **PostgreSQL**, **MySQL** with sharding/partitioning for SQL-based systems.  |
