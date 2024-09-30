@@ -18,6 +18,12 @@ With denormalization, multiple copies of the same data exist in different places
 
 Denormalized databases require extra logic to ensure data consistency during updates, which increases maintenance complexity. In OLAP systems, which often involve frequent data loads (ETL processes), this can complicate the process of keeping the data updated.
 
+Consider this example: On the left, we have a customer table, and on the right, an order table. Both tables contain a 'customer ID' that serves as the JOIN key. Suppose a data engineer wishes to create a dashboard without performing a join operation due to database limitations. The engineer might denormalize the tables into a single, flat table based on the 'customer ID'.
+
+However, if a requirement arises to mask customer names for security reasons, it introduces complications. The data engineer would have to modify the source tables, reconfigure the data pipeline, and backfill the entire 'customer name' column on the flat table. A seemingly simple change becomes quite complicated due to denormalization.
+
+Denormalization essentially locks data into a single view, reducing flexibility to adapt to business changes. Consider the scale: even if the customer table has hundreds of thousands of entries, the order table could have billions. Backfilling such extensive data is more costly than it appears at first glance.
+
 - **Problem:** When data changes (such as an update to a customer’s information), multiple locations in the denormalized structure must be updated simultaneously. This creates maintenance overhead and potential for errors.
 - **Consequence:** Increased likelihood of data anomalies and a higher burden on developers and database administrators to maintain data integrity across the system.
 
@@ -31,6 +37,9 @@ Denormalization can improve read performance but at the expense of write operati
 ### 5. **Difficulty in Handling Changes in Business Logic**
 
 Denormalized structures are less flexible when changes to business logic or requirements occur. Since data is duplicated across multiple places, changing one part of the structure often requires changing other parts to maintain consistency.
+
+Denormalization makes analytics rigid and less adaptable to business changes. Moreover, it adds complexity, especially in real-time data analytics.
+
 
 - **Problem:** Modifying a denormalized schema or updating how data is structured for new business needs can be complex and error-prone due to the interconnectedness of redundant data.
 - **Consequence:** Making schema or business logic changes becomes more challenging, requiring significant effort to ensure all redundant data is updated correctly.
