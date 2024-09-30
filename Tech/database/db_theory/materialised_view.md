@@ -110,7 +110,7 @@ You can refresh the materialized view periodically (e.g., daily) to keep the dat
 
 A **materialized view** is a powerful tool for improving the performance of read-heavy analytical queries by storing the precomputed results of complex queries. It reduces the need for real-time computation of expensive queries but requires careful management of refresh schedules and storage. They are especially useful in scenarios like reporting, data warehousing, and preaggregating large datasets for faster querying.
 
-## **materialized view** VS  **precomputed joins and aggregations**
+# **Materialized view** VS  **Precomputed joins and aggregations**
 
 A **materialized view** is related to **precomputed joins and aggregations**, but they are not exactly the same. Let’s break down the similarities and differences:
 
