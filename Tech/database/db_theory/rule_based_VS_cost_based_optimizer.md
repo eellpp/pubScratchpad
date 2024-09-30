@@ -115,3 +115,133 @@ The **Rule-Based Optimizer (RBO)** and **Cost-Based Optimizer (CBO)** are two di
 ### **Conclusion:**
 - **Rule-Based Optimizers** are simple, fast, and work well for small databases with predictable queries. However, they are not scalable and don’t adapt to the data, making them less suitable for modern, complex databases.
 - **Cost-Based Optimizers** are much more advanced and data-driven, making them ideal for large-scale databases with complex workloads. Although they introduce overhead and depend on accurate statistics, their ability to optimize complex queries dynamically based on data characteristics makes them the preferred choice for most modern databases.
+
+
+# Popular Big Data solutions using Rule based optimizer and why
+In the context of **big data**, databases can handle massive amounts of data with distributed architectures, often relying on **parallel processing** and **horizontal scalability**. Some databases, even at this scale, use **Rule-Based Optimizers (RBO)**, while others use more sophisticated **Cost-Based Optimizers (CBO)** to improve query performance.
+
+### **Popular Big Data Databases and Their Optimizers:**
+
+#### **1. Databases with Rule-Based Optimizers (RBO)**
+
+While many modern databases have moved towards **Cost-Based Optimizers (CBO)**, some **big data databases** still rely on **Rule-Based Optimizers (RBO)**, often due to the specific nature of workloads and the focus on simplicity and performance in distributed environments.
+
+---
+
+#### **Apache Cassandra (RBO)**
+- **Optimizer Type**: **Rule-Based Optimizer**
+- **Why RBO**:
+  - Cassandra is a **write-optimized, NoSQL database** designed for high-velocity writes and linear scalability. It does not require complex query plans or statistics-based optimization because of its **query-first design**.
+  - Queries in Cassandra are constrained by its data model, focusing primarily on **key-based lookups**. This makes complex query optimization unnecessary, and a rule-based approach suffices for typical workloads.
+  - Cassandra's architecture is optimized for **high availability** and **horizontal scalability**, and RBO is faster and simpler for the typical queries it handles.
+
+---
+
+#### **Elasticsearch (RBO)**
+- **Optimizer Type**: **Rule-Based Optimizer**
+- **Why RBO**:
+  - Elasticsearch is a **full-text search engine** that focuses on real-time indexing and querying of documents. Queries in Elasticsearch are highly specialized (e.g., text searches, aggregations), and the query planning doesn't need a sophisticated CBO.
+  - Elasticsearch uses a **shard and index-based approach** to distribute data, and most queries rely on **inverted indexing** and **filters** rather than complex join or aggregation operations.
+  - The focus on **search-first** workloads makes a rule-based optimizer suitable for quickly identifying relevant shards and documents.
+  
+---
+
+#### **HBase (RBO)**
+- **Optimizer Type**: **Rule-Based Optimizer**
+- **Why RBO**:
+  - HBase is designed for **fast random access** to large datasets and excels at handling **wide-column, key-value data models**.
+  - HBase doesn’t perform **complex SQL-style queries** (like joins or subqueries) that would require sophisticated optimization, so an RBO works well.
+  - It’s primarily used for **read/write-heavy operations** at scale, where the focus is on simple **get/put operations** rather than query optimization.
+
+---
+
+#### **MongoDB (RBO with elements of CBO in aggregation pipelines)**
+- **Optimizer Type**: **Primarily Rule-Based** with some cost-based elements in aggregation pipelines.
+- **Why RBO**:
+  - MongoDB is a document-oriented NoSQL database that uses **simple query patterns** (mostly key-value lookups). The query execution plans are often simple and do not require a full CBO.
+  - For many use cases, a **rule-based approach** (choosing indexes based on keys or fields) is sufficient.
+  - However, MongoDB has introduced **cost-based optimization** for its **aggregation pipeline** operations, where more complex queries (e.g., joins and groupings) are evaluated based on query execution cost.
+
+---
+
+#### **Redis (RBO)**
+- **Optimizer Type**: **Rule-Based Optimizer**
+- **Why RBO**:
+  - Redis is an in-memory data store used for **caching**, **key-value storage**, and **simple data structures**. Its query patterns are simple (e.g., get/set operations), and optimization is minimal.
+  - Redis primarily focuses on **performance** with very low-latency operations, making a complex CBO unnecessary.
+  - **Rule-based decisions** suffice for determining simple operations like direct key retrieval or evaluating commands like `SORT` or `ZSET`.
+
+---
+
+### **Databases with Cost-Based Optimizers (CBO)**
+
+In contrast, many modern big data databases use **Cost-Based Optimizers (CBO)** due to their ability to handle complex analytical queries, which involve joins, aggregations, and large-scale data processing.
+
+---
+
+#### **Apache Hive (CBO)**
+- **Optimizer Type**: **Cost-Based Optimizer**
+- **Why CBO**:
+  - Hive is a data warehouse system built on top of Hadoop, designed for **large-scale analytical queries**.
+  - It supports complex SQL-like queries with joins, aggregations, and subqueries, making a cost-based optimizer essential to **minimize query execution times** on massive datasets.
+  - Hive uses the **Apache Calcite** optimizer, which evaluates the cost of different query plans based on data statistics (e.g., table size, cardinality) to choose the most efficient execution plan.
+
+---
+
+#### **Apache Spark SQL (CBO)**
+- **Optimizer Type**: **Cost-Based Optimizer (Catalyst)**
+- **Why CBO**:
+  - Spark SQL uses the **Catalyst optimizer**, which combines **rule-based** and **cost-based optimization** techniques.
+  - Spark SQL can handle **large-scale data transformations** and **complex query workloads**, requiring CBO to determine the most efficient plan for join orders, partitioning, and other query operations.
+  - **Cost-based decisions** are crucial when choosing between in-memory processing or external shuffles for large datasets.
+
+---
+
+#### **Google BigQuery (CBO)**
+- **Optimizer Type**: **Cost-Based Optimizer**
+- **Why CBO**:
+  - BigQuery is a **cloud-native, distributed data warehouse** designed for complex analytical queries on massive datasets.
+  - BigQuery uses **columnar storage** and distributes queries across thousands of nodes. The CBO helps minimize costs by choosing the most efficient execution strategy, such as optimizing for I/O and network costs.
+  - CBO is critical in deciding when to **prune partitions** or **skip columns** to optimize query performance.
+
+---
+
+#### **ClickHouse (CBO with RBO elements)**
+- **Optimizer Type**: **Primarily Cost-Based Optimizer** with some **Rule-Based Optimizations**.
+- **Why CBO**:
+  - ClickHouse is a **columnar database** optimized for high-performance analytics, and CBO is essential for evaluating the costs of large-scale aggregations, sorting, and joins.
+  - ClickHouse also incorporates some **rule-based optimizations**, such as automatically selecting **merge joins** or **index scans** based on query structure.
+  - CBO helps optimize **parallel execution** and **data skipping** by analyzing data distribution and statistics.
+
+---
+
+#### **Snowflake (CBO)**
+- **Optimizer Type**: **Cost-Based Optimizer**
+- **Why CBO**:
+  - Snowflake is a **cloud-based data platform** that separates storage and compute, making cost-based optimization critical for minimizing the execution cost of queries, especially for large analytical workloads.
+  - The optimizer evaluates factors like **disk I/O**, **network latency**, and **compute resource costs** to choose the best execution plan.
+  - Snowflake uses a **distributed, elastic architecture**, and CBO ensures that the right resources are allocated for each query to achieve optimal performance.
+
+---
+
+### **Why Some Big Data Databases Still Use Rule-Based Optimizers:**
+
+1. **Simplicity and Predictability**:
+   - For **databases handling simple queries** (e.g., key-value lookups, document retrieval), a rule-based optimizer is fast, predictable, and sufficient. Since these databases don’t involve complex joins or subqueries, there’s no need for sophisticated optimization techniques.
+   - Databases like **Cassandra**, **Elasticsearch**, and **HBase** are often used in environments where queries are well-structured (e.g., fetching a specific key or range of values), so a rule-based optimizer works efficiently.
+
+2. **Low Overhead**:
+   - RBO incurs **minimal overhead** because it doesn't need to analyze large datasets or complex statistics, which is beneficial in environments where **low-latency, high-throughput** performance is crucial (e.g., **Redis**, **Cassandra**).
+   - For big data systems optimized for **write-heavy** or **real-time workloads**, RBO can ensure that the database doesn't waste time evaluating multiple plans, allowing for faster query processing.
+
+3. **Focused Query Model**:
+   - Some databases, like **Elasticsearch** or **Redis**, have a **specialized query model** (e.g., search queries, real-time indexing) that doesn’t involve many of the complexities that benefit from a CBO (like joins or aggregations). These systems are optimized for specific tasks (e.g., text search, in-memory retrieval), where a rule-based approach is often the fastest.
+
+4. **Designed for Specific Use Cases**:
+   - Databases like **HBase** or **Cassandra** are **write-optimized** and don’t perform SQL-style complex queries involving joins, subqueries, or aggregations. Instead, they focus on **linear scalability** and **availability**, which makes RBO sufficient for their intended use cases.
+
+---
+
+### **Conclusion:**
+- **Rule-Based Optimizers (RBO)** are still prevalent in big data databases that focus on **low-latency, high-throughput**, or **simple query patterns**. These optimizers provide **fast, predictable performance** without the overhead of a Cost-Based Optimizer (CBO), making them ideal for key-value stores, search engines, or streaming databases.
+- **Cost-Based Optimizers (CBO)**, on the other hand, are more suited for **complex analytical queries** involving **joins**, **aggregations**, and **large-scale transformations**. CBO is commonly found in distributed data warehouses like **Hive**, **BigQuery**, and **Snowflake**, where optimizing the cost of query execution is crucial for performance at scale.
