@@ -39,35 +39,35 @@ The Apache License 2.0 is a permissive open-source license, which gives users si
 
 1. No Removal of License Notices or Copyright Statements
 
-	•	You cannot remove or modify any copyright notices, trademarks, or license notices from the original code.
-	•	When you distribute the software, whether modified or unmodified, you must retain all existing notices, such as the LICENSE file and any NOTICE files that accompany the project.
-	•	If you modify the software, you are required to add your own copyright notice to the files you modify.
+	•	You cannot remove or modify any copyright notices, trademarks, or license notices from the original code.  
+	•	When you distribute the software, whether modified or unmodified, you must retain all existing notices, such as the LICENSE file and any NOTICE files that accompany the project.  
+	•	If you modify the software, you are required to add your own copyright notice to the files you modify.  
 
 2. No Use of Trademarks
 
-	•	The Apache License does not grant permission to use the trademarks or branding (e.g., logos, product names) of the project or the Apache Software Foundation (ASF).
-	•	For example, if you’re using Apache Hadoop or Apache Kafka, you can’t use the names “Hadoop” or “Kafka” in your own product name or imply endorsement by the Apache Software Foundation without explicit permission.
+	•	The Apache License does not grant permission to use the trademarks or branding (e.g., logos, product names) of the project or the Apache Software Foundation (ASF).  
+	•	For example, if you’re using Apache Hadoop or Apache Kafka, you can’t use the names “Hadoop” or “Kafka” in your own product name or imply endorsement by the Apache Software Foundation without explicit permission.  
 
 3. Patent Retaliation Clause
 
-	•	The Apache License 2.0 includes a patent retaliation clause. This means that if you file a patent lawsuit against any contributor of the software for patent infringement related to the software, you automatically lose the rights to use the software granted under the Apache License.
-	•	This is meant to protect contributors from patent litigation while still allowing them to contribute freely to the open-source project.
+	•	The Apache License 2.0 includes a patent retaliation clause. This means that if you file a patent lawsuit against any contributor of the software for patent infringement related to the software, you automatically lose the rights to use the software granted under the Apache License.  
+	•	This is meant to protect contributors from patent litigation while still allowing them to contribute freely to the open-source project.  
 
 4. Provide Attribution (Inclusion of License and Notice Files)
 
-	•	You must provide proper attribution when distributing the software, whether you’ve modified it or not. This includes:
-	•	Including the full text of the Apache License 2.0 in any distribution of the software (usually via a LICENSE file).
-	•	Including any required notices found in the project’s NOTICE file, especially if you redistribute or modify the project. If you make modifications, you need to add your own attributions as well, but still retain any existing ones.
-	•	If you’re distributing modified versions of the software, you must document the modifications and maintain the attributions from the original work.
+	•	You must provide proper attribution when distributing the software, whether you’ve modified it or not. This includes:  
+	•	Including the full text of the Apache License 2.0 in any distribution of the software (usually via a LICENSE file).  
+	•	Including any required notices found in the project’s NOTICE file, especially if you redistribute or modify the project. If you make modifications, you need to add your own attributions as well, but still retain any existing ones.  
+	•	If you’re distributing modified versions of the software, you must document the modifications and maintain the attributions from the original work.  
 
 5. Do Not Misrepresent the Origin of the Software
 
-	•	You cannot falsely claim that you are the original author of the software or mislead others into thinking the original creators endorse your modified version. You must retain credit for the original authors and maintain the NOTICE file if it exists.
+	•	You cannot falsely claim that you are the original author of the software or mislead others into thinking the original creators endorse your modified version. You must retain credit for the original authors and maintain the NOTICE file if it exists.  
 
 6. No Warranty or Liability
 
-	•	The Apache License 2.0 comes with an explicit disclaimer of warranties and liability. If you use the software, you do so at your own risk. This is not really a restriction but something important to keep in mind:
-	•	The software is provided “as-is,” meaning that the original authors of the software cannot be held responsible for any damages, defects, or other issues arising from the use of the software.
+	•	The Apache License 2.0 comes with an explicit disclaimer of warranties and liability. If you use the software, you do so at your own risk. This is not really a restriction but something important to keep in mind:  
+	•	The software is provided “as-is,” meaning that the original authors of the software cannot be held responsible for any damages, defects, or other issues arising from the use of the software.  
 
 What You Cannot Do:
 
