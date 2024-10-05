@@ -3,20 +3,20 @@ Apache projects use the Apache License 2.0. This is a widely used, permissive op
 Key Features of the Apache License 2.0:
 
 	1.	Permissive License:
-	•	The Apache License 2.0 allows users of the software (individuals or organizations) to use, modify, distribute, and even incorporate the code into proprietary software.
-	•	There are no copyleft requirements like the GPL, meaning you are not required to open-source your own code if you use an Apache-licensed library.
+		• The Apache License 2.0 allows users of the software (individuals or organizations) to use, modify, distribute, and even incorporate the code into proprietary software.
+		• There are no copyleft requirements like the GPL, meaning you are not required to open-source your own code if you use an Apache-licensed library.
 	2.	Attribution Requirement:
-	•	While you can use Apache-licensed software in your project, including in proprietary software, you must include a copy of the Apache License and any applicable notices (like copyright and attribution) in your software distribution.
-	•	This includes maintaining any NOTICE files that accompany the Apache project, providing credit to the original authors and contributors.
+		• While you can use Apache-licensed software in your project, including in proprietary software, you must include a copy of the Apache License and any applicable notices (like copyright and attribution) in your software distribution.
+		• This includes maintaining any NOTICE files that accompany the Apache project, providing credit to the original authors and contributors.
 	3.	Patent Grant:
-	•	The Apache License 2.0 provides an explicit patent grant, which means that contributors to the project agree to grant users of the software a royalty-free, worldwide, non-exclusive license to use any patents that may cover the contribution.
-	•	This patent clause offers legal protection for users of Apache-licensed software, allowing them to use it without fear of patent litigation from contributors.
+		• The Apache License 2.0 provides an explicit patent grant, which means that contributors to the project agree to grant users of the software a royalty-free, worldwide, non-exclusive license to use any patents that may cover the contribution.
+		• This patent clause offers legal protection for users of Apache-licensed software, allowing them to use it without fear of patent litigation from contributors.
 	4.	No Strong Copyleft:
-	•	Unlike the GPL (GNU General Public License), which requires derivative works to be released under the same license (copyleft), the Apache License 2.0 allows you to use Apache-licensed code in proprietary or commercial software without requiring you to open-source your application.
-	•	This makes the license more flexible and attractive for businesses that want to use open-source code without exposing their proprietary code.
+		• Unlike the GPL (GNU General Public License), which requires derivative works to be released under the same license (copyleft), the Apache License 2.0 allows you to use Apache-licensed code in proprietary or commercial software without requiring you to open-source your application.
+		• This makes the license more flexible and attractive for businesses that want to use open-source code without exposing their proprietary code.
 	5.	Compatibility with Other Licenses:
-	•	Apache License 2.0 is compatible with many other open-source licenses, including permissive licenses like the MIT License and BSD License.
-	•	However, it is not compatible with GPL v2, meaning you cannot combine Apache 2.0-licensed code with GPL v2-licensed code in the same project without violating one of the licenses. It is, however, compatible with GPL v3.
+		• Apache License 2.0 is compatible with many other open-source licenses, including permissive licenses like the MIT License and BSD License.
+		• However, it is not compatible with GPL v2, meaning you cannot combine Apache 2.0-licensed code with GPL v2-licensed code in the same project without violating one of the licenses. It is, however, compatible with GPL v3.
 
 Summary of What You Can Do with Apache License 2.0 Software:
 
@@ -33,12 +33,8 @@ Example Projects Using the Apache License 2.0:
 	•	Apache Spark (Cluster-computing framework)
 	•	Apache Maven (Build automation tool)
 
-Conclusion:
 
-The Apache License 2.0 is a permissive, business-friendly open-source license that provides significant freedom for developers and organizations to use, modify, and distribute software, whether in open-source or proprietary projects. The key requirements are to provide attribution and include the license text in your distribution, making it one of the most flexible and popular open-source licenses today.
-
-
-### Apache licence restrictions
+### Restrictions
 The Apache License 2.0 is a permissive open-source license, which gives users significant freedoms, but there are a few restrictions and obligations that you must adhere to when using software licensed under it. Here’s what you cannot do or need to be careful about when using the Apache License 2.0:
 
 1. No Removal of License Notices or Copyright Statements
@@ -76,13 +72,13 @@ The Apache License 2.0 is a permissive open-source license, which gives users si
 What You Cannot Do:
 
 	1.	Use Trademarks Without Permission:
-	•	You cannot use the name, logos, or trademarks of Apache projects without following the ASF’s trademark policy or obtaining explicit permission from the trademark owner.
+		• You cannot use the name, logos, or trademarks of Apache projects without following the ASF’s trademark policy or obtaining explicit permission from the trademark owner.
 	2.	Hide the License or Copyright Information:
-	•	You cannot distribute the software without including the original Apache License text and any relevant NOTICE files that were included with the original project. Modifying the license or failing to include it is a violation.
+		• You cannot distribute the software without including the original Apache License text and any relevant NOTICE files that were included with the original project. Modifying the license or failing to include it is a violation.
 	3.	File Patent Lawsuits Without Consequences:
-	•	You cannot file a patent lawsuit against the authors of the software without losing your rights to use the software. The license includes a patent retaliation clause to protect contributors.
+		• You cannot file a patent lawsuit against the authors of the software without losing your rights to use the software. The license includes a patent retaliation clause to protect contributors.
 	4.	Change the License of the Software Itself:
-	•	You cannot re-license the software under a different license. Any redistribution must retain the Apache License 2.0 unless the project has added additional licenses (dual-licensing). You can, however, combine Apache-licensed code with other code under different licenses as long as they are compatible (e.g., permissive licenses like MIT or BSD).
+		• You cannot re-license the software under a different license. Any redistribution must retain the Apache License 2.0 unless the project has added additional licenses (dual-licensing). You can, however, combine Apache-licensed code with other code under different licenses as long as they are compatible (e.g., permissive licenses like MIT or BSD).
 
 What You Can Do (Freedoms):
 
@@ -93,10 +89,18 @@ What You Can Do (Freedoms):
 
 Conclusion:
 
-The Apache License 2.0 is permissive and allows a great deal of freedom, including use in proprietary projects. However, you must ensure that you:
+The Apache License 2.0 is a permissive, business-friendly open-source license that provides significant freedom for developers and organizations to use, modify, and distribute software, whether in open-source or proprietary projects. The key requirements are to provide attribution and include the license text in your distribution, making it one of the most flexible and popular open-source licenses today.
+
+
+However, you must ensure that you:
 
 	•	Include the license and proper attribution (via LICENSE and NOTICE files).
 	•	Respect the trademarks and don’t use them without permission.
 	•	Follow the patent retaliation clause, avoiding patent lawsuits against contributors if you wish to keep using the software.
 
 By adhering to these simple restrictions, you can use Apache-licensed software freely in most contexts, including commercial and proprietary applications.
+
+
+
+
+
