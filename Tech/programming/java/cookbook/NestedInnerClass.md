@@ -1,4 +1,13 @@
+### Use Cases:
+
+**`Static Nested Classes`**: Often used for helper classes, constants, or utility classes that are closely related to the outer class but don't need access to its instance state.  
+**`Inner Classes`**: Commonly used in event handling, adapter patterns, or when you need a class that is intimately tied to the instance of the outer class.
+
+
 ### Types of Inner Classes:
+
+
+
 
 1. **Non-static Inner Class (Regular Inner Class)**:
    - This type of inner class is associated with an instance of the outer class. It can access all fields and methods of the outer class, including private members.
@@ -113,22 +122,37 @@ By using inner classes strategically, you can better encapsulate your code, impr
 ### Notes
 
 ```java
-public class Foo {
-       private FooHelper helper;
-
-       // constructor & any other logic
-
-       public void doSomeThing() {
-         helper.do();
+public class OuterClass {
+       private int outerField = 10;
+       
+       // Static nested class
+       public static class StaticNestedClass {
+           public void display() {
+               // Cannot directly access outerField
+               // System.out.println(outerField); // This would cause a compilation error
+               System.out.println("Inside Static Nested Class");
+           }
        }
        
-      public class FooHelper {
-        public void do() {
-         // code
-        }
-      }
-
- }
+       // Non-static nested class (Inner class)
+       public class InnerClass {
+           public void display() {
+               // Can access outerField
+               System.out.println("OuterField value: " + outerField);
+           }
+       }
+       
+       public static void main(String[] args) {
+           // Creating instance of static nested class
+           StaticNestedClass staticNested = new StaticNestedClass();
+           staticNested.display();
+           
+           // Creating instance of inner class
+           OuterClass outer = new OuterClass();
+           InnerClass inner = outer.new InnerClass();
+           inner.display();
+       }
+   }
 ```
 
 It is a way of logically grouping classes that are only used in one place: If a class is useful to only one other class, then it is logical to embed it in that class and keep the two together. Nesting such "helper classes" makes their package more streamlined.
