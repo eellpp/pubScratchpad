@@ -242,4 +242,3 @@ The traditional approach requires explicit synchronization and is vulnerable to 
 
 In summary, enum-based singletons leverage the JVM's guarantees about enum initialization to provide a thread-safe, serialization-safe, and reflection-proof singleton implementation. This makes them an excellent choice for implementing the Singleton pattern in Java, especially when you need guaranteed thread safety without the complexity of other synchronization mechanisms.
 
-Would you like me to elaborate on any specific aspect of this thread-safety or compare it with other singleton implementations?
