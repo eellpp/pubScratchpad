@@ -1,3 +1,27 @@
+
+```mermaid
+graph TD
+     subgraph Static Nested Classes
+       A[Builder Pattern]
+       B[Factory Method]
+       C[Enum with Behavior]
+       D[Utility Classes]
+       E[Data Containers]
+     end
+```
+```mermaid
+graph TD
+          subgraph Non-static Inner Classes
+       F[Iterator Pattern]
+       G[Adapter Pattern]
+       H[Strategy Pattern]
+       I[Observer Pattern]
+       J[State Pattern]
+     end
+   
+```
+
+
 Static and non-static inner classes are used in various design patterns and use cases in Java. Let's explore some popular use case patterns for both:
 
 1. Static Nested Classes:
@@ -118,29 +142,8 @@ public class CustomList<E> implements Iterable<E> {
       Representing different states of an object.
 
 3. Comparison of Use Cases:
-
-   
-
-```mermaid
-graph TD
-     subgraph Static Nested Classes
-       A[Builder Pattern]
-       B[Factory Method]
-       C[Enum with Behavior]
-       D[Utility Classes]
-       E[Data Containers]
-     end
-     subgraph Non-static Inner Classes
-       F[Iterator Pattern]
-       G[Adapter Pattern]
-       H[Strategy Pattern]
-       I[Observer Pattern]
-       J[State Pattern]
-     end
-   
-```
-
-4. Additional Use Cases:
+4. 
+5. Additional Use Cases:
 
    a. Static Nested Classes:
       - Caching: Implementing caching mechanisms.
@@ -152,14 +155,14 @@ graph TD
       - Callbacks: Implementing callback interfaces.
       - Domain-Specific Language (DSL): Creating fluent interfaces.
 
-5. Best Practices in Usage:
+6. Best Practices in Usage:
 
    - Prefer static nested classes unless you need access to the outer class instance.
    - Use non-static inner classes when the nested class needs to manipulate the state of the outer class.
    - Consider anonymous inner classes for short, one-time use implementations (e.g., event handlers, comparators).
    - Be cautious of potential memory leaks with non-static inner classes, especially in long-lived objects.
 
-6. Framework-Specific Uses:
+7. Framework-Specific Uses:
 
    - In Android development, non-static inner classes are often used for event handlers and AsyncTask implementations.
    - In Java EE, static nested classes are commonly used for defining named queries in JPA entities.
