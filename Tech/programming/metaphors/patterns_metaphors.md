@@ -19,6 +19,8 @@ Here is the table format with the concepts, metaphors, and their short descripti
 |**Archive**            |Old books stored in vault    | Old books can be stored in vault because they are not accessed so often. A backup on the other hand is a copy of original book|
 |**vault**              | A Bank Vault | Access is strictly controlled. In software vault the data itself may or may not be encrypted but access is strictly controlled and audited. The credentials may be auto renewed periodically etc. A plain encrypted data at rest can be accessed by anyone and credentials change cannot be monitored etc|
 |**assertion**          | security checkpoint at airport | if assertion is true the process can continue else throws error     |
+|**baseline**          | timing achieved while training for marathon   | baseline is timing achieved while training and benchmark the best time recorded in past for actual marathon |
+
 
 
 
