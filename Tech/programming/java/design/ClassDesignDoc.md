@@ -14,6 +14,8 @@ Writing a design document before coding a Java class is a great practice. It hel
    - Define the **Single Responsibility** of this class—what the class is supposed to do and only do.
    - You can also outline any **major responsibilities** it will have, such as interacting with other classes, maintaining data, or performing specific calculations.
 
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/data_engineering/programming/SOLID%20Principles.md
+
 4. **Public API (Methods and Fields)**
    - List and describe the **public methods** and fields that will be available in the class.
    - Define method signatures: **name, parameters, return types**, and **exceptions** that might be thrown.
