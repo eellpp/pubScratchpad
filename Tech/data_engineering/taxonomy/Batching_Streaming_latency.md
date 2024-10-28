@@ -7,3 +7,9 @@ While there isn’t a strict industry-wide standard for defining specific latenc
 3. **Stream Processing** (also known as real-time processing) aims for the lowest latency, often in milliseconds to a few seconds. This approach processes each data point as it arrives, enabling immediate action on high-speed data streams, which is essential for applications like fraud detection, social media monitoring, and real-time financial transactions
 
 These latency definitions help organizations decide on the appropriate processing approach based on the immediacy of insights needed, infrastructure requirements, and specific use cases.
+
+- https://www.littledata.com/data-batch-micro-batch-and-streaming-comparison-and-contrast/
+- https://www.upsolver.com/blog/batch-stream-a-cheat-sheet
+- https://www.astera.com/type/blog/batch-processing-vs-stream-processing/
+- https://www.decube.io/post/streaming-vs-batch-data
+
