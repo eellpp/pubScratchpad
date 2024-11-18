@@ -4,10 +4,14 @@ Let’s break down the command:
 
 ### Command:
 ```vim
+filetype plugin indent on
 :autocmd BufWritePre *.html :normal gg=G
 ```
 
+
 ---
+
+NOTE: `filetype plugin indent on' so that based on filetype set the indentation
 
 ### 1. **`:autocmd`**
 - This defines an **automatic command** that is triggered when specific events occur in Vim.
