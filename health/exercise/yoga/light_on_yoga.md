@@ -1,4 +1,26 @@
-# 1. Asanas
+# 1. Categories
+
+|Photo number|Category|
+|:-|:-|
+|1-59|Standing asanas, Ustrasana|
+|66-76|Simple back bending including the downward-facing dog (74) and upward facing dog (75)|
+|77-79|Dandasana, Navasana|
+|86-124|Sitting, Supta Virasana, Paryankasana, Bhekasana, Padmasana with variations, Supta Vajrasana|
+|125-176|Basic forward bending|
+|171-175|Purvottanasana, Akarna Dhanurasana|
+|176-218|Sirsasana with variations|
+|219-271|Sarvangasana with variations|
+|272-296|Abdominals, Supta Padangusthasana, Setu Bandha Sarvangasana|
+|297-339|Twists, Malasana|
+|346-359|Basic balancing poses, Pincha Mayurasana|
+|366-394|Kurmasana, Eka Pada Sirsasana cycle, Dwi Pada Sirsasana|
+|395-452|Balancing, Bakasana etc.|
+|453-471|Advanced sitting|
+|472-478|Intense leg stretches|
+|479-591|Backward bending|
+|592|Savasana|
+
+# 2. Asanas
 
 |Asana|Page|Difficulty|Plates|Sanskrit name|
 |:-|:-|:-|:-|:-|
@@ -204,14 +226,14 @@
 |56|144|6|120|Yoga Mudrāsana|
 |146|304|18|391|Yoganidrāsana|
 
-# 2. Nauli and kriya
+# 3. Nauli and kriya
 
 |Number|Page|Difficulty|Plates|Sanskrit name|
 |:-|:-|:-|:-|:-|
 |202|426|16|595,596|Nauli|
 |201|425|12|593,594|Ụḍdyāna Bandha|
 
-# 3. Pranayama
+# 4. Pranayama
 
 |Number|Page|Plates|Sanskrit name|
 |:-|:-|:-|:-|
@@ -230,24 +252,4 @@
 |213|455||Viloma|
 |212|454||Visama Ṿrtti|
 
-# 4. Categories
 
-|Photo number|Category|
-|:-|:-|
-|1-59|Standing asanas, Ustrasana|
-|66-76|Simple back bending including the downward-facing dog (74) and upward facing dog (75)|
-|77-79|Dandasana, Navasana|
-|86-124|Sitting, Supta Virasana, Paryankasana, Bhekasana, Padmasana with variations, Supta Vajrasana|
-|125-176|Basic forward bending|
-|171-175|Purvottanasana, Akarna Dhanurasana|
-|176-218|Sirsasana with variations|
-|219-271|Sarvangasana with variations|
-|272-296|Abdominals, Supta Padangusthasana, Setu Bandha Sarvangasana|
-|297-339|Twists, Malasana|
-|346-359|Basic balancing poses, Pincha Mayurasana|
-|366-394|Kurmasana, Eka Pada Sirsasana cycle, Dwi Pada Sirsasana|
-|395-452|Balancing, Bakasana etc.|
-|453-471|Advanced sitting|
-|472-478|Intense leg stretches|
-|479-591|Backward bending|
-|592|Savasana|
