@@ -9,3 +9,21 @@ Perfect is the enemy of the good
 you’re not going to change until the pain of change is less than the pain of staying the same.  
 
 We are mere Spatiotemporal blips of information in the infant universe with delusions of grandeur. We leave our heritage in everything we touch. Child or stone, no difference. Our ancestors are everywhere  
+
+---
+
+“For what it’s worth... it’s never too late, or in my case too early, to be whoever you want to be. There’s no time limit. Start whenever you want. You can change or stay the same. There are no rules to this thing. We can make the best or the worst of it. I hope you make the best of it. I hope you see things that startle you. I hope you feel things you’ve never felt before. I hope you meet people who have a different point of view. I hope you live a life you’re proud of, and if you’re not, I hope you have the courage to start over again.”
+
+― F. Scott Fitzgerald
+
+---
+
+for every success of yesterday rent is due today
+>> everyday have to work to keep successful
+
+---
+if universe is the answer then what is the question 
+>> All out endeavours in science and maths is to ask the right question to answer the why universe exists and its purpose. Out biological mind is not capable enough so we create tools and machines and ai and everything else that can make progress in asking the right question for which universe is the answer
+
+---
+
