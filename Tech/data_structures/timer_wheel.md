@@ -60,6 +60,6 @@ Consider a simple timer wheel with:
 
 In summary, the timer wheel is a highly efficient data structure for managing timers, especially in systems with high timer density and strict performance requirements.
 
-**Use Cases **
+**Use Cases**
 - https://adriacabeza.github.io/2024/07/12/caffeine-cache.html In Caffeine cache . Hierarchical Timer Wheel: TimerWheel.java . Hierarchical Timer Wheel: TimerWheel.java.
 In the case of Caffeine, the entries are added to these buckets based on their expiration times, allowing efficient addition, removal and expiration in O(1) time. Each bucket contains a linked list where the items are added. Given that the circular buffer size is limited, we would have problems when an event needs to be scheduled for a moment in future larger than the size of the ring. That is why we use a hierarchical timer wheel which simply layers multiple timer wheels with different resolutions.
