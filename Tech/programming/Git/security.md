@@ -36,6 +36,14 @@ $ git pull -v
 
 ```
 
+### Pushing an existing repo to git
+```bash
+git remote add origin https://github.com/<username>/<repo>.git
+git branch -M main
+git push origin main
+
+// when prompted for password input the token
+```
 ### Saving the credentials
 You can use the git config to enable credentials storage in git.  
 ```bash
