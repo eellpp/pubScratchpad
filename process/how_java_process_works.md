@@ -1,5 +1,30 @@
 The process for getting a new feature into the Java SDK involves several formal steps that ensure community review, standardization, and quality. Historically, many features have been introduced via the **Java Specification Request (JSR)** process, while more recent changes often follow the **JDK Enhancement Proposal (JEP)** route. Here’s an overview that combines these approaches:
 
+
+```mermaid
+flowchart TD
+    A[Feature Request / Idea]
+    B[Draft Proposal (JSR/JEP)]
+    C[Formation of Expert/Working Group]
+    D[Draft Specification & Design Document]
+    E[Public Review & Feedback]
+    F[Reference Implementation & TCK Development]
+    G[Final Review & Approval]
+    H[Integration into Codebase]
+    I[Milestone/Beta Releases & Testing]
+    J[Final Release in Java SDK]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+
+```
 ---
 
 ### **1. Idea and Proposal**
