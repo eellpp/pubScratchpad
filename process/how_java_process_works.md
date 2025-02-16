@@ -4,7 +4,7 @@ The process for getting a new feature into the Java SDK involves several formal 
 ```mermaid
 
 flowchart TD
-    A[Feature Request / Idea]
+    A[Feature Request]
     B[Draft Proposal JSR/JEP ]
     C[Expert/Working Group]
     D[Draft Specification & Design Document]
