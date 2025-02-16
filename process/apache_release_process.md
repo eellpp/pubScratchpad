@@ -35,7 +35,7 @@ Below is a Mermaid diagram summarizing this process:
 
 ```mermaid
 flowchart TD
-    A[New Feature Proposal (JIRA Issue/Email)]
+    A[New Feature Proposal JIRA Issue/Email]
     B[Community Discussion on Mailing List]
     C[Design Proposal and Approval]
     D[Implementation & Patch Submission]
