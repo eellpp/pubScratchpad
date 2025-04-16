@@ -15,41 +15,34 @@
 
 ```java
 // AgeGrouperUDF.java
+import org.apache.spark.sql.api.java.UDF1;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.RowFactory;
-import org.apache.spark.sql.api.java.UDF1;
-import org.apache.spark.sql.types.*;
+import scala.collection.JavaConverters;
+import scala.collection.Seq;
 
-import scala.collection.mutable.WrappedArray;
-import scala.collection.mutable.ArrayBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AgeGrouperUDF {
-    public static class AddAgeGroup implements UDF1<WrappedArray<Row>, WrappedArray<Row>> {
+    public static class AddAgeGroup implements  UDF1<Seq<Row>, Seq<Row>> {
         @Override
-        public WrappedArray<Row> call(WrappedArray<Row> inputRows) {
-            ArrayBuffer<Row> output = new ArrayBuffer<>();
-
-            for (int i = 0; i < inputRows.length(); i++) {
-                Row row = inputRows.apply(i);
-                String name = row.getString(0);
-                int age = row.getInt(1);
-                String ageGroup = (age < 35) ? "young" : "old";
-
-                Row enriched = RowFactory.create(name, age, ageGroup);
-                output.$plus$eq(enriched);
-            }
-
-            return (WrappedArray<Row>) WrappedArray.make(output.toArray(new Row[0]));
+       @Override
+    public Seq<Row> call(Seq<Row> batch) throws Exception {
+        List<Row> output = new ArrayList<>();
+        
+        // Convert Scala Seq to Java List for processing
+        List<Row> rows = JavaConverters.seqAsJavaList(batch);
+        
+        for (Row row : rows) {
+            String name = row.getString(0);
+            int age = row.getInt(1);
+            String ageType = age < 35 ? "young" : "old";
+            output.add(RowFactory.create(name, age, ageType));
         }
-
-        // Optional: schema if using Java UDF with DataFrame API
-        public static StructType getReturnType() {
-            return DataTypes.createArrayType(DataTypes.createStructType(new StructField[]{
-                DataTypes.createStructField("first_name", DataTypes.StringType, false),
-                DataTypes.createStructField("age", DataTypes.IntegerType, false),
-                DataTypes.createStructField("age_group", DataTypes.StringType, false)
-            }));
-        }
+        
+        // Convert back to Scala Seq
+        return JavaConverters.collectionAsScalaIterable(output).toSeq();
     }
 }
 ```
@@ -69,52 +62,36 @@ jar cf udf.jar AgeGrouperUDF.class
 
 ```python
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, ArrayType
-from pyspark.sql import functions as F
+from pyspark.sql.functions import col, pandas_udf
+from pyspark.sql.types import *
 
-# Start Spark session
+# Initialize Spark
 spark = SparkSession.builder \
-    .appName("JavaUDFArrayTransform") \
-    .config("spark.jars", "udf.jar") \
+    .appName("BatchUDFExample") \
+    .config("spark.jars", "javaudf.jar") \
     .getOrCreate()
 
-# Register Java UDF
+# Sample data
+data = [("John", 25), ("Alice", 30), ("Bob", 40), ("Eve", 35), ("Mike", 28)]
+df = spark.createDataFrame(data, ["name", "age"])
+
+# Register Java UDF (using Arrow for efficient batch transfer)
 spark.udf.registerJavaFunction(
-    "addAgeGroup",
-    "AgeGrouperUDF$AddAgeGroup",
+    "batchAgeUDF",
+    "com.example.BatchAgeTypeUDF",
     ArrayType(StructType([
-        StructField("first_name", StringType(), False),
-        StructField("age", IntegerType(), False),
-        StructField("age_group", StringType(), False)
+        StructField("name", StringType()),
+        StructField("age", IntegerType()),
+        StructField("age_type", StringType())
     ]))
 )
 
-# Input data: 5 rows
-data = [
-    ("A", "Alice", 30),
-    ("A", "Bob", 25),
-    ("B", "Carol", 40),
-    ("B", "Dave", 22),
-    ("C", "Eve", 35)
-]
-
-schema = StructType([
-    StructField("group_id", StringType()),
-    StructField("first_name", StringType()),
-    StructField("age", IntegerType())
-])
-
-df = spark.createDataFrame(data, schema)
-
-# Group rows into array of struct (for each group)
-df_struct = df.withColumn("person", F.struct("first_name", "age")) \
-              .groupBy("group_id") \
-              .agg(F.collect_list("person").alias("people"))
-
-# Apply Java UDF and explode results
-result = df_struct.withColumn("enriched", F.expr("addAgeGroup(people)")) \
-                  .withColumn("person", F.explode("enriched")) \
-                  .selectExpr("group_id", "person.first_name", "person.age", "person.age_group")
+# Process in batches of 2 using Java UDF
+result = df.withColumn("group_id", (col("monotonically_increasing_id") / 2).cast("int")) \
+    .groupBy("group_id") \
+    .agg(collect_list(struct("name", "age")).alias("batch")) \
+    .select(explode(expr("batchAgeUDF(batch)")).alias("result")) \
+    .select("result.*")
 
 result.show()
 ```
