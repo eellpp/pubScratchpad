@@ -5,6 +5,10 @@ get_meminfo_value() {
     grep "^$1:" /proc/meminfo | awk '{print $2}'
 }
 
+active_kb=$(get_meminfo_value "Active")
+active_mb=$((active_kb / 1024))
+echo "Active (BMC-style)  : ${active_mb} MB"
+
 # Get system-wide memory values
 mem_total_kb=$(get_meminfo_value "MemTotal")
 mem_free_kb=$(get_meminfo_value "MemFree")
@@ -28,6 +32,7 @@ echo "----------------------------------------"
 echo "Total Memory      : ${mem_total_mb} MB"
 echo "Used (real)       : ${mem_used_mb} MB"
 echo "Free (real)       : ${mem_free_mb} MB"
+echo "Active (hot memory) : ${active_mb} MB"
 echo "----------------------------------------"
 
 # ----------------------------------------
