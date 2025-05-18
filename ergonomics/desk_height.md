@@ -8,9 +8,21 @@ Subtract 6 inches from the result of Step 2 to get your maximum desk height.
 Remember, these values should only be a starting point for you. You might need to adjust your desk to sit safely and comfortably.   
 
 
-### What height should my desk be if I'm 5 ft 5 in?
+### What height should my desk be if I'm 5 ft 5 in (165cm ) ?
 
-If you're 5 ft 5 in tall, your ideal desk should be 24-26.5 in tall. Remember that everybody's different, so this range should serve just as a starting point.
+If you're 5 ft 5 in tall, 
+
+#### Chair height: 39.5 - 44.5 cm
+
+Your thighs and feet should be parallel to the floor (thighs and lower legs forming 90°-110° angle).
+
+#### Desk height: 61 - 67.5 cm
+
+Your elbows and forearms should lie straight on the table. Make sure there is a 90-110° angle at the elbow.
+
+#### Monitor height: 114.5 - 118.5 cm
+
+Looking straight, you should be looking at the top third of the screen.
 
 ### How high should my desk be for my height?
 
@@ -21,6 +33,9 @@ You can adjust your desk height with the instructions:
 Your elbows and forearms should lie straight on the desk and armrest. Aim for an angle of 90-110° at the elbow.
 
 Looking straight ahead, you should be looking at the top third of the monitor.
+
+
+
 
 Reference  
 - https://www.omnicalculator.com/everyday-life/desk-height
