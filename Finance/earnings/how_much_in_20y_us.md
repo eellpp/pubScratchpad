@@ -80,4 +80,6 @@ After 20 years, a U.S. banking professional might accumulate **$2.0M–$2.5M** i
 If you provide details (e.g., specific role, location, or savings habits), I can refine the estimate further! 
 
 
-[](https://www2.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/banking-industry-outlook.html)[](https://www.nerdwallet.com/article/finance/average-net-worth-by-age)
+https://www2.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/banking-industry-outlook.html
+
+https://www.nerdwallet.com/article/finance/average-net-worth-by-age
