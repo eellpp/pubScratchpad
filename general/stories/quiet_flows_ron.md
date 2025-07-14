@@ -148,4 +148,6 @@ And he stood there — letting the river flow over him, on him, through him.
 
 The Ron neither welcomed nor rejected him.
 
-It simply flowed. And quiet flows the Ron.
+It simply flowed. 
+
+And so, quiet flows the Ron.
