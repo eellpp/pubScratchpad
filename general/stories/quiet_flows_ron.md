@@ -80,9 +80,19 @@ quiet flowed the Ron.
 
 ### Chapter 2
 
+The pigs had harnessed clean energy, built AI-driven ethics councils, and traded in quantum pebbles. Their cities gleamed — towers of glass, streets that spoke, skies dotted with surveillance drones disguised as birds. Algorithms managed their economy with breathtaking precision, predicting needs before they were felt.
+
+And yet, beneath this glittering order, something remained unsettled.
+
+The pigs still felt hollow. Still struggled. Still clawed their way up the steep echelons of society. A few reached the summit — often at great personal cost — while the rest burned out, trampled in the climb. The cycle persisted: ambition, exhaustion, collapse.
+
+Some, unwilling to accept this as natural, turned inward. They questioned the meaning of it all. A handful published long, intricate theories on the origins of mass suffering — essays full of charts and complex maps — but their ideas were debated briefly and forgotten amid the rush of daily survival.
+
+Progress thrived. But peace never came.
+
 In the great academies, young scientists whispered:
 
-“We know the Ron is not divine. It is water from distant mountains. Our telescopes show the planet is covered in liquid — Ron is just one flow among millions. We revolve around a star, in a galaxy of stars. There are other planets. Maybe… maybe we should go there. Maybe we'll be happy there.”
+“Our telescopes show the planet is covered in liquid — Ron is just one flow among millions. We revolve around a star, in a galaxy of stars. There are other planets. Maybe… maybe we should go there. Maybe we'll be happy there.”
 
 Their professors listened. One, a deeply respected academic elder, simply nodded.
 
