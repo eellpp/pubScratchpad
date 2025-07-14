@@ -120,11 +120,11 @@ He now understood why the elder had turned his back to them and stared silently 
 
 The solution they were chasing was the very problem.
 
-They had sought to escape pain and sorrow as if these were foreign invaders, fixable bugs in the system. But pain, like joy, was simply what happened when something existed. Existence itself was not broken. It just was. Happiness. Pain. Struggle. Wonder. They weren’t problems to solve — they were side effects of being.
+They had sought to escape pain and sorrow as if these were solvable equations in the complicated system. But pain, like joy, was simply what happened when something existed. Existence itself was not broken. It just was. Happiness. Pain. Struggle. Wonder. They weren’t problems to solve — they were side effects of being.
 
 He felt no despair. Only stillness. Only truth.
 
-A deep urge pulled him from bed. Slowly, barefoot, he walked through the quiet streets. Past glowing signs. Past silent factories. Past the school where ambition was still taught.
+A deep urge pulled him from bed. Slowly, barefoot, he walked through the quiet streets. Past glowing signs. Past silent factories. Past the metropolis which glistened in their burning ambitions.
 
 He walked toward the edge of the island — toward the river Ron.
 
@@ -136,6 +136,4 @@ And he stood there — letting the river flow over him, on him, through him.
 
 The Ron neither welcomed nor rejected him.
 
-It simply flowed.
-
-And quiet flows the Ron.
+It simply flowed. And quiet flows the Ron.
