@@ -74,5 +74,68 @@ Maybe it was doing both.
 
 Maybe it was just smiling — amused at how far the pigs had come and how far they had drifted.
 
+
 And still...
 quiet flowed the Ron.
+
+### Chapter 2
+
+In the great academies, young scientists whispered:
+
+“We know the Ron is not divine. It is water from distant mountains. Our telescopes show the planet is covered in liquid — Ron is just one flow among millions. We revolve around a star, in a galaxy of stars. There are other planets. Maybe… maybe we should go there. Maybe we'll be happy there.”
+
+Their professors listened. One, a deeply respected academic elder, simply nodded.
+
+Then, one afternoon, without a word, he rose from his lecture podium and walked into the restricted wing of the Archives — a vault few knew existed. The young scientists followed quietly.
+
+He opened a long-sealed drawer. Inside were paper notes, faded with age.
+
+“These…” he whispered, “…are from long before our time. From when humans still walked this planet. Before the flood. Before the Ron turned this into an island.”
+
+He laid the papers out.
+
+“They wrote of farms… and pigs. Not unlike us. The humans built cities. They built economies. They unlocked the secrets of matter. And yet, they asked the same questions we do now — Why do we suffer? What is the point? Where is peace?"
+
+He fell silent, the rustle of Ron barely audible through the distant windows.
+
+Then, he turned his back to the room and walked slowly to the great glass window that looked toward the distant flow of the Ron — still winding its way along the horizon, unchanged.
+
+He said nothing more.
+
+The young pigs stood there in uneasy silence. Then one by one, frustrated, they left.
+
+That night, one of them — the same curious pig who had questioned Snip — woke with a start.
+
+In his dream, the Ron had risen — not in violence, but in magnificence. It thundered like thought itself. It had no voice, but it spoke. It had no eyes, but it watched. It asked questions not with words, but with motion.
+
+He sat up, breath shallow, heart pounding.
+
+All was still.
+
+Just wind. Just quiet. The dream was gone. The city still hummed.
+
+And yet... something had shifted.
+
+He now understood why the elder had turned his back to them and stared silently at the river.
+
+The solution they were chasing was the very problem.
+
+They had sought to escape pain and sorrow as if these were foreign invaders, fixable bugs in the system. But pain, like joy, was simply what happened when something existed. Existence itself was not broken. It just was. Happiness. Pain. Struggle. Wonder. They weren’t problems to solve — they were side effects of being.
+
+He felt no despair. Only stillness. Only truth.
+
+A deep urge pulled him from bed. Slowly, barefoot, he walked through the quiet streets. Past glowing signs. Past silent factories. Past the school where ambition was still taught.
+
+He walked toward the edge of the island — toward the river Ron.
+
+It shimmered in the moonlight, flowing like it always had. Not caring. Not judging. Not offering solutions. Just… being.
+
+He stepped to the edge. He let the water touch his hooves. Then his legs. Then his chest.
+
+And he stood there — letting the river flow over him, on him, through him.
+
+The Ron neither welcomed nor rejected him.
+
+It simply flowed.
+
+And quiet flows the Ron.
