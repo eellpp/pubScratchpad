@@ -6,17 +6,17 @@ The river whispered, curling gently around the island like a soft noose no one h
 
 A young pig approached, his snout still shiny from a recent promotion in the Pebble Bureau.
 
-“What are you doing here, old one?” he asked, puzzled. “The debate for food shares is about to start. You're missing your vote.”
+"What are you doing out here, old one?" he asked, puzzled. "The Super Bowl’s about to start — we’ve got our best shot in decades. You’re really going to miss a once-in-a-lifetime moment?"
 
 Snip didn't answer at first. He listened. Truly listened.
 
 “To the Ron,” he finally said.
 
-The young pig snorted. “It's just a river. It trapped us here.”
+The young pig snorted. "It’s just a river — flowing water, nothing more. Just waves and sounds and pointless shapes."
 
-Snip smiled faintly. “Or maybe it’s asking a question. Or maybe answering one. Or maybe just smiling. Flowing. Watching us forget.”
+Snip smiled faintly. "Or maybe these shapes and sounds are asking questions… or answering them. Or maybe they’re just smiling — flowing quietly, watching us rise and unravel."
 
-The young pig shook his head and trotted off toward the center of the island, where lights flickered, slogans were shouted, and machines hummed. Behind him, Snip closed his eyes.
+The young pig shook his head and trotted off toward the center of the island, where lights flickered, slogans were shouted, and crowd hummed. Behind him, Snip closed his eyes.
 
 And quiet flowed the Ron.
 
