@@ -10,6 +10,13 @@ Fidelity's guideline: Aim to save at least  **6x annual salary amount by 50, 8x 
 
  Not all of that money will need to come from your savings, however. Some will likely come from Social Security. So, we did the math and found that most people will need to generate about 45% of their retirement income (before taxes) from savings. Based on our estimates, saving 15% each year from age 25 to 67 should get you there. If you are lucky enough to have a pension, your target savings rate may be lower.
 
+### Critic
+For high income low expense people, instead of this method, you should you multiple of expeneses. Assuming 6x of annual income for these people might be over calculating. 
+Calculation based on 25x of annual expenses seems correct.  
+However expenses also vary by age. Someone between 30 to 50 will have mortgage , education and other expenses which in retirement is not required.  
+
+
+
 References :
 1. https://www.fidelity.com/viewpoints/retirement/how-much-money-should-I-save  
 2. https://www.fidelity.com/viewpoints/retirement/how-much-do-i-need-to-retire
