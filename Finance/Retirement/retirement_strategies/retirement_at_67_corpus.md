@@ -72,7 +72,7 @@ We focus on retirement **expenses only**. Let’s say:
 
 * Plan around **retirement lifestyle expenses**
 * Allow for **age-based expense variation**
-* Target **\~30× monthly retirement expenses** as a better heuristic than 10× salary
+* Target **\~30 years of monthly retirement expenses** as a better heuristic than 10× salary
 
 
 
