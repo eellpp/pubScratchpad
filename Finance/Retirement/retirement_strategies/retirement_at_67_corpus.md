@@ -15,6 +15,66 @@ For high income low expense people, instead of this method, you should you multi
 Calculation based on 25x of annual expenses seems correct.  
 However expenses also vary by age. Someone between 30 to 50 will have mortgage , education and other expenses which in retirement is not required.  
 
+Fidelity's 10× rule is overkill for high earners with lean retirement goals. Instead:
+
+- Plan around retirement lifestyle expenses
+- Allow for age-based expense variation
+- Target ~30× monthly retirement expenses as a better heuristic than 10× salary
+
+
+## 💡 Updated Scenario: Varying Expenses Across Life Stages
+
+| Life Stage   | Age Range | Typical Monthly Expenses (SGD) | Key Cost Drivers                                     |
+| ------------ | --------- | ------------------------------ | ---------------------------------------------------- |
+| Early Career | 25–30     | 3,000                          | Low: Rent, food, transport                           |
+| Midlife      | 30–50     | 6,000–8,000                    | Mortgage, children, education                        |
+| Late Career  | 50–67     | 4,000–5,000                    | Fewer dependents, health costs                       |
+| Retirement   | 67+       | 3,000–3,500                    | No rent/mortgage, simpler lifestyle, some healthcare |
+
+
+## 🧮 Retirement Corpus Estimation (Adjusted)
+
+We focus on retirement **expenses only**. Let’s say:
+
+* Retirement Monthly Expense Target (no housing, no kids): SGD 3,200
+* Annual: SGD 38,400
+* Retirement Corpus Needed:
+
+  * **@ 3% rule**: SGD **1.28 million**
+  * **@ 4% rule**: SGD **960k**
+
+---
+
+## ✅ Takeaways
+
+| Strategy Type               | If You Follow Income-Based 10× Rule | If You Follow Expense-Based Corpus       |
+| --------------------------- | ----------------------------------- | ---------------------------------------- |
+| Corpus Needed @67           | SGD 1.56 million                    | SGD 1.28 million (3% rule)               |
+| Realistic Retirement Target | ✅ Covers everything                 | ✅ More optimized, less over-saving       |
+| Notes                       | Good safety net, possibly overkill  | Must ensure accurate lifestyle estimates |
+
+---
+
+## 🔁 Suggested Strategy for High-Income, Low-Spend
+
+| Age Range | Focus                    | Why                                |
+| --------- | ------------------------ | ---------------------------------- |
+| 25–35     | Save aggressively (20%+) | Low personal expenses, high margin |
+| 35–50     | Balance savings + family | Mortgages + education peak         |
+| 50–60     | Re-accelerate saving     | Expenses drop, income likely peaks |
+| 60–67     | Optimize for drawdown    | Reduce risk, rebalance investments |
+
+---
+
+## 🧠 Conclusion
+
+**Fidelity's 10× rule is overkill for high earners with lean retirement goals**. Instead:
+
+* Plan around **retirement lifestyle expenses**
+* Allow for **age-based expense variation**
+* Target **\~30× monthly retirement expenses** as a better heuristic than 10× salary
+
+
 
 
 References :
