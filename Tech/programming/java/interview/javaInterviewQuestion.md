@@ -1,6 +1,14 @@
 ### Explain  checked and unchecked exception with example
-Checked → recoverable conditions you expect callers to deal with (I/O, user/data issues).   
-Unchecked → programmer mistakes / illegal state or args; let them bubble to a boundary where you log/translate.  
+
+##### Checked exceptions (extends Exception, not RuntimeException)
+The compiler forces you to handle or declare them.  
+Use when the caller can recover (retry, fallback, show message).  
+Examples: IOException, SQLException, ParseException.  
+
+##### Unchecked exceptions (extends RuntimeException)
+Not enforced by the compiler.  
+Use for programming errors or conditions you don’t expect callers to recover from at that site.  
+Examples: NullPointerException, IllegalArgumentException, ArithmeticException.  
 
 1) Local recovery (handle here)
 
@@ -20,6 +28,14 @@ try {
   dao.save(order);
 } catch (SQLException e) {                           // checked
   throw new OrderPersistenceException(orderId, e);   // unchecked or checked per your API
+}
+```
+
+```java
+int parsePort(String s) {
+    int port = Integer.parseInt(s); // may throw NumberFormatException (unchecked)
+    if (port < 0 || port > 65535) throw new IllegalArgumentException("Bad port");
+    return port;
 }
 ```
 
