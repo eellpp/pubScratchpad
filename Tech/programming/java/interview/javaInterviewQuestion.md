@@ -180,7 +180,7 @@ T2: get(k1) after publish       ⇒ sees vNew
 
 ---
 
-## Practical guidance
+##### Practical guidance
 
 * Use **CHM** when multiple threads **read and write** concurrently.
 * Prefer **atomic per-key ops** (`putIfAbsent`, `computeIfAbsent`, `compute`, `merge`) to avoid races.
@@ -198,6 +198,11 @@ CHM lets T1 write **k1** while T2 reads **k1** safely (reader sees old or new, n
 
  Fine-Grained Locking: Instead of locking the entire map, ConcurrentHashMap uses fine-grained locking at the segment level. This means that only the relevant segment is locked during write operations, allowing other threads to continue working with other segments concurrently.   
 
+ ### What happens when a volatile modifier is added to a variable
+ When the volatile keyword is applied then then value written to the variable is immediatly available to read from another thread.   
+ The volatile variable bypasses cpu caches and value is immediatly written to main memory 
+
+ 
  ### What is factory design pattern
  The Factory Pattern in Spring helps in achieving better separation of concerns and abstraction, allowing you to decouple the creation of objects from their usage, making your code more flexible and maintainable.
 
@@ -276,6 +281,7 @@ public class Main {
  ```
 
  In this example, the Shape class is an abstract class with a constructor to set the color of the shape and an abstract method calculateArea() that is meant to be overridden by subclasses. The Circle and Rectangle classes are concrete subclasses that extend the Shape class and provide implementations for the calculateArea() method.
+
 ### JDBC
 
 ### What does Statement.setFetchSize(nSize) method really do in SQL Server JDBC driver?   
