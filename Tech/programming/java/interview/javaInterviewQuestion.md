@@ -836,5 +836,74 @@ A Kafka broker is a server that works as part of a Kafka cluster (in other words
 
 Kafka topics are separated into partitions, each of which contains records in a fixed order. A unique offset is assigned and attributed to each record in a partition. Multiple partition logs can be found in a single topic. This allows several users to read from the same topic at the same time. Topics can be parallelized via partitions, which split data into a single topic among numerous brokers.
 
+#### Say in apache kafka I read a message and got an exception and application terminated . Will there be data loss in this case when the application reads back again
+
+Short answer: it depends on **when the offset was committed**.
+
+##### What Kafka guarantees
+
+* Kafka doesn’t delete the record when you read it. Data stays until the topic’s **retention** expires.
+* “Loss” here means your app **skips** processing a record because the consumer group’s **offset** already moved past it.
+
+##### Cases
+
+1. **Auto-commit (enable.auto.commit=true) or you commit before processing**
+
+   * If the offset was committed after `poll()` but **before** your code finished the work, a crash means you’ll **skip** that record on restart.
+   * From your app’s perspective, that’s **data loss** (at-most-once).
+
+2. **Manual commit after successful processing**
+
+   * If you only commit **after** the work completes, a crash before commit means Kafka will redeliver the record when you restart.
+   * That’s **at-least-once** (no loss, but duplicates possible if your processing is not idempotent).
+
+3. **Exactly-once (read → process → write)**
+
+   * Use **transactions** (idempotent producer + transactional consumer/producer, commit offsets as part of the transaction).
+   * On crash, uncommitted work and offsets are rolled back; on restart, the record is reprocessed **once** (exactly-once semantics for Kafka Streams or the classic consumer with transactions and `isolation.level=read_committed` on readers).
+
+##### Gotchas that can make you “lose” messages on restart
+
+* First run of a new group with `auto.offset.reset=latest`: if the app crashed before committing any offset, on restart the consumer may start at the **end** and skip earlier messages. Prefer `earliest` for brand-new groups.
+* Committing large batches: if you commit per 1,000 records and crash at record 999, you’ll reprocess the whole batch on restart (not loss—**duplicates**).
+
+##### Recommended pattern (plain Java consumer)
+
+```java
+props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
+props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "100");          // small-ish batches
+props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");     // for new groups
+
+try {
+  while (running) {
+    ConsumerRecords<K, V> records = consumer.poll(Duration.ofMillis(500));
+    // process the batch
+    boolean allOk = true;
+    for (ConsumerRecord<K,V> r : records) {
+      try {
+        process(r); // your logic; make it idempotent if possible
+      } catch (Exception e) {
+        allOk = false;
+        // optional: send to DLQ or break to avoid committing this batch
+        break;
+      }
+    }
+    if (allOk && !records.isEmpty()) {
+      consumer.commitSync(); // commit AFTER successful processing
+    }
+  }
+} finally {
+  try { consumer.commitSync(); } catch (Exception ignore) {}
+  consumer.close();
+}
+```
+
+##### If you also **produce** downstream (DB, another topic, S3)
+
+* Aim for **idempotent writes** (e.g., upsert by key, dedupe keys, or use unique constraints).
+* Or move to **transactions**:
+
+  * Producer: `enable.idempotence=true`, set a `transactional.id`.
+  * Wrap “process + write + sendOffsetsToTransaction” in a single transaction; readers use `isolation.level=read_committed`.
 
 
