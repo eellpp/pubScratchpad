@@ -208,7 +208,7 @@ Great scenario. Here’s how **ConcurrentHashMap (CHM)** behaves with three thre
 * **T2:** `get(k1)` (read same key **k1**)
 * **T3:** `put(k2, vX)` (write/update **another** key **k2**)
 
----
+
 
 #### What actually happens under the hood
 
@@ -240,7 +240,7 @@ Great scenario. Here’s how **ConcurrentHashMap (CHM)** behaves with three thre
 * CHM uses **volatile** fields and short synchronized sections so that once a `put/replace/remove` **completes**, subsequent `get`s that start after the publish point will see that update.
 * You’ll never read half-initialized nodes/values.
 
----
+
 
 #### Small timelines
 
@@ -259,7 +259,7 @@ T2: get(k1) during T1’s insert  ⇒ may see null (key not visible yet)
 T2: get(k1) after publish       ⇒ sees vNew
 ```
 
----
+
 
 ##### Practical guidance
 
@@ -282,6 +282,116 @@ CHM lets T1 write **k1** while T2 reads **k1** safely (reader sees old or new, n
  ### What happens when a volatile modifier is added to a variable
  When the volatile keyword is applied then then value written to the variable is immediatly available to read from another thread.   
  The volatile variable bypasses cpu caches and value is immediatly written to main memory 
+
+### What are the adanvatages of executor service than manually creating threads
+
+Here’s the straight answer for Java 17.
+
+##### Why `ExecutorService` beats “new Thread(…).start()”
+
+**1) Thread pooling (performance & stability)**
+
+* Reuses a bounded set of threads → avoids costly creation/destruction, context‐switch storms, and “thread explosion” under load.
+* Lets you **cap concurrency** (core/max pool size) and use **bounded queues** → prevents OOMs and thrashing.
+
+**2) Separation of concerns (execution policy)**
+
+* You submit *tasks*; the pool decides *how/when* to run them (fixed, cached, single, work-stealing, scheduled).
+* You can swap/tune the policy without changing task code.
+
+**3) Backpressure & load shedding**
+
+* Pick queue type (e.g., `LinkedBlockingQueue`, `SynchronousQueue`) and a **RejectedExecutionHandler** (abort, caller-runs, discard) to control behavior at saturation.
+
+**4) Futures, results, timeouts, cancellation**
+
+* `submit(Callable)` returns a `Future`: `get(timeout)`, `cancel(true)`, check exceptions.
+* With `CompletableFuture` you compose pipelines, add timeouts, combine tasks, and handle failures cleanly.
+
+**5) Scheduling & periodic tasks**
+
+* `ScheduledThreadPoolExecutor` does `schedule()`, `scheduleAtFixedRate()`, `scheduleWithFixedDelay()`—no ad-hoc timers.
+
+**6) Lifecycle management**
+
+* Graceful shutdown: `shutdown()`, `awaitTermination()`, or immediate `shutdownNow()`—much harder with loose threads.
+
+**7) Observability & hygiene**
+
+* Custom `ThreadFactory` for **naming**, priorities, daemon flag, and `UncaughtExceptionHandler`.
+* Easier to add metrics around queue depth, active threads, task latency.
+
+**8) Specialization**
+
+* CPU-bound work: fixed pool sized ~ `cores`.
+* I/O-bound: larger pool or separate pool per I/O type.
+* Work-stealing (`ForkJoinPool`) for many small tasks (avoid blocking inside it).
+
+
+
+##### Minimal patterns
+
+**Fixed pool + results + timeout**
+
+```java
+var pool = Executors.newFixedThreadPool(
+    Math.max(2, Runtime.getRuntime().availableProcessors()),
+    r -> { var t = new Thread(r, "app-worker"); t.setDaemon(true); return t; }
+);
+
+Future<Result> f = pool.submit(() -> compute());
+try {
+  Result r = f.get(2, TimeUnit.SECONDS);
+} catch (TimeoutException te) {
+  f.cancel(true);
+}
+```
+
+**Tunable `ThreadPoolExecutor` with backpressure**
+
+```java
+var queue = new ArrayBlockingQueue<Runnable>(1000);
+var exec = new ThreadPoolExecutor(
+    8, 16, 60, TimeUnit.SECONDS, queue,
+    r -> { var t = new Thread(r, "api-%d".formatted(System.nanoTime())); t.setDaemon(true); return t; },
+    new ThreadPoolExecutor.CallerRunsPolicy() // shed load gracefully
+);
+```
+
+**Scheduled jobs**
+
+```java
+var sched = Executors.newScheduledThreadPool(2);
+sched.scheduleAtFixedRate(this::rollup, 0, 5, TimeUnit.MINUTES);
+```
+
+**Consume many tasks as they finish**
+
+```java
+var ecs = new ExecutorCompletionService<Result>(exec);
+for (Task t : tasks) ecs.submit(() -> t.call());
+for (int i = 0; i < tasks.size(); i++) {
+  Result r = ecs.take().get(); // next completed
+}
+```
+
+
+##### When manual threads are OK
+
+* A **single** long-lived background thread with a trivial, well-controlled lifecycle.
+* Tiny prototypes/tests.
+  (You still lose pooling, backpressure, and clean shutdown.)
+
+
+
+##### Gotchas / tips
+
+* Don’t block in a `ForkJoinPool` (or use `ManagedBlocker`/separate pool).
+* Use **bounded** queues for services; unbounded queues hide overload until it’s too late.
+* Name your threads and set `UncaughtExceptionHandler`.
+* For very high concurrency and I/O heavy apps, consider splitting pools by workload.
+
+> Note: In Java 21, **virtual threads** change the story (cheap threads, structured concurrency). On Java 17, `ExecutorService` is the right tool for robust, high-throughput task execution.
 
  
  ### What is factory design pattern
@@ -397,7 +507,7 @@ Great—since you’re on **Oracle + Java 17 (JDBC)**, here’s a crisp, practic
 * **Small/narrow rows:** push `fetchSize` higher (10k–20k).
 * **Wide rows / LOBs:** keep `fetchSize` modest (200–1,000), stream LOBs.
 
----
+
 
 #### Oracle specifics that matter
 
@@ -453,7 +563,7 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
 * **Gzip on the fly** (`.gz`)—often 3–10× smaller, significantly faster end-to-end when I/O bound.
 * Use big buffers (≥ 1MB) for writer and gzip.
 
----
+
 
 #### Scenario guide (pros/cons & settings)
 
@@ -513,7 +623,7 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
 * Gzip on the fly; 1–8MB buffers.
 * Consider `/*+ PARALLEL(n) */` with DBA approval.
 
----
+
 
 ###### Example: Oracle-tuned exporter snippet
 
@@ -583,7 +693,7 @@ The flush() method of PrintWriter Class in Java is used to flush the stream. By 
 * The client only gets data **after the whole response is ready**.
 * Works fine for small/fast payloads (e.g. JSON with a few KB).
 
----
+
 
 #### 2. Streaming API
 
@@ -606,7 +716,7 @@ The connection stays **open** while data flows.
    * Client library (Java, Python, JS, etc.) can read input streams as they arrive.
    * In Java, you’d use `HttpURLConnection` or `HttpClient` → `InputStream` → read line by line.
 
----
+
 
 #### 3. Common Formats for Streaming APIs
 
@@ -633,7 +743,7 @@ The connection stays **open** while data flows.
 
   * For data exports, the server can push raw CSV lines or binary blobs.
 
----
+
 
 #### 4. Why Streaming?
 
@@ -642,7 +752,7 @@ The connection stays **open** while data flows.
 ✅ **Responsive UIs** – progress updates, logs, live dashboards.
 ✅ **Realtime feel** – e.g. chat messages, financial ticks, event feeds.
 
----
+
 
 #### 5. Trade-offs
 
@@ -740,7 +850,7 @@ In a typical caching model, when a new client request for a resource comes in, a
 
 Great topic. A plain `HashMap` in a multi-threaded app is a minefield. Here’s a clear checklist of the **design challenges** you’ll face and the typical fixes/patterns used in industry.
 
----
+
 
 #### 1) Concurrency correctness
 
@@ -753,7 +863,7 @@ Great topic. A plain `HashMap` in a multi-threaded app is a minefield. Here’s 
 * **Nulls**: CHM forbids `null` keys/values; naive loaders can throw NPEs.
   **Fix**: use a **sentinel** for “cached negative” or wrap in `Optional`.
 
----
+
 
 #### 2) Thundering herd / cache stampede
 
@@ -768,14 +878,14 @@ Multiple threads miss the same key and all hit the backing store.
   ```
 * **Fix B**: use Caffeine’s `Cache<K, V>` with `CacheLoader` (built-in stampede control).
 
----
+
 
 #### 3) Lock contention & hot keys
 
 * Heavy work inside `computeIfAbsent` blocks other updates on **that key**; hot keys can bottleneck.
 * **Fix**: keep loader fast (I/O offloaded), shard hot values, or precompute/warm.
 
----
+
 
 #### 4) Eviction, expiry, and memory
 
@@ -787,7 +897,7 @@ Multiple threads miss the same key and all hit the backing store.
 * **Large/variable values**: big entries cause fragmentation and long GC pauses.
   **Fix**: cap size by **weight**; consider **off-heap** (Ehcache 3 off-heap, Chronicle Map) if truly needed.
 
----
+
 
 #### 5) Consistency with the source of truth
 
@@ -800,7 +910,7 @@ Multiple threads miss the same key and all hit the backing store.
 * **Invalidation**: on multi-instance/microservices you need cross-node coherence.
   **Fix**: publish invalidations via Kafka/Redis pub-sub/JMS; version keys (e.g., `key#version`); or use a distributed cache (Redis, Hazelcast, Coherence) if strict coherence is required.
 
----
+
 
 #### 6) Loader behavior & backpressure
 
@@ -811,7 +921,7 @@ Multiple threads miss the same key and all hit the backing store.
 * **Negative caching**: repeated misses hammer the source.
   **Fix**: cache “not found” briefly.
 
----
+
 
 #### 7) Value mutability & partial updates
 
@@ -824,7 +934,7 @@ Multiple threads miss the same key and all hit the backing store.
     ```
   * If you must mutate, guard per-entry with fine-grained locks or make fields volatile.
 
----
+
 
 #### 8) Sizing, preallocation, and GC
 
@@ -833,7 +943,7 @@ Multiple threads miss the same key and all hit the backing store.
 * **GC pauses** with large objects / many short-lived entries.
   **Fix**: tune eviction, use compression (JDK flags), consider ZGC/Shenandoah for large heaps.
 
----
+
 
 #### 9) Observability & operability
 
@@ -842,21 +952,21 @@ Multiple threads miss the same key and all hit the backing store.
   * **Fix**: expose metrics (hit/miss/loads/evictions), add tracing around loaders, and log outliers.
   * Add **removal listeners** (Caffeine) to watch why entries leave.
 
----
+
 
 #### 10) Time & clocks
 
 * Expiry needs a clock; system clock changes can break TTL.
   **Fix**: use a **monotonic** time source if implementing yourself or rely on Caffeine’s internal clock.
 
----
+
 
 #### 11) Security & multi-tenancy
 
 * **Key bleed** across tenants if you don’t namespace keys.
   **Fix**: include tenant/user in the key; set per-tenant size limits to avoid noisy neighbor issues.
 
----
+
 
 #### 12) Failure & recovery
 
@@ -865,7 +975,7 @@ Multiple threads miss the same key and all hit the backing store.
 * **Corruption**: handle loader exceptions so you don’t poison the cache with failed futures.
   **Fix**: store successes only; on failure, remove or insert short-lived negative.
 
----
+
 
 ###### What most teams do in practice
 
@@ -877,7 +987,7 @@ Multiple threads miss the same key and all hit the backing store.
   * metrics & removal listeners.
 * For **shared/coherent cache** across nodes: Redis/Hazelcast/Coherence with explicit invalidation + local near-cache (often Caffeine) for hot keys.
 
----
+
 
 ###### Minimal, safe local cache (single-flight + TTL) with CHM
 
