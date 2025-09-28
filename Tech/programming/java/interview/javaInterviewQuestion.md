@@ -119,7 +119,7 @@ When multiple threads access and modify the same instance of a singleton bean co
  ConcurrentHashMap: thread-safe for concurrent reads+writes with high throughput; provides atomic per-key operations (compute*, putIfAbsent, merge) and weakly-consistent iterators.
 
 
-#### If one thread is writing a key in concurrent hash map and other thread is reading the same key and third thread is updating another key in map , how will concurrent hashmap handle this case
+### If one thread is writing a key in concurrent hash map and other thread is reading the same key and third thread is updating another key in map , how will concurrent hashmap handle this case
 
 Great scenario. Here’s how **ConcurrentHashMap (CHM)** behaves with three threads:
 
