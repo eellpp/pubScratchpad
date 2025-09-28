@@ -1,3 +1,9 @@
+### What is difference between throw and throws keyword in java
+Use throw to launch an exception instance right now; use throws to declare that a method might throw, so callers must handle or propagate it.
+
+You can throw both checked and unchecked exceptions.  
+If it’s checked, you must either catch it or declare it with throws.
+
 ### Explain  checked and unchecked exception with example
 
 ##### Checked exceptions (extends Exception, not RuntimeException)
