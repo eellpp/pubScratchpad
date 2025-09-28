@@ -414,6 +414,122 @@ https://www.javacodegeeks.com/2018/12/java-streaming-jdbc-resultset-csv.html
 The flush() method of PrintWriter Class in Java is used to flush the stream. By flushing the stream, it means to clear the stream of any element that may be or maybe not inside the stream. 
 
 
+### Explain how Streaming API works from http request perspective
+
+#### 1. Normal HTTP API (non-streaming)
+
+* Client makes a request → server processes → prepares **entire response** → sends it in one shot.
+* The client only gets data **after the whole response is ready**.
+* Works fine for small/fast payloads (e.g. JSON with a few KB).
+
+---
+
+#### 2. Streaming API
+
+Instead of waiting for the **whole result set**, the server sends data in **chunks** as it becomes available.
+The connection stays **open** while data flows.
+
+#### How it works (technically)
+
+1. **HTTP/1.1 chunked transfer encoding** or **HTTP/2 streaming**:
+
+   * Response header is sent with `Transfer-Encoding: chunked`.
+   * Server writes chunks of bytes (often JSON lines, CSV rows, or event messages).
+   * Each chunk is immediately flushed to the socket.
+   * Client reads incrementally without waiting for completion.
+2. **Connection stays open**:
+
+   * Until the server finishes producing data (or a timeout/close).
+3. **Client consumption**:
+
+   * Client library (Java, Python, JS, etc.) can read input streams as they arrive.
+   * In Java, you’d use `HttpURLConnection` or `HttpClient` → `InputStream` → read line by line.
+
+---
+
+#### 3. Common Formats for Streaming APIs
+
+* **Server-Sent Events (SSE)**
+
+  * `Content-Type: text/event-stream`.
+  * Each chunk is a message like:
+
+    ```
+    data: {"msg": "hello"}
+    ```
+  * Used by browsers and UIs (e.g. OpenAI streaming chat completions).
+* **NDJSON (Newline-delimited JSON)**
+
+  * Each line is a valid JSON object.
+  * Example:
+
+    ```
+    {"id":1,"msg":"hello"}
+    {"id":2,"msg":"world"}
+    ```
+  * Easy to parse line-by-line in most languages.
+* **Raw binary / CSV rows**
+
+  * For data exports, the server can push raw CSV lines or binary blobs.
+
+---
+
+#### 4. Why Streaming?
+
+✅ **Lower latency** – client sees first results immediately.
+✅ **Handles huge results** – don’t need to buffer everything in server RAM.
+✅ **Responsive UIs** – progress updates, logs, live dashboards.
+✅ **Realtime feel** – e.g. chat messages, financial ticks, event feeds.
+
+---
+
+#### 5. Trade-offs
+
+* ❌ Harder to retry/resume (since mid-stream state may be lost if connection breaks).
+* ❌ Parsing is incremental, not “load once and map to object”.
+* ❌ Some proxies/load balancers buffer responses unless configured for streaming.
+* ❌ Harder to paginate/index—client must consume whole stream sequentially.
+
+When transferring datasets, where transfer is only successfull when full data is received, then streaming data is not prefferred. 
+
+Use streaming for:  
+- realtime feeds, large exports, progressive UX.
+
+Avoid streaming for:  
+- small atomic responses,
+- compliance-critical data,
+- or environments with unreliable infra.
+
+
+
+#### 6. Example (Java 17 HTTP Client reading a streaming API)
+
+```java
+import java.net.http.*;
+import java.net.URI;
+import java.io.*;
+
+public class StreamingApiClient {
+    public static void main(String[] args) throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest req = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.example.com/stream"))
+                .build();
+
+        HttpResponse<InputStream> resp = client.send(req, HttpResponse.BodyHandlers.ofInputStream());
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(resp.body()))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println("Got chunk: " + line);
+                // parse line as JSON, CSV, etc.
+            }
+        }
+    }
+}
+```
+
+
 ### What is a Streaming API response
 Streaming Response: The server starts sending data as soon as it's available and continues to send more data in chunks or pieces. The client receives and processes this data incrementally as it arrives. This is particularly useful when the server needs time to generate or fetch data, and it allows the client to start consuming data earlier.
 
@@ -458,6 +574,181 @@ Caching is the mechanism of storing data in a temporary storage location, either
 Caching improves performance by decreasing page load times, and reduces the load on servers and databases.
 
 In a typical caching model, when a new client request for a resource comes in, a lookup is done on the temporary storage to see if a similar request came in earlier. 
+
+### Say in java you are keeping an in memory cache in hash map. This is multiple threaded application. What are the design challenges you have
+
+Great topic. A plain `HashMap` in a multi-threaded app is a minefield. Here’s a clear checklist of the **design challenges** you’ll face and the typical fixes/patterns used in industry.
+
+---
+
+#### 1) Concurrency correctness
+
+* **Data races / corruption**: `HashMap` is **not** thread-safe (pre-JDK8 it could even loop during resize).
+  **Fix**: use `ConcurrentHashMap` (CHM) or a proven cache library (Caffeine).
+* **Atomic compound ops**: `if (!map.containsKey(k)) map.put(k,v)` is not atomic → duplicates, lost updates.
+  **Fix**: use CHM’s atomic methods: `compute`, `computeIfAbsent`, `putIfAbsent`, `merge`.
+* **Visibility/memory model**: writers update a value but readers still see stale state.
+  **Fix**: store **immutable** values (or defensive copies) and publish via CHM (which has the needed happens-before); or use `volatile` fields inside value objects when mutation is unavoidable.
+* **Nulls**: CHM forbids `null` keys/values; naive loaders can throw NPEs.
+  **Fix**: use a **sentinel** for “cached negative” or wrap in `Optional`.
+
+---
+
+#### 2) Thundering herd / cache stampede
+
+Multiple threads miss the same key and all hit the backing store.
+
+* **Fix A (per-key single flight)**: store `CompletableFuture<V>` in the map and have all waiters join it:
+
+  ```java
+  var f = cache.computeIfAbsent(key, k ->
+      CompletableFuture.supplyAsync(() -> load(k), loaderPool));
+  return f.get();
+  ```
+* **Fix B**: use Caffeine’s `Cache<K, V>` with `CacheLoader` (built-in stampede control).
+
+---
+
+#### 3) Lock contention & hot keys
+
+* Heavy work inside `computeIfAbsent` blocks other updates on **that key**; hot keys can bottleneck.
+* **Fix**: keep loader fast (I/O offloaded), shard hot values, or precompute/warm.
+
+---
+
+#### 4) Eviction, expiry, and memory
+
+* **No eviction** in CHM → unbounded growth → OOM or GC pressure.
+* **Fix**:
+
+  * Implement policy (TTL/Tmax, size bound). Rolling your own LRU/LFU correctly under concurrency is hard.
+  * **Use Caffeine** (W-TinyLFU, size/weight based, `expireAfterWrite/Access`, `refreshAfterWrite`, `maximumSize/Weight`).
+* **Large/variable values**: big entries cause fragmentation and long GC pauses.
+  **Fix**: cap size by **weight**; consider **off-heap** (Ehcache 3 off-heap, Chronicle Map) if truly needed.
+
+---
+
+#### 5) Consistency with the source of truth
+
+* **Stale data**: how fresh must the cache be?
+  **Patterns**:
+
+  * **Cache-aside** (read-through on miss; explicit invalidate on write).
+  * **Write-through** (update cache & DB atomically).
+  * **Write-behind** (buffered writes; harder to reason about).
+* **Invalidation**: on multi-instance/microservices you need cross-node coherence.
+  **Fix**: publish invalidations via Kafka/Redis pub-sub/JMS; version keys (e.g., `key#version`); or use a distributed cache (Redis, Hazelcast, Coherence) if strict coherence is required.
+
+---
+
+#### 6) Loader behavior & backpressure
+
+* **Slow/failed loaders** can pile up waiters and exhaust threads.
+
+  * **Fix**: timeouts, circuit-breaker, limited loader pool, bulk/batch loads.
+  * **Cancellation**: propagate interrupts, handle `CompletableFuture.cancel`.
+* **Negative caching**: repeated misses hammer the source.
+  **Fix**: cache “not found” briefly.
+
+---
+
+#### 7) Value mutability & partial updates
+
+* Putting a mutable object once and then mutating it in place causes data races and surprising reads.
+
+  * **Fix**: treat values as **immutable snapshots** and replace with `compute`:
+
+    ```java
+    cache.compute(key, (k, old) -> recompute(old));
+    ```
+  * If you must mutate, guard per-entry with fine-grained locks or make fields volatile.
+
+---
+
+#### 8) Sizing, preallocation, and GC
+
+* **Resizes** are costly under load.
+  **Fix**: estimate cardinality and set `new ConcurrentHashMap<>(initialCapacity)` up front.
+* **GC pauses** with large objects / many short-lived entries.
+  **Fix**: tune eviction, use compression (JDK flags), consider ZGC/Shenandoah for large heaps.
+
+---
+
+#### 9) Observability & operability
+
+* **No insight** → you won’t know hit ratio, evictions, latency, stampedes.
+
+  * **Fix**: expose metrics (hit/miss/loads/evictions), add tracing around loaders, and log outliers.
+  * Add **removal listeners** (Caffeine) to watch why entries leave.
+
+---
+
+#### 10) Time & clocks
+
+* Expiry needs a clock; system clock changes can break TTL.
+  **Fix**: use a **monotonic** time source if implementing yourself or rely on Caffeine’s internal clock.
+
+---
+
+#### 11) Security & multi-tenancy
+
+* **Key bleed** across tenants if you don’t namespace keys.
+  **Fix**: include tenant/user in the key; set per-tenant size limits to avoid noisy neighbor issues.
+
+---
+
+#### 12) Failure & recovery
+
+* **Warmup**: cold cache thundering herd at startup.
+  **Fix**: pre-warm critical keys, or lazy-warm with rate limits.
+* **Corruption**: handle loader exceptions so you don’t poison the cache with failed futures.
+  **Fix**: store successes only; on failure, remove or insert short-lived negative.
+
+---
+
+###### What most teams do in practice
+
+* For a **local, in-process cache**: use **Caffeine** instead of rolling your own (`ConcurrentHashMap` + custom eviction). It solves:
+
+  * eviction/expiry (LRU/LFU via W-TinyLFU),
+  * refresh & async loading,
+  * stampede control,
+  * metrics & removal listeners.
+* For **shared/coherent cache** across nodes: Redis/Hazelcast/Coherence with explicit invalidation + local near-cache (often Caffeine) for hot keys.
+
+---
+
+###### Minimal, safe local cache (single-flight + TTL) with CHM
+
+```java
+class LocalCache<K, V> {
+  private static final class Entry<V> {
+    final CompletableFuture<V> future;
+    final long expiresAtNanos;
+    Entry(CompletableFuture<V> f, long exp) { this.future = f; this.expiresAtNanos = exp; }
+  }
+  private final ConcurrentHashMap<K, Entry<V>> map = new ConcurrentHashMap<>();
+  private final Duration ttl;
+  private final Executor loaderPool;
+
+  LocalCache(Duration ttl, Executor loaderPool) { this.ttl = ttl; this.loaderPool = loaderPool; }
+
+  V get(K key, Function<K, V> loader) {
+    long now = System.nanoTime();
+    Entry<V> e = map.compute(key, (k, old) -> {
+      if (old != null && old.expiresAtNanos > now) return old;
+      CompletableFuture<V> f = CompletableFuture.supplyAsync(() -> loader.apply(k), loaderPool);
+      long exp = now + ttl.toNanos();
+      return new Entry<>(f, exp);
+    });
+    try { return e.future.get(); }
+    catch (Exception ex) { map.remove(key, e); throw new CompletionException(ex); }
+  }
+}
+```
+
+(Still, prefer **Caffeine** unless you have a strong reason not to.)
+
 
 ###  How  to prevent a thread from sharing its state with other threads
 use ThreadLocal.  
