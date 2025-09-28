@@ -110,15 +110,90 @@ When multiple threads access and modify the same instance of a singleton bean co
 
  Utilize Java's concurrent libraries such as java.util.concurrent classes for managing concurrent access to shared resources. For example, using ConcurrentHashMap instead of a regular HashMap if your bean needs to store and manipulate data concurrently.
 
- ### What is concurrent HashMap and when would you use it ?
+ ### what is the difference between HashMap and Concurrant HashMap in java ? When would you use one over other
  ConcurrentHashMap is beneficial in a multi-threaded environment and performs better than HashMap. It provides thread-safety, scalability, and synchronization. For the single-threaded environment, the HashMap performs slightly better than ConcurrentHashMap.
 
  In HashMap, if one thread is iterating the object and the other thread will try to iterate the object, it will throw a runtime exception. But, in ConcurrentHashMap, it is possible to iterate the objects simultaneously by two or more threads.
 
- ### What does synchronization mean for concurrent hash map
- synchronization refers to the mechanisms used to maintain thread safety when multiple threads are accessing and modifying the map concurrently. 
+ HashMap: not thread-safe. Use it in single-threaded code or for immutable/read-only maps safely published after construction.  
+ 
+ ConcurrentHashMap: thread-safe for concurrent reads+writes with high throughput; provides atomic per-key operations (compute*, putIfAbsent, merge) and weakly-consistent iterators.
 
- The goal of synchronization in ConcurrentHashMap is to provide a balance between performance and thread safety. Traditional synchronization methods, like using locks or synchronized blocks, can lead to contention and performance bottlenecks in multi-threaded scenarios. ConcurrentHashMap uses a variety of techniques to allow efficient concurrent operations:
+
+#### If one thread is writing a key in concurrent hash map and other thread is reading the same key and third thread is updating another key in map , how will concurrent hashmap handle this case
+
+Great scenario. Here’s how **ConcurrentHashMap (CHM)** behaves with three threads:
+
+* **T1:** `put(k1, vNew)` (write/update key **k1**)
+* **T2:** `get(k1)` (read same key **k1**)
+* **T3:** `put(k2, vX)` (write/update **another** key **k2**)
+
+---
+
+#### What actually happens under the hood
+
+##### 1) Reads are (mostly) lock-free; writes lock **only the affected bucket**
+
+* CHM splits the table into **bins (buckets)**.
+* **Writes** (`put/compute/replace/remove`) take a **short, per-bin lock** for the key’s bucket.
+* **Reads** (`get`) are **lock-free** (they read volatile fields), so they don’t block other threads.
+
+##### 2) Reading the **same key** while it’s being written
+
+* While T1 is updating **k1**, T2’s `get(k1)`:
+
+  * Sees **either the old value or the new value** (never a corrupted/partial value).
+  * Once T1 **publishes** the new mapping (via volatile writes inside CHM), any `get(k1)` that starts **after that publish** will observe **vNew**.
+  * If T1 is **inserting a brand-new key**, a concurrent `get(k1)` may return **null** until the publish happens.
+
+> Intuition: you’ll observe a clean “before” or “after” snapshot for that key—no torn states.
+
+##### 3) Writing a **different key** at the same time
+
+* T3’s `put(k2, vX)` proceeds **independently** of T1’s write to **k1** **if k1 and k2 hash to different bins** (the common case).
+
+  * They **don’t block each other** and can run in parallel.
+* If **k1** and **k2** collide into the **same bin**, their updates contend on that bin’s lock, so one waits briefly.
+
+##### 4) Memory visibility (happens-before)
+
+* CHM uses **volatile** fields and short synchronized sections so that once a `put/replace/remove` **completes**, subsequent `get`s that start after the publish point will see that update.
+* You’ll never read half-initialized nodes/values.
+
+---
+
+#### Small timelines
+
+**Update existing key**
+
+```
+T1: put(k1, vNew)  — acquires k1’s bin lock → updates → publishes → releases
+T2: get(k1)        — if before publish ⇒ sees old value; after publish ⇒ sees vNew
+T3: put(k2, vX)    — runs in parallel unless k2 shares k1’s bin (hash collision)
+```
+
+**Insert new key**
+
+```
+T2: get(k1) during T1’s insert  ⇒ may see null (key not visible yet)
+T2: get(k1) after publish       ⇒ sees vNew
+```
+
+---
+
+## Practical guidance
+
+* Use **CHM** when multiple threads **read and write** concurrently.
+* Prefer **atomic per-key ops** (`putIfAbsent`, `computeIfAbsent`, `compute`, `merge`) to avoid races.
+* Keep values **immutable** (or replace whole values) to avoid in-place mutation races.
+* If you need TTL/eviction/refresh/stampede control, use a cache library (e.g., **Caffeine**) rather than building policies on top of CHM.
+
+**Bottom line:**
+CHM lets T1 write **k1** while T2 reads **k1** safely (reader sees old or new, never corrupt) and lets T3 update **k2** in parallel (unless it hashes to the same bucket), delivering high throughput with fine-grained contention.
+
+
+ ### How are concurrent hash map designed  ? How do they achieve concurrancy
+ ConcurrentHashMap uses a variety of techniques to allow efficient concurrent operations:
 
  Segmented Structure: ConcurrentHashMap is divided into segments, each of which is effectively a separate hash table. This allows different threads to modify different segments concurrently, reducing contention.  
 
