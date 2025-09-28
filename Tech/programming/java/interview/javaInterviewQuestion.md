@@ -2,7 +2,6 @@
 yes. Because final marks the reference not the object. You can't make the reference point to another hash table. However you can add new values to it.  
 int is a primitive type, not reference. Means with final you can't change the value of variable. 
 
-### what is computeIfAbsent for map 
 
 ### What is inversion of control for Spring JDBC?
 
