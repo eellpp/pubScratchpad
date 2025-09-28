@@ -1,3 +1,43 @@
+### Explain  checked and unchecked exception with example
+Checked → recoverable conditions you expect callers to deal with (I/O, user/data issues).   
+Unchecked → programmer mistakes / illegal state or args; let them bubble to a boundary where you log/translate.  
+
+1) Local recovery (handle here)
+
+Do this when you can actually fix/continue (retry, fallback, default).
+```java
+try {
+  return readConfig();
+} catch (IOException e) {              // checked
+  return Config.defaultConfig();       // real fallback
+}
+```
+
+or throw other more meaningful exception 
+
+```java
+try {
+  dao.save(order);
+} catch (SQLException e) {                           // checked
+  throw new OrderPersistenceException(orderId, e);   // unchecked or checked per your API
+}
+```
+
+Use checked exceptions sparingly—only when typical callers can and should handle them (I/O, user input, business rule violations where a different action is likely).
+
+Prefer unchecked for:
+- programming contract violations (IllegalArgumentException, IllegalStateException),
+- infrastructure problems callers can’t fix (e.g., serialization bug),
+- internal boundaries where you’ll handle at a higher layer (controller/adaptor).
+
+Layered translation:
+- Repository: wrap SQLException → DataAccessException (unchecked).
+- Service: translate to domain exception (InsufficientFundsException maybe checked if UI can prompt user).
+- Controller: map to HTTP 4xx/5xx.
+
+Log once, at the boundary (e.g., controller/filter/job runner). Don’t log and rethrow repeatedly.
+
+
 ### If i declare a Map variable as final, can i put values into it later
 yes. Because final marks the reference not the object. You can't make the reference point to another hash table. However you can add new values to it.  
 int is a primitive type, not reference. Means with final you can't change the value of variable. 
