@@ -171,6 +171,25 @@ When multiple threads access and modify the same instance of a singleton bean co
 
  Utilize Java's concurrent libraries such as java.util.concurrent classes for managing concurrent access to shared resources. For example, using ConcurrentHashMap instead of a regular HashMap if your bean needs to store and manipulate data concurrently.
 
+### how would you implement a thread safe singleton in java 
+
+create a synchronised static method and return an object instance from it.   
+synchronised insists that only thread at a time.   
+
+``` java
+public final class ConfigService {
+    private static ConfigService instance;
+
+    private ConfigService() { }
+
+    public static synchronized ConfigService getInstance() {
+        if (instance == null) instance = new ConfigService();
+        return instance;
+    }
+}
+
+```
+
  ### what is the difference between HashMap and Concurrant HashMap in java ? When would you use one over other
  ConcurrentHashMap is beneficial in a multi-threaded environment and performs better than HashMap. It provides thread-safety, scalability, and synchronization. For the single-threaded environment, the HashMap performs slightly better than ConcurrentHashMap.
 
