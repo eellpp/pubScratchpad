@@ -60,6 +60,11 @@ A consumer group is a **shared cursor per partition** with automatic **membershi
    * If a broker with a partition leader fails: Kafka elects a new leader; consumer transparently resumes after metadata refresh.
 
 
-#### Mental model in one line
+## If a kafka topic has 10 partitions and 5 consumers in a consumer group , then how will the partition be distributed among the consumers . What happens when a consumer exits the group and later rejoins 
+
+If a consumer joins/leaves, Kafka rebalances. Coordinator reassigns its partitions; another consumer continues from the last committed offset. 
+
+Ff a broker with a partition leader fails: Kafka elects a new leader; consumer transparently resumes after metadata refresh
+
 
 
