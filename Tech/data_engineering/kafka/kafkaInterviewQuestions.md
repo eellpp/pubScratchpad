@@ -1,7 +1,7 @@
 
 ## What is the role of kafka consumer group ? How does kafka handle message consumption in a consumer group
 
-Here’s the quick, practical picture.
+A consumer group is a **shared cursor per partition** with automatic **membership, assignment, and recovery**, giving you parallelism (by partitions), ordering (within a partition), and resilience—with offsets as the durable progress marker.
 
 #### What a Kafka **consumer group** does
 
@@ -62,4 +62,4 @@ Here’s the quick, practical picture.
 
 #### Mental model in one line
 
-A consumer group is a **shared cursor per partition** with automatic **membership, assignment, and recovery**, giving you parallelism (by partitions), ordering (within a partition), and resilience—with offsets as the durable progress marker.
+
