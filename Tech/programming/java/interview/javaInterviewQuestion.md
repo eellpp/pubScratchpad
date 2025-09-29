@@ -190,6 +190,10 @@ public final class ConfigService {
 
 ```
 
+The above class is also immutable . There is only a static getInstance method which creates the object using private constructor.   
+Once the instance is created, there is no update available for it .
+
+
  ### what is the difference between HashMap and Concurrant HashMap in java ? When would you use one over other
  ConcurrentHashMap is beneficial in a multi-threaded environment and performs better than HashMap. It provides thread-safety, scalability, and synchronization. For the single-threaded environment, the HashMap performs slightly better than ConcurrentHashMap.
 
