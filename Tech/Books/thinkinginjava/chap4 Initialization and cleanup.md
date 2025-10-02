@@ -9,8 +9,119 @@ Here are the **important points** from the chapter *“Initialization and Cleanu
 * If you don’t explicitly define a constructor, the compiler provides a **default constructor** (no arguments).
 * Constructors can be **overloaded**, allowing different ways of initializing the same class.
 
-Q: why constructor does not have return value ?    
+#### Q: why constructor does not have return value ?    
 If there were a return value, and if you could select your own, the compiler would somehow need to know what to do with that return value.  
+
+#### Q: Create a class with a String field that is initialized at the point of definition, and another one that is initialized by the constructor. What is the difference between the two approaches?  
+A: Inline (field) initialization runs before the constructor body, right after super() and in the textual order the fields are declared.  
+
+#### Q: What are the byte sizes of types in java   
+A:  
+
+| Type      | Bytes                                                                       | Bits | Signed?      | Range / Notes                                            |
+| --------- | --------------------------------------------------------------------------- | ---- | ------------ | -------------------------------------------------------- |
+| `boolean` | JVM-dependent (typically 1 byte in arrays, but spec only says *true/false*) | —    | —            | Only `true` / `false`                                    |
+| `byte`    | 1                                                                           | 8    | Yes          | −128 to 127                                              |
+| `short`   | 2                                                                           | 16   | Yes          | −32,768 to 32,767                                        |
+| `char`    | 2                                                                           | 16   | **Unsigned** | 0 to 65,535 (Unicode code units)                         |
+| `int`     | 4                                                                           | 32   | Yes          | −2,147,483,648 to 2,147,483,647                          |
+| `long`    | 8                                                                           | 64   | Yes          | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807  |
+| `float`   | 4                                                                           | 32   | IEEE-754     | ~±3.40282347×10³⁸ (7 decimal digits precision)           |
+| `double`  | 8                                                                           | 64   | IEEE-754     | ~±1.7976931348623157×10³⁰⁸ (15 decimal digits precision) |
+
+
+* `boolean` size isn’t strictly defined in the Java spec. It’s only guaranteed to hold two values. In practice:
+
+  * 1 bit logically, but most JVMs use **1 byte** in arrays and may use word size (4 bytes) internally for fields.
+* `char` is special: it’s **unsigned** and represents a UTF-16 code unit.
+* `float` and `double` follow IEEE-754 standard floating-point representation.
+* All **integral types** except `char` are signed two’s complement.
+* Sizes are **fixed across all platforms** (unlike C/C++).
+
+
+#### Q: In  overloaded method of primitive types how the java chooses the correct function 
+A:   
+
+If you have several overloaded methods that accept different primitive types, and you call them with a literal or smaller primitive, Java will choose the **widening conversion** path.
+
+Example:
+
+```java
+class OverloadPrimitives {
+    void f(int x)   { System.out.println("int"); }
+    void f(long x)  { System.out.println("long"); }
+    void f(float x) { System.out.println("float"); }
+    void f(double x){ System.out.println("double"); }
+
+    public static void main(String[] args) {
+        OverloadPrimitives op = new OverloadPrimitives();
+        op.f(5);       // int literal → "int"
+        op.f(5L);      // long literal → "long"
+        op.f(5.0f);    // float literal → "float"
+        op.f(5.0);     // double literal → "double"
+        byte b = 5;
+        op.f(b);       // byte promoted → int → "int"
+    }
+}
+```
+
+**Key point**:
+Smaller primitives (`byte`, `short`, `char`) are automatically widened to `int` if there isn’t an exact match. From there, they can be further widened if necessary:
+`byte → short → int → long → float → double`
+
+
+##### 2. No Narrowing by Default
+
+Java does **not** automatically narrow a type in overloading.
+Example:
+
+```java
+void f(short x) { System.out.println("short"); }
+
+f(5);  // error? No! 5 is an int literal → won't choose short automatically
+```
+
+You’d need an explicit cast:
+
+```java
+f((short)5);
+```
+
+##### 3. Overloading Ambiguities
+
+When multiple widening paths exist, the **most specific match** is chosen.
+But if there are two equally valid options, the compiler will complain about ambiguity.
+
+Example:
+
+```java
+void f(long x) {}
+void f(float x) {}
+
+f(5);  // int can become either long or float → compiler error: ambiguous
+```
+
+##### 4. Overloading with `char`
+
+* `char` is a 16-bit unsigned integer in Java.
+* It can promote to `int`, `long`, `float`, or `double`.
+* If you overload with `char` explicitly, it gets priority:
+
+```java
+void f(char x) { System.out.println("char"); }
+void f(int x)  { System.out.println("int"); }
+
+f('a');  // chooses "char"
+```
+
+---
+
+✅ **In short**:
+
+* Java always tries for the **closest match**.
+* If not exact, it uses **widening conversion**.
+* No automatic narrowing is allowed.
+* Ambiguities happen if two methods are equally good candidates.
 
 
 ---
