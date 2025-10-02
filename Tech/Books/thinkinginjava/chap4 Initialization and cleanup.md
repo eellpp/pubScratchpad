@@ -39,6 +39,15 @@ A:
 * Sizes are **fixed across all platforms** (unlike C/C++).
 
 
+---
+
+# 2. Method Overloading
+
+* Same method name but different parameter lists.
+* Helps create flexible initialization and object creation mechanisms.
+* The return type alone cannot distinguish overloaded methods.
+
+
 #### Q: In  overloaded method of primitive types how the java chooses the correct function 
 A:   
 
@@ -125,14 +134,6 @@ f('a');  // chooses "char"
 
 ---
 
-# 2. Method Overloading
-
-* Same method name but different parameter lists.
-* Helps create flexible initialization and object creation mechanisms.
-* The return type alone cannot distinguish overloaded methods.
-
----
-
 # 3. Default Initialization
 
 * Java guarantees that class fields are initialized with **default values** (0, false, null, etc.) if not explicitly initialized.
@@ -198,9 +199,16 @@ Suppose you’re inside a method and you’d like to get the reference to the cu
 #### Q: when an method inside a object instance is called, then how does object know which instance is calling it  
 There’s a secret first argument passed to the instance method eg : peel( ), and that argument is the reference to the object that’s being manipulated.
 
+#### Q: How to call one constructor from another 
+A:   When you write several constructors for a class, there are times when you’d like to call one constructor from another to avoid duplicating code. You can make such a call by using the this keyword.
+
+#### Q: Can you call more than one constructor from a constructor using this :
+A : NO. you can call one constructor using this, you cannot call two. In addition, the constructor call must be the first thing you do, or you’ll get a compiler error message.   
+
+
 ---
 
-✅ **Core Takeaway**:
+**Core Takeaway**:
 In Java, *initialization* is handled through constructors, field defaults, and explicit setup, while *cleanup* is best done through explicit methods rather than relying on garbage collection or `finalize()`. Always ensure proper resource management.
 
 
