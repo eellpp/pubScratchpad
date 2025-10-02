@@ -199,14 +199,96 @@ Finalization is deprecated for removal (JEP 421; JDK 18) and can even be disable
 6. **Constructor execution**
    Finally, the constructor body runs. If the class has a superclass, its constructor chain is executed first via `super()`. Constructors may perform complex setup logic or delegate to other constructors.
 
----
-
-✅ **Key insight**:
+**Key insight**:
 Java object creation is a multi-step process: *class load → static initialization → instance memory allocation → default values → field initializers → constructor logic*. This order guarantees that objects start life in a consistent, predictable state.
 
----
 
-Would you like me to also create a **timeline diagram** (step 1 → 6 visually) so you can keep it as a quick reference?
+# 7.1 : Static block 
+
+## 🔹 What a `static` block is
+
+* A **static block** (or static initializer) is a block of code marked with `static { ... }`.
+* It runs **once**, when the class is loaded into the JVM, before any objects are created or any static methods/fields are accessed.
+* Example:
+
+```java
+class Config {
+    static final Map<String, String> SETTINGS;
+
+    static {
+        SETTINGS = new HashMap<>();
+        SETTINGS.put("env", "prod");
+        SETTINGS.put("region", "us-east");
+    }
+}
+```
+
+
+## 🔹 Why not just static field initializers?
+
+For *simple values* you don’t need a static block:
+
+```java
+static final int DEFAULT_TIMEOUT = 30;
+```
+
+But static blocks are useful when:
+
+1. **Complex initialization is needed**
+
+   * If you must run multiple statements to compute a value.
+   * Example: populating a collection, reading a resource, or calculating a constant.
+
+2. **Exception handling**
+
+   * Field initializers can’t throw checked exceptions, but static blocks can wrap code in `try-catch`.
+   * Example: loading a configuration file or database driver.
+
+```java
+static Connection conn;
+static {
+    try {
+        conn = DriverManager.getConnection("jdbc:...");
+    } catch (SQLException e) {
+        throw new ExceptionInInitializerError(e);
+    }
+}
+```
+
+3. **Dependent initialization order**
+
+   * If initialization of one field depends on another, a static block can make the sequence explicit.
+
+```java
+static final int A;
+static final int B;
+
+static {
+    A = 10;
+    B = A * 2;
+}
+```
+
+4. **Performance or resource setup**
+
+   * Sometimes you want to pre-load expensive data or register something (like JDBC drivers, logging config, caches) as soon as the class is loaded.
+
+
+## 🔹 When *not* to use
+
+* If initialization is a **single expression**, prefer inline field initialization (`static final int X = 42;`).
+* Don’t use static blocks for heavy work; class loading should be fast.
+* Don’t rely on static blocks for application flow — they’re best for **setup, not logic**.
+
+
+**Rule of Thumb**
+
+* **Use static field initializers** for simple constants.
+* **Use static blocks** when you need:
+
+  * multi-statement initialization,
+  * exception handling during initialization, or
+  * dependent setup that can’t be expressed inline.
 
 
 ---
