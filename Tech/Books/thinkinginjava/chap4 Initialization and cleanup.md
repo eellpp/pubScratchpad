@@ -139,6 +139,16 @@ f('a');  // chooses "char"
 * Java guarantees that class fields are initialized with **default values** (0, false, null, etc.) if not explicitly initialized.
 * Local variables **must be explicitly initialized** before use.
 
+`int i` and then doing i++ gives compiler error.   
+Java could have done default initialization but it takes that stand that its a programmer error not to have have un-initialized variable and then operating on it.   
+
+Caveat   
+If a primitive is a field in a class, however, things are a bit different. int/long types are initialized to 0 and char to null etc.     
+Each primitive field of a class is guaranteed to get an initial value. Even though the values are not specified, they automatically get initialized (the char value is a zero, which prints as a space). So at least there’s no threat of working with uninitialized variables.
+
+
+When you define an object reference inside a class without initializing it to a new object, that reference is given a special value of null.
+
 ---
 
 # 4. Cleanup
@@ -163,13 +173,41 @@ f('a');  // chooses "char"
 * Explicit methods (like `dispose()` or `close()`) should be created for releasing non-memory resources.
 * Don’t rely on `finalize()`.
 
+Finalization is deprecated for removal (JEP 421; JDK 18) and can even be disabled via flags; the JDK plans to remove it entirely. Relying on it risks future breakage
+
 ---
 
 # 7. Order of Initialization
 
-* **Class fields** are initialized in the order of definition, before the constructor body executes.
-* **Static fields** are initialized when the class is first loaded.
-* **Instance fields** are initialized each time a new object is created.
+### Object Creation in Java (Example: `Dog`)
+
+1. **Class loading**
+   The first time you create a `Dog` object—or reference any of its static fields or methods—the JVM must load `Dog.class`. This is done by searching the classpath and creating a corresponding `Class` object.
+
+2. **Static initialization**
+   When the class is loaded, all static initializers and static fields are executed once. This happens only on the first load of the class.
+
+3. **Memory allocation**
+   When you call `new Dog()`, the JVM allocates space on the heap for the new `Dog` instance.
+
+4. **Default field initialization**
+   The allocated memory is cleared (zeroed out), so all primitive fields get their default values (`0`, `false`, `\u0000`) and all object references are set to `null`.
+
+5. **Instance field initializers**
+   Any fields that have inline initializations (at the point of declaration) are assigned their values now.
+
+6. **Constructor execution**
+   Finally, the constructor body runs. If the class has a superclass, its constructor chain is executed first via `super()`. Constructors may perform complex setup logic or delegate to other constructors.
+
+---
+
+✅ **Key insight**:
+Java object creation is a multi-step process: *class load → static initialization → instance memory allocation → default values → field initializers → constructor logic*. This order guarantees that objects start life in a consistent, predictable state.
+
+---
+
+Would you like me to also create a **timeline diagram** (step 1 → 6 visually) so you can keep it as a quick reference?
+
 
 ---
 
@@ -195,6 +233,7 @@ f('a');  // chooses "char"
 
 Suppose you’re inside a method and you’d like to get the reference to the current object. Since that reference is passed secretly by the compiler, there’s no identifier for it. However, for this purpose there’s a keyword: this. 
 
+A static method has no `this`. Through static methods java provides global functions . (Since it has this global methods , its not a strict OO language) 
 
 #### Q: when an method inside a object instance is called, then how does object know which instance is calling it  
 There’s a secret first argument passed to the instance method eg : peel( ), and that argument is the reference to the object that’s being manipulated.
