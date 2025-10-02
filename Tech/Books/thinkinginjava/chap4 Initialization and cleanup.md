@@ -2,7 +2,7 @@ Here are the **important points** from the chapter *“Initialization and Cleanu
 
 ---
 
-## 1. Object Initialization
+# 1. Object Initialization
 
 * **Constructors** are special methods that ensure an object starts its life in a valid state.
 * They have the same name as the class and no return type.
@@ -114,9 +114,8 @@ void f(int x)  { System.out.println("int"); }
 f('a');  // chooses "char"
 ```
 
----
 
-✅ **In short**:
+**In short**:
 
 * Java always tries for the **closest match**.
 * If not exact, it uses **widening conversion**.
@@ -126,7 +125,7 @@ f('a');  // chooses "char"
 
 ---
 
-## 2. Method Overloading
+# 2. Method Overloading
 
 * Same method name but different parameter lists.
 * Helps create flexible initialization and object creation mechanisms.
@@ -134,21 +133,21 @@ f('a');  // chooses "char"
 
 ---
 
-## 3. Default Initialization
+# 3. Default Initialization
 
 * Java guarantees that class fields are initialized with **default values** (0, false, null, etc.) if not explicitly initialized.
 * Local variables **must be explicitly initialized** before use.
 
 ---
 
-## 4. Cleanup
+# 4. Cleanup
 
 * Since Java has **garbage collection**, explicit cleanup (like destructors in C++) is not usually required.
 * But for resources like files, sockets, database connections, explicit cleanup is necessary.
 
 ---
 
-## 5. Finalization
+# 5. Finalization
 
 * The `finalize()` method can be overridden to perform cleanup before garbage collection.
 * **Unreliable**: There’s no guarantee when (or if) `finalize()` will run.
@@ -157,7 +156,7 @@ f('a');  // chooses "char"
 
 ---
 
-## 6. Constructors and Cleanup Together
+# 6. Constructors and Cleanup Together
 
 * Constructors ensure the object is properly initialized.
 * Explicit methods (like `dispose()` or `close()`) should be created for releasing non-memory resources.
@@ -165,7 +164,7 @@ f('a');  // chooses "char"
 
 ---
 
-## 7. Order of Initialization
+# 7. Order of Initialization
 
 * **Class fields** are initialized in the order of definition, before the constructor body executes.
 * **Static fields** are initialized when the class is first loaded.
@@ -173,14 +172,14 @@ f('a');  // chooses "char"
 
 ---
 
-## 8. Arrays and Initialization
+# 8. Arrays and Initialization
 
 * Arrays are objects in Java and are created with `new`.
 * Automatically initialized to default values.
 
 ---
 
-## 9. Enumerations (enums)
+# 9. Enumerations (enums)
 
 * Provide a type-safe way of defining a fixed set of constants.
 * Each `enum` value is actually an object of the `enum` type.
@@ -188,16 +187,20 @@ f('a');  // chooses "char"
 
 ---
 
-## 10. The `this` Keyword
+# 10. The `this` Keyword
 
 * Used inside a class to refer to the current object.
 * Helpful in disambiguating between instance variables and parameters with the same name.
+
+Suppose you’re inside a method and you’d like to get the reference to the current object. Since that reference is passed secretly by the compiler, there’s no identifier for it. However, for this purpose there’s a keyword: this. 
+
+
+#### Q: when an method inside a object instance is called, then how does object know which instance is calling it  
+There’s a secret first argument passed to the instance method eg : peel( ), and that argument is the reference to the object that’s being manipulated.
 
 ---
 
 ✅ **Core Takeaway**:
 In Java, *initialization* is handled through constructors, field defaults, and explicit setup, while *cleanup* is best done through explicit methods rather than relying on garbage collection or `finalize()`. Always ensure proper resource management.
 
----
 
-Do you want me to make an **Anki-style flashcard set** from these points so you can quickly reinforce them?
