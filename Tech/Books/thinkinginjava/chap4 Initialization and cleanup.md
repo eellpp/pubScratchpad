@@ -347,6 +347,11 @@ if you are going to define methods you must end the sequence of enum instances w
 
 Also, Java forces you to define the instances as the first thing in the enum. You’ll get a compile-time error if you try to define them after any of the methods or fields.
 
+### Enum vs Class Initialization
+When the JVM initializes Enum, it creates enum singleton objects immediately. Class objects are created when new is called.    
+Enum objects are thread safe and no need to protected by synchornized   
+
+
 
 ### Enum instance vs Class fields
 
