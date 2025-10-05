@@ -298,6 +298,39 @@ static {
 * Arrays are objects in Java and are created with `new`.
 * Automatically initialized to default values.
 
+If you access the location of array beyond its length, then it throws runtime exception 
+
+Arrays are fixed size. ArrayList adds wrapper and is extensible. 
+
+Scenario where array is more suitable  :
+- example we have millions of object, where each object is only 3 tags per object and keeping it in array of string is better. List overhead is avoided in this
+
+arrays can be initialized as 
+
+```java
+
+String[] names = new String[] { "joe" , "loe" , "poe" }
+
+```
+
+### Varags
+With varargs you are still getting array. However you can also call without args . A array of size 0 is automatically generated 
+
+```java
+static void f(int required, String... trailing) {
+ System.out.print("required: " + required + " ");
+ for(String s : trailing)
+ System.out.print(s + " ");
+ System.out.println();
+}
+public static void main(String[] args) {
+ f(1, "one");
+ f(2, "two", "three");
+ f(0);
+}
+
+```
+
 ---
 
 # 9. Enumerations (enums)
@@ -305,6 +338,132 @@ static {
 * Provide a type-safe way of defining a fixed set of constants.
 * Each `enum` value is actually an object of the `enum` type.
 * Can have fields, methods, and constructors.
+
+When you create an enum, an associated class is produced for you by the compiler. This class is automatically inherited from java.lang.Enum, which provides certain capabilities
+
+Except for the fact that you can’t inherit from it, an enum can be treated much like a regular class. This means that you can add methods to an enum. It’s even possible for an enum to have a main( ).
+
+if you are going to define methods you must end the sequence of enum instances with a semicolon. 
+
+Also, Java forces you to define the instances as the first thing in the enum. You’ll get a compile-time error if you try to define them after any of the methods or fields.
+
+
+### Enum instance vs Class fields
+
+
+### 1. Enum instances in Java
+
+When you write:
+
+```java
+public enum Day {
+    MONDAY, TUESDAY, WEDNESDAY;
+}
+```
+
+What actually happens is:
+
+* `Day` is a **class** (the compiler generates it).
+* `MONDAY`, `TUESDAY`, and `WEDNESDAY` are **public static final objects** (instances) of that class.
+* Each one is constructed exactly once, when the enum class is loaded.
+
+So under the hood it’s as if the compiler wrote:
+
+```java
+public final class Day extends java.lang.Enum<Day> {
+    public static final Day MONDAY = new Day("MONDAY", 0);
+    public static final Day TUESDAY = new Day("TUESDAY", 1);
+    public static final Day WEDNESDAY = new Day("WEDNESDAY", 2);
+
+    private Day(String name, int ordinal) {
+        super(name, ordinal);
+    }
+}
+```
+
+That’s why they’re called **instances**: each constant (`MONDAY`, `TUESDAY`, …) is literally an object of type `Day`.
+
+
+### 2. Why not call them “fields” like class fields?
+
+* Fields are just data slots (e.g., `int x = 5;`).
+* Enum constants are not *just* data. They are **fully constructed objects** with identity, methods, and fields of their own.
+* Example:
+
+  ```java
+  public enum Operation {
+      PLUS { double apply(double x, double y) { return x + y; } },
+      TIMES { double apply(double x, double y) { return x * y; } };
+
+      abstract double apply(double x, double y);
+  }
+  ```
+
+Here, `PLUS` and `TIMES` are not primitive-like values or fields; they are **different subclasses of `Operation` with their own method implementations**. That’s why the language treats them as instances, not fields.
+
+
+## Enum example to organise constants in better way 
+
+```java
+public final class Food {
+    private Food() {} // no instances
+
+    // Common type for all menu items
+    public sealed interface MenuItem permits Appetizers, Coffee, Dessert {
+        Category category();
+        String label();
+    }
+
+    public enum Category { APPETIZERS, COFFEE, DESSERT }
+
+    public enum Appetizers implements MenuItem {
+        BRUSCHETTA("Bruschetta"),
+        GARLIC_BREAD("Garlic Bread");
+
+        private final String label;
+        Appetizers(String label) { this.label = label; }
+        public Category category() { return Category.APPETIZERS; }
+        public String label() { return label; }
+    }
+
+    public enum Coffee implements MenuItem {
+        ESPRESSO("Espresso"),
+        CAPPUCCINO("Cappuccino");
+
+        private final String label;
+        Coffee(String label) { this.label = label; }
+        public Category category() { return Category.COFFEE; }
+        public String label() { return label; }
+    }
+
+    public enum Dessert implements MenuItem {
+        TIRAMISU("Tiramisu"),
+        CHEESECAKE("Cheesecake");
+
+        private final String label;
+        Dessert(String label) { this.label = label; }
+        public Category category() { return Category.DESSERT; }
+        public String label() { return label; }
+    }
+
+    // --- Helpers to treat everything "under FOOD" ---
+    public static List<MenuItem> all() {
+        return Stream.of(Appetizers.values(), Coffee.values(), Dessert.values())
+                     .flatMap(Arrays::stream)
+                     .map(mi -> (MenuItem) mi)
+                     .toList();
+    }
+
+    public static Map<Category, List<MenuItem>> byCategory() {
+        return all().stream().collect(
+            Collectors.groupingBy(MenuItem::category,
+                () -> new EnumMap<>(Category.class), Collectors.toList()));
+    }
+}
+
+```
+
+This keep the Food constants organised and readable. 
 
 ---
 
