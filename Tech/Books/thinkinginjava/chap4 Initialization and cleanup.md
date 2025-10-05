@@ -470,6 +470,49 @@ public final class Food {
 
 This keep the Food constants organised and readable. 
 
+
+### Enum as replacement for constant + switch antipattern 
+
+Enum has this property : If the enum declares an abstract method, then each constant must override it, just like subclasses would.
+
+```java
+public enum Operation {
+    PLUS {
+        @Override
+        public double apply(double x, double y) {
+            return x + y;
+        }
+    },
+    MINUS {
+        @Override
+        public double apply(double x, double y) {
+            return x - y;
+        }
+    },
+    TIMES {
+        @Override
+        public double apply(double x, double y) {
+            return x * y;
+        }
+    },
+    DIVIDE {
+        @Override
+        public double apply(double x, double y) {
+            return x / y;
+        }
+    };
+
+    // Abstract method to be implemented by each constant
+    public abstract double apply(double x, double y);
+}
+
+```
+
+```java
+double result = Operation.PLUS.apply(2, 3);   // 5.0
+double product = Operation.TIMES.apply(4, 5); // 20.0
+
+```
 ---
 
 # 10. The `this` Keyword
