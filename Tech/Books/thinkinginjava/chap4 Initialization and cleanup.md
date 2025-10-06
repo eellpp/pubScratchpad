@@ -513,6 +513,97 @@ double result = Operation.PLUS.apply(2, 3);   // 5.0
 double product = Operation.TIMES.apply(4, 5); // 20.0
 
 ```
+
+### State machine with enum
+
+Java enums are a very *popular* and idiomatic way to model small/medium, fixed-set state machines. They give you exhaustiveness checks, clean code, and great performance with `EnumMap`/`EnumSet`.
+
+### Why enums fit FSMs
+
+* **Finite, known states** → perfect match for `enum`.
+* **Compiler help** → `switch` on an enum is exhaustiveness-checked.
+* **Fast & lean** → `EnumMap`/`EnumSet` are array-backed.
+* **Constant-specific behavior** → each state can override methods (strategy per state).
+
+### Two common patterns
+
+#### 1) Constant-specific behavior (polymorphic states)
+
+```java
+enum State {
+  NEW {
+    @Override State on(Event e) {
+      return switch (e) {
+        case PAY    -> PROCESSING;
+        case CANCEL -> CANCELED;
+        default     -> illegal(this, e);
+      };
+    }
+  },
+  PROCESSING {
+    @Override State on(Event e) {
+      return switch (e) {
+        case PACK   -> SHIPPED;
+        case CANCEL -> CANCELED;
+        default     -> illegal(this, e);
+      };
+    }
+  },
+  SHIPPED   { @Override State on(Event e) { return e == Event.DELIVER ? DELIVERED : illegal(this, e); } },
+  DELIVERED { @Override State on(Event e) { return this; } },
+  CANCELED  { @Override State on(Event e) { return this; } };
+
+  abstract State on(Event e);
+  static State illegal(State s, Event e) { throw new IllegalStateException(s+" cannot handle "+e); }
+}
+enum Event { PAY, PACK, DELIVER, CANCEL }
+```
+
+* Pros: logic lives with the state; no giant switch elsewhere.
+* Easy to add **entry/exit hooks** as methods on the enum (just keep mutable data outside the enum singletons).
+
+#### 2) Table-driven with `EnumMap`
+
+```java
+enum State { NEW, PROCESSING, SHIPPED, DELIVERED, CANCELED }
+enum Event { PAY, PACK, DELIVER, CANCEL }
+
+final class FSM {
+  private static final EnumMap<State, EnumMap<Event, State>> T = new EnumMap<>(State.class);
+  static {
+    put(State.NEW,        Event.PAY,    State.PROCESSING);
+    put(State.NEW,        Event.CANCEL, State.CANCELED);
+    put(State.PROCESSING, Event.PACK,   State.SHIPPED);
+    put(State.PROCESSING, Event.CANCEL, State.CANCELED);
+    put(State.SHIPPED,    Event.DELIVER,State.DELIVERED);
+  }
+  private static void put(State s, Event e, State to) {
+    T.computeIfAbsent(s, k -> new EnumMap<>(Event.class)).put(e, to);
+  }
+  static State next(State s, Event e) {
+    var row = T.get(s);
+    if (row == null || !row.containsKey(e)) throw new IllegalStateException(s+" cannot handle "+e);
+    return row.get(e);
+  }
+}
+```
+
+* Pros: data-driven (easy to visualize/test), simple to attach **actions/guards** via another map keyed by `(state,event)`.
+
+### When enums are a great choice
+
+* State set is **small and stable**.
+* You want **compile-time safety** and simple, fast lookups.
+* Transitions are straightforward (no complex hierarchy or dynamic states).
+
+### When to consider alternatives
+
+* **Dynamic/extendable states** at runtime → enums are fixed; use classes/`sealed` hierarchies.
+* **Hierarchical/orthogonal states, timers, guards, async effects** → consider a framework (e.g., Spring Statemachine) or a composable design (state interface + handlers).
+* **Per-entity mutable state in the enum** → avoid; keep mutable data in the entity/context, not in the enum singletons.
+
+**Bottom line:** Enums are a *popular, clean, and efficient* way to build many Java FSMs. Start with enums; if the machine grows complicated or needs runtime extensibility, graduate to a more flexible design.
+
 ---
 
 # 10. The `this` Keyword
