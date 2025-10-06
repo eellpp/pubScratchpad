@@ -5,11 +5,11 @@
 * They allow separating **error-handling logic** from **business logic**.
 
 
-### Return status vs Exception : Two Different Classes of "Problems"
+#### Return status vs Exception : Two Different Classes of "Problems"
 
 The primary motivation for using both is to distinguish between **operational errors** (expected, handleable failures) and **programmer errors** (unexpected bugs, contract violations).
 
-#### 1. Return Status/Error Codes: For "Operational Errors"
+##### 1. Return Status/Error Codes: For "Operational Errors"
 
 These are predictable, expected failures that are part of the normal flow of your program. The calling code should have a plan for handling them.
 
@@ -25,7 +25,7 @@ These are predictable, expected failures that are part of the normal flow of you
     *   **Not Exceptional:** These situations aren't "exceptional" at all; they are a common and expected part of running a program in a complex real-world environment.
     *   **Performance:** In performance-critical paths (like a tight loop), checking an integer status is much faster than the stack unwinding involved in throwing and catching an exception.
 
-#### 2. Exceptions: For "Programmer Errors" and "True Exceptional States"
+##### 2. Exceptions: For "Programmer Errors" and "True Exceptional States"
 
 These are unexpected failures that indicate a bug, a violated assumption, or a state from which the program cannot easily recover in the current context.
 
@@ -42,11 +42,11 @@ These are unexpected failures that indicate a bug, a violated assumption, or a s
     *   **Cannot Be Ignored (Easily):** While you can ignore exceptions, it's more explicit and dangerous than ignoring a return value. This forces you to think about the exceptional case at some level.
 
 
-### The Mental Model: When to Use Which
+#### The Mental Model: When to Use Which
 
 Think of it as a conversation between the function (the callee) and the code calling it (the caller).
 
-#### The Model for Return Status/Errors
+##### The Model for Return Status/Errors
 
 **Question:** "Is this a failure that the caller is **expected to handle** as part of normal operation?"
 
@@ -75,7 +75,7 @@ if (!result.success) {
 processData(result.data);
 ```
 
-#### The Model for Exceptions
+##### The Model for Exceptions
 
 **Question:** "Has a pre-condition or assumption of this function been violated? Is this a situation the caller **cannot reasonably recover from** at this immediate location?"
 
@@ -108,7 +108,7 @@ function startCar() {
 ```
 
 
-### How They Work Together in Practice: A Layered Approach
+#### How They Work Together in Practice: A Layered Approach
 
 A well-designed application uses both, often in different layers.
 
@@ -164,7 +164,7 @@ class MoneyService {
 }
 ```
 
-### Summary
+#### Summary
 
 | Aspect | Return Status / Error Code | Exception |
 | :--- | :--- | :--- |
@@ -178,34 +178,34 @@ The most robust software uses a combination: **exceptions for bugs and violated 
 
 Here's a practical checklist for choosing between returning status and throwing exceptions, designed for modern software engineering practices:
 
-### 🎯 Error Handling Decision Checklist
+#### 🎯 Error Handling Decision Checklist
 
-##### 1. **Is this an expected business scenario?**
+ 1. **Is this an expected business scenario?**
    - ✅ **Return status**: Validation failures, domain rules, optional features
    - ❌ **Throw exception**: System failures, corrupted data, invariant violations
 
-##### 2. **Can the caller continue normally after handling this?**
+ 2. **Can the caller continue normally after handling this?**
    - ✅ **Return status**: Yes, this is part of normal workflow
    - ❌ **Throw exception**: No, this requires aborting or significant context change
 
-##### 3. **Is this a programming error or contract violation?**
+ 3. **Is this a programming error or contract violation?**
    - ✅ **Return status**: No, inputs/outputs are within expected range
    - ❌ **Throw exception**: Yes (null parameters, type errors, assertion failures)
 
-##### 4. **Should this failure be explicitly handled at the call site?**
+ 4. **Should this failure be explicitly handled at the call site?**
    - ✅ **Return status**: Caller must handle this specific case immediately
    - ❌ **Throw exception**: Can be handled at a higher level boundary
 
-##### 5. **Is this in performance-critical code?**
+ 5. **Is this in performance-critical code?**
    - ✅ **Return status**: Hot paths, tight loops, high-throughput systems
    - ❌ **Throw exception**: Normal business logic, setup/teardown code
 
-##### 6. **Data Engineering Specific: Is this a data quality issue?**
+ 6. **Data Engineering Specific: Is this a data quality issue?**
    - ✅ **Return status**: Individual record failures, schema mismatches, data validation
    - ❌ **Throw exception**: Connection failures, corrupted files, system unavailability
 
 
-### 📋 Quick Decision Matrix (Status vs Exception)
+#### 📋 Quick Decision Matrix (Status vs Exception)
 
 | Scenario | Pattern | Rationale |
 |----------|---------|-----------|
@@ -219,9 +219,9 @@ Here's a practical checklist for choosing between returning status and throwing 
 | **Business rule failure** | Return status | Domain logic outcome |
 
 
-### 🛠 Practical Implementation Rules
+#### 🛠 Practical Implementation Rules
 
-#### Use Return Status When:
+##### Use Return Status When:
 ```python
 # Data validation
 def validate_record(record) -> ValidationResult:
@@ -233,7 +233,7 @@ def process_payment(amount) -> PaymentResult:
 def find_user(email) -> Optional[User]:
 ```
 
-#### Use Exceptions When:
+##### Use Exceptions When:
 ```python
 # Pre-condition violations
 def calculate_metrics(data):
@@ -252,7 +252,7 @@ def process_transaction():
 ```
 
 
-### 🔄 Modern Best Practices
+#### 🔄 Modern Best Practices
 
 1. **Be consistent** within your codebase
 2. **Document** which pattern each API uses
