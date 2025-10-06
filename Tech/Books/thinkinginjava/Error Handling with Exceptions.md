@@ -176,6 +176,93 @@ class MoneyService {
 
 The most robust software uses a combination: **exceptions for bugs and violated contracts**, and **return values for expected edge cases.** The mental model is about classifying the problem and choosing the tool that forces the correct behavior from the developer using your API.
 
+Here's a practical checklist for choosing between returning status and throwing exceptions, designed for modern software engineering practices:
+
+### 🎯 Error Handling Decision Checklist
+
+##### 1. **Is this an expected business scenario?**
+   - ✅ **Return status**: Validation failures, domain rules, optional features
+   - ❌ **Throw exception**: System failures, corrupted data, invariant violations
+
+##### 2. **Can the caller continue normally after handling this?**
+   - ✅ **Return status**: Yes, this is part of normal workflow
+   - ❌ **Throw exception**: No, this requires aborting or significant context change
+
+##### 3. **Is this a programming error or contract violation?**
+   - ✅ **Return status**: No, inputs/outputs are within expected range
+   - ❌ **Throw exception**: Yes (null parameters, type errors, assertion failures)
+
+##### 4. **Should this failure be explicitly handled at the call site?**
+   - ✅ **Return status**: Caller must handle this specific case immediately
+   - ❌ **Throw exception**: Can be handled at a higher level boundary
+
+##### 5. **Is this in performance-critical code?**
+   - ✅ **Return status**: Hot paths, tight loops, high-throughput systems
+   - ❌ **Throw exception**: Normal business logic, setup/teardown code
+
+##### 6. **Data Engineering Specific: Is this a data quality issue?**
+   - ✅ **Return status**: Individual record failures, schema mismatches, data validation
+   - ❌ **Throw exception**: Connection failures, corrupted files, system unavailability
+
+
+### 📋 Quick Decision Matrix (Status vs Exception)
+
+| Scenario | Pattern | Rationale |
+|----------|---------|-----------|
+| **Input validation** | Return status | Expected business case |
+| **Resource not found** | Return status | Common operational outcome |
+| **Permission denied** | Return status | Normal security response |
+| **Null parameters** | Throw exception | Programming contract violation |
+| **External system down** | Throw exception | Unrecoverable dependency failure |
+| **Data corruption** | Throw exception | Cannot proceed with processing |
+| **Out of memory** | Throw exception | System-level failure |
+| **Business rule failure** | Return status | Domain logic outcome |
+
+
+### 🛠 Practical Implementation Rules
+
+#### Use Return Status When:
+```python
+# Data validation
+def validate_record(record) -> ValidationResult:
+
+# Business operations  
+def process_payment(amount) -> PaymentResult:
+
+# Query operations
+def find_user(email) -> Optional[User]:
+```
+
+#### Use Exceptions When:
+```python
+# Pre-condition violations
+def calculate_metrics(data):
+    if not data:
+        raise ValueError("Data cannot be empty")
+
+# System failures
+def connect_database():
+    if not db_available():
+        raise ConnectionError("Database unavailable")
+
+# Integrity violations
+def process_transaction():
+    if balance < 0:  # Should never happen
+        raise IntegrityError("Negative balance detected")
+```
+
+
+### 🔄 Modern Best Practices
+
+1. **Be consistent** within your codebase
+2. **Document** which pattern each API uses
+3. **Convert exceptions to status** at system boundaries
+4. **Use typed exceptions/status** for better handling
+5. **Log exceptions** but handle statuses silently when expected
+
+This checklist ensures you're using the right tool for the right problem while maintaining clean, predictable error handling.
+
+---
 
 ## 2. Basic Concepts
 
