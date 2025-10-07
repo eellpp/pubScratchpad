@@ -1,8 +1,8 @@
 Java has several "gotchas" that can catch even seasoned developers by surprise if they aren’t aware of them. 
 
-## Advanced
+# Advanced
 
-### jdbc driver getObject() 
+### 1. jdbc driver getObject() 
 Some DBs/drivers default to text protocol on the wire, so they naturally parse to String unless you ask for a numeric type. 
 
 getObject() is driver-dependent. A SMALLINT can come back as a String, and if you treat that as “a 2-byte number,” you’ll get type bugs, wrong ordering, bigger payloads, and slower queries. Always use getShort() or getObject(col, Short.class), and normalize/validate at system boundaries.
@@ -113,7 +113,7 @@ Great catch. Here’s what’s going on and why it bites people.
 .
 
 
-## Basic 
+# Basic 
 
 ### 1. **Autoboxing and Unboxing Pitfalls**: 
 
