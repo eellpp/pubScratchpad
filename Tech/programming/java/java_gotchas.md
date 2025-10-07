@@ -214,7 +214,7 @@ Java’s default serialization can be inefficient and can cause maintenance issu
 With Serializable, the server writes out your object’s state (class + fields) into a JVM-specific byte stream, sends it “over the wire,” and the client deserializes it back into a live object by matching class name and serialVersionUID. This was heavily used in older Java EE frameworks for RMI, EJB, session replication, and JMS because it made state transfer automatic — but today, it’s avoided in favor of schema-based, cross-language formats like JSON, Avro, or Protobuf.
 
 
-### 5. **Overuse of `Finalize()` and Garbage Collection Timing**: 
+### 5. **Overuse of `Finalize()` . use try with resource **: 
 The `finalize()` method is not guaranteed to run in a timely manner, and it may not run at all if the object is never garbage-collected. Since Java 9, `finalize()` has been deprecated due to its unreliability. Instead, the `**try-with-resources`** statement is preferred for releasing resources like file streams or database connections
 
 **try-with-resources** (TWR) in Java—what it is, how it works, and the gotchas to watch.
