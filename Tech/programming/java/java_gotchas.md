@@ -416,5 +416,110 @@ System.out.println(isListOf(o, String.class));   // false
 ### 7. **Concurrency and `HashMap`**: 
 `HashMap` is not thread-safe, and using it in a concurrent setting can lead to infinite loops or data corruption. `ConcurrentHashMap` or `Collections.synchronizedMap` are better alternatives when thread safety is required. Similarly, common practices, like double-checked locking, are error-prone without `volatile`, due to Java’s memory model【32†source】【28†source】.
 
+This is a classic concurrency gotcha in Java. Let’s unpack it.
+
+---
+
+##### 1. The double-checked locking pattern
+
+It’s a common idiom for lazy initialization of singletons:
+
+```java
+class Singleton {
+    private static Singleton instance;
+
+    public static Singleton getInstance() {
+        if (instance == null) {                  // first check (no locking)
+            synchronized (Singleton.class) {
+                if (instance == null) {          // second check (with lock)
+                    instance = new Singleton();  // create instance
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+
+**Intent:**
+
+* Avoid paying the cost of `synchronized` after initialization.
+* Only synchronize on the first call.
+
+
+
+##### 2. The problem (before `volatile`)
+
+In Java’s memory model (pre-Java 5 especially), the JVM and CPU are free to **reorder writes** for performance. The assignment:
+
+```java
+instance = new Singleton();
+```
+
+isn’t atomic—it’s roughly:
+
+1. Allocate memory.
+2. Construct object (run constructor).
+3. Assign reference to `instance`.
+
+The compiler/CPU may reorder (1) + (3) before (2).
+So another thread might observe a **non-null `instance` whose constructor hasn’t finished yet**. That leads to subtle, hard-to-reproduce bugs (NPEs, partially initialized state).
+
+
+
+##### 3. Why `volatile` fixes it
+
+Marking the field as `volatile`:
+
+```java
+private static volatile Singleton instance;
+```
+
+changes the rules:
+
+* **Visibility guarantee:** a write to `volatile` is visible to all threads immediately.
+* **Happens-before guarantee:** a write to a `volatile` field happens-before subsequent reads of that field.
+* **No reordering across `volatile` writes/reads:** the constructor finishes before the reference is published.
+
+So with `volatile`, another thread won’t see a half-constructed object.
+
+
+
+##### 4. Industry practice today
+
+* ✅ If you *must* use double-checked locking, always declare the field `volatile`.
+* ✅ Since Java 5, this is officially safe due to the revised Java Memory Model (JSR-133).
+* ❌ Without `volatile`, it’s broken—sometimes works, sometimes doesn’t, depending on JIT/CPU.
+* Often, people prefer simpler idioms:
+
+  * **Eager init:** `private static final Singleton INSTANCE = new Singleton();`
+  * **Initialization-on-demand holder:**
+
+    ```java
+    class Singleton {
+        private Singleton() {}
+        private static class Holder {
+            static final Singleton INSTANCE = new Singleton();
+        }
+        public static Singleton getInstance() {
+            return Holder.INSTANCE;
+        }
+    }
+    ```
+
+    → Lazy, thread-safe, no volatile, no locking.
+
+
+##### 5. TL;DR
+
+* Double-checked locking without `volatile` is unsafe because of **reordering/visibility issues** in the Java Memory Model.
+* `volatile` ensures that once a thread sees a non-null reference, the object is fully constructed.
+* In modern code, either use `volatile` correctly or prefer simpler patterns like the **holder class idiom** or `enum` singletons.
+
+---
+
+👉 Do you want me to also show a **step-by-step timeline** of two threads running this code incorrectly (with and without `volatile`) so you can see the exact interleaving that causes the bug?
+
+
 ### 8. **Java ArrayLists do not shrink automatically** : 
 
