@@ -283,6 +283,129 @@ Exceptions are classified into two types. Checked and Unchecked. Throwable itsel
     * **Checked exceptions** – Must be declared or handled (`IOException`, `SQLException`).
     * **Unchecked exceptions (RuntimeException)** – Often programming errors (`NullPointerException`, `IndexOutOfBoundsException`).
 
+## 3.1 termination vs resumption
+
+Great question. “Termination vs resumption” boils down to: **Java exceptions are termination-style**, so if you want “try again” behavior you design it explicitly. Here’s what good, modern practice looks like.
+
+#### When to throw vs when to “resume”
+
+* **Throw (terminate)** for *programming errors* and *non-recoverable states*: illegal arguments, invariant violations, NPEs, corrupted state, logic bugs. Prefer unchecked exceptions. Don’t retry.
+* **Don’t throw—return a result/validate first** for *expected business outcomes*: “user not found”, “validation failed”, “insufficient balance”, “file missing but can be created”. Use return types (`Optional`, custom `Result`/`Either`), or validations before side-effects.
+* **Throw but recover with retry** for *transient I/O faults*: timeouts, 5xx HTTP, database deadlocks, network flaps. Make the retry *explicit* and bounded.
+
+#### Proven patterns for “resumption-like” behavior in Java
+
+##### 1) Guard clauses & validations (no exceptions for control flow)
+
+Validate early and return structured results instead of throwing, then proceed only on success.
+
+```java
+sealed interface Result<T> {
+  record Ok<T>(T value) implements Result<T> {}
+  record Err<T>(String code, String message) implements Result<T> {}
+}
+
+Result<Void> r = validator.validate(request);
+if (r instanceof Result.Err<Void> err) return err;      // no exception
+// safe to proceed
+```
+
+Libraries: your own `Result`, or Vavr’s `Either`/`Validation`/`Try`.
+
+##### 2) Retry with backoff + jitter (for transient failures)
+
+Use a loop (or a library) around a `try` block. Only retry **idempotent** operations.
+
+```java
+int attempts = 0, max = 5;
+Duration backoff = Duration.ofMillis(200);
+
+while (true) {
+  try {
+    return client.call(); // e.g., HTTP GET (idempotent)
+  } catch (TransientException e) {
+    if (++attempts >= max) throw e;
+    Thread.sleep(jitter(backoff.multipliedBy(attempts)));
+    // Optional: refresh token, rotate endpoint, reopen connection
+  }
+}
+```
+
+Production-grade: **Resilience4j** (Retry, RateLimiter, TimeLimiter, Bulkhead, CircuitBreaker) or **Spring Retry**.
+
+##### 3) Circuit breaker + fallback
+
+Stop hammering a failing dependency and use a fallback (cached data, degraded mode).
+
+* Good for “resume service” quickly while upstream is flaky.
+* Pair with **timeouts**—don’t rely on defaults.
+
+##### 4) Compensating actions / Sagas (for multi-step workflows)
+
+For cross-service transactions, don’t retry blindly. Use **Sagas** (orchestration/choreography) with compensations to *resume system consistency* instead of throwing the whole flow away.
+
+##### 5) Idempotency & deduplication
+
+Make retried operations safe:
+
+* Idempotency keys on write APIs.
+* Upsert semantics.
+* At-least-once consumers using **dedup** tables or exactly-once processing where available.
+
+##### 6) Null-Object / Default strategies
+
+Provide safe defaults to keep going (e.g., a `NoopCache`, “anonymous user” policy) when a dependency is optional. Log and continue.
+
+##### 7) Supervisor/Isolation mindset
+
+Isolate failure domains:
+
+* Run risky work in its own thread pool (bulkhead).
+* Use `CompletableFuture.handle/exceptionally` to transform failures into defaults and keep the main flow alive.
+
+#### A clean “resumption” template (manual loop)
+
+```java
+while (true) {
+  try {
+    ensureOutputDirExists();            // fixable precondition (no throw)
+    writeFile(data);                    // may throw
+    break;                              // success ⇒ exit loop
+  } catch (RecoverableIoException e) {  // transient, actionable
+    reopenFileOrReconnect();
+    continue;                           // resume
+  } catch (NonRecoverableException e) { // bug or bad input
+    throw e;                            // terminate
+  }
+}
+```
+
+Key ideas:
+
+* **Classify exceptions** into *recoverable* vs *non-recoverable*.
+* **Fix, then retry** only the recoverable ones.
+* Keep **side-effects idempotent** to make retries safe.
+
+#### Practical rules of thumb
+
+1. **Don’t use exceptions for expected control flow.** Use types (Result/Either/Optional) or return codes with context.
+2. **If you do throw, make it exceptional and actionable.** One error code, clear message, causal chain.
+3. **Bound retries** (count and time), add **exponential backoff + jitter**, and instrument them (metrics, logs, tracing).
+4. **Time out** every external call. A hanging call defeats resumption.
+5. **Apply circuit breakers** to avoid retry storms and enable graceful degradation.
+6. **Validate before side-effects.** Preflight checks mean fewer exceptions.
+7. **Keep operations idempotent**; otherwise retries can corrupt state.
+8. **Log once, at the boundary.** Avoid double-logging on each layer during retries.
+
+#### If you’re using frameworks
+
+* **Spring**: Spring Retry + Resilience4j annotations (`@Retry`, `@CircuitBreaker`, `@TimeLimiter`) with policies defined in config. Use `@ControllerAdvice` for termination-style mapping of unhandled exceptions to HTTP responses.
+* **Reactive (Project Reactor)**: `mono.retryWhen(backoff)`, `onErrorResume(fallback)`, `timeout`, `circuitBreaker` operator via Resilience4j reactor module.
+* **Vavr**: `Try.of(() -> doIo()).recover(...)` for concise, expression-style resumption.
+
+
+**Bottom line:** In Java we *terminate by default* on true errors. For “resumption,” design it explicitly with validations (no throw), retries/backoff for transient faults, circuit breakers, and idempotent operations. That gives you the “keep trying until satisfactory” behavior the book alludes to—done in a safe, observable, and production-ready way.
+
 
 ## 4. Syntax and Flow
 
