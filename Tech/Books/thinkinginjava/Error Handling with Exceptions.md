@@ -274,6 +274,8 @@ This checklist ensures you're using the right tool for the right problem while m
 ## 3. Exception Hierarchy
 
 * Root class: **`Throwable`**
+All exception are subclasses of throwable exception.
+Exceptions are classified into two types. Checked and Unchecked. Throwable itself is checked exception   
 
   * **`Error`** – Serious problems beyond program control (e.g., JVM errors). Rarely handled.
   * **`Exception`** – Issues the program can often recover from.
