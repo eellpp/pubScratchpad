@@ -1,4 +1,10 @@
-## Idempotence
+Root word : Idem means same , potent means power. The word refers to same  + power. Means when done multiple times it achieves the same as done once. No side effects . 
+
+- **HTTP Get request **is idempotent 
+- **maven package install** is idempotent. If the same version exists it does nothing
+- **ansible** does idempotent installation. If the infra exists as per config it does nothing
+- **Idempotency keys** (UUID or orderId#action) make retries safe. They tag a command/event with a unique token so that re-delivery or re-execution doesn’t produce a second side-effect (double charge, duplicate order, duplicate email).
+
 An operation is idempotent if it can be applied multiple times without changing the result beyond the initial application. In other words, repeating the operation has no additional effect.
 	
 **Importance** : Idempotence is crucial in distributed systems, particularly in APIs and network operations, where retries might occur due to network failures.
@@ -6,7 +12,7 @@ An operation is idempotent if it can be applied multiple times without changing 
 Example: HTTP methods like GET, PUT, and DELETE are designed to be idempotent. A PUT request to update a resource should result in the same state whether it’s called once or multiple times with the same data.
 
 
-### Idempotence and statelessness are related concepts but are not the same.
+## Idempotence and statelessness are related concepts but are not the same.
 
 ### Idempotence:
 - **Definition:** An operation is idempotent if performing it multiple times has the same effect as performing it once. In other words, the outcome of the operation does not change after the first application, even if it is repeated.
