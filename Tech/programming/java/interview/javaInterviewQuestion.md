@@ -157,6 +157,8 @@ public class MainApp {
 ### What Is the Default Bean Scope in Spring Framework?
 By default, a Spring Bean is initialized as a singleton.  
 
+---
+
 ### What is a Singleton Pattern
 The Singleton Pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance  
 
@@ -176,6 +178,8 @@ When multiple threads access and modify the same instance of a singleton bean co
 create a synchronised static method and return an object instance from it.   
 synchronised insists that only thread at a time.   
 
+#### Attempt 1
+
 ``` java
 public final class ConfigService {
     private static ConfigService instance;
@@ -189,10 +193,129 @@ public final class ConfigService {
 }
 
 ```
+**Why `final` is Used in Singleton Pattern**
+
+##### 1. **Prevents Class Inheritance**
+The primary reason for using `final` on a singleton class is to **prevent subclassing**:
+
+```java
+public final class ConfigService { // Cannot be extended
+    // ...
+}
+
+// ❌ This would cause a compilation error
+class EvilSubclass extends ConfigService { // Not allowed!
+    // Could create multiple instances or break singleton behavior
+}
+```
+
+##### 2. **Maintains Singleton Integrity**
+Without `final`, someone could:
+
+```java
+// If class wasn't final, this would be possible:
+class MaliciousSubclass extends ConfigService {
+    public static MaliciousSubclass createAnotherInstance() {
+        // Bypass the singleton pattern
+        return new MaliciousSubclass();
+    }
+}
+```
+
+#### Problems with This Specific Singleton Implementation
+
+While the `final` is good, this implementation has several issues:
+
+##### ❌ **Not Thread-Safe**
+```java
+public static synchronized ConfigService getInstance() {
+    if (instance == null) instance = new ConfigService(); // Race condition possible
+    return instance;
+}
+```
+
+Multiple threads could see `instance == null` simultaneously before the first thread finishes initialization.
+
+##### ❌ **Inefficient Synchronization**
+The `synchronized` method is called every time, creating unnecessary overhead after the first initialization.
+
+#### Better Singleton Implementations
+
+##### ✅ **1. Eager Initialization (Simplest)**
+```java
+public final class ConfigService {
+    // Created when class is loaded - thread-safe
+    private static final ConfigService INSTANCE = new ConfigService();
+    
+    private ConfigService() { }
+    
+    public static ConfigService getInstance() {
+        return INSTANCE; // No synchronization needed
+    }
+}
+```
+
+##### ✅ **2. Bill Pugh Singleton (Lazy + Efficient)**
+```java
+public final class ConfigService {
+    private ConfigService() { }
+    
+    // Inner helper class - lazy initialization
+    private static class SingletonHelper {
+        private static final ConfigService INSTANCE = new ConfigService();
+    }
+    
+    public static ConfigService getInstance() {
+        return SingletonHelper.INSTANCE; // Thread-safe & lazy
+    }
+}
+```
+
+##### ✅ **3. Enum Singleton (Most Recommended)**
+```java
+public enum ConfigService {
+    INSTANCE; // Guaranteed singleton by JVM
+    
+    // Add your methods here
+    public String getConfigValue(String key) {
+        return "value";
+    }
+}
+// Usage: ConfigService.INSTANCE.getConfigValue("key");
+```
+
+##### ✅ **4. Double-Checked Locking (If You Need Lazy Init)**
+```java
+public final class ConfigService {
+    private static volatile ConfigService instance;
+    
+    private ConfigService() { }
+    
+    public static ConfigService getInstance() {
+        if (instance == null) { // First check (no synchronization)
+            synchronized (ConfigService.class) {
+                if (instance == null) { // Second check (with synchronization)
+                    instance = new ConfigService();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+
+#### Summary
+
+- **`final` class**: Prevents inheritance and maintains singleton integrity
+- **Better patterns exist**: The implementation you showed has thread-safety issues
+- **Recommendation**: Use **Enum** or **Bill Pugh** pattern for most singleton needs
+
+The `final` keyword is a crucial part of a robust singleton implementation, ensuring that the singleton contract cannot be violated through inheritance.
 
 The above class is also immutable . There is only a static getInstance method which creates the object using private constructor.   
 Once the instance is created, there is no update available for it .
 
+---
 
  ### what is the difference between HashMap and Concurrant HashMap in java ? When would you use one over other
  ConcurrentHashMap is beneficial in a multi-threaded environment and performs better than HashMap. It provides thread-safety, scalability, and synchronization. For the single-threaded environment, the HashMap performs slightly better than ConcurrentHashMap.
