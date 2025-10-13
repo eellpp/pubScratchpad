@@ -1,4 +1,6 @@
 
+CommonPool is a pre-created, system-wide thread pool optimized for parallel recursive tasks (like those using `parallelStream()`).
+
 **The JDK's common Fork/Join pool is a critical shared resource that is implemented as a singleton**
 
 
@@ -6,7 +8,6 @@
 
 The **Common Pool** specifically refers to the **common fork/join pool** in Java, introduced with the Fork/Join Framework in Java 7. It's a `ForkJoinPool` that is used behind the scenes for parallel operations.
 
-*   **Key Idea:** It's a pre-created, system-wide thread pool optimized for parallel recursive tasks (like those using `parallelStream()`).
 *   **Goal:** Efficiently execute a large number of small, computational tasks by leveraging work-stealing algorithms.
 *   **How you use it:** You often don't instantiate it directly. It's used implicitly.
     ```java
