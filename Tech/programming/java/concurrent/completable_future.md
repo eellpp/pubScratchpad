@@ -1,33 +1,6 @@
-These flashcards cover the key concepts of `CompletableFuture` as discussed in the document.
-
-| **Question**                                                     | **Answer**                       |
-|------------------------------------------------------------------|----------------------------------|
-| What does `CompletableFuture` extend in Java?                     | `Future`                         |
-| What does `CompletableFuture` provide over `Future`?              | Non-blocking operations          |
-| How does `CompletableFuture` handle exceptions?                   | With `exceptionally()` or `handle()` |
-| What does `CompletableFuture.supplyAsync()` do?                   | Executes a task asynchronously   |
-| How can you manually complete a `CompletableFuture`?              | Using `complete()`               |
-| What method is used to chain tasks in `CompletableFuture`?        | `thenApply()`, `thenCompose()`   |
-| What does `CompletableFuture.allOf()` do?                         | Combines multiple futures        |
-| How does `join()` differ from `get()`?                            | `join()` throws unchecked exceptions |
-| What is thrown by `get()` if the task fails?                      | `ExecutionException`             |
-| What type of exception does `join()` throw?                       | `CompletionException`            |
-| Can `CompletableFuture` be used with functional programming?      | Yes, supports lambdas and method references |
-| How does `thenAccept()` work in `CompletableFuture`?              | It consumes the result without returning a value |
-| What is `thenCompose()` used for in `CompletableFuture`?          | To chain dependent tasks         |
-| What is a key feature of `CompletableFuture`?                     | Asynchronous non-blocking computation |
-| How do you wait for all tasks to finish in `CompletableFuture`?   | Use `CompletableFuture.allOf()`  |
-| What is the purpose of `exceptionally()` in `CompletableFuture`?  | To handle exceptions             |
-| What does `thenRun()` do in `CompletableFuture`?                  | Runs a task after completion without using the result |
-| What does `thenApply()` return?                                   | A transformed result             |
-| What is a key advantage of `CompletableFuture` over `Future`?     | Non-blocking chaining and combination |
-| How can you block until all futures are complete?                 | Use `get()` on `CompletableFuture.allOf()` |
 
 
-
-The key difference between `CompletableFuture` and `Future` lies in their features and capabilities for handling asynchronous computations in Java. Let's explore these differences and understand when to use each.
-
-### **1. Future** (`java.util.concurrent.Future`)
+### **1. Future** (`java.util.concurrent.Future`) legacy 
 
 The `Future` interface was introduced in Java 5 and is part of the `java.util.concurrent` package. It represents the result of an asynchronous computation, and it provides methods to check if the computation is complete, to wait for its completion, and to retrieve the result.
 
@@ -106,6 +79,109 @@ completableFuture.get();
 - **Error Handling**: When you need built-in exception handling for asynchronous computations.
 
 In modern Java applications, `CompletableFuture` is typically preferred over `Future` because of its richer feature set, non-blocking capabilities, and ability to chain tasks together.
+
+
+**Yes, by default, `CompletableFuture` uses the common ForkJoinPool for asynchronous operations.**
+
+However, this requires some important clarification about *when* and *how* it uses the common pool.
+
+## How CompletableFuture Uses the Common Pool
+
+### 1. **Async Methods Without an Executor**
+When you use `CompletableFuture` methods that end with `*Async` and **don't specify a custom executor**, they use the common ForkJoinPool:
+
+```java
+CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+    // This task runs in the common ForkJoinPool
+    return "Hello from common pool!";
+});
+
+CompletableFuture<Void> future2 = CompletableFuture.runAsync(() -> {
+    // This also runs in the common ForkJoinPool
+    System.out.println("Running in common pool");
+});
+```
+
+### 2. **Async Methods With a Custom Executor**
+When you **explicitly provide an executor**, it uses that instead:
+
+```java
+ExecutorService customExecutor = Executors.newFixedThreadPool(4);
+
+CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+    // This runs in our custom thread pool, NOT the common pool
+    return "Hello from custom executor!";
+}, customExecutor);
+```
+
+### 3. **Non-Async Operations**
+Regular operations (without `Async`) execute in the thread that completes the previous stage:
+
+```java
+CompletableFuture.supplyAsync(() -> "data") // Runs in common pool
+    .thenApply(result -> result.toUpperCase()) // Runs in same thread as supplyAsync
+    .thenAccept(result -> System.out.println(result)); // Runs in same thread
+```
+
+## Important Considerations and Best Practices
+
+### **Blocking Operations Warning**
+**Never** perform blocking operations in the common pool:
+
+```java
+// ❌ DANGEROUS - Can stall the common pool
+CompletableFuture.supplyAsync(() -> {
+    try {
+        Thread.sleep(5000); // Blocking call
+        return someBlockingIODatabaseCall(); // Blocking I/O
+    } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+    }
+}); // Uses common pool by default
+
+// ✅ BETTER - Use custom executor for blocking tasks
+ExecutorService ioExecutor = Executors.newCachedThreadPool();
+CompletableFuture.supplyAsync(() -> {
+    // Blocking I/O operation
+    return someBlockingIODatabaseCall();
+}, ioExecutor); // Explicit custom executor
+```
+
+### **Checking Which Pool is Being Used**
+You can verify which thread is executing your task:
+
+```java
+CompletableFuture.supplyAsync(() -> {
+    Thread currentThread = Thread.currentThread();
+    System.out.println("Thread name: " + currentThread.getName());
+    System.out.println("Thread is daemon: " + currentThread.isDaemon());
+    System.out.println("Thread in ForkJoinPool: " + 
+        (currentThread instanceof ForkJoinWorkerThread));
+    return "result";
+});
+```
+
+### **Common Pool Configuration**
+The common pool size is determined by:
+- Runtime.availableProcessors() - 1 (if not configured)
+- Can be configured with: `-Djava.util.concurrent.ForkJoinPool.common.parallelism=N`
+
+```java
+// Set common pool parallelism to 16
+System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "16");
+```
+
+## Summary
+
+| Scenario | Thread Pool Used |
+|----------|------------------|
+| `supplyAsync(() -> {})` | Common ForkJoinPool |
+| `runAsync(() -> {})` | Common ForkJoinPool |
+| `supplyAsync(() -> {}, customExecutor)` | Custom Executor |
+| `thenApply()`, `thenAccept()` (non-async) | Previous stage's thread |
+| `thenApplyAsync()` | Common ForkJoinPool |
+
+**Best Practice:** Use the common pool for CPU-intensive tasks, but provide a custom executor for I/O-bound or blocking operations to avoid stalling the common pool.
 
 ### Using Completable future for Method Chaining
 `CompletableFuture` example where the `main` function accepts a list of IDs. For each ID, we perform the same three steps: fetch data, process the data, and store the data, with random sleep times for each task. The tasks are chained for each ID, and all the tasks are executed asynchronously.
