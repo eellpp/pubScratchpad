@@ -53,7 +53,7 @@ When multiple threads access and modify the same instance of a singleton bean co
 create a synchronised static method and return an object instance from it.   
 synchronised insists that only thread at a time.   
 
-#### Attempt 1
+### Singleton **Attempt 1 (Not Good)**
 
 ``` java
 public final class ConfigService {
@@ -68,9 +68,9 @@ public final class ConfigService {
 }
 
 ```
-**Why `final` is Used in Singleton Pattern**
+### Why `final` is Used in Singleton Pattern**
 
-##### 1. **Prevents Class Inheritance**
+**Prevents Class Inheritance**   
 The primary reason for using `final` on a singleton class is to **prevent subclassing**:
 
 ```java
@@ -84,7 +84,7 @@ class EvilSubclass extends ConfigService { // Not allowed!
 }
 ```
 
-##### 2. **Maintains Singleton Integrity**
+**Maintains Singleton Integrity**   
 Without `final`, someone could:
 
 ```java
@@ -97,11 +97,11 @@ class MaliciousSubclass extends ConfigService {
 }
 ```
 
-#### Problems with This Specific Singleton Implementation
+**Problems with This Specific Singleton Implementation**
 
 While the `final` is good, this implementation has several issues:
 
-##### ❌ **Not Thread-Safe**
+**1. Not Thread-Safe**
 ```java
 public static synchronized ConfigService getInstance() {
     if (instance == null) instance = new ConfigService(); // Race condition possible
@@ -111,12 +111,12 @@ public static synchronized ConfigService getInstance() {
 
 Multiple threads could see `instance == null` simultaneously before the first thread finishes initialization.
 
-##### ❌ **Inefficient Synchronization**
+**2. Inefficient Synchronization**
 The `synchronized` method is called every time, creating unnecessary overhead after the first initialization.
 
-#### Better Singleton Implementations
+### Better Singleton Implementations
 
-##### ✅ **1. Eager Initialization (Simplest)**
+#### **1. Eager Initialization (Simplest)**
 ```java
 public final class ConfigService {
     // Created when class is loaded - thread-safe
@@ -130,7 +130,7 @@ public final class ConfigService {
 }
 ```
 
-##### ✅ **2. Bill Pugh Singleton (Lazy + Efficient)**
+#### **2. Bill Pugh Singleton (Lazy + Efficient)**
 ```java
 public final class ConfigService {
     private ConfigService() { }
@@ -146,7 +146,7 @@ public final class ConfigService {
 }
 ```
 
-##### ✅ **3. Enum Singleton (Most Recommended)**
+#### ✅ **3. Enum Singleton (Most Recommended)**
 ```java
 public enum ConfigService {
     INSTANCE; // Guaranteed singleton by JVM
@@ -159,7 +159,7 @@ public enum ConfigService {
 // Usage: ConfigService.INSTANCE.getConfigValue("key");
 ```
 
-##### ✅ **4. Double-Checked Locking (If You Need Lazy Init)**
+#### **4. Double-Checked Locking (If You Need Lazy Init)**
 ```java
 public final class ConfigService {
     private static volatile ConfigService instance;
@@ -179,7 +179,7 @@ public final class ConfigService {
 }
 ```
 
-#### Summary
+**Summary**
 
 - **`final` class**: Prevents inheritance and maintains singleton integrity
 - **Better patterns exist**: The implementation you showed has thread-safety issues
