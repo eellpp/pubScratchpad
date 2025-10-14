@@ -34,7 +34,7 @@ Layered translation:
 Log once, at the boundary (e.g., controller/filter/job runner). Don’t log and rethrow repeatedly.
 
 
-### What is a Singleton Pattern
+## 2. What is a Singleton Pattern
 The Singleton Pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance  
 
 The Singleton Pattern is commonly used to manage resources that are shared among multiple components of an application.
