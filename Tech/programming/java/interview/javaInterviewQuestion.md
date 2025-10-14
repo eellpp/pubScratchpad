@@ -34,105 +34,6 @@ Layered translation:
 Log once, at the boundary (e.g., controller/filter/job runner). Don’t log and rethrow repeatedly.
 
 
-### If i declare a Map variable as final, can i put values into it later
-yes. Because final marks the reference not the object. You can't make the reference point to another hash table. However you can add new values to it.  
-int is a primitive type, not reference. Means with final you can't change the value of variable. 
-
-
-### What is inversion of control for Spring JDBC?
-
-Inversion of Control in the context of Spring means that the framework controls the creation, configuration, and management of application objects and their interactions. This helps in building more modular, maintainable, and testable applications by reducing tight coupling and promoting separation of concerns.
-
-In Spring, you define your application's components (beans) using configuration metadata, which can be XML-based or annotation-based. These configurations tell the Spring container what beans to create and how they are related to each other.
-
-Dependency injection, an aspect of Inversion of Control (IoC), is a general concept stating that we do not create our objects manually but instead describe how they should be created. Then an IoC container will instantiate required classes if needed
-
-### What does @Component annotation mean in spring
-@Component is an annotation that allows Spring to detect our custom beans automatically.
-
-In other words, without having to write any explicit code, Spring will:
-
-Scan our application for classes annotated with @Component
-Instantiate them and inject any specified dependencies into them
-Inject them wherever needed
-
-### What is the use of @Configuration Annotation in spring
-In Spring Framework, the @Configuration annotation is used to indicate that a class defines one or more beans that should be managed by the Spring IoC container. When a class is annotated with @Configuration, it effectively becomes a configuration class, and Spring treats it as a source of bean definitions. 
-
-Suppose you have a Spring application that manages two beans: a UserService and a EmailService. You want to configure these beans using a Java-based configuration class.
-
-```java
-public class UserService {
-    private String name;
-
-    public UserService(String name) {
-        this.name = name;
-    }
-
-    public String getGreeting() {
-        return "Hello from " + name;
-    }
-}
-
-```
-
-```java
-public class EmailService {
-    public void sendEmail(String recipient, String message) {
-        System.out.println("Sending email to " + recipient + ": " + message);
-    }
-}
-
-```
-create a configuration class named AppConfig using the @Configuration annotation:  
-
-```java
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
-public class AppConfig {
-
-    @Bean
-    public UserService userService() {
-        return new UserService("John");
-    }
-
-    @Bean
-    public EmailService emailService() {
-        return new EmailService();
-    }
-}
-
-```
-
-Use the configured beans in your application:   
-
-```java
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-public class MainApp {
-    public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        UserService userService = context.getBean(UserService.class);
-        System.out.println(userService.getGreeting());
-
-        EmailService emailService = context.getBean(EmailService.class);
-        emailService.sendEmail("example@example.com", "Hello there!");
-
-        context.close();
-    }
-}
-
-
-```
-
-### What Is the Default Bean Scope in Spring Framework?
-By default, a Spring Bean is initialized as a singleton.  
-
----
-
 ### What is a Singleton Pattern
 The Singleton Pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance  
 
@@ -288,6 +189,171 @@ The `final` keyword is a crucial part of a robust singleton implementation, ensu
 
 The above class is also immutable . There is only a static getInstance method which creates the object using private constructor.   
 Once the instance is created, there is no update available for it .
+
+
+## Spring Boot
+
+### 1. What is  for Spring IOC (inversion of control) 
+Inversion of Control in the context of Spring means that the framework controls the creation, configuration, and management of application objects and their interactions. This helps in building more modular, maintainable, and testable applications by reducing tight coupling and promoting separation of concerns.
+
+In Spring, you define your application's components (beans) using configuration metadata, which can be XML-based or annotation-based. These configurations tell the Spring container what beans to create and how they are related to each other.
+
+Dependency injection, an aspect of Inversion of Control (IoC), is a general concept stating that we do not create our objects manually but instead describe how they should be created. Then an IoC container will instantiate required classes if needed
+
+### What does @Component annotation do in spring
+@Component is an annotation that allows Spring to detect our custom beans automatically.
+
+Spring will : 
+- Scan our application for classes annotated with @Component
+- Instantiate them and inject any specified dependencies into them
+- Inject them wherever needed
+
+### If i declare a Map variable as final, can i put values into it later
+yes. Because final marks the reference not the object. You can't make the reference point to another hash table. However you can add new values to it.  
+int is a primitive type, not reference. Means with final you can't change the value of variable. 
+
+
+
+
+
+
+### What is the use of @Configuration Annotation in spring
+In Spring Framework, the @Configuration annotation is used to indicate that a class defines one or more beans that should be managed by the Spring IoC container. When a class is annotated with @Configuration, it effectively becomes a configuration class, and Spring treats it as a source of bean definitions. 
+
+#### Without @Configuration (Traditional Java Approach)
+
+```java
+// Manual bean management - no Spring container help
+public class ManualAppConfig {
+    
+    public DataSource dataSource() {
+        DriverManagerDataSource ds = new DriverManagerDataSource();
+        ds.setUrl("jdbc:h2:mem:testdb");
+        ds.setUsername("sa");
+        ds.setPassword("");
+        return ds;
+    }
+    
+    public JdbcTemplate jdbcTemplate() {
+        // PROBLEM: Creates NEW instance every time - no singleton!
+        return new JdbcTemplate(dataSource());
+    }
+    
+    public UserService userService() {
+        // PROBLEM: Each call creates new dependencies
+        return new UserService(jdbcTemplate());
+    }
+    
+    // Manual array configuration
+    public String[] supportedCountries() {
+        return new String[]{"US", "UK", "CA", "AU"};
+    }
+    
+    public List<String> adminEmails() {
+        return Arrays.asList("admin@company.com", "support@company.com");
+    }
+}
+
+// Usage without Spring
+public class ManualApp {
+    public static void main(String[] args) {
+        ManualAppConfig config = new ManualAppConfig();
+        
+        UserService service1 = config.userService();
+        UserService service2 = config.userService();
+        
+        // service1 and service2 have DIFFERENT JdbcTemplate instances!
+        System.out.println(service1 == service2); // false - not singleton
+    }
+}
+```
+
+#### With @Configuration (Spring Managed)
+
+```java
+@Configuration
+public class SpringAppConfig {
+    
+    // String configuration
+    @Value("${app.database.url:jdbc:h2:mem:defaultdb}")
+    private String databaseUrl;
+    
+    // Bean - Spring manages as singleton
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource ds = new DriverManagerDataSource();
+        ds.setUrl(databaseUrl);
+        ds.setUsername("sa");
+        ds.setPassword("");
+        return ds;
+    }
+    
+    // Bean with dependency injection
+    @Bean
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+        // Spring injects the SAME dataSource instance
+        return new JdbcTemplate(dataSource);
+    }
+    
+    @Bean
+    public UserService userService(JdbcTemplate jdbcTemplate) {
+        // Spring injects the SAME jdbcTemplate instance
+        return new UserService(jdbcTemplate);
+    }
+    
+    // Array configuration as bean
+    @Bean
+    public String[] supportedCountries() {
+        return new String[]{"US", "UK", "CA", "AU"};
+    }
+    
+    @Bean
+    public List<String> adminEmails() {
+        return Arrays.asList("admin@company.com", "support@company.com");
+    }
+    
+    // Bean with array dependency
+    @Bean
+    public NotificationService notificationService(String[] supportedCountries) {
+        // Spring injects the countries array
+        return new NotificationService(supportedCountries);
+    }
+}
+
+// Usage with Spring
+public class SpringApp {
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class);
+        
+        UserService service1 = context.getBean(UserService.class);
+        UserService service2 = context.getBean(UserService.class);
+        
+        // service1 and service2 are THE SAME instance (singleton)
+        System.out.println(service1 == service2); // true - singleton!
+        
+        // Access configured arrays
+        String[] countries = context.getBean("supportedCountries", String[].class);
+        System.out.println(Arrays.toString(countries));
+    }
+}
+```
+
+#### Key Benefits of @Configuration:
+
+1. **Singleton Management**: Beans are singletons by default
+2. **Dependency Injection**: Spring automatically injects dependencies
+3. **Lifecycle Management**: Spring handles bean creation, initialization, destruction
+4. **Consistent Instances**: All beans get the same dependency instances
+5. **Configuration Reuse**: Beans can be easily shared across the application
+
+**Without @Configuration**: You manually manage object lifecycle and dependencies
+**With @Configuration**: Spring handles everything automatically with proper dependency injection and singleton management
+
+### What Is the Default Bean Scope in Spring Framework?
+By default, a Spring Bean is initialized as a singleton.  
+
+
+
 
 ---
 
