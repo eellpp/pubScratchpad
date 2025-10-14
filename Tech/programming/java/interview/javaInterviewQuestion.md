@@ -16,6 +16,14 @@ Not enforced by the compiler.
 Use for programming errors or conditions you don’t expect callers to recover from at that site.  
 Examples: NullPointerException, IllegalArgumentException, ArithmeticException.  
 
+
+**When would you choose to use a checked exception vs. an unchecked exception in your own code?** 
+
+Expected Answer: This is a design philosophy question.   
+- Use a Checked Exception when the caller is expected to recover from the exceptional situation. For example, if a file is not found, the caller can prompt the user for a new path. It's for anticipated, recoverable problems.
+- Use an Unchecked Exception when the exception is the result of a programming error or a situation from which the caller cannot reasonably be expected to recover. For example, a null reference where an object is required, or an invalid argument passed to a method. It indicates a bug.
+
+**Cases for checked exception**
 1) Local recovery (handle here)
 
 Do this when you can actually fix/continue (retry, fallback, default).
