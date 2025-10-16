@@ -357,6 +357,10 @@ By default, a Spring Bean is initialized as a singleton.
 
 ---
 
+### While one thread is iterating over the hashmap , another thread is modifying it. What is the behaviour in this case
+ConcurrentModificationException will be thrown 
+
+ConcurrentModificationException: This is a common runtime exception thrown when a thread detects that a collection has been structurally modified by another thread while it is iterating over it. Although typically associated with iterators, it can also occur in other scenarios where concurrent modifications are not handled.
  ### what is the difference between HashMap and Concurrant HashMap in java ? When would you use one over other
  ConcurrentHashMap is beneficial in a multi-threaded environment and performs better than HashMap. It provides thread-safety, scalability, and synchronization. For the single-threaded environment, the HashMap performs slightly better than ConcurrentHashMap.
 
