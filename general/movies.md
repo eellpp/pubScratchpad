@@ -1,5 +1,5 @@
 
-Director: https://www.google.com/search?client=safari&rls=en&q=Ritesh+Batra&ie=UTF-8&oe=UTF-8   
+Director: https://en.wikipedia.org/wiki/Ritesh_Batra
 Lunch Box : https://en.wikipedia.org/wiki/The_Lunchbox  
 
 
