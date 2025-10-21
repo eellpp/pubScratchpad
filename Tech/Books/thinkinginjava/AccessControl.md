@@ -271,12 +271,137 @@ class B {
 }
 ```
 
-## **In One Line:**
+### **In One Line:**
 
 * **private** = only in the class
 * **default** = class + same package
 * **protected** = default + subclasses (even in other packages)
 * **public** = anywhere
+
+## Anonymous class
+
+Sure! Here's a clear and simple explanation of **Anonymous Inner Classes in Java**:
+
+###  **Anonymous Inner Class in Java (No Name Class)**
+
+An **anonymous inner class** is a special type of inner class that:
+
+✔ **Does not have a name**
+✔ Is created **on the spot**
+✔ Is used to **override a method** or **implement an interface quickly**
+✔ Is often used with **interfaces, abstract classes, or existing classes**
+
+
+### 💡 **Why Use It?**
+
+You use an anonymous inner class when:
+
+* You **need a one-time-only use of a class**
+* You want to **override methods without creating a separate class file**
+* You want cleaner and shorter code when passing behavior (like in event handling or threading)
+
+####  **Example 1: Using Interface (Runnable)**
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Running in anonymous inner class");
+            }
+        };
+
+        Thread t = new Thread(r);
+        t.start();
+    }
+}
+```
+
+✔ We created a class that implements `Runnable`
+✔ We didn't give it a name
+✔ We override `run()` directly
+
+####  **Example 2: Extending a Class**
+
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Animal() {
+            @Override
+            void sound() {
+                System.out.println("Dog barks");
+            }
+        };
+
+        a.sound();  // Output: Dog barks
+    }
+}
+```
+
+✔ A subclass of `Animal` is created anonymously
+✔ The `sound()` method is overridden
+✔ No need for `class Dog extends Animal { ... }`
+
+
+####  **Example 3: With Abstract Class**
+
+```java
+abstract class Greeting {
+    abstract void sayHello();
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Greeting g = new Greeting() {
+            void sayHello() {
+                System.out.println("Hello from anonymous class");
+            }
+        };
+
+        g.sayHello();
+    }
+}
+```
+
+✔ We provide the implementation directly for an abstract class.
+
+###  **Things to Remember**
+
+| Feature     | Rule                                                                        |
+| ----------- | --------------------------------------------------------------------------- |
+| Name        | No class name — it is "anonymous"                                           |
+| Constructor | ❌ Can't define a constructor (no name = no constructor)                     |
+| Use case    | Best for one-time use or short-lived implementations                        |
+| Static      | ❌ Cannot be static                                                          |
+| Syntax      | Always defined at the moment of object creation                             |
+| Limit       | Can extend **only one class** or implement **only one interface** at a time |
+
+
+
+###  **Syntax Pattern**
+
+```java
+ParentType obj = new ParentType() {
+    // method overrides or new methods
+};
+```
+
+Where `ParentType` can be:
+
+* a class
+* an abstract class
+* an interface
+
+###  **Simple Definition:**
+
+>  An anonymous inner class is a **class without a name**, created to **override methods or implement interfaces** immediately where you need it — without creating a separate class file.
 
 
 
