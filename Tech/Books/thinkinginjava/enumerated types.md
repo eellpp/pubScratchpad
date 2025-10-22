@@ -268,3 +268,6 @@ final class FSM {
 * **Per-entity mutable state in the enum** → avoid; keep mutable data in the entity/context, not in the enum singletons.
 
 **Bottom line:** Enums are a *popular, clean, and efficient* way to build many Java FSMs. Start with enums; if the machine grows complicated or needs runtime extensibility, graduate to a more flexible design.
+
+## references
+- **`java.time.temporal.ChronoUnit`** is a enum with instances as HOURS, MINS, WEEKS , etc  
