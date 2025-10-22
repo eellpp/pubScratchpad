@@ -1,5 +1,5 @@
 
-# ✅ `final` – Explained in All Scenarios
+# `final` – Explained in All Scenarios
 
 The `final` keyword in Java means **"cannot be changed" — but the meaning depends on where it is used**.
 
