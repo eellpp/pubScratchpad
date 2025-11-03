@@ -793,12 +793,12 @@ public class EmployeeService {
 * ✅ **Connection Pooling:**
   In Boot, HikariCP is used automatically; for non-Boot, configure `HikariDataSource`.
 
-#### Assume you have to connect to multiple databases, then how would you configure
+### Assume you have to connect to multiple databases, then how would you configure
 
 When you need **more than one database** in Spring, the trick is: **define more than one `DataSource`, give each one its own `JdbcTemplate`, and tell Spring which one to inject using qualifiers.** That’s it. Everything else is variations.
 
 
-##### 1. Spring Boot way (two DBs: e.g. Postgres + Oracle)
+#### 1. Spring Boot way (two DBs: e.g. Postgres + Oracle)
 
 **application.yml** (cleaner than properties):
 
@@ -888,7 +888,7 @@ That’s the basic multi-DB pattern.
 
 ---
 
-##### 2. Transactions with multiple DBs
+#### 2. Transactions with multiple DBs
 
 If you want **separate transactions per DB** (most common), define 2 tx managers:
 
@@ -974,7 +974,7 @@ public class MultiDbConfig {
 
 ---
 
-##### 4. If DB is chosen at runtime (multi-tenant / per-customer)
+#### 4. If DB is chosen at runtime (multi-tenant / per-customer)
 
 If your code says “for customer X use DB A, for customer Y use DB B”, then create a **Routing DataSource**:
 
@@ -991,7 +991,7 @@ Then register it with map of target datasources. Your `JdbcTemplate` then points
 
 ---
 
-##### 5. Things to watch out for
+#### 5. Things to watch out for
 
 * ✅ **Name everything** (`@Qualifier`) to avoid “expected single matching bean but found 2”.
 * ✅ **Mark one as `@Primary`** so Spring Boot autoconfig doesn’t get confused.
