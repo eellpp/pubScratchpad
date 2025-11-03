@@ -644,10 +644,368 @@ public class Main {
 
  In this example, the Shape class is an abstract class with a constructor to set the color of the shape and an abstract method calculateArea() that is meant to be overridden by subclasses. The Circle and Rectangle classes are concrete subclasses that extend the Shape class and provide implementations for the calculateArea() method.
 
-### JDBC
+# Database
+
+
+
+### How would you configure JdbcTemplate for database access
+
+**What is `JdbcTemplate`?**  
+
+`JdbcTemplate` is a core class in Spring’s JDBC module that simplifies database access.
+It manages:
+
+* Connection acquisition and release
+* Statement creation and execution
+* Exception translation to Spring’s `DataAccessException` hierarchy
+* Parameter binding and result mapping
+
+
+#### ⚙️ 2. Dependencies
+
+For **Spring Boot + PostgreSQL**, include in `pom.xml`:
+
+```xml
+<dependencies>
+    <!-- Spring Boot Starter JDBC -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+
+    <!-- PostgreSQL Driver -->
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+    </dependency>
+</dependencies>
+```
+
+#### 🏗️ 3. Configuration Approaches
+
+##### **A. Spring Boot (Recommended)**
+
+Spring Boot auto-configures `JdbcTemplate` if it finds:
+
+1. A `DataSource` bean
+2. The `spring-boot-starter-jdbc` dependency
+
+Just add database details in `application.properties` (or `application.yml`):
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/employees
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
+
+Spring Boot will automatically:
+
+* Create a `DataSource`
+* Create a `JdbcTemplate` bean linked to that DataSource
+
+Then inject and use it:
+
+```java
+@Repository
+public class EmployeeRepository {
+
+    private final JdbcTemplate jdbcTemplate;
+
+    public EmployeeRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    public List<Employee> findAll() {
+        return jdbcTemplate.query(
+            "SELECT id, name, department FROM employees",
+            (rs, rowNum) -> new Employee(
+                rs.getInt("id"),
+                rs.getString("name"),
+                rs.getString("department")
+            )
+        );
+    }
+}
+```
+
+---
+
+##### **B. Manual Configuration (Non-Boot Spring)**
+
+define the beans manually in a `@Configuration` class:
+
+```java
+@Configuration
+public class DatabaseConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/employees");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("postgres");
+        return dataSource;
+    }
+
+    @Bean
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+}
+```
+
+Then inject as usual:
+
+```java
+@Service
+public class EmployeeService {
+    private final JdbcTemplate jdbcTemplate;
+
+    public EmployeeService(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    public int countEmployees() {
+        return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM employees", Integer.class);
+    }
+}
+```
+
+##### 🧠 4. Notes & Best Practices
+
+*  **Prefer NamedParameterJdbcTemplate** for readability:
+
+  ```java
+  @Bean
+  public NamedParameterJdbcTemplate namedParameterJdbcTemplate(DataSource ds) {
+      return new NamedParameterJdbcTemplate(ds);
+  }
+  ```
+
+* ✅ **Transaction Management:**
+  Add `@EnableTransactionManagement` and annotate methods with `@Transactional`.
+
+* ✅ **Error Handling:**
+  Spring converts SQL exceptions into `DataAccessException` — catch that instead of `SQLException`.
+
+* ✅ **Connection Pooling:**
+  In Boot, HikariCP is used automatically; for non-Boot, configure `HikariDataSource`.
+
+#### Assume you have to connect to multiple databases, then how would you configure
+
+When you need **more than one database** in Spring, the trick is: **define more than one `DataSource`, give each one its own `JdbcTemplate`, and tell Spring which one to inject using qualifiers.** That’s it. Everything else is variations.
+
+
+##### 1. Spring Boot way (two DBs: e.g. Postgres + Oracle)
+
+**application.yml** (cleaner than properties):
+
+```yaml
+spring:
+  datasource:
+    primary:
+      url: jdbc:postgresql://localhost:5432/employees
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+
+  datasource:
+    secondary:
+      url: jdbc:oracle:thin:@//localhost:1521/ORCLCDB
+      username: hr
+      password: hr
+      driver-class-name: oracle.jdbc.OracleDriver
+```
+
+Now define 2 data sources + 2 jdbc templates:
+
+```java
+@Configuration
+public class MultiDbConfig {
+
+    @Bean
+    @Primary
+    @ConfigurationProperties("spring.datasource.primary")
+    public DataSource primaryDataSource() {
+        return DataSourceBuilder.create().build();
+    }
+
+    @Bean
+    @ConfigurationProperties("spring.datasource.secondary")
+    public DataSource secondaryDataSource() {
+        return DataSourceBuilder.create().build();
+    }
+
+    @Bean
+    @Primary
+    public JdbcTemplate primaryJdbcTemplate(DataSource primaryDataSource) {
+        return new JdbcTemplate(primaryDataSource);
+    }
+
+    @Bean
+    public JdbcTemplate secondaryJdbcTemplate(@Qualifier("secondaryDataSource") DataSource ds) {
+        return new JdbcTemplate(ds);
+    }
+}
+```
+
+What happened here?
+
+* `@Primary` = “if you don’t say which one, use this”.
+* We gave **names** to beans (`primaryJdbcTemplate`, `secondaryJdbcTemplate`), so we can inject them.
+
+Use them like this:
+
+```java
+@Repository
+public class EmployeeRepository {
+
+    private final JdbcTemplate primaryJdbcTemplate;   // Postgres
+    private final JdbcTemplate secondaryJdbcTemplate; // Oracle
+
+    public EmployeeRepository(
+            @Qualifier("primaryJdbcTemplate") JdbcTemplate primaryJdbcTemplate,
+            @Qualifier("secondaryJdbcTemplate") JdbcTemplate secondaryJdbcTemplate) {
+        this.primaryJdbcTemplate = primaryJdbcTemplate;
+        this.secondaryJdbcTemplate = secondaryJdbcTemplate;
+    }
+
+    public List<Employee> findInPrimary() {
+        return primaryJdbcTemplate.query("select id, name from employees", 
+            (rs, n) -> new Employee(rs.getInt("id"), rs.getString("name")));
+    }
+
+    public List<Dept> findInSecondary() {
+        return secondaryJdbcTemplate.query("select deptno, dname from dept",
+            (rs, n) -> new Dept(rs.getInt("deptno"), rs.getString("dname")));
+    }
+}
+```
+
+That’s the basic multi-DB pattern.
+
+---
+
+##### 2. Transactions with multiple DBs
+
+If you want **separate transactions per DB** (most common), define 2 tx managers:
+
+```java
+@Configuration
+@EnableTransactionManagement
+public class TxConfig {
+
+    @Bean
+    @Primary
+    public PlatformTransactionManager primaryTxManager(
+            @Qualifier("primaryDataSource") DataSource ds) {
+        return new DataSourceTransactionManager(ds);
+    }
+
+    @Bean
+    public PlatformTransactionManager secondaryTxManager(
+            @Qualifier("secondaryDataSource") DataSource ds) {
+        return new DataSourceTransactionManager(ds);
+    }
+}
+```
+
+Then:
+
+```java
+@Service
+public class BillingService {
+
+    @Transactional("primaryTxManager")
+    public void doOnPrimary() {
+        // uses primary db
+    }
+
+    @Transactional("secondaryTxManager")
+    public void doOnSecondary() {
+        // uses secondary db
+    }
+}
+```
+
+##### 3. Non-Boot / plain Spring Java config
+
+Same idea, just build datasources yourself:
+
+```java
+@Configuration
+public class MultiDbConfig {
+
+    @Bean
+    @Primary
+    public DataSource primaryDataSource() {
+        var ds = new DriverManagerDataSource();
+        ds.setDriverClassName("org.postgresql.Driver");
+        ds.setUrl("jdbc:postgresql://localhost:5432/employees");
+        ds.setUsername("postgres");
+        ds.setPassword("postgres");
+        return ds;
+    }
+
+    @Bean
+    public DataSource secondaryDataSource() {
+        var ds = new DriverManagerDataSource();
+        ds.setDriverClassName("oracle.jdbc.OracleDriver");
+        ds.setUrl("jdbc:oracle:thin:@//localhost:1521/ORCLCDB");
+        ds.setUsername("hr");
+        ds.setPassword("hr");
+        return ds;
+    }
+
+    @Bean
+    @Primary
+    public JdbcTemplate primaryJdbcTemplate(DataSource primaryDataSource) {
+        return new JdbcTemplate(primaryDataSource);
+    }
+
+    @Bean
+    public JdbcTemplate secondaryJdbcTemplate(@Qualifier("secondaryDataSource") DataSource ds) {
+        return new JdbcTemplate(ds);
+    }
+}
+```
+
+---
+
+##### 4. If DB is chosen at runtime (multi-tenant / per-customer)
+
+If your code says “for customer X use DB A, for customer Y use DB B”, then create a **Routing DataSource**:
+
+```java
+public class TenantRoutingDataSource extends AbstractRoutingDataSource {
+    @Override
+    protected Object determineCurrentLookupKey() {
+        return TenantContext.getCurrentTenant(); // e.g. "tenantA"
+    }
+}
+```
+
+Then register it with map of target datasources. Your `JdbcTemplate` then points to the routing datasource, and Spring will pick the right DB per thread. This is for dynamic / per-request switching.
+
+---
+
+##### 5. Things to watch out for
+
+* ✅ **Name everything** (`@Qualifier`) to avoid “expected single matching bean but found 2”.
+* ✅ **Mark one as `@Primary`** so Spring Boot autoconfig doesn’t get confused.
+* ✅ **Use separate connection pools** (Boot’s Hikari config per datasource).
+* ✅ **Use separate transaction managers** if you’re mutating on both DBs.
+* ⚠️ **Don’t mix reads/writes for 2 DBs in one method** unless you’re okay with them not being in one ACID tx.
+* ⚠️ If two DBs are the **same vendor but different schemas**, it’s still easier to treat them as two datasources.
+
+
+
 
 ### What does Statement.setFetchSize(nSize) method really do in SQL Server JDBC driver?   
- ### What should you take care while choosing fetch size parameter in jdbc.  
+
+What should you take care while choosing fetch size parameter in jdbc.  
 In JDBC, the setFetchSize(int) method is very important to performance and memory-management within the JVM as it controls the number of network calls from the JVM to the database and correspondingly the amount of RAM used for ResultSet processing.
 
 The RESULT-SET is the number of rows marshalled on the DB in response to the query. The ROW-SET is the chunk of rows that are fetched out of the RESULT-SET per call from the JVM to the DB. The number of these calls and resulting RAM required for processing is dependent on the fetch-size setting.
