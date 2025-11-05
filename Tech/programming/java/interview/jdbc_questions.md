@@ -358,11 +358,12 @@ Then register it with map of target datasources. Your `JdbcTemplate` then points
 
 
 ### What does Statement.setFetchSize(nSize) method really do in SQL Server JDBC driver?   
+### In the JDBC driver, what is the actual effect of calling Statement.setFetchSize(n)? Does it influence how data is retrieved from the server or just how the client buffers results?
 
 What should you take care while choosing fetch size parameter in jdbc.  
 In JDBC, the setFetchSize(int) method is very important to performance and memory-management within the JVM as it controls the number of network calls from the JVM to the database and correspondingly the amount of RAM used for ResultSet processing.
 
-The RESULT-SET is the number of rows marshalled on the DB in response to the query. The ROW-SET is the chunk of rows that are fetched out of the RESULT-SET per call from the JVM to the DB. The number of these calls and resulting RAM required for processing is dependent on the fetch-size setting.
+The **RESULT-SET** is the number of rows marshalled on the DB in response to the query. The **ROW-SET** is the chunk of rows that are fetched out of the RESULT-SET per call from the JVM to the DB. The number of these calls and resulting RAM required for processing is dependent on the fetch-size setting.
 
 So if the RESULT-SET has 100 rows and the fetch-size is 10, there will be 10 network calls to retrieve all of the data, using roughly 10*{row-content-size} RAM at any given time.
 
@@ -371,7 +372,7 @@ The default fetch-size is 10, which is rather small. In the case posted, it woul
 What happens underneath ResultSet.next() is that it doesn't actually fetch one row at a time from the RESULT-SET. It fetches that from the (local) ROW-SET and fetches the next ROW-SET (invisibly) from the server as it becomes exhausted on the local client.
 
 
- Most of the JDBC drivers’ default fetch size is 10. In normal JDBC programming if you want to retrieve 1000 rows it requires 100 network round trips between your application and database server to transfer all data. Definitely this will impact your application response time. The reason is JDBC drivers are designed to fetch small number of rows from database to avoid any out of memory issues.   
+ **Most of the JDBC drivers’ default fetch size is 10**. In normal JDBC programming if you want to retrieve 1000 rows it requires 100 network round trips between your application and database server to transfer all data. Definitely this will impact your application response time. The reason is JDBC drivers are designed to fetch small number of rows from database to avoid any out of memory issues.   
 
  Type of Application: Consider the nature of your application. For interactive applications, a lower fetchSize might be preferable to provide faster initial results, while for batch processing, a larger fetchSize can improve throughput.
 
