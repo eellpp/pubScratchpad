@@ -568,3 +568,159 @@ https://www.javacodegeeks.com/2018/12/java-streaming-jdbc-resultset-csv.html
 
 The flush() method of PrintWriter Class in Java is used to flush the stream. By flushing the stream, it means to clear the stream of any element that may be or maybe not inside the stream. 
 
+
+### Avoiding sql injection when accepting user params for sql statements
+
+Here’s a tight, battle-tested playbook for preventing SQL injection in a backend that accepts user params:
+
+#### Core rule (non-negotiable)
+
+* **Always use parameterized queries / prepared statements.** Never build SQL by string concatenation.
+
+# Safe patterns (Java/Spring examples)
+
+* **JdbcTemplate**
+
+  ```java
+  String sql = "SELECT * FROM users WHERE email = ?";
+  return jdbcTemplate.query(sql, rs -> { /* map */ }, emailParam);
+  ```
+* **NamedParameterJdbcTemplate**
+
+  ```java
+  String sql = "SELECT * FROM orders WHERE user_id = :uid AND status = :st";
+  Map<String,Object> p = Map.of("uid", uid, "st", status);
+  return namedJdbcTemplate.query(sql, p, mapper);
+  ```
+* **JPA / Hibernate**
+
+  ```java
+  @Query("select u from User u where u.email = :email")
+  Optional<User> findByEmail(@Param("email") String email);
+  ```
+* **jOOQ** (strongly typed SQL)
+
+  ```java
+  ctx.selectFrom(USER).where(USER.EMAIL.eq(emailParam)).fetch();
+  ```
+
+#### Dynamic SQL done safely
+
+* **IN lists:** use frameworks that expand binds safely (e.g., `namedJdbcTemplate` with `:ids`, jOOQ `IN(ids)`).
+* **ORDER BY / column names:** **whitelist** and map user input to constants:
+
+  ```java
+  String sort = switch (userSort) {
+    case "createdAt" -> "created_at";
+    case "name"      -> "name";
+    default          -> "created_at";
+  };
+  String sql = "SELECT ... ORDER BY " + sort + " " + (asc ? "ASC" : "DESC");
+  ```
+
+  (Only inject server-chosen identifiers, never raw input.)
+* **LIMIT/OFFSET:** parse to integers and clamp ranges.
+* **LIKE searches:** bind the pattern; escape wildcards if you accept raw `%`/`_`.
+
+  ```java
+  String pattern = "%" + userTerm.replace("%","\\%").replace("_","\\_") + "%";
+  jdbcTemplate.query("... WHERE name LIKE ? ESCAPE '\\'", mapper, pattern);
+  ```
+
+#### Validation & normalization
+
+* Validate **type/shape** (UUIDs, ints, enums) before hitting the DB.
+* Reject or normalize weird Unicode (look-alikes), overly long inputs, and null bytes.
+* Use **allow-lists** for enums/status codes; never accept raw SQL fragments.
+
+#### DB-side protections
+
+* **Least privilege:** app accounts can only `SELECT/INSERT/UPDATE/DELETE` on needed tables; no DDL, no `SUPERUSER`.
+* Separate **read** vs **write** users if possible.
+* Disable multi-statements / batch-queries that allow stacked commands (e.g., MySQL `allowMultiQueries=false`).
+* Turn on DB audit/logging for anomalous query patterns.
+
+
+
+#### Avoiding SQL Injection with prepared statements
+
+Here’s a clear and practical **example of a `PreparedStatement`** using the standard **JDBC API** — this is the safest and most common way to prevent SQL injection:
+
+
+
+#### ✅ Example: Fetch user by email
+
+```java
+import java.sql.*;
+
+public class UserLookupExample {
+    public static void main(String[] args) {
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=mydb";
+        String user = "app_user";
+        String password = "secret";
+
+        String sql = "SELECT id, name, email FROM users WHERE email = ?";
+
+        try (Connection conn = DriverManager.getConnection(url, user, password);
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            // Bind parameter safely (no concatenation)
+            ps.setString(1, "john@example.com");
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    System.out.println("ID: " + rs.getInt("id"));
+                    System.out.println("Name: " + rs.getString("name"));
+                    System.out.println("Email: " + rs.getString("email"));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+#### 💡 Key details
+
+1. **`?` placeholders** represent parameters in the SQL statement.
+
+   * JDBC ensures these are treated as **data**, not part of the SQL command.
+   * This prevents injection even if the input contains `' OR 1=1 --`.
+
+2. **Binding parameters**:
+
+   * `ps.setString(1, value)` safely escapes and transmits the data to the DB.
+   * You can use `setInt`, `setLong`, `setDate`, etc., depending on the column type.
+
+3. **Automatic precompilation**:
+
+   * The SQL statement is parsed once by the DB server.
+   * Multiple executions with different parameters reuse the same query plan — improving performance and security.
+
+
+#### ✅ Example: Inserting new record safely
+
+```java
+String insertSql = "INSERT INTO users (name, email, age) VALUES (?, ?, ?)";
+try (PreparedStatement ps = conn.prepareStatement(insertSql)) {
+    ps.setString(1, "Alice");
+    ps.setString(2, "alice@example.com");
+    ps.setInt(3, 30);
+    ps.executeUpdate();
+}
+```
+#### ⚠️ Unsafe pattern (avoid)
+
+```java
+// ❌ Vulnerable to SQL injection
+String sql = "SELECT * FROM users WHERE email = '" + userInput + "'";
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery(sql);
+```
+
+Even if you manually escape quotes, you can still be bypassed.
+
+
+
+
