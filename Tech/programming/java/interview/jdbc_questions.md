@@ -2,7 +2,7 @@
 
 
 
-### How would you configure JdbcTemplate for database access
+## How would you configure JdbcTemplate for database access
 
 **What is `JdbcTemplate`?**  
 
@@ -15,7 +15,7 @@ It manages:
 * Parameter binding and result mapping
 
 
-#### ⚙️ 2. Dependencies
+### ⚙️ 2. Dependencies
 
 For **Spring Boot + PostgreSQL**, include in `pom.xml`:
 
@@ -35,9 +35,9 @@ For **Spring Boot + PostgreSQL**, include in `pom.xml`:
 </dependencies>
 ```
 
-#### 🏗️ 3. Configuration Approaches
+### 🏗️ 3. Configuration Approaches
 
-##### **A. Spring Boot (Recommended)**
+#### **A. Spring Boot (Recommended)**
 
 Spring Boot auto-configures `JdbcTemplate` if it finds:
 
@@ -85,7 +85,7 @@ public class EmployeeRepository {
 
 ---
 
-##### **B. Manual Configuration (Non-Boot Spring)**
+#### **B. Manual Configuration (Non-Boot Spring)**
 
 define the beans manually in a `@Configuration` class:
 
@@ -127,7 +127,7 @@ public class EmployeeService {
 }
 ```
 
-##### 🧠 4. Notes & Best Practices
+#### 🧠 4. Notes & Best Practices
 
 *  **Prefer NamedParameterJdbcTemplate** for readability:
 
@@ -147,12 +147,12 @@ public class EmployeeService {
 * ✅ **Connection Pooling:**
   In Boot, HikariCP is used automatically; for non-Boot, configure `HikariDataSource`.
 
-### Assume you have to connect to multiple databases, then how would you configure
+## Assume you have to connect to multiple databases, then how would you configure
 
 When you need **more than one database** in Spring, the trick is: **define more than one `DataSource`, give each one its own `JdbcTemplate`, and tell Spring which one to inject using qualifiers.** That’s it. Everything else is variations.
 
 
-#### 1. Spring Boot way (two DBs: e.g. Postgres + Oracle)
+### 1. Spring Boot way (two DBs: e.g. Postgres + Oracle)
 
 **application.yml** (cleaner than properties):
 
@@ -242,7 +242,7 @@ That’s the basic multi-DB pattern.
 
 ---
 
-#### 2. Transactions with multiple DBs
+### 2. Transactions with multiple DBs
 
 If you want **separate transactions per DB** (most common), define 2 tx managers:
 
@@ -284,7 +284,7 @@ public class BillingService {
 }
 ```
 
-##### 3. Non-Boot / plain Spring Java config
+#### 3. Non-Boot / plain Spring Java config
 
 Same idea, just build datasources yourself:
 
@@ -328,7 +328,7 @@ public class MultiDbConfig {
 
 ---
 
-#### 4. If DB is chosen at runtime (multi-tenant / per-customer)
+### 4. If DB is chosen at runtime (multi-tenant / per-customer)
 
 If your code says “for customer X use DB A, for customer Y use DB B”, then create a **Routing DataSource**:
 
@@ -345,7 +345,7 @@ Then register it with map of target datasources. Your `JdbcTemplate` then points
 
 ---
 
-#### 5. Things to watch out for
+### 5. Things to watch out for
 
 * ✅ **Name everything** (`@Qualifier`) to avoid “expected single matching bean but found 2”.
 * ✅ **Mark one as `@Primary`** so Spring Boot autoconfig doesn’t get confused.
@@ -357,8 +357,7 @@ Then register it with map of target datasources. Your `JdbcTemplate` then points
 
 
 
-### What does Statement.setFetchSize(nSize) method really do in SQL Server JDBC driver?   
-### In the JDBC driver, what is the actual effect of calling Statement.setFetchSize(n)? Does it influence how data is retrieved from the server or just how the client buffers results?
+## In the JDBC driver, what is the actual effect of calling Statement.setFetchSize(n)? Does it influence how data is retrieved from the server or just how the client buffers results?
 
 What should you take care while choosing fetch size parameter in jdbc.  
 In JDBC, the setFetchSize(int) method is very important to performance and memory-management within the JVM as it controls the number of network calls from the JVM to the database and correspondingly the amount of RAM used for ResultSet processing.
@@ -377,11 +376,11 @@ What happens underneath ResultSet.next() is that it doesn't actually fetch one r
  Type of Application: Consider the nature of your application. For interactive applications, a lower fetchSize might be preferable to provide faster initial results, while for batch processing, a larger fetchSize can improve throughput.
 
 
-### Is fetch size param literally executed by jdbc driver 
+## Is fetch size param literally executed by jdbc driver 
 The fetchSize parameter is a hint to the JDBC driver as to many rows to fetch in one go from the database. But the driver is free to ignore this and do what it sees fit. Some drivers, like the Oracle one, fetch rows in chunks, so you can read very large result sets without needing lots of memory. Other drivers just read in the whole result set in one go, and I'm guessing that's what your driver is doing.
 
 
-### For Oracle database, say you have to download 5 million rows. Explain the pros and cons of approaches taken when the row size is small vs when the row size is large . The application is interactive website vs batch eod job etc. 
+## For Oracle database, say you have to download 5 million rows. Explain the pros and cons of approaches taken when the row size is small vs when the row size is large . The application is interactive website vs batch eod job etc. 
 
 Great—since you’re on **Oracle + Java 17 (JDBC)**, here’s a crisp, practical playbook with trade-offs and settings for different situations.
 
@@ -393,9 +392,9 @@ Great—since you’re on **Oracle + Java 17 (JDBC)**, here’s a crisp, practic
 
 
 
-#### Oracle specifics that matter
+### Oracle specifics that matter
 
-###### 1) Row fetching knobs
+#### 1) Row fetching knobs
 
 * `PreparedStatement.setFetchSize(N)`
   Tells Oracle JDBC how many rows to fetch per round trip. Fewer round trips = better throughput, but higher client memory per fetch.
@@ -411,7 +410,7 @@ Great—since you’re on **Oracle + Java 17 (JDBC)**, here’s a crisp, practic
 * Medium rows (1–2 KB): `fetchSize = 2_000–10_000`.
 * Wide rows (≥ 8 KB, or have LOBs): `fetchSize = 200–1_000`.
 
-###### 2) Snapshot consistency & ORA-01555
+#### 2) Snapshot consistency & ORA-01555
 
 Long scans read from a consistent SCN. If writers keep churning and your **UNDO** can’t retain old versions long enough, you can hit **ORA-01555: snapshot too old**.
 
@@ -424,24 +423,24 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
   `SELECT /*+ PARALLEL(n) */ ... AS OF SCN :scn WHERE id BETWEEN :lo AND :hi`
   so all chunks see the **same point-in-time** view.
 
-###### 3) Sorting & indexing
+#### 3) Sorting & indexing
 
 * `ORDER BY` a **primary key** if you need determinism/resume-ability. Sorting a huge set on a non-indexed expression will spill to TEMP and slow your job.
 * If you don’t need order, **skip ORDER BY** to maximize scan speed (especially with `PARALLEL`).
 
-###### 4) LOBs & very wide rows
+#### 4) LOBs & very wide rows
 
 * Read **LOBs via streams** (`getBinaryStream` / `getCharacterStream`) and **write straight out**; avoid `getBytes()` on giant BLOBs.
 * Keep `fetchSize` modest for LOB queries (200–500), because each “row” can be large.
 * If possible, **avoid exporting gigantic LOBs to CSV**; use file dumps or object storage pointers.
 
-###### 5) Parallelism
+#### 5) Parallelism
 
 * You can parallelize on the **application side** by splitting the PK/ROWID ranges into N shards, each with its own connection and output file (later merge if truly needed).
   Example shard predicate: `WHERE id BETWEEN :lo AND :hi`.
 * Or use Oracle hints: `SELECT /*+ PARALLEL(8) */ ...` for the scan itself (coordinate with your DBA; don’t hurt prod).
 
-###### 6) CSV correctness & I/O
+#### 6) CSV correctness & I/O
 
 * Use an RFC-4180-ish escape (quotes doubled, wrap if comma/quote/CR/LF).
 * **Gzip on the fly** (`.gz`)—often 3–10× smaller, significantly faster end-to-end when I/O bound.
@@ -449,9 +448,9 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
 
 
 
-#### Scenario guide (pros/cons & settings)
+### Scenario guide (pros/cons & settings)
 
-###### A) Small row size (e.g., 5–10 narrow columns, no LOBs)
+#### A) Small row size (e.g., 5–10 narrow columns, no LOBs)
 
 **Pros:** High throughput, minimal memory per row; can push fetch size high.
 **Cons:** Network round trips dominate if fetch size is too small.
@@ -464,7 +463,7 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
 
 **When interactive:** lower `fetchSize` (200–500) so first page returns fast.
 
-###### B) Medium row size (1–2 KB)
+#### B) Medium row size (1–2 KB)
 
 **Pros:** Still streamable with good throughput.
 **Cons:** Memory per batch grows; “too large” fetch size adds client pressure.
@@ -477,7 +476,7 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
 
 **Interactive:** `fetchSize = 200–1_000`.
 
-###### C) Wide rows (≥ 8 KB) or with LOBs (CLOB/BLOB)
+#### C) Wide rows (≥ 8 KB) or with LOBs (CLOB/BLOB)
 
 **Pros:** Few round trips even with small fetch sizes.
 **Cons:** Client buffering and GC pressure; CSV bloats; Excel consumers choke.
@@ -490,12 +489,12 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
 
 **Interactive:** `fetchSize = 100–300`.
 
-###### D) Interactive ad-hoc (dashboards, tools)
+#### D) Interactive ad-hoc (dashboards, tools)
 
 **Goal:** low latency for first rows.
 **Use:** `fetchSize = 200–500`; no gzip; smaller buffers; possibly server-side pagination (`ROWNUM`/`OFFSET` style) for UI.
 
-###### E) Backend/EOD batch (10M–100M rows)
+#### E) Backend/EOD batch (10M–100M rows)
 
 **Goal:** sustained throughput, reliability, repeatability.
 **Use:**
@@ -509,7 +508,7 @@ Long scans read from a consistent SCN. If writers keep churning and your **UNDO*
 
 
 
-###### Example: Oracle-tuned exporter snippet
+#### Example: Oracle-tuned exporter snippet
 
 ```java
 try (PreparedStatement ps = conn.prepareStatement(
@@ -553,7 +552,7 @@ try (PreparedStatement ps = conn.prepareStatement(sql)) {
 ```
 
 
-### How to get export a large amount of data (greater > 10 million) from database in csv format
+## How to get export a large amount of data (greater > 10 million) from database in csv format
 Approach 1 : get rows in result set and store in list and return csv
 Approach 2: return csv in streaming manner
 
@@ -569,15 +568,15 @@ https://www.javacodegeeks.com/2018/12/java-streaming-jdbc-resultset-csv.html
 The flush() method of PrintWriter Class in Java is used to flush the stream. By flushing the stream, it means to clear the stream of any element that may be or maybe not inside the stream. 
 
 
-### Avoiding sql injection when accepting user params for sql statements
+## Avoiding sql injection when accepting user params for sql statements
 
 Here’s a tight, battle-tested playbook for preventing SQL injection in a backend that accepts user params:
 
-#### Core rule (non-negotiable)
+### Core rule (non-negotiable)
 
 * **Always use parameterized queries / prepared statements.** Never build SQL by string concatenation.
 
-# Safe patterns (Java/Spring examples)
+### Safe patterns (Java/Spring examples)
 
 * **JdbcTemplate**
 
@@ -604,7 +603,7 @@ Here’s a tight, battle-tested playbook for preventing SQL injection in a backe
   ctx.selectFrom(USER).where(USER.EMAIL.eq(emailParam)).fetch();
   ```
 
-#### Dynamic SQL done safely
+### Dynamic SQL done safely
 
 * **IN lists:** use frameworks that expand binds safely (e.g., `namedJdbcTemplate` with `:ids`, jOOQ `IN(ids)`).
 * **ORDER BY / column names:** **whitelist** and map user input to constants:
@@ -627,13 +626,13 @@ Here’s a tight, battle-tested playbook for preventing SQL injection in a backe
   jdbcTemplate.query("... WHERE name LIKE ? ESCAPE '\\'", mapper, pattern);
   ```
 
-#### Validation & normalization
+### Validation & normalization
 
 * Validate **type/shape** (UUIDs, ints, enums) before hitting the DB.
 * Reject or normalize weird Unicode (look-alikes), overly long inputs, and null bytes.
 * Use **allow-lists** for enums/status codes; never accept raw SQL fragments.
 
-#### DB-side protections
+### DB-side protections
 
 * **Least privilege:** app accounts can only `SELECT/INSERT/UPDATE/DELETE` on needed tables; no DDL, no `SUPERUSER`.
 * Separate **read** vs **write** users if possible.
@@ -642,13 +641,13 @@ Here’s a tight, battle-tested playbook for preventing SQL injection in a backe
 
 
 
-#### Avoiding SQL Injection with prepared statements
+### Avoiding SQL Injection with prepared statements
 
 Here’s a clear and practical **example of a `PreparedStatement`** using the standard **JDBC API** — this is the safest and most common way to prevent SQL injection:
 
 
 
-#### ✅ Example: Fetch user by email
+### Example: Fetch user by email
 
 ```java
 import java.sql.*;
@@ -681,7 +680,7 @@ public class UserLookupExample {
 }
 ```
 
-#### 💡 Key details
+**Key details**
 
 1. **`?` placeholders** represent parameters in the SQL statement.
 
@@ -699,7 +698,7 @@ public class UserLookupExample {
    * Multiple executions with different parameters reuse the same query plan — improving performance and security.
 
 
-#### ✅ Example: Inserting new record safely
+### Example: Inserting new record safely
 
 ```java
 String insertSql = "INSERT INTO users (name, email, age) VALUES (?, ?, ?)";
@@ -710,7 +709,7 @@ try (PreparedStatement ps = conn.prepareStatement(insertSql)) {
     ps.executeUpdate();
 }
 ```
-#### ⚠️ Unsafe pattern (avoid)
+###  Unsafe pattern (avoid)
 
 ```java
 // ❌ Vulnerable to SQL injection
