@@ -1,11 +1,106 @@
 ## Explain partition and consumer group in kafka 
 
+
+
+* **Partition** → *Data storage and parallelism unit.*
+  Each Kafka topic is split into multiple partitions, and each partition is an ordered, immutable sequence of records.
+
+  * Enables **parallel writes and reads**.
+  * Each record has an **offset** unique within its partition.
+  * A single partition is consumed by only **one consumer** within a group at any time.
+
+* **Consumer Group** → *Consumption coordination unit.*
+  A consumer group is a set of consumers that share the work of reading from a topic’s partitions.
+
+  * Kafka ensures **each partition is consumed by exactly one consumer in the group** (for load balancing).
+  * Multiple groups can independently consume the same topic without affecting each other (each has its own offsets).
+  * Enables **scalable and fault-tolerant** consumption.
+
+**In short:**
+
+* **Partition =** how Kafka *stores and distributes* data.
+* **Consumer Group =** how Kafka *shares and coordinates* reading of that data among consumers.
+
+
 When you create a topic, you decided how many partitions it has. 
 The downstream consumers can then scale themself based on partition.  
 If there are hundred thousand messages in topic per minute spread across 10 partitions, then you can scale up to max 10 instances in group where each instance gets 10K messages    
 
 
-### Partitions (The Scaling of Data & Parallelism)
+## When creating a kafka topic what is the consideration on deciding how many partitions it should have
+
+Picking the partition count is about balancing **parallelism vs. overhead**. 
+
+### What to consider
+
+1. **Max consumer parallelism**
+
+   * A group can run at most **one consumer per partition**.
+   * Choose partitions ≥ the **max concurrent consumers** you plan to run.
+
+2. **Throughput target**
+
+   * Estimate peak ingest (msgs/s or MB/s) and consumer processing capacity.
+   * **Partitions ≥ ceil( peak_rate_per_topic / sustainable_rate_per_consumer )**.
+   * Do a quick load test to find your sustainable rate per consumer.
+
+3. **Key-based ordering & joins**
+
+   * Ordering is only guaranteed **within a partition**. If you need per-key order, keep all events for a key on one partition and ensure good key distribution to avoid hot spots.
+   * For Kafka Streams/joins, **co-partition** related topics (same partition count and partitioner).
+
+4. **Hot keys & skew**
+
+   * If traffic is skewed to a few keys, adding partitions won’t fix the hotspot; you may need **better keys**, **composite keys**, or **key bucketing**.
+
+5. **Future scaling**
+
+   * You can **increase** partitions later, but:
+
+     * It **changes key→partition mapping** (hash % N), which can break global per-key ordering across the resize moment.
+     * You **cannot decrease** partitions.
+
+6. **Operational overhead**
+
+   * More partitions ⇒ more **file handles, memory, network replication, controller metadata, rebalancing time**, and **log-compaction work**.
+   * Replication factor multiplies this cost: total replicas = partitions × RF.
+
+7. **Latency & batching**
+
+   * More partitions can boost producer throughput via more in-flight batches, but excessive partitions per broker/consumer can raise scheduling overhead and GC.
+
+8. **Retention/compaction**
+
+   * High retention × many partitions ⇒ lots of segments and compaction IO. Keep it reasonable.
+
+### Simple starting rule of thumb
+
+```
+partitions =
+  max(
+    planned_max_consumers_in_a_group,
+    ceil(peak_msgs_per_sec / msgs_per_sec_per_consumer)
+    // or use bytes/sec if messages are large
+  )
+```
+
+Then validate with a **short load test** and adjust.
+
+### Example
+
+* Peak: 200k msgs/s, each consumer can do ~25k msgs/s ⇒ need ≥ 8 partitions.
+* You want to run up to 12 consumers for headroom ⇒ choose **12 partitions** (or 16 if you want growth and can afford the overhead).
+
+### Quick tips
+
+* Keep partition counts for joined/streamed topics **aligned**.
+* Prefer **stable custom partitioners** if you must grow partitions without remapping keys (or plan a migration window).
+* Avoid “hundreds of thousands” of partitions cluster-wide unless you’ve proven the ops can handle it.
+
+In short: size for **parallelism and throughput**, check **ordering needs**, and respect the **operational cost**—then confirm with a load test.
+
+
+## Partitions (The Scaling of Data & Parallelism)
 
 A **partition** is a unit of parallelism and data organization **within a single topic**.
 
