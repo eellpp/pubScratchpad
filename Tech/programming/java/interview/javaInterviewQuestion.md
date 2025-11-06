@@ -204,7 +204,22 @@ public class SpringApp {
 By default, a Spring Bean is initialized as a singleton.  
 
 
+### when there are multiple beans of the same interface type , then how to autowire it 
 
+When there are multiple beans of the same interface type — spring will throw a NoUniqueBeanDefinitionException at startup.  
+
+Use @Qualifier – explicitly name the bean you want:
+
+```java
+
+@Component("paypalService")
+public class PayPalPaymentService implements PaymentService { ... }
+
+@Autowired
+@Qualifier("paypalService")
+private PaymentService paymentService;
+
+```
 
 ---
 
