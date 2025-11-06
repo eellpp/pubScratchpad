@@ -286,7 +286,6 @@ T2: get(k1) after publish       ⇒ sees vNew
 ```
 
 
-
 ##### Practical guidance
 
 * Use **CHM** when multiple threads **read and write** concurrently.
@@ -309,7 +308,30 @@ CHM lets T1 write **k1** while T2 reads **k1** safely (reader sees old or new, n
  When the volatile keyword is applied then then value written to the variable is immediatly available to read from another thread.   
  The volatile variable bypasses cpu caches and value is immediatly written to main memory 
 
-# If a task in executor service pool throws an unchecked exception, then will it terminate the pool
+
+### Have you worked with multithreading or asynchronous processing in Java? Can you explain how you’ve implemented it in your projects?
+
+Follow-up triggers (depending on their answer):
+“Did you use ExecutorService, ForkJoinPool, or create threads manually?”
+“How did you manage thread lifecycle, exceptions, and shutdown?”
+“Did you ever use CompletableFuture or parallel streams for async workflows?”
+
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/java/concurrent/threading/Common%20Pool%20and%20ForkJoin%20Pool.md
+
+#### Difference between ForkJoinPool and Custom Executor Service Thread Pool
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/java/concurrent/threading/ForkJoinPool%20Vs%20Custom%20Executor%20Service%20Pool.md
+
+### what is the pool used when completableFuture runs with executor 
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/java/concurrent/threading/CompletableFuture%20Pitfalls.md
+
+Scenario You add a feature that calls 3 slow REST APIs via supplyAsync(). Under load, those stages block sockets on the common pool. 
+Meanwhile, another part of your app uses parallelStream() (also common FJP) for CPU work. Now the common pool is starved by your I/O, CPU tasks crawl, latencies spike, and throughput collapses.
+
+#### If a task in executor service pool throws an unchecked exception, then will it terminate the pool
+https://github.com/eellpp/pubScratchpad/tree/main/Tech/programming/java/concurrent/threading
+
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/java/concurrent/threading/threading_exception_handling.md#if-a-task-in-executor-service-pool-throws-an-unchecked-exception-then-will-it-terminate-the-pool
+
 
 ### What are the adanvatages of executor service than manually creating threads
 
