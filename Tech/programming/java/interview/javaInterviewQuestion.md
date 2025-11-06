@@ -309,6 +309,8 @@ CHM lets T1 write **k1** while T2 reads **k1** safely (reader sees old or new, n
  When the volatile keyword is applied then then value written to the variable is immediatly available to read from another thread.   
  The volatile variable bypasses cpu caches and value is immediatly written to main memory 
 
+# If a task in executor service pool throws an unchecked exception, then will it terminate the pool
+
 ### What are the adanvatages of executor service than manually creating threads
 
 Here’s the straight answer for Java 17.
@@ -407,17 +409,6 @@ for (int i = 0; i < tasks.size(); i++) {
 * A **single** long-lived background thread with a trivial, well-controlled lifecycle.
 * Tiny prototypes/tests.
   (You still lose pooling, backpressure, and clean shutdown.)
-
-
-
-##### Gotchas / tips
-
-* Don’t block in a `ForkJoinPool` (or use `ManagedBlocker`/separate pool).
-* Use **bounded** queues for services; unbounded queues hide overload until it’s too late.
-* Name your threads and set `UncaughtExceptionHandler`.
-* For very high concurrency and I/O heavy apps, consider splitting pools by workload.
-
-> Note: In Java 21, **virtual threads** change the story (cheap threads, structured concurrency). On Java 17, `ExecutorService` is the right tool for robust, high-throughput task execution.
 
  
  ### What is factory design pattern
