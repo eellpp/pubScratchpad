@@ -925,15 +925,9 @@ ElasticSearch mappings define how documents and their fields are indexed and sto
 
 
 ### What is Apache Kafka
-Kafka is a messaging system built for high throughput and fault tolerance.  
 
-A Topic is a category or feed in which records are saved and published.
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/data_engineering/kafka/kafkaInterviewQuestions.md
 
-A Kafka broker is a server that works as part of a Kafka cluster (in other words, a Kafka cluster is made up of a number of brokers). Multiple brokers typically work together to build a Kafka cluster, which provides load balancing, reliable redundancy, and failover. The cluster is managed and coordinated by brokers using Apache ZooKeeper. Without sacrificing performance, each broker instance can handle read and write volumes of hundreds of thousands per second (and gigabytes of messages). Each broker has its own ID and can be in charge of one or more topic log divisions.
-
-### What do you mean by a Partition in Kafka? 
-
-Kafka topics are separated into partitions, each of which contains records in a fixed order. A unique offset is assigned and attributed to each record in a partition. Multiple partition logs can be found in a single topic. This allows several users to read from the same topic at the same time. Topics can be parallelized via partitions, which split data into a single topic among numerous brokers.
 
 #### Say in apache kafka I read a message and got an exception and application terminated . Will there be data loss in this case when the application reads back again
 
