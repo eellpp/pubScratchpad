@@ -43,7 +43,7 @@ When multiple threads access and modify the same instance of a singleton bean co
  Utilize Java's concurrent libraries such as java.util.concurrent classes for managing concurrent access to shared resources. For example, using ConcurrentHashMap instead of a regular HashMap if your bean needs to store and manipulate data concurrently.
 
 ### how would you implement a thread safe singleton in java 
-https://github.com/eellpp/pubScratchpad/tree/main/Tech/programming/java/interview/solutions
+https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/java/interview/solutions/singleton_implementation.md
 
 # Spring Boot
 
@@ -65,9 +65,6 @@ Spring will :
 ### If i declare a Map variable as final, can i put values into it later
 yes. Because final marks the reference not the object. You can't make the reference point to another hash table. However you can add new values to it.  
 int is a primitive type, not reference. Means with final you can't change the value of variable. 
-
-
-
 
 
 
