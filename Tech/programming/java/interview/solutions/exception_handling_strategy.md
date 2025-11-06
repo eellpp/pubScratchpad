@@ -1,4 +1,4 @@
-# Exception Handling strategy
+# Exception Handling strategy for Webservice 
 
 ## 1) Goals & Principles
 
