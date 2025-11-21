@@ -12,7 +12,6 @@
 Use for programming errors or conditions you don’t expect callers to recover from at that site. Not enforced by the compiler.  
 Examples: NullPointerException, IllegalArgumentException, ArithmeticException.  
 
-
 ### When would you choose to use a checked exception vs. an unchecked exception in your own code?** 
 
 Expected Answer: This is a design philosophy question.   
@@ -20,6 +19,14 @@ Expected Answer: This is a design philosophy question.
 - Use an Unchecked Exception when the exception is the result of a programming error or a situation from which the caller cannot reasonably be expected to recover. For example, a null reference where an object is required, or an invalid argument passed to a method. It indicates a bug.
 
 Use checked exceptions sparingly—only when typical callers can and should handle them (I/O, user input, business rule violations where a different action is likely).
+
+
+###  consider a try–catch–finally block where the catch rethrows the caught exception. What happens if the finally block also contains code that either throws an exception or returns a value?
+The exception is not consumed by finally unless you explicitly throw a different exception inside finally. You do not need to re-throw it again in finally.
+
+The exception thrown from finally overrides the one thrown from catch.  
+The original exception is lost unless you explicitly capture and chain it. This is why developers are strongly discouraged from throwing exceptions in finally.  
+
 
 ### In Spring Jdbc are SqlException and DataAccessException checked or unchecked exception ?
 https://github.com/eellpp/pubScratchpad/blob/main/Tech/programming/java/interview/solutions/jdbc_exception.md
