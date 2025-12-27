@@ -211,6 +211,3 @@ Now:
 * Third-party libraries are visible but not overwhelming.
 * Everything (including library logs) goes into a **consistent format** (with time, class, function, line number, corr_id, markers) that your log parser can ingest.
 
-
-
-If you tell me your typical stack (e.g. “PySpark batch jobs + REST service in FastAPI + S3 access via boto3”), I can sketch a **concrete logging profile**: which library loggers to tune, recommended default levels, and a sample config tuned for that setup.
