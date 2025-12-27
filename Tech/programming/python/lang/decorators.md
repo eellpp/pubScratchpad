@@ -1,6 +1,5 @@
 https://realpython.com/primer-on-python-decorators/  
 
-
 - They can be reused.
 - They can decorate functions with arguments and return values.
 - They can use @functools.wraps to look more like the decorated function.
@@ -12,19 +11,41 @@ how to:
 - Keep state within decorators
 - Use classes as decorators
 
+
+#### Creating Singletons
 ```bash
-import functools
+import threading
+from functools import wraps
 
-def do_once(func):
-    @functools.wraps(func)
-    def wrapper_do_once(*args, **kwargs):
-        return func(*args, **kwargs)
-    return wrapper_do_once
+def singleton(cls):
+    instances = {}
+    lock = threading.Lock()
 
-@do_once
-def greet(name):
-    print(f"Hello {name}")
-    
+    @wraps(cls)
+    def get_instance(*args, **kwargs):
+        # 1. If instance already exists → return immediately (very fast)
+        if cls not in instances:
+            with lock:       # 2. take locks only when instances not created yet.
+                if cls not in instances: # only when instace not created yet, if race condition at 1, then need double check
+                    instances[cls] = cls(*args, **kwargs)
+        return instances[cls]
+
+    return get_instance
+
+```
+
+
+```bash
+@singleton
+class Database:
+    def __init__(self):
+        print("Connecting…")
+
+db1 = Database()
+db2 = Database()
+
+print(db1 is db2)   # True
+
 ```
 
 #### Timing Functions  
@@ -87,24 +108,7 @@ def login_required(func):
 def secret():
 ```
 
-#### Creating Singletons
-```bash
-mport functools
 
-def singleton(cls):
-    """Make a class a Singleton class (only one instance)"""
-    @functools.wraps(cls)
-    def wrapper_singleton(*args, **kwargs):
-        if not wrapper_singleton.instance:
-            wrapper_singleton.instance = cls(*args, **kwargs)
-        return wrapper_singleton.instance
-    wrapper_singleton.instance = None
-    return wrapper_singleton
-
-@singleton
-class TheOne:
-    pass
-```
 
 #### Caching Return Values
 ```bash
@@ -129,4 +133,78 @@ def fibonacci(num):
         return num
     return fibonacci(num - 1) + fibonacci(num - 2)
 ``` 
+
+## Expressions added in python 3.9 
+
+#### Role-Based Access Control (RBAC)
+
+Expression needed because the decorator needs arguments (role name) 
+
+```bash
+def require_role(role):
+    def deco(fn):
+        def wrapper(user, *a, **k):
+            if role not in user.roles:
+                raise PermissionError(f"Requires role: {role}")
+            return fn(user, *a, **k)
+        return wrapper
+    return deco
+
+
+@require_role("admin")        # expression call
+def delete_user(user, id):
+    ...
+
+```
+
+#### Conditional expressions 
+
+```python
+def enabled(fn):
+    def wrapper(*a, **k):
+        return fn(*a, **k)
+    return wrapper
+
+def disabled(fn):
+    def wrapper(*a, **k):
+        print("Feature disabled")
+    return wrapper
+
+
+FEATURE_ENABLED = False
+
+@(enabled if FEATURE_ENABLED else disabled)   # conditional expression
+def new_checkout():
+    ...
+
+```
+
+
+#### Dependency Injection 
+
+With expressionm dependency isn’t a hardcoded decorator name.
+
+```def inject(service):
+    def deco(fn):
+        def wrapper(*a, **k):
+            return fn(service(), *a, **k)
+        return wrapper
+    return deco
+
+
+from myapp.services import PaymentService
+
+@inject(PaymentService)     # expression = class ref
+def checkout(payment_service):
+    ...
+python
+
+```
+
+Decorator expressions matter when you need:  
+✔ configuration (rate, retries, roles…)   
+✔ conditional enable/disable  
+✔ environment-driven behavior  
+✔ dynamic lookup (dicts, lists, modules, classes)  
+✔ clean, reusable cross-cutting concerns  
 
