@@ -274,11 +274,4 @@ str(Path("file.txt"))
 | Delete            | `unlink()`                           |
 | Metadata          | `stat()`                             |
 
----
 
-If you want, I can also provide:
-
-* **A quick PDF-style reference**
-* **Advanced usage (permissions, symlinks, async, pathlib vs os perf)**
-* **Dask / multiprocessing friendly pathlib usage**
-  Just tell me 😊
