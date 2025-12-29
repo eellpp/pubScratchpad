@@ -189,8 +189,6 @@ Here are **great comprehensive resources** that track features across releases:
 
 ---
 
-If you want, I can also generate **download links and JEP numbers for each feature**, or a **PDF/cheat sheet summarizing them all**!
-
 [1]: https://en.wikipedia.org/wiki/Java_version_history?utm_source=chatgpt.com "Java version history"
 [2]: https://www.baeldung.com/new-java-9?utm_source=chatgpt.com "New Features in Java 9"
 [3]: https://medium.com/%40techie_arbaaz/main-java-versions-and-their-key-features-from-9-to-21-977ac97e9f18?utm_source=chatgpt.com "Main Java Versions and Their Key Features from 9 to 21"
