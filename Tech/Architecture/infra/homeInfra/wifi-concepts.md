@@ -126,36 +126,8 @@ Just passes internet.
 
 Router = Your home’s **security gate + traffic manager**
 
----
-
-# 🧠 Short Summary Cheat Sheet
-
-| Feature                       | Modem | Router                   |
-| ----------------------------- | ----- | ------------------------ |
-| Talks to ISP                  | ✔️    | ❌                        |
-| Creates WiFi                  | ❌     | ✔️ (usually)             |
-| Assigns private IPs (DHCP)    | ❌     | ✔️                       |
-| Provides firewall             | ❌     | ✔️                       |
-| NAT (many devices share 1 IP) | ❌     | ✔️                       |
-| Needed for Internet           | ✔️    | ✔️ (if multiple devices) |
-
----
-
-# ✅ One-Line Definition
-
 **Modem connects your home to the internet.
 Router connects your devices to each other and to the internet.**
-
----
-
-If you want, I can next explain:
-
-* Where ONT fits in fiber homes
-* Why sometimes modem is not needed in fiber
-* What is a gateway
-* Difference between router vs access point
-* Mesh WiFi vs normal router
-
 
 # 🏠 Wifi concepts
 
