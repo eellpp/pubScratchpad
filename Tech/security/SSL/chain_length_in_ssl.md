@@ -1,7 +1,3 @@
-Great question—**certificate chain length** (a.k.a. certificate chain or chain of trust) is a core concept in SSL/TLS. Here’s a clean, practical explanation.
-
----
-
 ## 1. What is a “certificate chain” in SSL/TLS?
 
 When your browser connects to `https://example.com`, it doesn’t just trust the website’s certificate by itself. Instead, it verifies a **chain of certificates**:
