@@ -40,3 +40,25 @@ There are a few parts to the difficulty. One is that when I have something to sa
 > - Take a brake from internet. After work, keep yourself busy doing things that don't involve using a screen and even try some hard blocking method to avoid using tech in public spaces.
 > All this things might help you finding people to connect. Your initial answer should rewritten: "How to be alone?" -> "How to meet people?". The individualistic culture created in the last few decades, exacerbated by social media create a loneliness epidemic; kids have less friend, same for adults, so many people I met told me that online dating sucks, more and more people are using brain medication for anxiety and depression. The situation is not good and individualistic thinking clearly is not working.
 > The real trick is not learning to be alone, but re-learning how to make friends and share parts of life with others. Humans are social animals.
+
+
+**4.**
+> Looking back on the last two years and auditing what worked, I would say routine and lingering were the most important thing.
+> Trying new things is mentally draining and labor intensive, this is a fact of life for many. What worked for me was finding something I enjoyed (exercise classes) and doing it consistently multiple times a week at the same place for months. With repetition, it's very easy to make new friends. Complaining about one exercise one week turns into making comments about the music the next, and all of a sudden you're getting coffee with friends.
+> At the start it was very difficult, and I was very bad, but now I'm part of a community and have many close friends. Its a hour per day most days of the week. It's also a jumping off point for everything else social. It provides purpose and self-confidence. Which are prerequisites for everything else meaningful in life.
+
+**5**
+> 1. This will be tough. That doesn't mean you are doing it wrong.
+> 2. Growth is proportional to your willingness to be uncomfortable.
+> 3. Meds can work wonders, AND you can still be depressed. Medicine resolve biological depression. It doesn't resolve situational depression.
+> 4. You will likely go through the stages of grief as you grieve this change. One of those stages is sadness.
+> Again, that's okay. You will grow so much as you find new ways to socialize and to enjoy solitude. It will be painful, but that is normal. It is part if the process.
+> Also again, I'm sorry to hear life took an unexpected turn. I know how hard that can be.
+
+### Others
+> Giving kindness is most satisfying. It makes the receiver happy, but it makes you happy as well in a wat that kind of lasts. It’s an interaction that compounds on both sides. I think that’s why church groups, and mentorships, ans teaching, and advisory roles are satisfying. Teaching, giving, coaching all make life far more vibrant emotionally, and far less lonely.
+
+
+> "watch who you spend your time with". I picked up that nugget from a successful (and happy) guy in North Carolina who does development and has really turned around the small town he lives in with his strategy for revitalization.
+He also said to make your bed every morning, which I have done for years. Highly recommend this as it is an act of self care.
+
