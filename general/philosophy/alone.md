@@ -1,5 +1,6 @@
-https://news.ycombinator.com/item?id=47296547
-**Ask HN**
+URL: https://news.ycombinator.com/item?id=47296547  
+
+**Ask HN**  
 > For the first time in my life, at 38, I'm alone. When I was 18 I basically moved out of my parents' straight in with my highschool sweetheart, and we were together ever since. That chapter of my life is over now, and I'm finding the adjustment very difficult.
 There are a few parts to the difficulty. One is that when I have something to say about my day, there's nowhere to say it; no one on HN cares whether I fixed up the blinds or cooked pork steaks. I hang out in an IRC chatroom for that, but sometimes nobody's around for hours.
 > Another is that weekends are hard. I used to be in a house filled with life each weekend, and now it's me and my dog (and my cat, when he decides to grace me with his presence). Having animals helps somewhat, but it's still hard simply being alone with myself for ~60 hours.
