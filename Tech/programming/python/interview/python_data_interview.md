@@ -114,7 +114,24 @@ What happens if you do list(transform_data(...))
 6. How would you process a 10GB CSV file efficiently in Python?
 
 7. What is `yield from` and when is it useful in pipeline design?
+yield from is used to delegate iteration to another generator or iterable. It simplifies code by automatically yielding all values from the sub-generator and correctly forwarding exceptions and control flow. In pipeline design, it is useful for composing generator-based stages, flattening nested outputs, and building modular streaming pipelines where each stage can delegate work to another stage cleanly.
 
+```python
+def read(file):
+    yield from file
+
+def filter_valid(data):
+    for row in data:
+        if is_valid(row):
+            yield row
+
+def transform_data(data):
+    for row in data:
+        yield transform(row)
+
+def pipeline(file):
+    yield from transform_data(filter_valid(read(file)))
+```
 ---
 
 ### 🔹 File Handling
@@ -281,7 +298,8 @@ from typing import Dict
 
 29. What does `removeprefix()` and `removesuffix()` do?
 
-👉 Where is it useful in ETL pipelines?
+removeprefix() and removesuffix() remove a specified prefix or suffix only if it exactly matches the start or end of the string. They are safer than older methods like lstrip() and rstrip(), which remove characters rather than exact substrings. These are especially useful in data pipelines for cleaning file paths, URLs, and structured strings.
+
 
 ---
 
