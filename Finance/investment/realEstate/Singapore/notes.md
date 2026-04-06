@@ -1,4 +1,12 @@
 
+### Only 10% of older condo are able to go en-bloc
+>> Yet, the reality is that not many ageing estates successfully go en bloc. Over the past decade, fewer than 10 per cent of older condominiums have been sold collectively, with many attempts falling through due to lack of consensus among owners or limited developer interest, said property analysts.
+
+https://www.straitstimes.com/singapore/housing/keeping-old-condos-liveable-will-take-financial-discipline-not-just-new-rules-and-subsidies?ref=top-story
+
+>> More than 1,000 of Singapore’s 3,750 private residential developments are at least 30 years old. Many were built in the 1980s and 1990s and are now reaching the stage where major systems – from lifts to plumbing and electrical systems – begin to fail. But many may not have collected adequate sinking funds for such urgent essential repairs, especially since maintenance costs have risen over the years.
+>> .. Replacing all 12 lifts would cost $1.8 million, but as at August 2025, the sinking fund held barely $1 million, The Straits Times reported then. ...
+
 ### 40-50% of loan portfolio of banks is property
 At the end of March 2018, the three large Singapore banks - DBS, OCBC and UOB - had 42 to 50 per cent of their loan portfolio exposed to the property sector, including housing loans.
 According to the DBS First Quarter 2018 financial data, the bank lent a total of S$140 billion to the housing and construction sector (S$66 billion to building and construction, S$73 billion to housing loans).
