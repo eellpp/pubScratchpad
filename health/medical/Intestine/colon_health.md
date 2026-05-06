@@ -92,6 +92,8 @@ Do not deliberately eat hard seed shells or rough items as a test. It is unneces
 
 ## 6. Better way to judge stool: Bristol Stool Chart
 
+<img width="400" height="500" alt="Stool chart" src="https://github.com/user-attachments/assets/4360301d-4e31-4987-a74d-a8a7ae01b322" />
+
 The Bristol Stool Chart classifies stool into seven types based on shape and consistency. Cleveland Clinic describes it as a tool healthcare providers use to discuss stool form and possible bathroom issues. ([Cleveland Clinic][2])
 
 | Type   | Appearance                | Meaning               |
