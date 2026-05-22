@@ -83,11 +83,6 @@ Shuffle hash join involves moving the data with the same hash key to same node. 
 
 sort join involves first sorting each of the table and then doing the join. Shuffle sort-merge join involves moving the data with the same hash key to same node, then sorting each of dataset and then doing the join in the node. 
 
-### Which is faster : distinct or groupby when finding unique rows by multiple columns in big data table
-### Why is distict slower than groupby when operating on lots of columns?
-Distinct creates more shuffles. Spark has while optimization replaces distinct by ReplaceDistinctWithAggregate optimization rule
-Groupby will involve creation of hash by group key and would be faster. 
-However distinct will involve sorting and duplicate removal by columns.
 
 ### What is shuffling
 The shuffle is Spark’s mechanism for re-distributing data so that it’s grouped differently across partitions. This typically involves copying data across executors and machines, making the shuffle a complex and costly operation.
@@ -95,6 +90,11 @@ The shuffle is Spark’s mechanism for re-distributing data so that it’s group
 Spark knows to avoid a shuffle when a previous transformation has already partitioned the data according to the same partitioner.
 
 In general, avoiding shuffle will make your program run faster. All shuffle data must be written to disk and then transferred over the network.
+
+##  For aggregation compare groupByKey , reduceByKey and sql group by 
+groupByKey is usually the slowest. It groups all raw values for each key and may move a large amount of data across the network. It also needs more memory because Spark has to hold many values per key.  
+reduceByKey is usually faster. It combines values locally inside each partition before shuffling data. So instead of sending every value across the network, Spark sends smaller partial results. This reduces shuffle, memory usage, and execution time.  
+SQL GROUP BY on DataFrame is usually similar to reduceByKey for normal aggregations like SUM, COUNT, MIN, and MAX. Spark SQL performs partial aggregation before shuffle and final aggregation after shuffle. It is often the preferred option because Catalyst and Tungsten can optimize the execution plan.  
 
 ### What is difference between groupByKey and reduceByKey
 -  groupByKey shuffles all the data, which is slow.
@@ -108,8 +108,6 @@ In general, avoiding shuffle will make your program run faster. All shuffle data
 
 too few (causing less concurrency, data skewing and improper resource utilization) or too many (causing task scheduling to take more time than actual execution time) partitions is not good.
 
-### What is the default partition size in spark
-By default, Spark creates one partition for each block of the file (blocks being 128MB by default in HDFS), but you can also ask for a higher number of partitions by passing a larger value.
 
 **How to create dataframe with complex datatype columns ?**
 We have to provide a schema 
