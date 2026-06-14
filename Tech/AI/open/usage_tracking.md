@@ -1,4 +1,6 @@
 
+as_of : June 2026
+
 # Check usage
 https://chatgpt.com/codex/cloud/settings/analytics#usage
 
