@@ -21,9 +21,9 @@ So **ൻ, ൽ, ൾ, ൺ, ർ, ൿ** are special final consonant forms.
 | Chillaksharam | English sound | Malayalam word | Transliteration | Meaning          |
 | ------------- | ------------- | -------------- | --------------- | ---------------- |
 | ൻ             | n             | ഞാൻ            | ñān / njān      | I                |
+| ൺ             | retroflex n   | മൺ             | maṇ             | soil             |
 | ൽ             | l             | കാൽ            | kāl             | leg / foot       |
 | ൾ             | retroflex l   | വാൾ            | vāḷ             | sword            |
-| ൺ             | retroflex n   | മൺ             | maṇ             | soil             |
 | ർ             | r             | കാർ            | kār             | car              |
 | ൿ             | k             | rarely used    | —               | mostly old usage |
 
