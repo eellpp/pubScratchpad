@@ -17,7 +17,7 @@ Malayalam vowels can stand alone as letters.
 | ഋ         | ri / r̥      | ഋഷി          | rishi            | sage       |
 | എ         | e            | എലി          | eli              | rat        |
 | ഏ         | ē / long e   | ഏണി          | ēṇi              | ladder     |
-| ഐ         | ai           | ഐനം          | ainam            | type/kind  |
+| ഐ         | ai           | ഐനം          | ainam            | type/kind/category  |
 | ഒ         | o            | ഒരാൾ         | orāḷ             | one person |
 | ഓ         | ō / long o   | ഓണം          | ōṇam             | Onam       |
 | ഔ         | au           | ഔഷധം         | aushadham        | medicine   |
