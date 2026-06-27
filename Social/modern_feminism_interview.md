@@ -5,13 +5,13 @@
 
 ## What she actually says
 
-She says the sexual revolution had benefits for women, but also reset male–female relations in a way that often benefited men more than women. Her central reason is asymmetry: women face pregnancy, greater physical vulnerability, and more risk when relationships go wrong, while men on average are more drawn to casual sex and multiple partners. So a culture where casual sex becomes the expected starting point, especially in college, is in her view generally worse for women. ([GitHub][1])
+She says the sexual revolution had benefits for women, but also reset male–female relations in a way that often benefited men more than women. Her central reason is asymmetry: women face pregnancy, greater physical vulnerability, and more risk when relationships go wrong, while men on average are more drawn to casual sex and multiple partners. So a culture where casual sex becomes the expected starting point, especially in college, is in her view generally worse for women. 
 
-She is not saying men are evil. She says male risk-taking and youthful male energy can be destructive when badly directed, but the same energy can become courage, inventiveness, adventure, and other virtues. Her concern is: society must **channel** male energy, not deny that it exists. ([GitHub][1])
+She is not saying men are evil. She says male risk-taking and youthful male energy can be destructive when badly directed, but the same energy can become courage, inventiveness, adventure, and other virtues. Her concern is: society must **channel** male energy, not deny that it exists. 
 
-She also says women need positive non-hostile relationships with men. She thinks “heteropessimism” — women becoming disappointed, bitter, or wanting to opt out of heterosexual relationships — partly comes from women having few good close friendships with men before being pushed into a sexual culture that favors male interests. ([GitHub][1])
+She also says women need positive non-hostile relationships with men. She thinks “heteropessimism” — women becoming disappointed, bitter, or wanting to opt out of heterosexual relationships — partly comes from women having few good close friendships with men before being pushed into a sexual culture that favors male interests. 
 
-Her positive model is marriage or serious commitment: men and women should read their differences not as war, but as “charming and interesting and funny.” She says marriage can teach real fondness for the opposite sex, but only if the man is not a tyrant and the woman is treated as an equal. ([GitHub][1])
+Her positive model is marriage or serious commitment: men and women should read their differences not as war, but as “charming and interesting and funny.” She says marriage can teach real fondness for the opposite sex, but only if the man is not a tyrant and the woman is treated as an equal. 
 
 ## What she probably means underneath
 
@@ -40,11 +40,11 @@ She wants women educated, capable, professionally fulfilled, and safe in public 
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **As a teen**                  | Boys and girls should learn to respect each other before seeing each other mainly through romance, sex, internet stereotypes, or gender-war ideas. She would probably support strong boundaries, less online influence, and more healthy ordinary friendships between boys and girls.                                     |
 | **College / university**       | This is where she is most critical. She thinks hookup culture teaches young women to accept a dating model that often benefits men more. She would likely advise: do not treat casual sexual availability as normal maturity; judge a person’s character, responsibility, and long-term suitability first.                |
-| **Young adult dating**         | She would ask: “Would this person be a good spouse or parent?” Even though she discusses this especially for women, she says she would tell her sons the same thing. Her idea is that sexual/romantic choices should be tied to responsibility, not just attraction or convenience. ([GitHub][1])                         |
-| **Adult / grown-up life**      | She seems to believe serious partnership requires compromise. Men should care about women’s happiness, education, and professional fulfillment. Women should not be reduced to subservient wives, but neither should motherhood/care work be treated as irrelevant. ([GitHub][1])                                         |
+| **Young adult dating**         | She would ask: “Would this person be a good spouse or parent?” Even though she discusses this especially for women, she says she would tell her sons the same thing. Her idea is that sexual/romantic choices should be tied to responsibility, not just attraction or convenience.                          |
+| **Adult / grown-up life**      | She seems to believe serious partnership requires compromise. Men should care about women’s happiness, education, and professional fulfillment. Women should not be reduced to subservient wives, but neither should motherhood/care work be treated as irrelevant.                                         |
 | **Marriage**                   | Marriage is her preferred arena for solving the “battle of the sexes.” She sees good marriage as equal, affectionate, realistic about difference, and good for both men and women. Not “man commands, woman obeys.”                                                                                                       |
 | **Workplace**                  | She values women’s education and professional achievement. But she thinks the workplace often assumes a male-style life path, and this can clash with motherhood or family life. So she would likely support work cultures where women can succeed without pretending pregnancy, children, and care burdens do not exist. |
-| **Casual social environment**  | She likely wants men and women to interact normally, with friendship and trust, instead of suspicion. But she also thinks some private same-sex venting is natural, and the internet makes things worse by exposing every crude or angry comment to the opposite sex. ([GitHub][1])                                       |
+| **Casual social environment**  | She likely wants men and women to interact normally, with friendship and trust, instead of suspicion. But she also thinks some private same-sex venting is natural, and the internet makes things worse by exposing every crude or angry comment to the opposite sex.                                       |
 | **General social interaction** | Her model is: less gender-war, less online ideology, more real-life exposure, more respect, more restraint, and more willingness to see the opposite sex as human rather than as enemy/class/oppressor/prey.                                                                                                              |
 
 ## What she is alluding to but not always saying directly
@@ -58,10 +58,9 @@ The deepest sentence behind her whole view is probably this:
 
 She is not mainly preaching female submission. She is warning against a world where women are told they are liberated, but the practical rules of dating, sex, work, and family quietly serve male convenience more than female flourishing.
 
-[1]: https://raw.githubusercontent.com/eellpp/pubScratchpad/refs/heads/main/Social/modern_feminism_interview.txt "raw.githubusercontent.com"
 
 
-## Interview
+# Interview
 ```text
 The growing alienation between men and women is, to my mind, one of the biggest stories of our time.
 
