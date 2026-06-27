@@ -59,6 +59,115 @@ The deepest sentence behind her whole view is probably this:
 She is not mainly preaching female submission. She is warning against a world where women are told they are liberated, but the practical rules of dating, sex, work, and family quietly serve male convenience more than female flourishing.
 
 
+Yes. Perry repeatedly presents **“burden-pair” thinking**: she looks at male–female relations not only as power/oppression, but as a historical exchange of different burdens, risks, and duties. Her point is not that the old world was perfect, but that earlier societies had some way of explaining why men and women carried different costs. Modern society removed many old male burdens, but some female burdens remain.
+
+Here are the main “things like this” she presents.
+
+### 1. Childbirth vs war / defense
+
+This is the clearest example you noticed.
+
+She says pregnancy and childbirth involve unavoidable female suffering. In traditional cultures, this was often understood alongside the male duty to fight, defend, and risk death for the community. The “woman in childbirth” and the “male warrior” were treated as counterpart roles. But in modern developed societies, men mostly no longer carry that old warrior burden, while women still carry pregnancy, childbirth, and much care work. ([GitHub][1])
+
+What she is alluding to:
+Modern women may feel, “I still carry the ancient female burden, but men no longer carry the ancient male burden.” That creates resentment, even if nobody can fully “solve” biology.
+
+### 2. Male physical danger vs male usefulness
+
+She says youthful male energy is dangerous when badly directed: risk-taking, aggression, violence. But the same traits can also produce courage, invention, adventure, exploration, and protection. So she does not see masculinity as simply toxic. She sees it as **powerful raw material that must be channeled**. ([GitHub][1])
+
+What she is alluding to:
+A society cannot simply shame boys for being boys. It needs meaningful paths for male energy: responsibility, work, family, service, discipline, craftsmanship, risk with purpose.
+
+### 3. Sexual freedom vs unequal consequences
+
+She argues that casual-sex culture looks equal on paper, but is not equal in consequences. Women face pregnancy, more physical vulnerability, and more social/emotional cost when things go wrong. Men, on average, benefit more from a norm of casual sex because the risks are lower for them. ([GitHub][1])
+
+What she is alluding to:
+“Same rule for men and women” does not always mean fairness. A rule can be formally equal but practically unequal because bodies and risks differ.
+
+### 4. The pill as liberation and illusion
+
+She says the pill changed everything because women could privately and invisibly control fertility. She acknowledges the benefits. But she also thinks it created the illusion that sex could become almost consequence-free. Her advice is basically: behave as if contraception does not erase the seriousness of sex. ([GitHub][1])
+
+What she is alluding to:
+Technology can reduce consequences, but not remove them. Pregnancy risk, emotional attachment, reputation, partner quality, family formation, and future children still matter.
+
+### 5. Two-income freedom vs two-income trap
+
+She says women entering the workforce brought real benefits. But when two incomes become the social norm, families start depending on both incomes. Then if one parent, especially the mother after childbirth, stops earning, the household becomes fragile. So what looked like more choice can become less choice. ([GitHub][1])
+
+What she is alluding to:
+Modern “freedom” often becomes a new obligation. Women are told they are free to work, but then the economy prices housing, lifestyle, and family life around the assumption that they must work.
+
+### 6. Men’s traditional home work got automated; women’s care work did not
+
+She says many traditionally male household tasks, like chopping firewood, are now automated or unnecessary. But care work, especially caring for babies and children, still cannot really be automated. So modernity removed many male domestic burdens faster than female ones. ([GitHub][1])
+
+What she is alluding to:
+Modern technology did not liberate men and women equally from old duties. It reduced some male-coded labor more easily than female-coded care labor.
+
+### 7. Consent education vs deeper human nature
+
+She says consent workshops have some use: explaining law, protecting institutions, telling victims where to get help. But she does not think they “reprogram” young men. She thinks sexual violence is not just caused by bad ideology; it also has deeper biological and behavioral roots that society must manage seriously. ([GitHub][1])
+
+What she is alluding to:
+Good slogans and workshops are not enough. Social norms, supervision, restraint, consequences, and character formation matter.
+
+### 8. Pornography vs small moral lessons
+
+She says a short consent workshop cannot compete with the scale of online pornography exposure. Her point is not only about pornography itself, but about **formation**: what shapes young people more — a school lesson, or hundreds of hours of online material? ([GitHub][1])
+
+What she is alluding to:
+Culture teaches more powerfully than official instruction. Young people absorb ideas about men, women, bodies, and relationships from the environment, not just from what adults formally tell them.
+
+### 9. Online speech exposes private gender resentment
+
+She says the internet exposes what men say about women and what women say about men. Earlier, “locker room talk” or women’s private gossip stayed private. Now it becomes public, viral, and identity-forming. ([GitHub][1])
+
+What she is alluding to:
+Men and women may always have complained about each other privately, but the internet turns private irritation into public ideology. This increases distrust between the sexes.
+
+### 10. Opposite-sex friendship as protection against gender war
+
+She says heteropessimism — women’s disappointment or antagonism toward relationships with men — may come from women not having positive close friendships with men before entering a casual sexual culture. If the first major experience of men is through a sexual market that favors male interests, women may become understandably negative. ([GitHub][1])
+
+What she is alluding to:
+Healthy ordinary friendships between boys and girls matter. They humanize the opposite sex before romance and sex enter the picture.
+
+### 11. Marriage as public commitment, not just romance
+
+She presents marriage as one way of making a “costly and public declaration of commitment.” Her point is that sex historically became safer for women when the man had to make a visible commitment approved by family/community. ([GitHub][1])
+
+What she is alluding to:
+Private attraction is not enough. Public accountability protects the more vulnerable party.
+
+### 12. Feminism must account for women “as women”
+
+She defines feminism broadly as politics for women as women, meaning it should recognize women’s specific vulnerabilities rather than pretending men and women are identical. ([GitHub][1])
+
+What she is alluding to:
+A feminism that only says “women can do whatever men do” may miss the deeper issue: women’s bodies, risks, and life patterns are not identical to men’s.
+
+### The deeper pattern
+
+Perry’s thinking is built around this idea:
+
+**Modern society removed many old rules, but did not remove the biological and emotional realities those rules were managing.**
+
+So she keeps asking:
+
+Who carries the cost?
+Who benefits from the new freedom?
+Which old burden disappeared?
+Which old burden remained?
+What social norm used to manage this problem?
+What replaced it — and is the replacement actually working?
+
+That is why her interview feels unusual. She is not only talking in the modern language of rights, choice, consent, and equality. She is also talking in the older language of **burden, sacrifice, protection, fertility, family, restraint, and social order**.
+
+
+
 
 # Interview
 ```text
