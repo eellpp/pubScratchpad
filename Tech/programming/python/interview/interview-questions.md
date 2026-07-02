@@ -1,6 +1,15 @@
 Reference
 https://github.com/DopplerHQ/awesome-interview-questions#python
 
+**what is lambda in python ?**
+Anonymous function that can be created at run time
+
+**What is difference between tuple and list and when to use each ?**
+- Tuple are immutable. 
+- tuples use parentheses for enclosing, but the lists have square brackets in their syntax.
+
+list = changeable collection, tuple = fixed group of values 
+- use tuple for fixed records that are not changed. 
 
 **What is named tuple ?** 
 
@@ -36,6 +45,11 @@ p = Point(11,22)
 type(p) # __main__.whatsmypurpose
 ```
 
+**What is the `yield` keyword used for in Python?**
+Yield can be used like a return statement in function. Instead of returning the output it will return a generator that can be iterated upon
+
+**What is an iterator in Python?**
+An iterable is an object capable of **returning** its **members** **one by one**. Said in other words, an iterable is anything that you can loop over with a `for` loop in Python.
 
 Q: How to package code in Python?
 
@@ -48,11 +62,7 @@ What advantages do NumPy arrays offer over (nested) Python lists?
 
 You have a memory leak in the working production application on one of your company servers. How would you start debugging it?
 
-**What is the `yield` keyword used for in Python?**
-Yield can be used like a return statement in function. Instead of returning the output it will return a generator that can be iterated upon
 
-**What is an iterator in Python?**
-An iterable is an object capable of **returning** its **members** **one by one**. Said in other words, an iterable is anything that you can loop over with a `for` loop in Python.
 
 **Can you define a funcition inside function in python ?**
 It’s possible to [define functions](https://realpython.com/defining-your-own-python-function/) _inside other functions_. Such functions are called [inner functions](https://realpython.com/inner-functions-what-are-they-good-for/).
@@ -103,12 +113,7 @@ What are `*args` and `**args` ?
 \*\*args will give the params for the named arguments
 
 
-**what is lambda in python ?**
-Anonymous function that can be created at run time
 
-**What is difference between tuple and list ?**
-- Tuple are immutable. 
-- tuples use parentheses for enclosing, but the lists have square brackets in their syntax.
 
 **Get unique elements from a list ?**
 
