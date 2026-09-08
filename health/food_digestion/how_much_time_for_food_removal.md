@@ -13,7 +13,6 @@ One important point is that stool is a **mixture from many meals**. If you have 
 
 Also, "completely extracted" has two meanings. **Nutrient extraction is mostly finished within roughly 6–10 hours**, once material has passed through the small intestine. **Physical elimination of the remaining residue** generally takes **24–72 hours**.
 
-If you'd like, I can also explain a simple way researchers measure your **personal gut-transit time using food markers**, without needing any medical tests.
 
 
 <img width="1122" height="1402" alt="food_transit_in_body" src="https://github.com/user-attachments/assets/702ce7ae-bbcb-4ef3-a335-cdbeaecafc32" />
