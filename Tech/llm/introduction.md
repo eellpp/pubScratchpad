@@ -3,7 +3,7 @@ Intuition: there are YouTube videos from 3blue1brown [1] and Welch Labs [2] on n
 Building: the videos/tutorials from Andrej Karpathy in Python [3] are considered to be very good at building and understanding the basics, from a small/toy neural network engine to transformers and tokenizers.
 There was a post here a few weeks ago [4] on reasoning models using Python/PyTorch with links to an older series on non-reasoning transformers.
 
-[1] https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_6700...  
+[1] https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
 [2] https://www.youtube.com/@WelchLabs/videos.   
 [3] https://karpathy.ai/zero-to-hero.html.   
 [4] https://news.ycombinator.com/item?id=50245138.   
